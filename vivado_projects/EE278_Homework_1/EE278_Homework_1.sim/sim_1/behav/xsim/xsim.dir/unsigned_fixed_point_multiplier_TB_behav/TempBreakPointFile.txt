@@ -1,0 +1,4 @@
+Breakpoint File Version 1.0
+21,true,"C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/unsigned_fixed_point_multiplier_TB.sv"
+22,true,"C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/unsigned_fixed_point_multiplier_TB.sv"
+23,true,"C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/unsigned_fixed_point_multiplier_TB.sv"
