@@ -3,8 +3,8 @@
   <File Type="PA-TCL" Name="signed_fixed_point_adder.tcl"/>
   <File Type="REPORTS-TCL" Name="signed_fixed_point_adder_reports.tcl"/>
   <File Type="RDS-RDS" Name="signed_fixed_point_adder.vds"/>
-  <File Type="RDS-UTIL" Name="unsigned_fixed_point_multiplier_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="unsigned_fixed_point_multiplier_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="unsigned_pipelined_fixed_point_adder_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="unsigned_pipelined_fixed_point_adder_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="signed_fixed_point_adder.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>

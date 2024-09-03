@@ -1,9 +1,9 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../../hdl/unsigned_pipelined_fixed_point_adder.v" \
+"../../../../../../hdl/signed_pipelined_fixed_point_adder.v" \
 
 sv xil_defaultlib  \
-"../../../../../../verif/unsigned_pipelined_fixed_point_adder_TB.sv" \
+"../../../../../../verif/signed_pipelined_fixed_point_adder_TB.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

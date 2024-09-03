@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Sep  2 19:07:07 2024
+# Process ID: 18320
+# Current directory: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1264 C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\EE278_Homework_1\EE278_Homework_1.xpr
+# Log file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/vivado.log
+# Journal file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1\vivado.jou
+# Running On: DESKTOP-D2NNA1U, OS: Windows, CPU Frequency: 3700 MHz, CPU Physical cores: 16, Host memory: 17101 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.sim/sim_1/behav/xsim/xsim.dir/unsigned_fixed_point_adder_TB_behav/obj/unsigned_fixed_point_adder_TB_behav.wcfg
+source unsigned_pipelined_fixed_point_adder_TB.tcl
+run 10 us
+relaunch_sim
+run 100 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.sim/sim_1/behav/xsim/xsim.dir/unsigned_fixed_point_adder_TB_behav/obj/unsigned_fixed_point_adder_TB_behav.wcfg
+source unsigned_pipelined_fixed_point_adder_TB.tcl
+relaunch_sim
+run 100 ns
+relaunch_sim
+run 100 ns
+run 100 ns
+relaunch_sim
+relaunch_sim
+run 100 ns
+relaunch_sim
+run 100 ns
+relaunch_sim
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+relaunch_sim
+relaunch_sim
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+relaunch_sim
+run 100 ns
+relaunch_sim
+relaunch_sim
+run 100 ns
+relaunch_sim
+run 100 ns
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.sim/sim_1/behav/xsim/xsim.dir/unsigned_fixed_point_adder_TB_behav/obj/unsigned_fixed_point_adder_TB_behav.wcfg
+source unsigned_pipelined_fixed_point_adder_TB.tcl
+relaunch_sim
+run 100 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 ns
+run 100 ns
+relaunch_sim
+run 100 ns
+relaunch_sim
+relaunch_sim
+run 100 ns
+run 100 ns
+relaunch_sim
+run 100 ns
+run 100 ns
+save_wave_config {C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.sim/sim_1/behav/xsim/xsim.dir/unsigned_fixed_point_adder_TB_behav/obj/unsigned_fixed_point_adder_TB_behav.wcfg}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top signed_pipelined_fixed_point_adder_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top signed_pipelined_fixed_point_adder [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.sim/sim_1/behav/xsim/xsim.dir/unsigned_fixed_point_adder_TB_behav/obj/unsigned_fixed_point_adder_TB_behav.wcfg
+source signed_pipelined_fixed_point_adder_TB.tcl
+relaunch_sim
+run 100 ns
+run 100 ns
+relaunch_sim
+run 100 ns
+relaunch_sim
+relaunch_sim
+close_sim
