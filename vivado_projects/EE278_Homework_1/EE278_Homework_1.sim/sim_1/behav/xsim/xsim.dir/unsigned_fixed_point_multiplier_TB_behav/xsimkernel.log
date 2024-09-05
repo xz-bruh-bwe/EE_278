@@ -1,7 +1,7 @@
-Running: xsim.dir/unsigned_fixed_point_multiplier_TB_behav/xsimk.exe -simmode gui -wdb unsigned_fixed_point_multiplier_TB_behav.wdb -simrunnum 0 -socket 54026
+Running: xsim.dir/unsigned_fixed_point_multiplier_TB_behav/xsimk.exe -simmode gui -wdb unsigned_fixed_point_multiplier_TB_behav.wdb -simrunnum 0 -socket 58907
 Design successfully loaded
-Design Loading Memory Usage: 8060 KB (Peak: 8060 KB)
+Design Loading Memory Usage: 7312 KB (Peak: 7312 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 8576 KB (Peak: 8576 KB)
-Simulation CPU Usage: 31 ms
+Simulation Memory Usage: 7796 KB (Peak: 7796 KB)
+Simulation CPU Usage: 15 ms

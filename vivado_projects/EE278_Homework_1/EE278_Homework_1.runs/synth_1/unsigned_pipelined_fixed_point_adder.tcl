@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.runs/synth_1/signed_fixed_point_adder.tcl"
+  variable script "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.runs/synth_1/unsigned_pipelined_fixed_point_adder.tcl"
   variable category "vivado_synth"
 }
 
@@ -84,7 +84,7 @@ set_property ip_output_repo c:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_pro
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/signed_fixed_point_adder.v
+read_verilog -library xil_defaultlib C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/unsigned_pipelined_fixed_point_adder.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -100,7 +100,7 @@ read_checkpoint -auto_incremental -incremental C:/Users/Baron/Desktop/EE_278_Rep
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top signed_fixed_point_adder -part xc7k70tfbv676-1
+synth_design -top unsigned_pipelined_fixed_point_adder -part xc7k70tfbv676-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -110,10 +110,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef signed_fixed_point_adder.dcp
+write_checkpoint -force -noxdef unsigned_pipelined_fixed_point_adder.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file signed_fixed_point_adder_utilization_synth.rpt -pb signed_fixed_point_adder_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file unsigned_pipelined_fixed_point_adder_utilization_synth.rpt -pb unsigned_pipelined_fixed_point_adder_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

@@ -9,9 +9,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "C:/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2023.1/ids_lite/ISE/lib/nt64;C:/Xilinx/Vivado/2023.1/bin;";
+  PathVal = "Z:/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/nt64;Z:/Xilinx/Vivado/2023.1/ids_lite/ISE/lib/nt64;Z:/Xilinx/Vivado/2023.1/bin;";
 } else {
-  PathVal = "C:/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2023.1/ids_lite/ISE/lib/nt64;C:/Xilinx/Vivado/2023.1/bin;" + PathVal;
+  PathVal = "Z:/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/nt64;Z:/Xilinx/Vivado/2023.1/ids_lite/ISE/lib/nt64;Z:/Xilinx/Vivado/2023.1/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -24,7 +24,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log signed_fixed_point_adder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source signed_fixed_point_adder.tcl" );
+         "-log unsigned_pipelined_fixed_point_adder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source unsigned_pipelined_fixed_point_adder.tcl" );
 
 
 

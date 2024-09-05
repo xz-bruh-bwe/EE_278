@@ -12,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2023.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2023.1/bin
+  PATH=Z:/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/nt64;Z:/Xilinx/Vivado/2023.1/ids_lite/ISE/lib/nt64:Z:/Xilinx/Vivado/2023.1/bin
 else
-  PATH=C:/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2023.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2023.1/bin:$PATH
+  PATH=Z:/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/nt64;Z:/Xilinx/Vivado/2023.1/ids_lite/ISE/lib/nt64:Z:/Xilinx/Vivado/2023.1/bin:$PATH
 fi
 export PATH
 
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log signed_fixed_point_adder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source signed_fixed_point_adder.tcl
+EAStep vivado -log unsigned_pipelined_fixed_point_adder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source unsigned_pipelined_fixed_point_adder.tcl
