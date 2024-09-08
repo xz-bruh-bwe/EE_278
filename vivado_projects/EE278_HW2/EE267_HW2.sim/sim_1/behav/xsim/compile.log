@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/Problem_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult4x4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/tb_mult4x4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_mult4x4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/EE267_HW2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
