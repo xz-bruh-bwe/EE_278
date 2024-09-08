@@ -4,6 +4,7 @@ module signed_pipelined_fixed_point_adder_TB;
     reg signed [7:0] A;
     reg signed [7:0] B;
     reg clk;
+    reg rst;
 
     // Output
     wire signed [8:0] Sum;
@@ -13,6 +14,7 @@ module signed_pipelined_fixed_point_adder_TB;
         .A(A),
         .B(B),
         .clk(clk),
+        .rst(rst),
         .Sum(Sum)
     );
 
@@ -28,34 +30,26 @@ module signed_pipelined_fixed_point_adder_TB;
         A = 8'sh00; // 0 in hex
         B = 8'sh00; // 0 in hex
 
-        // Wait for initial clock cycles
-        @(posedge clk);
-        @(posedge clk);
+         rst = 1;
 
-        // Apply test vectors
-        A = 8'sh0F; // 15 in hex
-        B = 8'sh0A; // 10 in hex
-        @(posedge clk); // Wait for result
+           #15;
+        rst = 0;
+        #15;
 
-        A = 8'sh17; // 23 in hex
-        B = 8'sh11; // 17 in hex
-        @(posedge clk); // Wait for result
+        // Apply test cases
+        A = 8'b0101_0100; // A = 5.25 (Q4.4)
+        B = 8'b0011_1100; // B = 3.75 (Q4.4)
+        #20;
 
-        A = 8'shF6; // -10 in hex (Two's complement representation)
-        B = 8'shFB; // -5 in hex
-        @(posedge clk); // Wait for result
+        A = 8'b1010_0100; // A 
+        B = 8'b1010_0100; // B 
+        #20;
 
-        A = 8'sh7F; // 127 in hex
-        B = 8'shFF; // -1 in hex
-        @(posedge clk); // Wait for result
+        A = 8'b1111_0100; // A = -2.75 (Q4.4)
+        B = 8'b1110_0100; // B = -1.75 (Q4.4)
+        #20;
 
-        A = 8'sh80; // -128 in hex
-        B = 8'sh01; // 1 in hex
-        @(posedge clk); // Wait for result
-
-        // Finish simulation after a few more cycles
-        @(posedge clk);
-        @(posedge clk);
+        // End simulation
         $finish;
     end
 
@@ -63,8 +57,7 @@ module signed_pipelined_fixed_point_adder_TB;
     initial begin
         $monitor("Time = %0t | A = %0d | B = %0d | Sum = %0d", $time, A, B, Sum);
     end
-
-
+    
 endmodule
 
 //// Clock generation

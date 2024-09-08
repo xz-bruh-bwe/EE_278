@@ -3,119 +3,77 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="unsigned_pipelined_fixed_point_adder_TB_behav.wdb" id="1">
+      <db_ref path="unsigned_fixed_point_multiplier_STRUCT_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="unsigned_pipelined_fixed_point_adder_TB" />
+            <top_module name="unsigned_fixed_point_multiplier_STRUCT" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="56.667 ns"></ZoomStartTime>
-      <ZoomEndTime time="306.263 ns"></ZoomEndTime>
-      <Cursor1Time time="90.551 ns"></Cursor1Time>
+      <ZoomStartTime time="834.090 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,153.182 ns"></ZoomEndTime>
+      <Cursor1Time time="1,100.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="207"></NameColumnWidth>
-      <ValueColumnWidth column_width="118"></ValueColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="14" />
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/A" type="array">
+      <obj_property name="ElementShortName">A[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/A" type="array">
-      <obj_property name="ElementShortName">A[7:0]</obj_property>
-      <obj_property name="ObjectShortName">A[7:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">4</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/B" type="array">
+      <obj_property name="ElementShortName">B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">B[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/B" type="array">
-      <obj_property name="ElementShortName">B[7:0]</obj_property>
-      <obj_property name="ObjectShortName">B[7:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">4</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/P" type="array">
+      <obj_property name="ElementShortName">P[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/Sum" type="array">
-      <obj_property name="ElementShortName">Sum[8:0]</obj_property>
-      <obj_property name="ObjectShortName">Sum[8:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">4</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider26">
-      <obj_property name="label">Stage 1:</obj_property>
+   <wvobject type="divider" fp_name="divider98">
+      <obj_property name="label">Output</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/dut/A_lower" type="array">
-      <obj_property name="ElementShortName">A_lower[3:0]</obj_property>
-      <obj_property name="ObjectShortName">A_lower[3:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">4</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/pp0" type="array">
+      <obj_property name="ElementShortName">pp0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pp0[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/dut/B_lower" type="array">
-      <obj_property name="ElementShortName">B_lower[3:0]</obj_property>
-      <obj_property name="ObjectShortName">B_lower[3:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">4</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/pp1" type="array">
+      <obj_property name="ElementShortName">pp1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pp1[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/dut/sum_lower" type="array">
-      <obj_property name="ElementShortName">sum_lower[4:0]</obj_property>
-      <obj_property name="ObjectShortName">sum_lower[4:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">4</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/pp2" type="array">
+      <obj_property name="ElementShortName">pp2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pp2[3:0]</obj_property>
    </wvobject>
-   <wvobject type="divider" fp_name="divider31">
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/pp3" type="array">
+      <obj_property name="ElementShortName">pp3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pp3[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/dut/A_upper" type="array">
-      <obj_property name="ElementShortName">A_upper[3:0]</obj_property>
-      <obj_property name="ObjectShortName">A_upper[3:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">0</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/sum1" type="array">
+      <obj_property name="ElementShortName">sum1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sum1[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/dut/B_upper" type="array">
-      <obj_property name="ElementShortName">B_upper[3:0]</obj_property>
-      <obj_property name="ObjectShortName">B_upper[3:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">0</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/sum2" type="array">
+      <obj_property name="ElementShortName">sum2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sum2[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/dut/sum_lower[4]" type="logic">
-      <obj_property name="ElementShortName">[4]</obj_property>
-      <obj_property name="ObjectShortName">[4]</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/sum3" type="array">
+      <obj_property name="ElementShortName">sum3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sum3[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/dut/sum_upper_with_carry" type="array">
-      <obj_property name="ElementShortName">sum_upper_with_carry[4:0]</obj_property>
-      <obj_property name="ObjectShortName">sum_upper_with_carry[4:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">0</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/c1" type="logic">
+      <obj_property name="ElementShortName">c1</obj_property>
+      <obj_property name="ObjectShortName">c1</obj_property>
    </wvobject>
-   <wvobject fp_name="/unsigned_pipelined_fixed_point_adder_TB/dut/Sum" type="array">
-      <obj_property name="ElementShortName">Sum[8:0]</obj_property>
-      <obj_property name="ObjectShortName">Sum[8:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">4</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/c2" type="logic">
+      <obj_property name="ElementShortName">c2</obj_property>
+      <obj_property name="ObjectShortName">c2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/unsigned_fixed_point_multiplier_STRUCT/c3" type="logic">
+      <obj_property name="ElementShortName">c3</obj_property>
+      <obj_property name="ObjectShortName">c3</obj_property>
    </wvobject>
 </wave_config>

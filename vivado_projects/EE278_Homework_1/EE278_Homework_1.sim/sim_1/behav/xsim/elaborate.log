@@ -1,9 +1,22 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: Z:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot signed_fixed_point_multiplier_TB_behav xil_defaultlib.signed_fixed_point_multiplier_TB xil_defaultlib.glbl -log elaborate.log 
+Running: Z:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot unsigned_fixed_point_multiplier_STRUCT_TB_behav xil_defaultlib.unsigned_fixed_point_multiplier_STRUCT_TB xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 8 for port 'A' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/unsigned_fixed_point_multiplier_STRUCT.v:20]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 8 for port 'A' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/unsigned_fixed_point_multiplier_STRUCT.v:29]
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 8 for port 'A' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/unsigned_fixed_point_multiplier_STRUCT.v:38]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_Homework_1/EE278_Homework_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.full_adder
+Compiling module xil_defaultlib.ripple_carry_adder_8bit
+Compiling module xil_defaultlib.unsigned_fixed_point_multiplier_...
+Compiling module xil_defaultlib.unsigned_fixed_point_multiplier_...
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot unsigned_fixed_point_multiplier_STRUCT_TB_behav

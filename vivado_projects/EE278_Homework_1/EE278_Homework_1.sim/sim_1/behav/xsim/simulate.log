@@ -1,5 +1,5 @@
 Time resolution is 1 ps
-Test Case 1: A = 0101 (1.25), B = 0011 (0.75), Product = 00001111 (0.9375)
-Test Case 2: A = 1100 (-1.00), B = 0010 (0.50), Product = 11111000 (-0.5000)
-Test Case 3: A = 1011 (-1.25), B = 0101 (1.25), Product = 11100111 (-1.5625)
-Test Case 4: A = 1001 (-1.75), B = 1001 (-1.75), Product = 00110001 (3.0625)
+A = 1100, B = 0100, P = xxx1000x
+A = 0110, B = 0011, P = xxx1001x
+A = 1010, B = 0111, P = xxx0011x
+$stop called at time : 30 ns : File "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/unsigned_fixed_point_multiplier_STRUCT_TB.v" Line 32

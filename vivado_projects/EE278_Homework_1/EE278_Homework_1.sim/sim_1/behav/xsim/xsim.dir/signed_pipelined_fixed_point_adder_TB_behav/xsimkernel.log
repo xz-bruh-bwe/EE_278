@@ -1,7 +1,7 @@
-Running: xsim.dir/signed_pipelined_fixed_point_adder_TB_behav/xsimk.exe -simmode gui -wdb signed_pipelined_fixed_point_adder_TB_behav.wdb -simrunnum 0 -socket 60639
+Running: xsim.dir/signed_pipelined_fixed_point_adder_TB_behav/xsimk.exe -simmode gui -wdb signed_pipelined_fixed_point_adder_TB_behav.wdb -simrunnum 0 -socket 64664
 Design successfully loaded
-Design Loading Memory Usage: 7296 KB (Peak: 7296 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 7460 KB (Peak: 7460 KB)
+Design Loading CPU Usage: 46 ms
 Simulation completed
-Simulation Memory Usage: 7892 KB (Peak: 7892 KB)
-Simulation CPU Usage: 15 ms
+Simulation Memory Usage: 8056 KB (Peak: 8056 KB)
+Simulation CPU Usage: 61 ms

@@ -1,9 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../../hdl/signed_fixed_point_multiplier.v" \
-
-sv xil_defaultlib  \
-"../../../../../../verif/signed_fixed_point_multiplier_TB.sv" \
+"../../../../../../hdl/unsigned_fixed_point_multiplier_STRUCT.v" \
+"../../../../../../verif/unsigned_fixed_point_multiplier_STRUCT_TB.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

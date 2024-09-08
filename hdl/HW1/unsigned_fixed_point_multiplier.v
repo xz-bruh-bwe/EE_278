@@ -6,6 +6,6 @@ module unsigned_fixed_point_multiplier(
     wire [7:0] temp_product;            // 8-bit temporary product to capture the result
 
     assign Product = A * B;        // Perform multiplication
-    //assign Product = temp_product >> 2; // Adjust for fixed-point by shifting right by 2 bits
+    assign Product = temp_product >> 2; // Adjust for fixed-point by shifting right by 2 bits
 
 endmodule

@@ -80,12 +80,9 @@ module unsigned_pipelined_fixed_point_adder_TB;
         @(posedge clk);
         $display("Test Case 4: A = %b (%0.4f), B = %b (%0.4f), Sum = %b (%0.4f)", 
                  A, $itor(A)/16.0, B, $itor(B)/16.0, Sum, $itor(Sum)/16.0);
-
         // End of simulation
         $stop;
-
         end
-
 endmodule
 
 
