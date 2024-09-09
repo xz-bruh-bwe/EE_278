@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Sep  8 13:25:30 2024
+# Process ID: 2676
+# Current directory: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11252 C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\EE278_HW2\EE267_HW2.xpr
+# Log file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/vivado.log
+# Journal file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2\vivado.jou
+# Running On: LAPTOP-NR37E6DI, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 16852 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/EE267_HW2.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/tb_mult4x4.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/tb_mult4x4.v
+export_ip_user_files -of_objects  [get_files C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/Problem_1.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/Problem_1.v
+add_files -norecurse C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/mult4x4.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/mult4x4_TB.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source mult4x4_TB.tcl
+relaunch_sim
+run 1000 ns
+run 1000 ns
+run 1000 ns
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source mult4x4_TB.tcl
+save_wave_config {C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/mult4x4_TB_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/mult4x4_TB_behav.wcfg
+set_property xsim.view C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/mult4x4_TB_behav.wcfg [get_filesets sim_1]
+run 1000 ns
+relaunch_sim
+run 1000 ns
+relaunch_sim
+relaunch_sim
+run 1000 ns
+relaunch_sim
+run 1000 ns
+run 1000 ns
+run 1000 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 1000 ns
+run 1000 ns
+save_wave_config {C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/mult4x4_TB_behav.wcfg}
+save_wave_config {C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/mult4x4_TB_behav.wcfg}
+close_sim
+add_files -norecurse C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/sequential_signed_mult4x4_TB.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sequential_signed_mult4x4 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sequential_signed_mult4x4_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/mult4x4_TB_behav.wcfg
+source sequential_signed_mult4x4_TB.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/mult4x4_TB_behav.wcfg
+source sequential_signed_mult4x4_TB.tcl
+relaunch_sim
+run 1000 ns
+run 1000 ns
+run 1000 ns
+close_sim

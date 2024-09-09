@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mult4x4_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mult4x4_TB" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,205.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,095.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="112"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/mult4x4_TB/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mult4x4_TB/St" type="logic">
+      <obj_property name="ElementShortName">St</obj_property>
+      <obj_property name="ObjectShortName">St</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mult4x4_TB/Mplier" type="array">
+      <obj_property name="ElementShortName">Mplier[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Mplier[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mult4x4_TB/Mcand" type="array">
+      <obj_property name="ElementShortName">Mcand[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Mcand[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mult4x4_TB/Prod" type="array">
+      <obj_property name="ElementShortName">Prod[8:0]</obj_property>
+      <obj_property name="ObjectShortName">Prod[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mult4x4_TB/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mult4x4_TB/uut/pstate" type="array">
+      <obj_property name="ElementShortName">pstate[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pstate[3:0]</obj_property>
+   </wvobject>
+</wave_config>
