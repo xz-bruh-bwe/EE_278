@@ -1,0 +1,236 @@
+
+*** Running vivado
+    with args -log sequential_signed_mult4x4.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sequential_signed_mult4x4.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source sequential_signed_mult4x4.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 455.570 ; gain = 160.770
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/EE267_HW2.srcs/utils_1/imports/synth_1/sequential_signed_mult4x4.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/EE267_HW2.srcs/utils_1/imports/synth_1/sequential_signed_mult4x4.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top sequential_signed_mult4x4 -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23700
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 898.500 ; gain = 412.328
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sequential_signed_mult4x4' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:83]
+WARNING: [Synth 8-567] referenced signal 'St' should be on the sensitivity list [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:73]
+WARNING: [Synth 8-567] referenced signal 'Mplier' should be on the sensitivity list [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:73]
+WARNING: [Synth 8-567] referenced signal 'Mcand' should be on the sensitivity list [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:73]
+WARNING: [Synth 8-567] referenced signal 'M' should be on the sensitivity list [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:73]
+WARNING: [Synth 8-567] referenced signal 'sign' should be on the sensitivity list [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'sequential_signed_mult4x4' (0#1) [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:2]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 988.902 ; gain = 502.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 988.902 ; gain = 502.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 988.902 ; gain = 502.730
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'pstate_reg' in module 'sequential_signed_mult4x4'
+WARNING: [Synth 8-327] inferring latch for variable 'Prod_reg' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:79]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                             0000 |                             0000
+                      s1 |                             0001 |                             0001
+                      s2 |                             0010 |                             0010
+                      s3 |                             0011 |                             0011
+                      s4 |                             0100 |                             0100
+                      s5 |                             0101 |                             0101
+                      s6 |                             0110 |                             0110
+                      s7 |                             0111 |                             0111
+                      s8 |                             1000 |                             1000
+                      s9 |                             1001 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pstate_reg' using encoding 'sequential' in module 'sequential_signed_mult4x4'
+WARNING: [Synth 8-327] inferring latch for variable 'done_reg' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'ACC_reg' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:19]
+WARNING: [Synth 8-327] inferring latch for variable 'abs_Mplier_reg' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'abs_Mcand_reg' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v:77]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 988.902 ; gain = 502.730
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input    9 Bit        Muxes := 1     
+	  10 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 2     
+	  10 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	  10 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     2|
+|2     |LUT1 |     1|
+|3     |LUT2 |     1|
+|4     |LUT3 |     3|
+|5     |LUT4 |    13|
+|6     |LUT5 |     8|
+|7     |LUT6 |    11|
+|8     |FDCE |     4|
+|9     |LD   |    12|
+|10    |LDC  |    14|
+|11    |IBUF |    10|
+|12    |OBUF |    10|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    89|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1185.344 ; gain = 699.172
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1185.344 ; gain = 699.172
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1185.344 ; gain = 699.172
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1195.145 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1289.781 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 26 instances were transformed.
+  LD => LDCE: 12 instances
+  LDC => LDCE: 14 instances
+
+Synth Design complete | Checksum: 42c0f19a
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1289.781 ; gain = 809.340
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/EE267_HW2.runs/synth_1/sequential_signed_mult4x4.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file sequential_signed_mult4x4_utilization_synth.rpt -pb sequential_signed_mult4x4_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 10 22:16:07 2024...

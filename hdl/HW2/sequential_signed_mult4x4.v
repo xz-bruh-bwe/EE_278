@@ -70,54 +70,53 @@ end
 //////////////////////////////////////////////////////////////////////////////
 // Output Logic: Handles the actions for each state (separated)
 //////////////////////////////////////////////////////////////////////////////
-always @(posedge clk or posedge St) begin
+always @(pstate) begin
     if (St) begin
         // Reset logic on start signal
-        abs_Mplier <= Mplier[3] ? -Mplier : Mplier;  // Calculate absolute value of Mplier
-        abs_Mcand <= Mcand[3] ? -Mcand : Mcand;      // Calculate absolute value of Mcand
-        ACC <= {4'b0000, abs_Mplier};                // Initialize ACC with abs(Mplier)
-        Prod <= 9'b0;                                // Clear product
-        done <= 0;                                   // Reset done flag
+        abs_Mplier = Mplier[3] ? -Mplier : Mplier;  // Calculate absolute value of Mplier
+        abs_Mcand = Mcand[3] ? -Mcand : Mcand;      // Calculate absolute value of Mcand
+        ACC = {4'b0000, abs_Mplier};                // Initialize ACC with abs(Mplier)
+        Prod = 9'b0;                                // Clear product
+        done = 0;                                   // Reset done flag
     end
     else begin
         case (pstate)
             s0: begin
-                ACC <= {4'b0000, abs_Mplier};  // Initialize ACC with absolute multiplier
+                ACC = {4'b0000, abs_Mplier};  // Initialize ACC with absolute multiplier
             end
             s1: begin
                 if (M) 
-                    ACC[7:4] <= ACC[7:4] + abs_Mcand;  // Add absolute multiplicand if M is 1
+                    ACC[7:4] = ACC[7:4] + abs_Mcand;  // Add absolute multiplicand if M is 1
             end
             s2: begin
-                ACC <= {1'b0, ACC[7:1]};  // Right shift ACC
+                ACC = {1'b0, ACC[7:1]};  // Right shift ACC
             end
             s3: begin
                 if (M) 
-                    ACC[7:4] <= ACC[7:4] + abs_Mcand;  // Add absolute multiplicand if M is 1
+                    ACC[7:4] = ACC[7:4] + abs_Mcand;  // Add absolute multiplicand if M is 1
             end
             s4: begin
-                ACC <= {1'b0, ACC[7:1]};  // Right shift ACC
+                ACC = {1'b0, ACC[7:1]};  // Right shift ACC
             end
             s5: begin
                 if (M) 
-                    ACC[7:4] <= ACC[7:4] + abs_Mcand;  // Add absolute multiplicand if M is 1
+                    ACC[7:4] = ACC[7:4] + abs_Mcand;  // Add absolute multiplicand if M is 1
             end
             s6: begin
-                ACC <= {1'b0, ACC[7:1]};  // Right shift ACC
+                ACC = {1'b0, ACC[7:1]};  // Right shift ACC
             end
             s7: begin
                 if (M) 
-                    ACC[7:4] <= ACC[7:4] + abs_Mcand;  // Add absolute multiplicand if M is 1
+                    ACC[7:4] = ACC[7:4] + abs_Mcand;  // Add absolute multiplicand if M is 1
             end
             s8: begin
-                ACC <= {1'b0, ACC[7:1]};  // Final right shift
+                ACC = {1'b0, ACC[7:1]};  // Final right shift
             end
             s9: begin
-                Prod <= sign ? -ACC : ACC;  // Assign the product with correct sign
-                done <= 1;    // Indicate completion
+                Prod = sign ? -ACC : ACC;  // Assign the product with correct sign
+                done = 1;    // Indicate completion
             end
         endcase
     end
 end
-
 endmodule

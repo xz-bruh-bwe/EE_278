@@ -2,8 +2,8 @@
 2020.2
 May  7 2023
 15:24:31
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/mult4x4.v,1725831414,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/mult4x4_TB.v,,mult4x4,,,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v,1725832951,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/sequential_signed_mult4x4_TB.v,,sequential_signed_mult4x4,,,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/mult4x4_TB.v,1725832371,verilog,,,,mult4x4_TB,,,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/sequential_signed_mult4x4_TB.v,1725833463,verilog,,,,sequential_signed_mult4x4_TB,,,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/EE267_HW2.sim/sim_1/behav/xsim/glbl.v,1725827098,verilog,,,,glbl,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/mult4x4.v,1726029739,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/mult4x4_TB.v,,mult4x4,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v,1726030149,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/sequential_signed_mult4x4_TB.v,,sequential_signed_mult4x4,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/mult4x4_TB.v,1726029832,verilog,,,,mult4x4_TB,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/sequential_signed_mult4x4_TB.v,1725863894,verilog,,,,sequential_signed_mult4x4_TB,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW2/EE267_HW2.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,,,,,,,

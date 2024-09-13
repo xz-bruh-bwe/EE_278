@@ -75,50 +75,49 @@ always @(pstate) //state transition
 
 always @(pstate) begin
     if (St) begin
-        ACC <= {5'b00000, Mplier};  // Initialize the ACC with the Mplier
-        Prod <= 9'b0;               // Clear product output
-        done <= 1'b0;               // Added to delatch the 
+        ACC = {5'b00000, Mplier};  // Initialize the ACC with the Mplier
+        Prod = 9'b0;               // Clear product output
+        done = 1'b0;               // Added to delatch the 
     end
     else begin
         case (pstate)
             s0: begin
-                ACC <= {5'b00000, Mplier};  // Initialize ACC with multiplier
+                ACC = {5'b00000, Mplier};  // Initialize ACC with multiplier
 
             end
             s1: begin
                 if (M) 
-                    ACC[8:4] <= {1'b0, ACC[7:4]} + {1'b0, Mcand};  // Add Mcand if M is 1
+                    ACC[8:4] = {1'b0, ACC[7:4]} + {1'b0, Mcand};  // Add Mcand if M is 1
             end
             s2: begin
-                ACC <= {1'b0, ACC[8:1]};  // Right shift ACC
+                ACC = {1'b0, ACC[8:1]};  // Right shift ACC
             end
             s3: begin
                 if (M) 
-                    ACC[8:4] <= {1'b0, ACC[7:4]} + {1'b0, Mcand};  // Add Mcand if M is 1
+                    ACC[8:4] = {1'b0, ACC[7:4]} + {1'b0, Mcand};  // Add Mcand if M is 1
             end
             s4: begin
-                ACC <= {1'b0, ACC[8:1]};  // Right shift ACC
+                ACC = {1'b0, ACC[8:1]};  // Right shift ACC
             end
             s5: begin
                 if (M) 
-                    ACC[8:4] <= {1'b0, ACC[7:4]} + {1'b0, Mcand};  // Add Mcand if M is 1
+                    ACC[8:4] = {1'b0, ACC[7:4]} + {1'b0, Mcand};  // Add Mcand if M is 1
             end
             s6: begin
-                ACC <= {1'b0, ACC[8:1]};  // Right shift ACC
+                ACC = {1'b0, ACC[8:1]};  // Right shift ACC
             end
             s7: begin
                 if (M) 
-                    ACC[8:4] <= {1'b0, ACC[7:4]} + {1'b0, Mcand};  // Add Mcand if M is 1
+                    ACC[8:4] = {1'b0, ACC[7:4]} + {1'b0, Mcand};  // Add Mcand if M is 1
             end
             s8: begin
-                ACC <= {1'b0, ACC[8:1]};  // Final right shift
+                ACC = {1'b0, ACC[8:1]};  // Final right shift
             end
             s9: begin
-                Prod <= ACC;  // Output the product
-                done <= 1;    // Indicate completion
+                Prod = ACC;  // Output the product
+                done = 1;    // Indicate completion
             end
         endcase
     end
 end
-
 endmodule

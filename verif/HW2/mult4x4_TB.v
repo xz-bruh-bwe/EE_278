@@ -168,11 +168,7 @@ initial begin
     // Hold:
     St = 1;           // Deassert start
 
-
-
-        
     #100;
     $finish;
 end
-
 endmodule

@@ -33,49 +33,71 @@ module sequential_signed_mult4x4_TB;
         Mplier = 0;
         Mcand = 0;
 
-        // Wait for the global reset
-        #10;
+        // Wait for the global reset to known state
+        #100;
 
         // Test case 1: 3 * -4 = -12
+        Mplier = 4'b1111; 
+        Mcand = 4'b1111;  
         St = 1;
-        Mplier = 4'b0011;  // +3
-        Mcand = 4'b1100;   // -4
-        #10 St = 0;        // Release start
+        #10; 
+        
+        St = 0;        // Release start
         wait(done);
+        #50;
         $display("Test 1: 3 * -4 = %d, Expected = -12", Prod);
-
+        
         // Test case 2: -5 * 7 = -35
-        St = 1;
+        
         Mplier = 4'b1011;  // -5
         Mcand = 4'b0111;   // 7
+        St = 1;
         #10 St = 0;        // Release start
         wait(done);
+        #50;
         $display("Test 2: -5 * 7 = %d, Expected = -35", Prod);
-
+        
         // Test case 3: -8 * -3 = 24
-        St = 1;
-        Mplier = 4'b1000;  // -8
-        Mcand = 4'b1101;   // -3
+        
+        Mplier = 4'b1000;  
+        Mcand = 4'b1101;   
+         St = 1;
         #10 St = 0;        // Release start
         wait(done);
+        #50;
         $display("Test 3: -8 * -3 = %d, Expected = 24", Prod);
-
+        
         // Test case 4: 6 * 2 = 12
+        
+        Mplier = 4'b0110;  
+        Mcand = 4'b0010;   
         St = 1;
-        Mplier = 4'b0110;  // +6
-        Mcand = 4'b0010;   // +2
         #10 St = 0;        // Release start
         wait(done);
+        #50;
         $display("Test 4: 6 * 2 = %d, Expected = 12", Prod);
+        
+        // Test case 5: 7 * -7 = -49
+        St = 1;
+        Mplier = 4'b0111;  
+        Mcand = 4'b1001;   
+        St = 1;
+        #10 St = 0;        // Release start
+        wait(done);
+        #50;
+        $display("Test 5: 7 * -7 = %d, Expected = -49", Prod);
 
         // Test case 5: 7 * -7 = -49
         St = 1;
-        Mplier = 4'b0111;  // +7
-        Mcand = 4'b1001;   // -7
+        Mplier = 4'b1111;  
+        Mcand = 4'b1111;   
+        St = 1;
         #10 St = 0;        // Release start
         wait(done);
+        #50;
         $display("Test 5: 7 * -7 = %d, Expected = -49", Prod);
-
+        
+        
         // End of simulation
         $finish;
     end
