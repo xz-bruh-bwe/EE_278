@@ -1,8 +1,9 @@
 Time resolution is 1 ps
-Test 1: 3 * -4 =    1, Expected = -12
-Test 2: -5 * 7 =  -35, Expected = -35
-Test 3: -8 * -3 =   24, Expected = 24
-Test 4: 6 * 2 =   12, Expected = 12
-Test 5: 7 * -7 =  -49, Expected = -49
-Test 5: 7 * -7 =    1, Expected = -49
-$finish called at time : 945 ns : File "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/sequential_signed_mult4x4_TB.v" Line 102
+At time 0: l1=0000, l2=0000, l3=0000, l4=0000 => sum=00000000
+At time 10: l1=0011, l2=0101, l3=0110, l4=1001 => sum=00000000
+At time 20: l1=1111, l2=0001, l3=1101, l4=1011 => sum=00000000
+At time 25: l1=1111, l2=0001, l3=1101, l4=1011 => sum=00001000
+At time 30: l1=1110, l2=0011, l3=1001, l4=1010 => sum=00001000
+At time 35: l1=1110, l2=0011, l3=1001, l4=1010 => sum=10010000
+$stop called at time : 40 ns : File "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/tb_adder.v" Line 64
+At time 45: l1=1110, l2=0011, l3=1001, l4=1010 => sum=01000001

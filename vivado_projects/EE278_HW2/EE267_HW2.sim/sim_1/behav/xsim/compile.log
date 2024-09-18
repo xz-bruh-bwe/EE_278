@@ -1,4 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/sequential_signed_mult4x4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sequential_signed_mult4x4
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/sequential_signed_mult4x4_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sequential_signed_mult4x4_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW2/pipilinedAdder_revised.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/verif/HW2/tb_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_adder

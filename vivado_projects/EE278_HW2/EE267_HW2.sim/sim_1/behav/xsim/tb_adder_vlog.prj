@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../../hdl/HW2/sequential_signed_mult4x4.v" \
-"../../../../../../verif/HW2/sequential_signed_mult4x4_TB.v" \
+"../../../../../../hdl/HW2/pipilinedAdder_revised.v" \
+"../../../../../../verif/HW2/tb_adder.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
