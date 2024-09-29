@@ -1,12 +1,12 @@
 module exponent_add #(parameter N = 16)
 (
-    input  logic [4:0] exp_a,   // Exponent of input a (5 bits for half precision)
-    input  logic [4:0] exp_b,   // Exponent of input b (5 bits for half precision)
-    output logic [5:0] exp_sum  // Sum of the exponents minus the bias
+    input  logic [7:0] exp_a,   // Exponent of input a (8 bits for bfloat16)
+    input  logic [7:0] exp_b,   // Exponent of input b (8 bits for bfloat16)
+    output logic [8:0] exp_sum  // Sum of the exponents minus the bias
 );
     
-    // Bias for half-precision brain floating point is 15 (5-bit exponent, bias = 2^(5-1)-1)
-    localparam BIAS = 5'd15;
+    // Bias for bfloat16 (8-bit exponent, bias = 127)
+    localparam BIAS = 8'd127;
 
     // Add exponents and subtract bias (exp_sum = exp_a + exp_b - BIAS)
     assign exp_sum = exp_a + exp_b - BIAS;

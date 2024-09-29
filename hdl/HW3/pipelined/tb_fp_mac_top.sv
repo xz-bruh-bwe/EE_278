@@ -36,37 +36,18 @@ module tb_fp_mac_top;
 
         // Apply first test case
         #20;
-        a = 16'h3C00;  // 1.0 in half-precision floating point
-        b = 16'h4000;  // 2.0 in half-precision floating point
-        c = 16'h4200;  // 3.0 in half-precision floating point (accumulate)
+        //-----------------------------------------//
+        // Mult Values
+        //-----------------------------------------//
+        a = 16'b0011_1100_0000_0000; // 1 in BF16
+        b = 16'b0011_1100_1000_0000; // 1.125 in BF16
+        //-----------------------------------------//
+        //  Add Values
+        c = 16'b0011_0100_0000_0000;  //  .25
+        //-----------------------------------------//
 
         #100; // Wait for pipeline to process the result
 
-        // Apply second test case
-        #20;
-        a = 16'h3800;  // 0.5 in half-precision floating point
-        b = 16'h4200;  // 3.0 in half-precision floating point
-        c = 16'h0000;  // 0.0 (accumulate)
-
-        #100; // Wait for pipeline to process the result
-
-        // Apply third test case
-        #20;
-        a = 16'hC000;  // -2.0 in half-precision floating point
-        b = 16'hC100;  // -4.0 in half-precision floating point
-        c = 16'hC200;  // -6.0 in half-precision floating point
-
-        #100; // Wait for pipeline to process the result
-
-        // Apply fourth test case
-        #20;
-        a = 16'h3C00;  // 1.0 in half-precision floating point
-        b = 16'h4200;  // 3.0 in half-precision floating point
-        c = 16'h3800;  // 0.5 in half-precision floating point (accumulate)
-
-        #100; // Wait for pipeline to process the result
-
-        // Finish simulation
         $stop;
     end
 

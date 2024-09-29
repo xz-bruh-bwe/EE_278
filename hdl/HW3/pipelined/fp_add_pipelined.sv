@@ -9,18 +9,18 @@ module fp_add_pipelined #(parameter N = 16)
 
     // Stage 1: Extract sign, exponent, and mantissa
     logic sign_a, sign_b;
-    logic [4:0] exp_a, exp_b;
-    logic [9:0] mant_a, mant_b;
+    logic [7:0] exp_a, exp_b;
+    logic [6:0] mant_a, mant_b;
 
     // Stage 2: Aligned mantissas and adjusted exponents
-    logic [9:0] mant_a_aligned, mant_b_aligned;
-    logic [4:0] exp_diff, exp_result;
+    logic [6:0] mant_a_aligned, mant_b_aligned;
+    logic [7:0] exp_diff, exp_result;
     logic sign_a_reg, sign_b_reg;
 
     // Stage 3: Mantissa sum and normalization
-    logic [10:0] mant_sum;
-    logic [4:0] exp_final;
-    logic [9:0] mant_final;
+    logic [7:0] mant_sum;
+    logic [7:0] exp_final;
+    logic [6:0] mant_final;
     logic sign_result;
 
     // Stage 1: Extract sign, exponent, and mantissa from a and b
@@ -35,10 +35,10 @@ module fp_add_pipelined #(parameter N = 16)
         end else begin
             sign_a <= a[N-1]; // Sign bit of a
             sign_b <= b[N-1]; // Sign bit of b
-            exp_a  <= a[N-2:N-6];  // Exponent of a
-            exp_b  <= b[N-2:N-6];  // Exponent of b
-            mant_a <= {1'b1, a[N-7:0]}; // Add implicit 1 to mantissa of a
-            mant_b <= {1'b1, b[N-7:0]}; // Add implicit 1 to mantissa of b
+            exp_a  <= a[N-2:N-9];  // Exponent of a (8 bits for bfloat16)
+            exp_b  <= b[N-2:N-9];  // Exponent of b (8 bits for bfloat16)
+            mant_a <= {1'b1, a[N-10:0]}; // Add implicit 1 to mantissa of a
+            mant_b <= {1'b1, b[N-10:0]}; // Add implicit 1 to mantissa of b
         end
     end
 
@@ -92,17 +92,17 @@ module fp_add_pipelined #(parameter N = 16)
             end
 
             // Normalize the result
-            if (mant_sum[10]) begin
-                mant_final <= mant_sum[10:1]; // Shift right if overflow
+            if (mant_sum[7]) begin
+                mant_final <= mant_sum[7:1]; // Shift right if overflow
                 exp_final <= exp_result + 1;
             end else begin
-                mant_final <= mant_sum[9:0];  // No need to shift
+                mant_final <= mant_sum[6:0];  // No need to shift
                 exp_final <= exp_result;
             end
         end
     end
 
     // Final result construction
-    assign result = {sign_result, exp_final, mant_final[9:0]}; // Assemble the final result
+    assign result = {sign_result, exp_final, mant_final[6:0]}; // Assemble the final result
 
 endmodule

@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../../hdl/HW3/pipelined/exponent_add.sv" \
+"../../../../../../hdl/HW3/pipelined/fp_add_pipelined.sv" \
+"../../../../../../hdl/HW3/pipelined/fp_mac_top.sv" \
+"../../../../../../hdl/HW3/pipelined/fp_mult_pipelined.sv" \
+"../../../../../../hdl/HW3/pipelined/mantissa_mult.sv" \
+"../../../../../../hdl/HW3/pipelined/normalize_round_pipelined.sv" \
+"../../../../../../hdl/HW3/pipelined/tb_fp_mac_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

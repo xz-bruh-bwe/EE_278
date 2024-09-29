@@ -1,0 +1,8 @@
+Time resolution is 1 ps
+Time: 0 | a: 0000, b: 0000, c: 0000, result: 0000
+Time: 30000 | a: 0000, b: 0000, c: 0000, result: XxX0
+Time: 45000 | a: 3c00, b: 3c80, c: 3400, result: XxX0
+Time: 50000 | a: 3c00, b: 3c80, c: 3400, result: 0000
+Time: 90000 | a: 3c00, b: 3c80, c: 3400, result: 3400
+Time: 110000 | a: 3c00, b: 3c80, c: 3400, result: 34Xx
+$stop called at time : 145 ns : File "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/tb_fp_mac_top.sv" Line 51
