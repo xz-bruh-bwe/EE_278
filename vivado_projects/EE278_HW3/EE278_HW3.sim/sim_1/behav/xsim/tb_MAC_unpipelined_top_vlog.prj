@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../hdl/HW3/nonpiplined/MAC_unpipelined_top.v" \
+"../../../../../../hdl/HW3/nonpiplined/bfloat16_add_sub.v" \
+"../../../../../../hdl/HW3/nonpiplined/bfloat16_mult.v" \
+"../../../../../../hdl/HW3/nonpiplined/tb_MAC_unpipelined_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

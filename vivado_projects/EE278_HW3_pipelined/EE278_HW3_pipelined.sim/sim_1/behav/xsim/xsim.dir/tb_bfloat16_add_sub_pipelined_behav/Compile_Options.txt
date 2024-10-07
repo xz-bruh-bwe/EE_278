@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_bfloat16_add_sub_pipelined_behav" "xil_defaultlib.tb_bfloat16_add_sub_pipelined" "xil_defaultlib.glbl" -log "elaborate.log" 

@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "fir_TOP",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "fir_TOP"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/fir_proj/fir_solution/csynth.tcl",
+    "sourceLine": 18,
+    "success": true
+  }
+]

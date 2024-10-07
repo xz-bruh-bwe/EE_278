@@ -2,11 +2,10 @@
 2020.2
 May  7 2023
 15:24:31
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/exponent_add.sv,1727603746,systemVerilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_add_pipelined.sv,,exponent_add,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_add_pipelined.sv,1727604116,systemVerilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_mac_top.sv,,fp_add_pipelined,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_mac_top.sv,1727502733,systemVerilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_mult_pipelined.sv,,fp_mac_top,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_mult_pipelined.sv,1727604217,systemVerilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/mantissa_mult.sv,,fp_mult_pipelined,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/mantissa_mult.sv,1727602813,systemVerilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/normalize_round_pipelined.sv,,mantissa_mult,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/normalize_round_pipelined.sv,1727604135,systemVerilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/tb_fp_mac_top.sv,,normalize_round_pipelined,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/tb_fp_mac_top.sv,1727597999,systemVerilog,,,,tb_fp_mac_top,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW3/EE278_HW3.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/MAC_unpipelined_top.v,1727687640,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_add_sub.v,,MAC_unpipelined_top,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_add_sub.v,1727750823,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_mult.v,,bfloat16_add_sub,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_mult.v,1727682573,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/tb_MAC_unpipelined_top.v,,bfloat16_mult,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/tb_MAC_unpipelined_top.v,1727752160,verilog,,,,tb_MAC_unpipelined_top,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/tb_bfloat16_add_sub.v,1727750327,verilog,,,,tb_bfloat16_add_sub,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/tb_bfloat16_mult.v,1727678989,verilog,,,,tb_bfloat16_mult,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW3/EE278_HW3.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,,,,,,,

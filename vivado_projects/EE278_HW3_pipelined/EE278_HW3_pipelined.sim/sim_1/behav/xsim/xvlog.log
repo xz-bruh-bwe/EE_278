@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/bfloat16_add_sub_pipelined.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bfloat16_add_sub_pipelined
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/bfloat16_mult_pipelined.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bfloat16_mult_pipelined
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/top_bfloat16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_bfloat16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/tb_top_bfloat16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top_bfloat16

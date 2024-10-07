@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_bfloat16_add_sub_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_bfloat16_add_sub" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="233.464 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,153.308 ns"></ZoomEndTime>
+      <Cursor1Time time="551.759 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="255"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/tb_bfloat16_add_sub/A" type="array">
+      <obj_property name="ElementShortName">A[15:0]</obj_property>
+      <obj_property name="ObjectShortName">A[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">9</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/B" type="array">
+      <obj_property name="ElementShortName">B[15:0]</obj_property>
+      <obj_property name="ObjectShortName">B[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">9</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/result" type="array">
+      <obj_property name="ElementShortName">result[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider5">
+      <obj_property name="label">Compare Exponent</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/expA" type="array">
+      <obj_property name="ElementShortName">expA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">expA[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/expB" type="array">
+      <obj_property name="ElementShortName">expB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">expB[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/exp_diff" type="array">
+      <obj_property name="ElementShortName">exp_diff[7:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_diff[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider10">
+      <obj_property name="label">Mantissa Shift</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/mantA" type="array">
+      <obj_property name="ElementShortName">mantA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mantA[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/mantA_shifted" type="array">
+      <obj_property name="ElementShortName">mantA_shifted[6:0]</obj_property>
+      <obj_property name="ObjectShortName">mantA_shifted[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/mantB" type="array">
+      <obj_property name="ElementShortName">mantB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mantB[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/mantB_shifted" type="array">
+      <obj_property name="ElementShortName">mantB_shifted[6:0]</obj_property>
+      <obj_property name="ObjectShortName">mantB_shifted[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider28">
+      <obj_property name="label">Mantissa Add</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/mant_sum" type="array">
+      <obj_property name="ElementShortName">mant_sum[8:0]</obj_property>
+      <obj_property name="ObjectShortName">mant_sum[8:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/mant_diff" type="array">
+      <obj_property name="ElementShortName">mant_diff[8:0]</obj_property>
+      <obj_property name="ObjectShortName">mant_diff[8:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/mant_res" type="array">
+      <obj_property name="ElementShortName">mant_res[8:0]</obj_property>
+      <obj_property name="ObjectShortName">mant_res[8:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/mant_res[8]" type="logic">
+      <obj_property name="ElementShortName">[8]</obj_property>
+      <obj_property name="ObjectShortName">[8]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider31">
+      <obj_property name="label">Result</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/sign_res" type="logic">
+      <obj_property name="ElementShortName">sign_res</obj_property>
+      <obj_property name="ObjectShortName">sign_res</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/larger_exp" type="array">
+      <obj_property name="ElementShortName">larger_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">larger_exp[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/exp_res" type="array">
+      <obj_property name="ElementShortName">exp_res[7:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_res[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/mant_res_norm" type="array">
+      <obj_property name="ElementShortName">mant_res_norm[6:0]</obj_property>
+      <obj_property name="ObjectShortName">mant_res_norm[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider34">
+      <obj_property name="label">Final Result</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_add_sub/dut/final_result" type="array">
+      <obj_property name="ElementShortName">final_result[15:0]</obj_property>
+      <obj_property name="ObjectShortName">final_result[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>

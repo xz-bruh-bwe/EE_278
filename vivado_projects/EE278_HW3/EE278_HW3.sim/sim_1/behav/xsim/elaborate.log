@@ -1,23 +1,23 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: Z:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fp_mac_top_behav xil_defaultlib.tb_fp_mac_top xil_defaultlib.glbl -log elaborate.log 
+Running: Z:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MAC_unpipelined_top_behav xil_defaultlib.tb_MAC_unpipelined_top xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'clk' is not connected on this instance [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_mult_pipelined.sv:79]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW3/EE278_HW3.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW3/EE278_HW3.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/MAC_unpipelined_top.v" Line 1. Module MAC_unpipelined_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_mult.v" Line 1. Module bfloat16_mult doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_add_sub.v" Line 1. Module bfloat16_add_sub doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/MAC_unpipelined_top.v" Line 1. Module MAC_unpipelined_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_mult.v" Line 1. Module bfloat16_mult doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_add_sub.v" Line 1. Module bfloat16_add_sub doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mantissa_mult
-Compiling module xil_defaultlib.exponent_add
-Compiling module xil_defaultlib.normalize_round_pipelined
-Compiling module xil_defaultlib.fp_mult_pipelined
-Compiling module xil_defaultlib.fp_add_pipelined
-Compiling module xil_defaultlib.fp_mac_top
-Compiling module xil_defaultlib.tb_fp_mac_top
+Compiling module xil_defaultlib.bfloat16_mult
+Compiling module xil_defaultlib.bfloat16_add_sub
+Compiling module xil_defaultlib.MAC_unpipelined_top
+Compiling module xil_defaultlib.tb_MAC_unpipelined_top
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_fp_mac_top_behav
+Built simulation snapshot tb_MAC_unpipelined_top_behav

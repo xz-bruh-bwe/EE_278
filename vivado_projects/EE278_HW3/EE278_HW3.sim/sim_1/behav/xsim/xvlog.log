@@ -1,14 +1,8 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/exponent_add.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module exponent_add
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_add_pipelined.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add_pipelined
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_mac_top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_mac_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/fp_mult_pipelined.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_mult_pipelined
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/mantissa_mult.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mantissa_mult
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/normalize_round_pipelined.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module normalize_round_pipelined
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/tb_fp_mac_top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_fp_mac_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/MAC_unpipelined_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MAC_unpipelined_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_add_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bfloat16_add_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/bfloat16_mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bfloat16_mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/nonpiplined/tb_MAC_unpipelined_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_MAC_unpipelined_top

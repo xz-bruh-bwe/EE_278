@@ -1,0 +1,11 @@
+0.7
+2020.2
+May  7 2023
+15:24:31
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/bfloat16_add_sub_pipelined.v,1727753551,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/bfloat16_mult_pipelined.v,,bfloat16_add_sub_pipelined,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/bfloat16_mult_pipelined.v,1727754200,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/top_bfloat16.v,,bfloat16_mult_pipelined,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/tb_bfloat16_add_sub_pipelined.v,1727753849,verilog,,,,tb_bfloat16_add_sub_pipelined,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/tb_bfloat16_mult_pipelined.v,1727754976,verilog,,,,tb_bfloat16_mult_pipelined,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/tb_top_bfloat16.v,1727755910,verilog,,,,tb_top_bfloat16,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/top_bfloat16.v,1727755523,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/HW3/pipelined/tb_top_bfloat16.v,,top_bfloat16,,,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/EE278_HW3_pipelined/EE278_HW3_pipelined.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,,,,,,,

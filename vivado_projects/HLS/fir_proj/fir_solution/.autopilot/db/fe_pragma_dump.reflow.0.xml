@@ -1,0 +1,3 @@
+<pragmas>
+<pragma file="HLS_Code/fir.c" line="7" pragmaType="interface" parentfunction="fir_TOP" mode="s_axilite" port="" bundle="fir_io" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>
