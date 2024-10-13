@@ -1,0 +1,6 @@
+neuron_fadd_32ns_32ns_32_7_full_dsp_1
+neuron_fmul_32ns_32ns_32_4_max_dsp_1
+neuron_weights_ROM_AUTO_1R
+neuron_neuron_io_s_axi
+neuron_flow_control_loop_pipe
+neuron

@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1728276510064">
+  <ports id="1" name="y" type="PortType" originalName="y" coreId="1702129263" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="2" name="x" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" iftype="IfTypeRegister" arraysize="6">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <edges id="47" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="50" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="51" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="52" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="53" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="56" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="59" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="60" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="61" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="62" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="64" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="70" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="79" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="81" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="82" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="83" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="84" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="87" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@ports.0"/>
+  <edges id="88" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="181" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="182" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="184" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="185" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="186" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="187" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="188" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="189" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="190" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="191" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="2147483647" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0" is_back_edge="1"/>
+  <blocks id="15" name="entry" type="BlockType">
+    <controlOutputObjs>for.inc</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="acc" originalName="acc" coreId="1701667072" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i" originalName="i" coreId="1886545448" bitwidth="3" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_write_ln16" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="543712105" contextFuncName="neuron" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="acc_write_ln16" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="0" contextFuncName="neuron" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln16" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="6225976" contextFuncName="neuron" opcode="br" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+      <controlInputObjs>for.inc</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HLS_Code/neuron.c">
+      <validLinenumbers>16</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="41" name="for.end" type="BlockType">
+    <controlInputObjs>for.inc</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="acc_load_1" lineNumber="21" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="4294967295" contextFuncName="neuron" bitwidth="32" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="21" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="bitcast_ln21" lineNumber="21" fileName="HLS_Code/neuron.c" fileDirectory="../." rtlName="y" coreId="4294967295" contextFuncName="neuron" bitwidth="32" opcode="bitcast" nodeLabel="6.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="21" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="y_write_ln21" lineNumber="21" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="3330220000" contextFuncName="neuron" opcode="write" nodeLabel="6.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="21" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>y</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln22" lineNumber="22" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="4294967295" contextFuncName="neuron" opcode="ret" nodeLabel="6.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="22" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="HLS_Code/neuron.c">
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>22</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="7" typeName="Pipeline" iiViolation="Memory Dependency;mFailedII=6;mDependenceDistancedII=1;mLimitedResource=0;nodes=34__,22__;" id="168" pipe_depth="14" RegionName="Weight_Sum_Loop">
+    <basic_blocks id="21" name="for.inc" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.end</controlOutputObjs>
+      <controlOutputObjs>for.inc.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="i_1" lineNumber="16" originalName="i" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="6619251" contextFuncName="neuron" bitwidth="3" opcode="load" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="icmp_ln16" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." rtlName="icmp_ln16_fu_116_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="neuron" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.68" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="add_ln16" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." rtlName="add_ln16_fu_122_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="neuron" bitwidth="3" opcode="add" m_display="0" m_delay="1.68" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln16" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="0" contextFuncName="neuron" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc.split</controlInputObjs>
+        <controlInputObjs>for.end</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="HLS_Code/neuron.c">
+        <validLinenumbers>16</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="36" name="for.inc.split" type="BlockType">
+      <controlInputObjs>for.inc</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="acc_load" lineNumber="17" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="0" contextFuncName="neuron" bitwidth="32" opcode="load" nodeLabel="6.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="17" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>store</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="i_cast" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." rtlName="i_cast_fu_128_p1" coreId="0" contextFuncName="neuron" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="x_addr" lineNumber="17" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="4100" contextFuncName="neuron" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="17" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>x</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="x_load" lineNumber="17" fileName="HLS_Code/neuron.c" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="neuron" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="17" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="bitcast_ln17" lineNumber="17" fileName="HLS_Code/neuron.c" fileDirectory="../." rtlName="grp_fu_99_p0" coreId="4294967295" contextFuncName="neuron" bitwidth="32" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="17" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="weights_addr" lineNumber="17" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="4294967295" contextFuncName="neuron" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="17" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="weights_load" lineNumber="17" fileName="HLS_Code/neuron.c" fileDirectory="../." coreName="ROM" implIndex="auto" control="no" opType="rom" coreId="95" contextFuncName="neuron" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="17" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="mul" lineNumber="17" fileName="HLS_Code/neuron.c" fileDirectory="../." rtlName="fmul_32ns_32ns_32_4_max_dsp_1_U2" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="neuron" bitwidth="32" opcode="fmul" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="5.78" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="17" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="acc_1" lineNumber="17" originalName="acc" fileName="HLS_Code/neuron.c" fileDirectory="../." rtlName="fadd_32ns_32ns_32_7_full_dsp_1_U1" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="neuron" bitwidth="32" opcode="fadd" nodeLabel="6.0" nodeLatency="6" m_display="1" m_delay="5.92" m_isLCDNode="true" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="17" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>fmul</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="i_write_ln16" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="4294967295" contextFuncName="neuron" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="acc_write_ln16" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="4294967295" contextFuncName="neuron" opcode="store" nodeLabel="13.0" m_display="1" m_delay="1.61" m_isLCDNode="true" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln16" lineNumber="16" fileName="HLS_Code/neuron.c" fileDirectory="../." coreId="3330222160" contextFuncName="neuron" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/neuron.c" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="neuron"/>
+        <controlInputObjs>for.inc</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="HLS_Code/neuron.c">
+        <validLinenumbers>17</validLinenumbers>
+        <validLinenumbers>16</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <regnodes realName="acc_load_reg_208">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="acc_reg_159">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="weights_addr_reg_183">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="x_load_reg_188">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="acc_1_reg_213">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln17_reg_198">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_167">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln16_reg_174">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_reg_203">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="weights_load_reg_193">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="x_addr_reg_178">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <expressionNodes realName="i_cast_fu_128">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_58">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln17_fu_139">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_addr_gep_fu_69">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln16_fu_122">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln16_fu_116">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln21_fu_154">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="acc_fu_54">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="weights_addr_gep_fu_82">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_95">
+    <nodeIds>32</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_99">
+    <nodeIds>31</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="acc_load_load_fu_143">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln16_store_fu_103">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln16_store_fu_147">
+    <nodeIds>34</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln21_write_fu_62">
+    <nodeIds>39</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln16_store_fu_134">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_1_load_fu_113">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="acc_load_1_load_fu_151">
+    <nodeIds>37</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln16_store_fu_108">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="weights">
+    <nodeIds>30</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="x">
+    <nodeIds>27</nodeIds>
+  </memoryPorts>
+  <ioPorts name="x(p0)">
+    <contents name="load">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="y">
+    <contents name="write">
+      <nodeIds>39</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="2" latency="2"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="2" latency="2"/>
+      <operations id="33" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="27" stage="1" latency="2"/>
+      <operations id="30" stage="1" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="31" stage="4" latency="4"/>
+    </states>
+    <states id="4">
+      <operations id="31" stage="3" latency="4"/>
+    </states>
+    <states id="5">
+      <operations id="31" stage="2" latency="4"/>
+    </states>
+    <states id="6">
+      <operations id="31" stage="1" latency="4"/>
+    </states>
+    <states id="7">
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="32" stage="7" latency="7"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="32" stage="6" latency="7"/>
+    </states>
+    <states id="9">
+      <operations id="32" stage="5" latency="7"/>
+    </states>
+    <states id="10">
+      <operations id="32" stage="4" latency="7"/>
+    </states>
+    <states id="11">
+      <operations id="32" stage="3" latency="7"/>
+    </states>
+    <states id="12">
+      <operations id="32" stage="2" latency="7"/>
+    </states>
+    <states id="13">
+      <operations id="32" stage="1" latency="7"/>
+    </states>
+    <states id="14">
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="neuron" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="50" mMaxLatency="50">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>15</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Weight_Sum_Loop" mII="7" mDepth="14" mMinTripCount="6" mMaxTripCount="6" mMinLatency="48" mMaxLatency="48" mType="1">
+      <basicBlocks>21</basicBlocks>
+      <basicBlocks>36</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>41</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

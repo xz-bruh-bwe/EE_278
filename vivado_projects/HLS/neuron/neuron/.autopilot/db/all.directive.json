@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "neuron",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "neuron"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/neuron/neuron/csynth.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]

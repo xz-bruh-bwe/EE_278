@@ -1,0 +1,3 @@
+<pragmas>
+<pragma file="HLS_Code/neuron.c" line="7" pragmaType="interface" parentfunction="neuron" mode="s_axilite" port="" bundle="neuron_io" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

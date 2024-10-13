@@ -2,85 +2,53 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'Z:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'Baron' on host 'desktop-d2nna1u' (Windows NT_amd64 version 6.2) on Thu Oct 03 23:44:53 -0700 2024
+INFO: [HLS 200-10] For user 'Baron' on host 'desktop-d2nna1u' (Windows NT_amd64 version 6.2) on Mon Oct 07 23:23:42 -0700 2024
 INFO: [HLS 200-10] In directory 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS'
-Sourcing Tcl script 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/fir_proj/fir_solution/csynth.tcl'
-INFO: [HLS 200-1510] Running: source C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/fir_proj/fir_solution/csynth.tcl
-INFO: [HLS 200-1510] Running: open_project fir_proj 
-INFO: [HLS 200-10] Opening project 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/fir_proj'.
-INFO: [HLS 200-1510] Running: set_top fir_TOP 
-INFO: [HLS 200-1510] Running: add_files HLS_Code/fir.c 
-INFO: [HLS 200-10] Adding design file 'HLS_Code/fir.c' to the project
-INFO: [HLS 200-1510] Running: add_files -tb HLS_Code/fir_test.c 
-INFO: [HLS 200-10] Adding test bench file 'HLS_Code/fir_test.c' to the project
-INFO: [HLS 200-1510] Running: add_files -tb HLS_Code/out.gold.dat 
-INFO: [HLS 200-10] Adding test bench file 'HLS_Code/out.gold.dat' to the project
-INFO: [HLS 200-1510] Running: open_solution fir_solution -flow_target vivado 
-INFO: [HLS 200-10] Opening solution 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/fir_proj/fir_solution'.
+Sourcing Tcl script 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/neuron_int_float/neuron_int_float/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/neuron_int_float/neuron_int_float/csim.tcl
+INFO: [HLS 200-1510] Running: open_project neuron_int_float 
+INFO: [HLS 200-10] Opening project 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/neuron_int_float'.
+INFO: [HLS 200-1510] Running: add_files HLS_Code/neuron_int_float.c 
+INFO: [HLS 200-10] Adding design file 'HLS_Code/neuron_int_float.c' to the project
+INFO: [HLS 200-1510] Running: add_files HLS_Code/neuron_int_float.h 
+INFO: [HLS 200-10] Adding design file 'HLS_Code/neuron_int_float.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb HLS_Code/neuron_int_float_test.c 
+INFO: [HLS 200-10] Adding test bench file 'HLS_Code/neuron_int_float_test.c' to the project
+INFO: [HLS 200-1510] Running: open_solution neuron_int_float -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/neuron_int_float/neuron_int_float'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-1611] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [HLS 200-1611] Setting target device to 'xa7a100t-fgg484-1Q'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
-INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS
-INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
-INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
-INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
-INFO: [HLS 200-1464] Running solution command: config_cosim -wave_debug=1
-INFO: [HLS 200-1510] Running: set_part xa7a12tcsg325-1Q 
+INFO: [HLS 200-1510] Running: set_part xa7a100tfgg484-1Q 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS -rtl verilog 
-INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all -wave_debug 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 107.184 MB.
-INFO: [HLS 200-10] Analyzing design file 'HLS_Code/fir.c' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.957 seconds; current allocated memory: 108.301 MB.
-INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.141 seconds; current allocated memory: 109.293 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.005 seconds; current allocated memory: 109.293 MB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 114.453 MB.
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 115.680 MB.
-INFO: [XFORM 203-510] Pipelining loop 'Shift_Accum_Loop' (HLS_Code/fir.c:15) in function 'fir_TOP' automatically.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 136.559 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 136.570 MB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'fir_TOP' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'fir_TOP' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'Shift_Accum_Loop'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'Shift_Accum_Loop'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.199 seconds; current allocated memory: 136.570 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 136.570 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'fir_TOP' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir_TOP/y' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir_TOP/x' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'fir_TOP' to 's_axilite & ap_ctrl_hs'.
-WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'Shift_Accum_Loop' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_TOP' pipeline 'Shift_Accum_Loop' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port fir_io.
-INFO: [RTGEN 206-100] Generating core module 'mul_7s_32s_32_2_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_TOP'.
-INFO: [RTMG 210-278] Implementing memory 'fir_TOP_shift_reg_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-279] Implementing memory 'fir_TOP_c_ROM_AUTO_1R' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.169 seconds; current allocated memory: 139.188 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.732 seconds; current allocated memory: 144.680 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.982 seconds; current allocated memory: 150.902 MB.
-INFO: [VHDL 208-304] Generating VHDL RTL for fir_TOP.
-INFO: [VLOG 209-307] Generating Verilog RTL for fir_TOP.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 145.77 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 6.708 seconds; current allocated memory: 43.910 MB.
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 8.711 seconds; peak allocated memory: 151.066 MB.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling(apcc) ../../../../HLS_Code/neuron_int_float_test.c in debug mode
+ECHO is off.
+ECHO is off.
+INFO: [HLS 200-10] Running 'Z:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Baron' on host 'desktop-d2nna1u' (Windows NT_amd64 version 6.2) on Mon Oct 07 23:23:46 -0700 2024
+INFO: [HLS 200-10] In directory 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/neuron_int_float/neuron_int_float/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.027 seconds; peak allocated memory: 6.652 MB.
+   Generating csim.exe
+RMSE between int and float outputs: 0.000000
+int_output[0] = 0, float_output[0] = 0.000000
+int_output[1] = -10, float_output[1] = -10.000000
+int_output[2] = -29, float_output[2] = -29.000000
+int_output[3] = -25, float_output[3] = -25.000000
+int_output[4] = 35, float_output[4] = 35.000000
+int_output[5] = 158, float_output[5] = 158.000000
+int_output[6] = 337, float_output[6] = 337.000000
+int_output[7] = 539, float_output[7] = 539.000000
+int_output[8] = 732, float_output[8] = 732.000000
+int_output[9] = 915, float_output[9] = 915.000000
+TEST PASSED: RMSE is within acceptable range.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.518 seconds; current allocated memory: 0.449 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 5.507 seconds; peak allocated memory: 106.477 MB.

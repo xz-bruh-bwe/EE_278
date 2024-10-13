@@ -1,0 +1,22 @@
+{
+    "0": {
+        "name": "neuron",
+        "file": "neuron.c",
+        "fileloc": "3",
+        "instructions": "34",
+        "total_instructions": "34",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "3",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

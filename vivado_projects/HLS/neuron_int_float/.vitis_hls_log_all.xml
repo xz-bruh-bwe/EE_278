@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="neuron_int_float" solutionName="neuron_int_float" date="2024-10-07T23:20:18.640-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="neuron_int_float" solutionName="neuron_int_float" date="2024-10-07T23:20:18.600-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="neuron_int_float" solutionName="neuron_int_float" date="2024-10-07T23:20:18.586-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="neuron_int_float" solutionName="neuron_int_float" date="2024-10-07T23:20:18.574-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="neuron_int_float" solutionName="neuron_int_float" date="2024-10-07T23:14:31.703-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="neuron_int_float" solutionName="neuron_int_float" date="2024-10-07T23:14:31.669-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="neuron_int_float" solutionName="neuron_int_float" date="2024-10-07T23:14:31.645-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="neuron_int_float" solutionName="neuron_int_float" date="2024-10-07T23:14:31.634-0700"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

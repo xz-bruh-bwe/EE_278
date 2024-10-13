@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln16_fu_116_p2" SOURCE="HLS_Code/neuron.c:16" VARIABLE="icmp_ln16" MODULE="neuron" LOOP="Weight_Sum_Loop" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_fu_122_p2" SOURCE="HLS_Code/neuron.c:16" VARIABLE="add_ln16" MODULE="neuron" LOOP="Weight_Sum_Loop" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op fmul" ID="" IMPL="maxdsp" LATENCY="3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U2" SOURCE="HLS_Code/neuron.c:17" VARIABLE="mul" MODULE="neuron" LOOP="Weight_Sum_Loop" BUNDLEDNAME="" DSP="3" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op fadd" ID="" IMPL="fulldsp" LATENCY="6" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U1" SOURCE="HLS_Code/neuron.c:17" VARIABLE="acc_1" MODULE="neuron" LOOP="Weight_Sum_Loop" BUNDLEDNAME="" DSP="2" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage rom_1p" ID="" IMPL="auto" LATENCY="1" OPTYPE="rom_1p" PRAGMA="" RTLNAME="weights_U" SOURCE="" VARIABLE="weights" MODULE="neuron" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="neuron_io_s_axi_U" SOURCE="" VARIABLE="" MODULE="neuron" LOOP="" BUNDLEDNAME="neuron_io" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

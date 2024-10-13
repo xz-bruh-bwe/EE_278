@@ -1,0 +1,8 @@
+ECHO is off.
+ECHO is off.
+INFO: [HLS 200-10] Running 'Z:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Baron' on host 'desktop-d2nna1u' (Windows NT_amd64 version 6.2) on Mon Oct 07 23:23:46 -0700 2024
+INFO: [HLS 200-10] In directory 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/neuron_int_float/neuron_int_float/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.027 seconds; peak allocated memory: 6.652 MB.

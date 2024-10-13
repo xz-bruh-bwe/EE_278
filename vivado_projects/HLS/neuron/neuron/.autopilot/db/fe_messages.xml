@@ -1,0 +1,9 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/neuron/neuron/csynth.tcl:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="neuron" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=neuron" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/neuron.c:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="neuron" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite bundle=neuron_io port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

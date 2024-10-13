@@ -1,6 +1,6 @@
 #include "fir.h"
 
-void fir_TOP (
+void fir (
   data_t *y,
   data_t x
   ) {

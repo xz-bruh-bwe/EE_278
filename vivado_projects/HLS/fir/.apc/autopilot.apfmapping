@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir.c" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\fir.c"/>
+    <originFiles name="fir.h" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\fir.h"/>
+    <originFiles name="fdacoefs.h" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\fdacoefs.h"/>
+  </source>
+  <testbench>
+    <originFiles name="fir_test.c" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\fir_test.c"/>
+    <originFiles name="out.gold.dat" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\out.gold.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
