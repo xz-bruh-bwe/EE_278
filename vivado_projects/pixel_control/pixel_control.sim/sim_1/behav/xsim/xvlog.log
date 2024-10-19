@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/pixel_control_signals.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pixel_control_signals
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/tb_pixel_control_signals.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pixel_control_signals
