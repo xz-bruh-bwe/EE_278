@@ -16,6 +16,8 @@ module tb_bfloat16_adder_pipelined;
     logic [15:0]  B;
     logic         clk;
     logic         rst_n;
+    logic         op_start;
+    logic         op_finish;
     logic [15:0] result;
 
 
@@ -25,11 +27,13 @@ module tb_bfloat16_adder_pipelined;
 
     // Instantiate the DUT
     bfloat16_adder_pipelined dut (
-        .A     (A),
-        .B     (B),
-        .clk   (clk),
-        .rst_n (rst_n),
-        .result(result)
+        .A          (A),
+        .B          (B),
+        .clk        (clk),
+        .rst_n      (rst_n),
+        .op_start   (op_start),
+        .op_finish  (op_finish),
+        .result     (result)
     );
 
 ////////////////////////////////////////////////////////////////////////
@@ -46,20 +50,46 @@ module tb_bfloat16_adder_pipelined;
     // Apply reset and test cases
     initial begin
         // Initialize clock and reset
-        clk   = 0;
-        rst_n = 0;
-        A = 16'b0;
-        B = 16'b0;
+        clk      = 0;
+        rst_n    = 0;
+        op_start = 0;
+        A        = 16'b0;
+        B        = 16'b0;
 
         assert_reset();
 
         repeat_clocks(4);
 
-        // Test Case 1: Add two positive numbers
+        // Test Case 1:
         //A = 16'b1011_1110_1000_0000; //-0.25
-        //B = 16'b0011_1111_1001_0000; // 1.125   
+        //B = 16'b0011_1111_1001_0000; // 1.125
+               
         input_data(.input_a(16'b1011_1110_1000_0000), 
                     .input_b(16'b0011_1111_1001_0000));
+        
+        repeat_clocks(2); 
+
+        // Test Case 2: 
+        //A = 16'b0011_1111_1010_0000; //1.25
+        //B = 16'b0011_1111_0110_0000; // .875
+        input_data(.input_a(16'b0011_1111_1010_0000), 
+                    .input_b(16'b0011_1111_0110_0000));
+        
+        repeat_clocks(2);
+
+        // Test Case 3: 
+        //A = 16'b1100_0000_1110_1000; // -7.25
+        //B = 16'b0100_0000_0011_1000; // 2.875
+        input_data(.input_a(16'b1100_0000_1110_1000), 
+                    .input_b(16'b0100_0000_0011_1000));
+
+        repeat_clocks(2);
+
+        // Test Case 3: 
+        //A = 16'b0011_1111_1010_0000; // 1.25
+        //B = 16'b0011_1111_0100_0000; // .75
+        input_data(.input_a(16'b0011_1111_1010_0000), 
+                    .input_b(16'b0011_1111_0100_0000));
         
         // Finish simulation
         $finish;
@@ -95,15 +125,25 @@ task repeat_clocks(input int a);
 
 endtask
 
+task assert_op_start;
+    op_start = 1'b1;
+endtask
+
+task deassert_op_start;
+    op_start = 1'b0;
+endtask 
+
 task input_data; 
     input [15:0] input_a;
     input [15:0] input_b;
         begin
             simple_clock();
+            assert_op_start();
             A = input_a;
             B = input_b;
+            simple_clock();
+            deassert_op_start();
         end
-
 endtask
 
 endmodule

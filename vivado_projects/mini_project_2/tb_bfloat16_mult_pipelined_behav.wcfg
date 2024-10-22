@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_bfloat16_mult_pipelined_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_bfloat16_mult_pipelined" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="31.534 ns"></ZoomStartTime>
+      <ZoomEndTime time="189.335 ns"></ZoomEndTime>
+      <Cursor1Time time="115.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="270"></NameColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="29" />
+   <wvobject type="divider" fp_name="divider45">
+      <obj_property name="label">System Inputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/A" type="array">
+      <obj_property name="ElementShortName">A[15:0]</obj_property>
+      <obj_property name="ObjectShortName">A[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/B" type="array">
+      <obj_property name="ElementShortName">B[15:0]</obj_property>
+      <obj_property name="ObjectShortName">B[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/op_start" type="logic">
+      <obj_property name="ElementShortName">op_start</obj_property>
+      <obj_property name="ObjectShortName">op_start</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider50">
+      <obj_property name="label">Stage 1: Decompose Inputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/signA_stage1" type="logic">
+      <obj_property name="ElementShortName">signA_stage1</obj_property>
+      <obj_property name="ObjectShortName">signA_stage1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/expA_stage1" type="array">
+      <obj_property name="ElementShortName">expA_stage1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">expA_stage1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/expB_stage1" type="array">
+      <obj_property name="ElementShortName">expB_stage1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">expB_stage1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/mantA_stage1" type="array">
+      <obj_property name="ElementShortName">mantA_stage1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mantA_stage1[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/mantB_stage1" type="array">
+      <obj_property name="ElementShortName">mantB_stage1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mantB_stage1[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/signA_stage1" type="logic">
+      <obj_property name="ElementShortName">signA_stage1</obj_property>
+      <obj_property name="ObjectShortName">signA_stage1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/signB_stage1" type="logic">
+      <obj_property name="ElementShortName">signB_stage1</obj_property>
+      <obj_property name="ObjectShortName">signB_stage1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/op_fin[0]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">[0]</obj_property>
+      <obj_property name="label">Stage_1[0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider58">
+      <obj_property name="label">Stage 2: Add exponents, multiply mantissas</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/sign_res_stage2" type="logic">
+      <obj_property name="ElementShortName">sign_res_stage2</obj_property>
+      <obj_property name="ObjectShortName">sign_res_stage2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/exp_res_stage2" type="array">
+      <obj_property name="ElementShortName">exp_res_stage2[8:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_res_stage2[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/mant_res_stage2" type="array">
+      <obj_property name="ElementShortName">mant_res_stage2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mant_res_stage2[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/op_fin[1]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">[1]</obj_property>
+      <obj_property name="label">Stage_2[1]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider59">
+      <obj_property name="label">Stage 3: Normalize the exponent</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/mant_res_stage2[15]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[15]</obj_property>
+      <obj_property name="ObjectShortName">[15]</obj_property>
+      <obj_property name="label">Mant_carry_bit[15]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/norm_exp_stage3" type="array">
+      <obj_property name="ElementShortName">norm_exp_stage3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">norm_exp_stage3[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/norm_mant_stage3" type="array">
+      <obj_property name="ElementShortName">norm_mant_stage3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">norm_mant_stage3[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/op_fin[2]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">[2]</obj_property>
+      <obj_property name="label">Stage_3[2]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider72">
+      <obj_property name="label">Final Stage: Result</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/result" type="array">
+      <obj_property name="ElementShortName">result[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/bfloat16_mult_pipelined/op_fin[3]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">[3]</obj_property>
+      <obj_property name="label">Final_Stage[3]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_mult_pipelined/op_finish" type="logic">
+      <obj_property name="ElementShortName">op_finish</obj_property>
+      <obj_property name="ObjectShortName">op_finish</obj_property>
+   </wvobject>
+</wave_config>

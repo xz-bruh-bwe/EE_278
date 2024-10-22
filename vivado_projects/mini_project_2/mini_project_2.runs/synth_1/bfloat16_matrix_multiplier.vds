@@ -1,0 +1,274 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Oct 21 20:51:33 2024
+# Process ID: 31732
+# Current directory: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1
+# Command line: vivado.exe -log bfloat16_matrix_multiplier.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bfloat16_matrix_multiplier.tcl
+# Log file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1/bfloat16_matrix_multiplier.vds
+# Journal file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-D2NNA1U, OS: Windows, CPU Frequency: 3700 MHz, CPU Physical cores: 16, Host memory: 17101 MB
+#-----------------------------------------------------------
+source bfloat16_matrix_multiplier.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 455.496 ; gain = 162.617
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.srcs/utils_1/imports/synth_1/bfloat16_adder_pipelined.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.srcs/utils_1/imports/synth_1/bfloat16_adder_pipelined.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top bfloat16_matrix_multiplier -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31548
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 896.289 ; gain = 407.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bfloat16_matrix_multiplier' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'bfloat16_mult_pipelined' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_mult_pipelined.v:1]
+	Parameter N bound to: 5'b10000 
+INFO: [Synth 8-6155] done synthesizing module 'bfloat16_mult_pipelined' (0#1) [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_mult_pipelined.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bfloat16_adder_pipelined' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:1]
+	Parameter N bound to: 5'b10000 
+INFO: [Synth 8-6155] done synthesizing module 'bfloat16_adder_pipelined' (0#1) [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bfloat16_matrix_multiplier' (0#1) [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier.sv:3]
+WARNING: [Synth 8-7137] Register op_fin_reg[3] in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:100]
+WARNING: [Synth 8-7137] Register mant_sum_reg in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:103]
+WARNING: [Synth 8-7137] Register mant_diff_reg in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:104]
+WARNING: [Synth 8-7137] Register op_fin_reg[5] in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:138]
+WARNING: [Synth 8-7137] Register op_fin_reg[4] in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:138]
+WARNING: [Synth 8-3848] Net OP_FINISH in module/entity bfloat16_matrix_multiplier does not have driver. [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier.sv:11]
+WARNING: [Synth 8-7129] Port OP_FINISH in module bfloat16_matrix_multiplier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OP_START[3] in module bfloat16_matrix_multiplier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OP_START[2] in module bfloat16_matrix_multiplier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OP_START[1] in module bfloat16_matrix_multiplier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OP_START[0] in module bfloat16_matrix_multiplier is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 989.965 ; gain = 501.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 989.965 ; gain = 501.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 989.965 ; gain = 501.664
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.srcs/utils_1/imports/synth_1/bfloat16_adder_pipelined.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 989.965 ; gain = 501.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 989.965 ; gain = 501.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 989.965 ; gain = 501.664
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    9 Bit       Adders := 8     
+	   2 Input    9 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 8     
+	   3 Input    8 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               16 Bit    Registers := 18    
+	                9 Bit    Registers := 20    
+	                8 Bit    Registers := 60    
+	                7 Bit    Registers := 4     
+	                1 Bit    Registers := 80    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 16    
+	   2 Input    9 Bit        Muxes := 8     
+	   2 Input    8 Bit        Muxes := 20    
+	   2 Input    7 Bit        Muxes := 8     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port OP_FINISH in module bfloat16_matrix_multiplier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OP_START[3] in module bfloat16_matrix_multiplier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OP_START[2] in module bfloat16_matrix_multiplier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OP_START[1] in module bfloat16_matrix_multiplier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OP_START[0] in module bfloat16_matrix_multiplier is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------------+---------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                | RTL Name                                                | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------------+---------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|bfloat16_matrix_multiplier | row[0].col[1].bfloat16_adder_pipelined/signB_stage2_reg | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
++---------------------------+---------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    52|
+|3     |LUT1   |     7|
+|4     |LUT2   |   108|
+|5     |LUT3   |    90|
+|6     |LUT4   |   138|
+|7     |LUT5   |    60|
+|8     |LUT6   |   148|
+|9     |SRL16E |     2|
+|10    |FDCE   |   425|
+|11    |FDRE   |    38|
+|12    |IBUF   |    66|
+|13    |OBUF   |    64|
+|14    |OBUFT  |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+---------------------------+------+
+|      |Instance                                   |Module                     |Cells |
++------+-------------------------------------------+---------------------------+------+
+|1     |top                                        |                           |  1200|
+|2     |  \row[0].col[1].bfloat16_adder_pipelined  |bfloat16_adder_pipelined   |   281|
+|3     |  \row[1].col[0].bfloat16_mult_pipelined   |bfloat16_mult_pipelined    |   234|
+|4     |  \row[1].col[1].bfloat16_adder_pipelined  |bfloat16_adder_pipelined_0 |   283|
+|5     |  \row[1].col[1].bfloat16_mult_pipelined   |bfloat16_mult_pipelined_1  |   234|
++------+-------------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1215.527 ; gain = 727.227
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1215.527 ; gain = 727.227
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1215.527 ; gain = 727.227
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1223.328 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1325.688 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 3b08cc30
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 17 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 1325.688 ; gain = 845.332
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1/bfloat16_matrix_multiplier.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bfloat16_matrix_multiplier_utilization_synth.rpt -pb bfloat16_matrix_multiplier_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 21 20:52:23 2024...

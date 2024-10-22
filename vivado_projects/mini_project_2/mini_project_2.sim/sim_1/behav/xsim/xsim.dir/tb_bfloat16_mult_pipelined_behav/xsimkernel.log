@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_bfloat16_mult_pipelined_behav/xsimk.exe -simmode gui -wdb tb_bfloat16_mult_pipelined_behav.wdb -simrunnum 0 -socket 65044
+Design successfully loaded
+Design Loading Memory Usage: 7344 KB (Peak: 7344 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7896 KB (Peak: 7896 KB)
+Simulation CPU Usage: 30 ms
