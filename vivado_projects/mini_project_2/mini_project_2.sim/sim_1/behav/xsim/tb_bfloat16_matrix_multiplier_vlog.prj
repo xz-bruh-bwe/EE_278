@@ -1,9 +1,11 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../../../hdl/mini_project_2/bfloat16_adder_pipelined.v" \
+"../../../../../../hdl/mini_project_2/bfloat16_mult_pipelined.v" \
 
 sv xil_defaultlib  \
-"../../../../../../hdl/mini_project_2/tb_bfloat16_adder_pipelined.sv" \
+"../../../../../../hdl/mini_project_2/bfloat16_matrix_multiplier.sv" \
+"../../../../../../hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bfloat16_matrix_multiplier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bfloat16_matrix_multiplier
+WARNING: [VRFC 10-3380] identifier 'N' is used before its declaration [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv:13]
+WARNING: [VRFC 10-3380] identifier 'N' is used before its declaration [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv:14]
+WARNING: [VRFC 10-3380] identifier 'SIZE' is used before its declaration [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv:15]
+WARNING: [VRFC 10-3380] identifier 'SIZE' is used before its declaration [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv:16]
+WARNING: [VRFC 10-3380] identifier 'N' is used before its declaration [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv:17]
