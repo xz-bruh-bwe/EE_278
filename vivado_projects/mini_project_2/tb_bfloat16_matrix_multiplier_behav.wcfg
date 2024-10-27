@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_bfloat16_matrix_multiplier_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_bfloat16_matrix_multiplier" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="117.667 ns"></ZoomStartTime>
+      <ZoomEndTime time="581.668 ns"></ZoomEndTime>
+      <Cursor1Time time="195.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="193"></NameColumnWidth>
+      <ValueColumnWidth column_width="199"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/tb_bfloat16_matrix_multiplier/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_matrix_multiplier/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="group12" type="group">
+      <obj_property name="label">Main IO</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_bfloat16_matrix_multiplier/A" type="array">
+         <obj_property name="ElementShortName">A[3:0][3:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">A[3:0][3:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bfloat16_matrix_multiplier/B" type="array">
+         <obj_property name="ElementShortName">B[3:0][3:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">B[3:0][3:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bfloat16_matrix_multiplier/OP_START" type="array">
+         <obj_property name="ElementShortName">OP_START[63:0]</obj_property>
+         <obj_property name="ObjectShortName">OP_START[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bfloat16_matrix_multiplier/OP_FINISH" type="array">
+         <obj_property name="ElementShortName">OP_FINISH[15:0]</obj_property>
+         <obj_property name="ObjectShortName">OP_FINISH[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bfloat16_matrix_multiplier/C" type="array">
+         <obj_property name="ElementShortName">C[3:0][3:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">C[3:0][3:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bfloat16_matrix_multiplier/temp_a" type="array">
+         <obj_property name="ElementShortName">temp_a[3:0][3:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_a[3:0][3:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bfloat16_matrix_multiplier/temp_b" type="array">
+         <obj_property name="ElementShortName">temp_b[3:0][3:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_b[3:0][3:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bfloat16_matrix_multiplier/N" type="array">
+         <obj_property name="ElementShortName">N[4:0]</obj_property>
+         <obj_property name="ObjectShortName">N[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bfloat16_matrix_multiplier/SIZE" type="array">
+         <obj_property name="ElementShortName">SIZE[3:0]</obj_property>
+         <obj_property name="ObjectShortName">SIZE[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group13" type="group">
+      <obj_property name="label">C_00 Ouput Products</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_matrix_multiplier/bfloat16_matrix_multiplier/\row[0].col[0].dep[0].bfloat16_mult_pipelined /A" type="array">
+      <obj_property name="ElementShortName">A[15:0]</obj_property>
+      <obj_property name="ObjectShortName">A[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_matrix_multiplier/bfloat16_matrix_multiplier/\row[0].col[0].dep[0].bfloat16_mult_pipelined /B" type="array">
+      <obj_property name="ElementShortName">B[15:0]</obj_property>
+      <obj_property name="ObjectShortName">B[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_matrix_multiplier/bfloat16_matrix_multiplier/\row[0].col[0].dep[0].bfloat16_mult_pipelined /op_start" type="logic">
+      <obj_property name="ElementShortName">op_start</obj_property>
+      <obj_property name="ObjectShortName">op_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_matrix_multiplier/bfloat16_matrix_multiplier/\row[0].col[0].dep[0].bfloat16_mult_pipelined /op_finish" type="logic">
+      <obj_property name="ElementShortName">op_finish</obj_property>
+      <obj_property name="ObjectShortName">op_finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bfloat16_matrix_multiplier/bfloat16_matrix_multiplier/\row[0].col[0].dep[0].bfloat16_mult_pipelined /result" type="array">
+      <obj_property name="ElementShortName">result[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result[15:0]</obj_property>
+   </wvobject>
+</wave_config>

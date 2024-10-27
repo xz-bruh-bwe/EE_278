@@ -1,7 +1,12 @@
 module tb_bfloat16_matrix_multiplier;
 
     `timescale 1ns/1ps
-
+////////////////////////////////////////////////////////////////////////
+//Parameter
+////////////////////////////////////////////////////////////////////////
+    
+parameter   N     = 5'd16;
+    parameter   SIZE  = 4'd4;
 ////////////////////////////////////////////////////////////////////////
 //System Definitions
 ////////////////////////////////////////////////////////////////////////
@@ -16,8 +21,10 @@ module tb_bfloat16_matrix_multiplier;
     logic              OP_FINISH [SIZE*SIZE-1:0]      ;
     logic      [N-1:0] C         [SIZE-1:0][SIZE-1:0] ; // 4x4 matrix C (16-bit bfloat16 results)
 
-    parameter   N     = 5'd16;
-    parameter   SIZE  = 4'd4;
+    logic [N-1:0] temp_a [SIZE-1:0][SIZE-1:0];
+    logic [N-1:0] temp_b [SIZE-1:0][SIZE-1:0];
+
+    
 
 ////////////////////////////////////////////////////////////////////////
 // Module Instantiation
@@ -45,18 +52,21 @@ bfloat16_matrix_multiplier #(.N   (N),
 ////////////////////////////////////////////////////////////////////////
 // Predefined Arrays
 ////////////////////////////////////////////////////////////////////////
-logic [N-1:0] temp_a [SIZE-1:0][SIZE-1:0] = '{
-        '{1, 2, 3, 4},
-        '{1, 2, 3, 4},
-        '{1, 2, 3, 4},
-        '{1, 2, 3, 4}
+initial begin
+   temp_a = '{
+        '{16'b0100_0000_1000_0000, 16'b0100_0000_0100_0000, 16'b0100_0000_0000_0000, 16'b0011_1111_1000_0000},
+        '{16'b0100_0000_1000_0000, 16'b0100_0000_0100_0000, 16'b0100_0000_0000_0000, 16'b0011_1111_1000_0000},
+        '{16'b0100_0000_1000_0000, 16'b0100_0000_0100_0000, 16'b0100_0000_0000_0000, 16'b0011_1111_1000_0000},
+        '{16'b0100_0000_1000_0000, 16'b0100_0000_0100_0000, 16'b0100_0000_0000_0000, 16'b0011_1111_1000_0000}
     };
-logic [N-1:0] temp_b [SIZE-1:0][SIZE-1:0] = '{
-        '{1, 2, 3, 4},
-        '{1, 2, 3, 4},
-        '{1, 2, 3, 4},
-        '{1, 2, 3, 4}
+
+    temp_b = '{
+        '{16'b0100_0000_1000_0000, 16'b0100_0000_0100_0000, 16'b0100_0000_0000_0000, 16'b0011_1111_1000_0000},
+        '{16'b0100_0000_1000_0000, 16'b0100_0000_0100_0000, 16'b0100_0000_0000_0000, 16'b0011_1111_1000_0000},
+        '{16'b0100_0000_1000_0000, 16'b0100_0000_0100_0000, 16'b0100_0000_0000_0000, 16'b0011_1111_1000_0000},
+        '{16'b0100_0000_1000_0000, 16'b0100_0000_0100_0000, 16'b0100_0000_0000_0000, 16'b0011_1111_1000_0000}
     };
+end
 
 ////////////////////////////////////////////////////////////////////////
 // Initial Begin and Stimulus
@@ -71,9 +81,11 @@ repeat_clocks(3);
 
 assert_reset();
 
-repeat_clocks(2);
+repeat_clocks(10);
 
-initialize_array();
+initialize_array_0();
+
+repeat_clocks(2);
 
 
 
@@ -88,8 +100,8 @@ integer i, j;
         // Iterate through the 2D arrays and set each element to zero.
         for (i = 0; i < SIZE; i++) begin
             for (j = 0; j < SIZE; j++) begin
-                A       [i][j] = 0;
-                B       [i][j] = 0;
+                A[i][j] = 0;
+                B[i][j] = 0;
                 OP_START[i*SIZE+j] = 0;
             end
         end
@@ -108,12 +120,33 @@ task initialize_array;
 
 endtask
 
+
+task initialize_array_0;
+    integer i, j;
+    begin 
+        simple_clock();
+        assert_all_op_start();
+        for (i = 0; i < SIZE; i++) begin
+            for (j = 0; j < SIZE; j++) begin
+                A[i][j] = temp_a[j][i];
+                B[i][j] = temp_b[j][i];
+            end
+        end
+        simple_clock();
+        deassert_all_op_start();
+    end
+
+endtask
+
+
+
+
 task assert_all_op_start;
 begin
     integer a;
     for(a = 0; a < SIZE*SIZE*SIZE; a++)
         begin   
-            OP_START[a] <= 1;
+            OP_START[a] = 1;
         end
 end
 endtask 
@@ -123,7 +156,7 @@ begin
     integer b;
     for(b = 0; b < SIZE*SIZE*SIZE; b++)
         begin   
-            OP_START[b] <= 0;
+            OP_START[b] = 0;
         end
 end
 endtask
