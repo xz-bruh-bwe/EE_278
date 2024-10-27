@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_bfloat16_matrix_multiplier_behav/xsimk.exe -simmode gui -wdb tb_bfloat16_matrix_multiplier_behav.wdb -simrunnum 0 -socket 59129
+Running: xsim.dir/tb_bfloat16_matrix_multiplier_behav/xsimk.exe -simmode gui -wdb tb_bfloat16_matrix_multiplier_behav.wdb -simrunnum 0 -socket 61851
 Design successfully loaded
-Design Loading Memory Usage: 8720 KB (Peak: 8720 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 7984 KB (Peak: 7984 KB)
+Design Loading CPU Usage: 46 ms
 Simulation completed
-Simulation Memory Usage: 9952 KB (Peak: 9952 KB)
-Simulation CPU Usage: 15 ms
+Simulation Memory Usage: 9168 KB (Peak: 9168 KB)
+Simulation CPU Usage: 77 ms

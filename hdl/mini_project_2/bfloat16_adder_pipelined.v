@@ -83,8 +83,8 @@ module bfloat16_adder_pipelined #(parameter N = 5'd16)
             mantB_shifted_stage2 <= mantB_stage1 >> exp_diff_stage2;
 
             // Carry over the signs
-            signA_stage2 <= signA_stage1; // ::The Signs are carried over in stage 2? Propagation problems
-            signB_stage2 <= signB_stage1; // ::The Signs are carried over in stage 2? Propagation problems
+            signA_stage2 <= signA_stage1; 
+            signB_stage2 <= signB_stage1; 
 
             op_fin[1] <= op_fin[0]; 
         end

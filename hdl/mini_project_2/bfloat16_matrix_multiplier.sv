@@ -17,13 +17,12 @@ module bfloat16_matrix_multiplier #(parameter N     = 5'd16,
     genvar i, j;
     genvar k;
 
-    wire [N-1:0] mult_result[SIZE*SIZE*SIZE-1:0];     // Wires for each of the 8 multiplier results (for a 2x2 matrix)
+    //----------------------------------------------------------------
+    wire [N-1:0] mult_result[SIZE*SIZE*SIZE-1:0];     
     wire         mult_op_finish[SIZE*SIZE*SIZE-1:0];
 
-
-    //wire [N-1:0] mult_result[SIZE*SIZE*SIZE-1:0];     // Wires for each of the 8 multiplier results (for a 2x2 matrix)
+    //----------------------------------------------------------------
     wire        adder_op_finish[SIZE*SIZE*SIZE-1:0];
-
     wire[N-1:0] partial_sum[SIZE*SIZE*2-1:0];
     wire        partial_sum_op_finish[SIZE*SIZE*2-1:0];
 
@@ -45,7 +44,7 @@ module bfloat16_matrix_multiplier #(parameter N     = 5'd16,
                 )
                 bfloat16_mult_pipelined(
                     .A        (A[i][k]   ),  //Input from matrix A
-                    .B        (B[k][j]   ),  //Input from matrix B (transposed s
+                    .B        (B[k][j]   ),  //Input from matrix B (transposed)
                     .clk      (clk       ), 
                     .rst_n    (rst_n     ), 
                     .op_start (OP_START[i * SIZE * SIZE + j * SIZE + k]), 
@@ -97,10 +96,7 @@ endgenerate
         end
     endgenerate
 
-        
-
-
-
+    
 endmodule 
         
     

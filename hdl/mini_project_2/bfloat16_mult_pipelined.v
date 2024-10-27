@@ -5,7 +5,7 @@ module bfloat16_mult_pipelined #(parameter N = 5'd16)
     input           clk,        // Clock
     input           rst_n,        // Reset
     input           op_start,    // Operation Start
-    output wire      op_finish,   //
+    output wire     op_finish,   //
     output reg [N-1:0] result   // Bfloat16 output
 );
 

@@ -2,10 +2,10 @@
 2020.2
 May  7 2023
 15:24:31
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v,1729972085,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_mult_pipelined.v,,bfloat16_adder_pipelined,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier.sv,1729972085,systemVerilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv,,bfloat16_matrix_multiplier,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_mult_pipelined.v,1729972085,verilog,,,,bfloat16_mult_pipelined,,uvm,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v,1730016198,verilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_mult_pipelined.v,,bfloat16_adder_pipelined,,uvm,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier.sv,1730006428,systemVerilog,,C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv,,bfloat16_matrix_multiplier,,uvm,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_mult_pipelined.v,1730013603,verilog,,,,bfloat16_mult_pipelined,,uvm,,,,,,
 C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_adder_pipelined.sv,1729483207,systemVerilog,,,,tb_bfloat16_adder_pipelined,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv,1729979725,systemVerilog,,,,tb_bfloat16_matrix_multiplier,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_mult_pipelined.sv,1729482353,systemVerilog,,,,tb_bfloat16_mult_pipelined,,uvm,,,,,,
-C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv,1730005038,systemVerilog,,,,tb_bfloat16_matrix_multiplier,,uvm,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_mult_pipelined.sv,1730016994,systemVerilog,,,,tb_bfloat16_mult_pipelined,,uvm,,,,,,
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.sim/sim_1/behav/xsim/glbl.v,1729384493,verilog,,,,glbl,,uvm,,,,,,
