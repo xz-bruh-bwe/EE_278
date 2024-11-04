@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vitis HLS Report for 'adap_fir_Pipeline_Shift_Accum_Loop'
+================================================================
+* Date:           Sun Nov  3 12:02:30 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        adap_fir_proj
+* Solution:       adap_fir (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      128|      128|  1.280 us|  1.280 us|  128|  128|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Shift_Accum_Loop  |      126|      126|        12|          5|          1|    24|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|     47|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      -|      -|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|    155|    -|
+|Register         |        -|   -|    286|     32|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|    286|    234|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      120|  80|  35200|  17600|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|      1|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln25_fu_180_p2   |         +|   0|  0|  14|           6|           2|
+    |add_ln30_fu_169_p2   |         +|   0|  0|  13|           5|           2|
+    |ap_condition_343     |       and|   0|  0|   2|           1|           1|
+    |ap_condition_346     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln26_fu_163_p2  |      icmp|   0|  0|  14|           6|           1|
+    |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  47|          20|           9|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------+----+-----------+-----+-----------+
+    |                 Name                | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |acc_fu_50                            |   9|          2|   32|         64|
+    |ap_NS_fsm                            |  31|          6|    1|          6|
+    |ap_done_int                          |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2              |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg     |   9|          2|    1|          2|
+    |ap_phi_reg_pp0_iter1_mul_pn_reg_114  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_acc_load            |   9|          2|   32|         64|
+    |ap_sig_allocacmp_i_1                 |   9|          2|    6|         12|
+    |i_fu_54                              |   9|          2|    6|         12|
+    |shift_reg_address0                   |  20|          4|    5|         20|
+    |shift_reg_d0                         |  14|          3|   32|         96|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Total                                | 155|         33|  151|        348|
+    +-------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+----+----+-----+-----------+
+    |                 Name                | FF | LUT| Bits| Const Bits|
+    +-------------------------------------+----+----+-----+-----------+
+    |acc_1_reg_270                        |  32|   0|   32|          0|
+    |acc_fu_50                            |  32|   0|   32|          0|
+    |ap_CS_fsm                            |   5|   0|    5|          0|
+    |ap_done_reg                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg     |   1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter0_mul_pn_reg_114  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter1_mul_pn_reg_114  |  32|   0|   32|          0|
+    |coeffs_1_load_reg_255                |  32|   0|   32|          0|
+    |i_1_reg_222                          |   6|   0|    6|          0|
+    |i_cast1_reg_231                      |   6|   0|   64|         58|
+    |i_fu_54                              |   6|   0|    6|          0|
+    |icmp_ln26_reg_236                    |   1|   0|    1|          0|
+    |shift_reg_load_reg_250               |  32|   0|   32|          0|
+    |tmp_reg_227                          |   1|   0|    1|          0|
+    |tmp_reg_227                          |  64|  32|    1|          0|
+    +-------------------------------------+----+----+-----+-----------+
+    |Total                                | 286|  32|  281|         58|
+    +-------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+------------------------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++---------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_din0    |  out|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_din1    |  out|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_opcode  |  out|    2|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_dout0   |   in|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_ce      |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_102_p_din0    |  out|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_102_p_din1    |  out|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_102_p_dout0   |   in|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_102_p_ce      |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|mul                  |   in|   32|     ap_none|                                 mul|        scalar|
+|x                    |   in|   32|     ap_none|                                   x|        scalar|
+|acc_out              |  out|   32|      ap_vld|                             acc_out|       pointer|
+|acc_out_ap_vld       |  out|    1|      ap_vld|                             acc_out|       pointer|
+|shift_reg_address0   |  out|    5|   ap_memory|                           shift_reg|         array|
+|shift_reg_ce0        |  out|    1|   ap_memory|                           shift_reg|         array|
+|shift_reg_we0        |  out|    1|   ap_memory|                           shift_reg|         array|
+|shift_reg_d0         |  out|   32|   ap_memory|                           shift_reg|         array|
+|shift_reg_q0         |   in|   32|   ap_memory|                           shift_reg|         array|
+|coeffs_1_address0    |  out|    5|   ap_memory|                            coeffs_1|         array|
+|coeffs_1_ce0         |  out|    1|   ap_memory|                            coeffs_1|         array|
+|coeffs_1_q0          |   in|   32|   ap_memory|                            coeffs_1|         array|
++---------------------+-----+-----+------------+------------------------------------+--------------+
+

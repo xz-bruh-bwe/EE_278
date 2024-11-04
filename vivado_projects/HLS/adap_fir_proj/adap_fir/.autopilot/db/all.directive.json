@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "adap_fir",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "adap_fir"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/adap_fir_proj/adap_fir/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "adap_fir",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "adap_fir"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/adap_fir_proj/adap_fir/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="HLS_Code/adap_fir.c" line="11" pragmaType="interface" parentfunction="adap_fir" mode="s_axilite" port="" bundle="fir_io" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS_Code/adap_fir.c" line="12" pragmaType="interface" parentfunction="adap_fir" mode="s_axilite" port="y" bundle="fir_io" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS_Code/adap_fir.c" line="13" pragmaType="interface" parentfunction="adap_fir" mode="s_axilite" port="x" bundle="fir_io" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS_Code/adap_fir.c" line="14" pragmaType="interface" parentfunction="adap_fir" mode="s_axilite" port="d" bundle="fir_io" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

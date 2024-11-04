@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14_1" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14_2" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14_3" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14_4" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14_5" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14_6" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14_7" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14_8" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" VARIABLE="add_ln14_9" MODULE="array_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="AXI_LITE_s_axi_U" SOURCE="" VARIABLE="" MODULE="array_add" LOOP="" BUNDLEDNAME="AXI_LITE" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

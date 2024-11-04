@@ -1,0 +1,7 @@
+<pragmas>
+<pragma file="HLS_Code/array_add.cpp" line="11" pragmaType="pipeline" parentfunction="array_add" off="0" ii="1" style=""/>
+<pragma file="HLS_Code/array_add.cpp" line="6" pragmaType="interface" parentfunction="array_add" mode="s_axilite" port="a" bundle="AXI_LITE" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS_Code/array_add.cpp" line="7" pragmaType="interface" parentfunction="array_add" mode="s_axilite" port="b" bundle="AXI_LITE" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS_Code/array_add.cpp" line="8" pragmaType="interface" parentfunction="array_add" mode="s_axilite" port="result" bundle="AXI_LITE" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS_Code/array_add.cpp" line="9" pragmaType="interface" parentfunction="array_add" mode="s_axilite" port="" bundle="AXI_LITE" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

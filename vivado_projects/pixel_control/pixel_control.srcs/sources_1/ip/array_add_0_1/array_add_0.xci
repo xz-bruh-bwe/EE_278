@@ -1,0 +1,99 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "array_add_0",
+    "component_reference": "xilinx.com:hls:array_add:1.0",
+    "ip_revision": "2113805070",
+    "gen_directory": "../../../../pixel_control.gen/sources_1/ip/array_add_0_1",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "array_add_0", "resolve_type": "user", "usage": "all" } ],
+        "clk_period": [ { "value": "10", "enabled": false, "usage": "all" } ],
+        "machine": [ { "value": "64", "enabled": false, "usage": "all" } ],
+        "combinational": [ { "value": "1", "enabled": false, "usage": "all" } ],
+        "latency": [ { "value": "0", "enabled": false, "usage": "all" } ],
+        "II": [ { "value": "x", "enabled": false, "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z007s" } ],
+        "PACKAGE": [ { "value": "clg225" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Flow" } ],
+        "IPREVISION": [ { "value": "2113805070" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../pixel_control.gen/sources_1/ip/array_add_0_1" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "." } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "ap_start": [ { "direction": "in" } ],
+        "ap_done": [ { "direction": "out" } ],
+        "ap_idle": [ { "direction": "out" } ],
+        "ap_ready": [ { "direction": "out" } ],
+        "a": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "b": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "result": [ { "direction": "out", "size_left": "31", "size_right": "0" } ]
+      },
+      "interfaces": {
+        "ap_ctrl": {
+          "vlnv": "xilinx.com:interface:acc_handshake:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_handshake_rtl:1.0",
+          "mode": "slave",
+          "port_maps": {
+            "start": [ { "physical_name": "ap_start" } ],
+            "done": [ { "physical_name": "ap_done" } ],
+            "idle": [ { "physical_name": "ap_idle" } ],
+            "ready": [ { "physical_name": "ap_ready" } ]
+          }
+        },
+        "a": {
+          "vlnv": "xilinx.com:signal:data:1.0",
+          "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "LAYERED_METADATA": [ { "value": "undef", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "DATA": [ { "physical_name": "a" } ]
+          }
+        },
+        "b": {
+          "vlnv": "xilinx.com:signal:data:1.0",
+          "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "LAYERED_METADATA": [ { "value": "undef", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "DATA": [ { "physical_name": "b" } ]
+          }
+        },
+        "result": {
+          "vlnv": "xilinx.com:signal:data:1.0",
+          "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
+          "mode": "master",
+          "parameters": {
+            "LAYERED_METADATA": [ { "value": "undef", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "DATA": [ { "physical_name": "result" } ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/adap_fir_proj/adap_fir/csynth.tcl:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=adap_fir_XLX_SEP_ PragmaOptions=name=adap_fir_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=adap_fir
+        ^
+C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/adap_fir_proj/adap_fir/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=adap_fir_XLX_SEP_ PragmaOptions=name=adap_fir_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=adap_fir
+        ^
+HLS_Code/adap_fir.c:11:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=adap_fir_XLX_SEP_ PragmaOptions=s_axilite bundle=fir_io port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite bundle=fir_io port=return
+        ^
+HLS_Code/adap_fir.c:12:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=adap_fir_XLX_SEP_ PragmaOptions=s_axilite bundle=fir_io port=y_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite bundle=fir_io port=y
+        ^
+HLS_Code/adap_fir.c:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=adap_fir_XLX_SEP_ PragmaOptions=s_axilite bundle=fir_io port=x_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite bundle=fir_io port=x
+        ^
+HLS_Code/adap_fir.c:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=adap_fir_XLX_SEP_ PragmaOptions=s_axilite bundle=fir_io port=d_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite bundle=fir_io port=d
+        ^
+6 warnings generated.

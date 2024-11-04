@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Oct 25 14:05:17 2024
-# Process ID: 19896
+# Start of session at: Thu Oct 31 19:38:38 2024
+# Process ID: 17892
 # Current directory: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1
-# Command line: vivado.exe -log bfloat16_matrix_multiplier.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bfloat16_matrix_multiplier.tcl
-# Log file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1/bfloat16_matrix_multiplier.vds
+# Command line: vivado.exe -log bfloat16_matrix_multiplier_4x4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bfloat16_matrix_multiplier_4x4.tcl
+# Log file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1/bfloat16_matrix_multiplier_4x4.vds
 # Journal file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1\vivado.jou
 # Running On: DESKTOP-D2NNA1U, OS: Windows, CPU Frequency: 3700 MHz, CPU Physical cores: 16, Host memory: 17101 MB
 #-----------------------------------------------------------
-source bfloat16_matrix_multiplier.tcl -notrace
+source bfloat16_matrix_multiplier_4x4.tcl -notrace

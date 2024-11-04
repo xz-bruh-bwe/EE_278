@@ -1,0 +1,26 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: HLS_Code/array_add.cpp, Line: 13, Column: 19 }
+Function:        _Z9array_addPKiS0_Pi
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: HLS_Code/array_add.cpp, Line: 5, Column: 0 }
+Function:        _Z9array_addPKiS0_Pi
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' ('
+  - LoopLoc:         'HLS_Code/array_add.cpp:13:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          array_add
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...

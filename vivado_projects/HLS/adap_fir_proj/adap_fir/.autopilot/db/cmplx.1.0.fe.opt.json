@@ -1,0 +1,18 @@
+{
+  "0": {
+    "basicblocks": 14,
+    "calls": "",
+    "file": "adap_fir.c",
+    "fileloc": 6,
+    "instructions": 58,
+    "loads": {
+      "G": 6
+    },
+    "name": "adap_fir",
+    "stores": {
+      "G": 3,
+      "T": 1
+    },
+    "total_instructions": 58
+  }
+}

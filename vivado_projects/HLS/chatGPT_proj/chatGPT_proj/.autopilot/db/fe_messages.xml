@@ -1,0 +1,30 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=array_add" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=array_add" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/array_add.cpp:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="array_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=a bundle=AXI_LITE" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/array_add.cpp:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="array_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=b bundle=AXI_LITE" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/array_add.cpp:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="array_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=result bundle=AXI_LITE" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/array_add.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="array_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=AXI_LITE" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/array_add.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="array_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="HLS_Code/array_add.cpp:13:19" msg_body="Loop 'VITIS_LOOP_13_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_13_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="HLS_Code/array_add.cpp:5:0" msg_body="Unrolling loop 'VITIS_LOOP_13_1' (HLS_Code/array_add.cpp:13:19) in function 'array_add' completely with a factor of 10">
+        <args Factor="10" LoopLoc="HLS_Code/array_add.cpp:13:19" LoopName="VITIS_LOOP_13_1"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

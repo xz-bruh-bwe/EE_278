@@ -1,0 +1,514 @@
+<profile>
+    <ReportVersion>
+        <Version>2023.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg400-1</Part>
+        <TopModelName>array_add</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <TargetInitiationInterval>1</TargetInitiationInterval>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>yes</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.196</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>10</Best-caseLatency>
+            <Average-caseLatency>10</Average-caseLatency>
+            <Worst-caseLatency>10</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
+            <PipelineInitiationInterval>10</PipelineInitiationInterval>
+            <PipelineDepth>11</PipelineDepth>
+            <Interval-min>10</Interval-min>
+            <Interval-max>10</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <FF>288</FF>
+            <LUT>560</LUT>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_AWVALID</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_AWREADY</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_AWADDR</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_WVALID</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_WREADY</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_WDATA</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_WSTRB</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_ARVALID</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_ARREADY</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_ARADDR</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_RVALID</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_RREADY</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_RDATA</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_RRESP</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_BVALID</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_BREADY</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_AXI_LITE_BRESP</name>
+            <Object>AXI_LITE</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>array_add</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>array_add</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>interrupt</name>
+            <Object>array_add</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>array_add</ModuleName>
+            <BindInstances>result_d0 result_d0 result_d0 result_d0 result_d0 result_d0 result_d0 result_d0 result_d0 result_d0</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>array_add</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.196</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>10</Best-caseLatency>
+                    <Average-caseLatency>10</Average-caseLatency>
+                    <Worst-caseLatency>10</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>10</PipelineInitiationInterval>
+                    <PipelineDepth>11</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>288</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>560</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_d0" SOURCE="HLS_Code/array_add.cpp:14" URAM="0" VARIABLE="add_ln14_9"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_export output="C:/Users/Baron/Documents/Grad_School/EE_278/HLS_exports"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="a" index="0" direction="in" srcType="int const *" srcSize="32">
+            <hwRefs>
+                <hwRef type="memory" interface="s_axi_AXI_LITE" name="a" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="b" index="1" direction="in" srcType="int const *" srcSize="32">
+            <hwRefs>
+                <hwRef type="memory" interface="s_axi_AXI_LITE" name="b" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="result" index="2" direction="out" srcType="int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="memory" interface="s_axi_AXI_LITE" name="result" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_AXI_LITE" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="8" portPrefix="s_axi_AXI_LITE_" paramPrefix="C_S_AXI_AXI_LITE_">
+            <ports>
+                <port>s_axi_AXI_LITE_ARADDR</port>
+                <port>s_axi_AXI_LITE_ARREADY</port>
+                <port>s_axi_AXI_LITE_ARVALID</port>
+                <port>s_axi_AXI_LITE_AWADDR</port>
+                <port>s_axi_AXI_LITE_AWREADY</port>
+                <port>s_axi_AXI_LITE_AWVALID</port>
+                <port>s_axi_AXI_LITE_BREADY</port>
+                <port>s_axi_AXI_LITE_BRESP</port>
+                <port>s_axi_AXI_LITE_BVALID</port>
+                <port>s_axi_AXI_LITE_RDATA</port>
+                <port>s_axi_AXI_LITE_RREADY</port>
+                <port>s_axi_AXI_LITE_RRESP</port>
+                <port>s_axi_AXI_LITE_RVALID</port>
+                <port>s_axi_AXI_LITE_WDATA</port>
+                <port>s_axi_AXI_LITE_WREADY</port>
+                <port>s_axi_AXI_LITE_WSTRB</port>
+                <port>s_axi_AXI_LITE_WVALID</port>
+            </ports>
+            <memories>
+                <memorie memorieName="a" offset="64" range="64"/>
+                <memorie memorieName="b" offset="128" range="64"/>
+                <memorie memorieName="result" offset="192" range="64"/>
+            </memories>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64" argName="a"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="128" argName="b"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="192" argName="result"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_AXI_LITE</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
+            </portMaps>
+            <ports>
+                <port>interrupt</port>
+            </ports>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table>
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_AXI_LITE">32, 8, 64, 0</column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table>
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_AXI_LITE">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_AXI_LITE">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_AXI_LITE">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_AXI_LITE">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="interrupt">interrupt, interrupt</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="a">in, int const *</column>
+                    <column name="b">in, int const *</column>
+                    <column name="result">out, int*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <column name="a">s_axi_AXI_LITE, memory, name=a offset=64 range=64</column>
+                    <column name="b">s_axi_AXI_LITE, memory, name=b offset=128 range=64</column>
+                    <column name="result">s_axi_AXI_LITE, memory, name=result offset=192 range=64</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="interface" location="HLS_Code/array_add.cpp:6" status="valid" parentFunction="array_add" variable="a" isDirective="0" options="s_axilite port=a bundle=AXI_LITE"/>
+        <Pragma type="interface" location="HLS_Code/array_add.cpp:7" status="valid" parentFunction="array_add" variable="b" isDirective="0" options="s_axilite port=b bundle=AXI_LITE"/>
+        <Pragma type="interface" location="HLS_Code/array_add.cpp:8" status="valid" parentFunction="array_add" variable="result" isDirective="0" options="s_axilite port=result bundle=AXI_LITE"/>
+        <Pragma type="interface" location="HLS_Code/array_add.cpp:9" status="valid" parentFunction="array_add" variable="return" isDirective="0" options="s_axilite port=return bundle=AXI_LITE"/>
+        <Pragma type="pipeline" location="HLS_Code/array_add.cpp:11" status="valid" parentFunction="array_add" variable="" isDirective="0" options="II=1"/>
+    </PragmaReport>
+</profile>
+

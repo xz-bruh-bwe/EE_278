@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array_add.cpp",
+    "fileloc": 5,
+    "instructions": 86,
+    "loads": {
+      "T": 20
+    },
+    "name": "array_add",
+    "stores": {
+      "T": 10
+    },
+    "total_instructions": 86
+  }
+}

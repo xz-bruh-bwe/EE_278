@@ -1,0 +1,1352 @@
+
+
+================================================================
+== Vitis HLS Report for 'adap_fir_Pipeline_Shift_Accum_Loop'
+================================================================
+* Date:           Sun Nov  3 12:02:31 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        adap_fir_proj
+* Solution:       adap_fir (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      128|      128|  1.280 us|  1.280 us|  128|  128|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Shift_Accum_Loop  |      126|      126|        12|          5|          1|    24|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|     47|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      -|      -|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|    155|    -|
+|Register         |        -|   -|    286|     32|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|    286|    234|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      120|  80|  35200|  17600|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|      1|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln25_fu_180_p2   |         +|   0|  0|  14|           6|           2|
+    |add_ln30_fu_169_p2   |         +|   0|  0|  13|           5|           2|
+    |ap_condition_343     |       and|   0|  0|   2|           1|           1|
+    |ap_condition_346     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln26_fu_163_p2  |      icmp|   0|  0|  14|           6|           1|
+    |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  47|          20|           9|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------+----+-----------+-----+-----------+
+    |                 Name                | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |acc_fu_50                            |   9|          2|   32|         64|
+    |ap_NS_fsm                            |  31|          6|    1|          6|
+    |ap_done_int                          |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2              |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg     |   9|          2|    1|          2|
+    |ap_phi_reg_pp0_iter1_mul_pn_reg_114  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_acc_load            |   9|          2|   32|         64|
+    |ap_sig_allocacmp_i_1                 |   9|          2|    6|         12|
+    |i_fu_54                              |   9|          2|    6|         12|
+    |shift_reg_address0                   |  20|          4|    5|         20|
+    |shift_reg_d0                         |  14|          3|   32|         96|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Total                                | 155|         33|  151|        348|
+    +-------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+----+----+-----+-----------+
+    |                 Name                | FF | LUT| Bits| Const Bits|
+    +-------------------------------------+----+----+-----+-----------+
+    |acc_1_reg_270                        |  32|   0|   32|          0|
+    |acc_fu_50                            |  32|   0|   32|          0|
+    |ap_CS_fsm                            |   5|   0|    5|          0|
+    |ap_done_reg                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg     |   1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter0_mul_pn_reg_114  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter1_mul_pn_reg_114  |  32|   0|   32|          0|
+    |coeffs_1_load_reg_255                |  32|   0|   32|          0|
+    |i_1_reg_222                          |   6|   0|    6|          0|
+    |i_cast1_reg_231                      |   6|   0|   64|         58|
+    |i_fu_54                              |   6|   0|    6|          0|
+    |icmp_ln26_reg_236                    |   1|   0|    1|          0|
+    |shift_reg_load_reg_250               |  32|   0|   32|          0|
+    |tmp_reg_227                          |   1|   0|    1|          0|
+    |tmp_reg_227                          |  64|  32|    1|          0|
+    +-------------------------------------+----+----+-----+-----------+
+    |Total                                | 286|  32|  281|         58|
+    +-------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+------------------------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++---------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_din0    |  out|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_din1    |  out|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_opcode  |  out|    2|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_dout0   |   in|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_151_p_ce      |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_102_p_din0    |  out|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_102_p_din1    |  out|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_102_p_dout0   |   in|   32|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|grp_fu_102_p_ce      |  out|    1|  ap_ctrl_hs|  adap_fir_Pipeline_Shift_Accum_Loop|  return value|
+|mul                  |   in|   32|     ap_none|                                 mul|        scalar|
+|x                    |   in|   32|     ap_none|                                   x|        scalar|
+|acc_out              |  out|   32|      ap_vld|                             acc_out|       pointer|
+|acc_out_ap_vld       |  out|    1|      ap_vld|                             acc_out|       pointer|
+|shift_reg_address0   |  out|    5|   ap_memory|                           shift_reg|         array|
+|shift_reg_ce0        |  out|    1|   ap_memory|                           shift_reg|         array|
+|shift_reg_we0        |  out|    1|   ap_memory|                           shift_reg|         array|
+|shift_reg_d0         |  out|   32|   ap_memory|                           shift_reg|         array|
+|shift_reg_q0         |   in|   32|   ap_memory|                           shift_reg|         array|
+|coeffs_1_address0    |  out|    5|   ap_memory|                            coeffs_1|         array|
+|coeffs_1_ce0         |  out|    1|   ap_memory|                            coeffs_1|         array|
+|coeffs_1_q0          |   in|   32|   ap_memory|                            coeffs_1|         array|
++---------------------+-----+-----+------------+------------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 5, depth = 12
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 1
+  Pipeline-0 : II = 5, D = 12, States = { 1 2 3 4 5 6 7 8 9 10 11 12 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.12>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%acc = alloca i32 1"   --->   Operation 15 'alloca' 'acc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 16 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %x"   --->   Operation 17 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%mul_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mul"   --->   Operation 18 'read' 'mul_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln0 = store i6 23, i6 %i"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 20 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %acc"   --->   Operation 20 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 21 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%i_1 = load i6 %i"   --->   Operation 22 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 23 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i6.i32, i6 %i_1, i32 5" [HLS_Code/adap_fir.c:25]   --->   Operation 24 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln25 = br i1 %tmp, void %for.body.split, void %for.end.exitStub" [HLS_Code/adap_fir.c:25]   --->   Operation 25 'br' 'br_ln25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%i_cast1 = zext i6 %i_1"   --->   Operation 26 'zext' 'i_cast1' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%empty = trunc i6 %i_1"   --->   Operation 27 'trunc' 'empty' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%speclooptripcount_ln21 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 24, i64 24, i64 24" [HLS_Code/adap_fir.c:21]   --->   Operation 28 'speclooptripcount' 'speclooptripcount_ln21' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specloopname_ln25 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [HLS_Code/adap_fir.c:25]   --->   Operation 29 'specloopname' 'specloopname_ln25' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (1.82ns)   --->   "%icmp_ln26 = icmp_eq  i6 %i_1, i6 0" [HLS_Code/adap_fir.c:26]   --->   Operation 30 'icmp' 'icmp_ln26' <Predicate = (!tmp)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln26 = br i1 %icmp_ln26, void %if.else, void %if.then" [HLS_Code/adap_fir.c:26]   --->   Operation 31 'br' 'br_ln26' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.78ns)   --->   "%add_ln30 = add i5 %empty, i5 31" [HLS_Code/adap_fir.c:30]   --->   Operation 32 'add' 'add_ln30' <Predicate = (!tmp & !icmp_ln26)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln30 = zext i5 %add_ln30" [HLS_Code/adap_fir.c:30]   --->   Operation 33 'zext' 'zext_ln30' <Predicate = (!tmp & !icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%shift_reg_addr = getelementptr i32 %shift_reg, i64 0, i64 %zext_ln30" [HLS_Code/adap_fir.c:30]   --->   Operation 34 'getelementptr' 'shift_reg_addr' <Predicate = (!tmp & !icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 35 [2/2] (2.32ns)   --->   "%shift_reg_load = load i5 %shift_reg_addr" [HLS_Code/adap_fir.c:30]   --->   Operation 35 'load' 'shift_reg_load' <Predicate = (!tmp & !icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 24> <RAM>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%coeffs_1_addr = getelementptr i32 %coeffs_1, i64 0, i64 %i_cast1" [HLS_Code/adap_fir.c:31]   --->   Operation 36 'getelementptr' 'coeffs_1_addr' <Predicate = (!tmp & !icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 37 [2/2] (2.32ns)   --->   "%coeffs_1_load = load i5 %coeffs_1_addr" [HLS_Code/adap_fir.c:31]   --->   Operation 37 'load' 'coeffs_1_load' <Predicate = (!tmp & !icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 24> <RAM>
+ST_1 : Operation 38 [1/1] (2.32ns)   --->   "%store_ln28 = store i32 %x_read, i32 0" [HLS_Code/adap_fir.c:28]   --->   Operation 38 'store' 'store_ln28' <Predicate = (!tmp & icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 24> <RAM>
+ST_1 : Operation 39 [1/1] (1.58ns)   --->   "%br_ln29 = br void %for.inc" [HLS_Code/adap_fir.c:29]   --->   Operation 39 'br' 'br_ln29' <Predicate = (!tmp & icmp_ln26)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 4.64>
+ST_2 : Operation 40 [1/2] (2.32ns)   --->   "%shift_reg_load = load i5 %shift_reg_addr" [HLS_Code/adap_fir.c:30]   --->   Operation 40 'load' 'shift_reg_load' <Predicate = (!tmp & !icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 24> <RAM>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%shift_reg_addr_1 = getelementptr i32 %shift_reg, i64 0, i64 %i_cast1" [HLS_Code/adap_fir.c:30]   --->   Operation 41 'getelementptr' 'shift_reg_addr_1' <Predicate = (!tmp & !icmp_ln26)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (2.32ns)   --->   "%store_ln30 = store i32 %shift_reg_load, i5 %shift_reg_addr_1" [HLS_Code/adap_fir.c:30]   --->   Operation 42 'store' 'store_ln30' <Predicate = (!tmp & !icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 24> <RAM>
+ST_2 : Operation 43 [1/2] (2.32ns)   --->   "%coeffs_1_load = load i5 %coeffs_1_addr" [HLS_Code/adap_fir.c:31]   --->   Operation 43 'load' 'coeffs_1_load' <Predicate = (!tmp & !icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 24> <RAM>
+
+State 3 <SV = 2> <Delay = 5.70>
+ST_3 : [1/1] (1.82ns)   --->   Input mux for Operation 44 '%mul8 = fmul i32 %shift_reg_load, i32 %coeffs_1_load'
+ST_3 : Operation 44 [4/4] (3.87ns)   --->   "%mul8 = fmul i32 %shift_reg_load, i32 %coeffs_1_load" [HLS_Code/adap_fir.c:31]   --->   Operation 44 'fmul' 'mul8' <Predicate = (!tmp & !icmp_ln26)> <Delay = 3.87> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 5.70>
+ST_4 : Operation 45 [3/4] (5.70ns)   --->   "%mul8 = fmul i32 %shift_reg_load, i32 %coeffs_1_load" [HLS_Code/adap_fir.c:31]   --->   Operation 45 'fmul' 'mul8' <Predicate = (!tmp & !icmp_ln26)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 5.70>
+ST_5 : Operation 46 [2/4] (5.70ns)   --->   "%mul8 = fmul i32 %shift_reg_load, i32 %coeffs_1_load" [HLS_Code/adap_fir.c:31]   --->   Operation 46 'fmul' 'mul8' <Predicate = (!tmp & !icmp_ln26)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 47 [1/1] (1.82ns)   --->   "%add_ln25 = add i6 %i_1, i6 63" [HLS_Code/adap_fir.c:25]   --->   Operation 47 'add' 'add_ln25' <Predicate = (!tmp)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 48 [1/1] (1.58ns)   --->   "%store_ln25 = store i6 %add_ln25, i6 %i" [HLS_Code/adap_fir.c:25]   --->   Operation 48 'store' 'store_ln25' <Predicate = (!tmp)> <Delay = 1.58>
+
+State 6 <SV = 5> <Delay = 5.70>
+ST_6 : Operation 49 [1/4] (5.70ns)   --->   "%mul8 = fmul i32 %shift_reg_load, i32 %coeffs_1_load" [HLS_Code/adap_fir.c:31]   --->   Operation 49 'fmul' 'mul8' <Predicate = (!tmp & !icmp_ln26)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 50 [1/1] (1.58ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 50 'br' 'br_ln0' <Predicate = (!tmp & !icmp_ln26)> <Delay = 1.58>
+
+State 7 <SV = 6> <Delay = 7.25>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%mul_pn = phi i32 %mul_read, void %if.then, i32 %mul8, void %if.else" [HLS_Code/adap_fir.c:31]   --->   Operation 51 'phi' 'mul_pn' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (0.00ns)   --->   "%acc_load = load i32 %acc" [HLS_Code/adap_fir.c:21]   --->   Operation 52 'load' 'acc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : [1/1] (1.58ns)   --->   Input mux for Operation 53 '%acc_1 = fadd i32 %acc_load, i32 %mul_pn'
+ST_7 : Operation 53 [5/5] (5.66ns)   --->   "%acc_1 = fadd i32 %acc_load, i32 %mul_pn" [HLS_Code/adap_fir.c:21]   --->   Operation 53 'fadd' 'acc_1' <Predicate = true> <Delay = 5.66> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "%acc_load_1 = load i32 %acc"   --->   Operation 60 'load' 'acc_load_1' <Predicate = (tmp)> <Delay = 0.00>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %acc_out, i32 %acc_load_1"   --->   Operation 61 'write' 'write_ln0' <Predicate = (tmp)> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 62 'ret' 'ret_ln0' <Predicate = (tmp)> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 7.25>
+ST_8 : Operation 54 [4/5] (7.25ns)   --->   "%acc_1 = fadd i32 %acc_load, i32 %mul_pn" [HLS_Code/adap_fir.c:21]   --->   Operation 54 'fadd' 'acc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.25>
+ST_9 : Operation 55 [3/5] (7.25ns)   --->   "%acc_1 = fadd i32 %acc_load, i32 %mul_pn" [HLS_Code/adap_fir.c:21]   --->   Operation 55 'fadd' 'acc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.25>
+ST_10 : Operation 56 [2/5] (7.25ns)   --->   "%acc_1 = fadd i32 %acc_load, i32 %mul_pn" [HLS_Code/adap_fir.c:21]   --->   Operation 56 'fadd' 'acc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.25>
+ST_11 : Operation 57 [1/5] (7.25ns)   --->   "%acc_1 = fadd i32 %acc_load, i32 %mul_pn" [HLS_Code/adap_fir.c:21]   --->   Operation 57 'fadd' 'acc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 1.58>
+ST_12 : Operation 58 [1/1] (1.58ns)   --->   "%store_ln25 = store i32 %acc_1, i32 %acc" [HLS_Code/adap_fir.c:25]   --->   Operation 58 'store' 'store_ln25' <Predicate = true> <Delay = 1.58>
+ST_12 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln25 = br void %for.body" [HLS_Code/adap_fir.c:25]   --->   Operation 59 'br' 'br_ln25' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ mul]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ x]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ acc_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ shift_reg]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ coeffs_1]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+acc                    (alloca           ) [ 0111111111111]
+i                      (alloca           ) [ 0111110000000]
+x_read                 (read             ) [ 0000000000000]
+mul_read               (read             ) [ 0111111100000]
+store_ln0              (store            ) [ 0000000000000]
+store_ln0              (store            ) [ 0000000000000]
+br_ln0                 (br               ) [ 0000000000000]
+i_1                    (load             ) [ 0011110000000]
+specpipeline_ln0       (specpipeline     ) [ 0000000000000]
+tmp                    (bitselect        ) [ 0111111111111]
+br_ln25                (br               ) [ 0000000000000]
+i_cast1                (zext             ) [ 0010000000000]
+empty                  (trunc            ) [ 0000000000000]
+speclooptripcount_ln21 (speclooptripcount) [ 0000000000000]
+specloopname_ln25      (specloopname     ) [ 0000000000000]
+icmp_ln26              (icmp             ) [ 0111111111111]
+br_ln26                (br               ) [ 0000000000000]
+add_ln30               (add              ) [ 0000000000000]
+zext_ln30              (zext             ) [ 0000000000000]
+shift_reg_addr         (getelementptr    ) [ 0010000000000]
+coeffs_1_addr          (getelementptr    ) [ 0010000000000]
+store_ln28             (store            ) [ 0000000000000]
+br_ln29                (br               ) [ 0111111100000]
+shift_reg_load         (load             ) [ 0101111000000]
+shift_reg_addr_1       (getelementptr    ) [ 0000000000000]
+store_ln30             (store            ) [ 0000000000000]
+coeffs_1_load          (load             ) [ 0101111000000]
+add_ln25               (add              ) [ 0000000000000]
+store_ln25             (store            ) [ 0000000000000]
+mul8                   (fmul             ) [ 0110001100000]
+br_ln0                 (br               ) [ 0110001100000]
+mul_pn                 (phi              ) [ 0111110111110]
+acc_load               (load             ) [ 0101110011110]
+acc_1                  (fadd             ) [ 0010000000001]
+store_ln25             (store            ) [ 0000000000000]
+br_ln25                (br               ) [ 0000000000000]
+acc_load_1             (load             ) [ 0000000000000]
+write_ln0              (write            ) [ 0000000000000]
+ret_ln0                (ret              ) [ 0000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="mul">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mul"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="x">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="x"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="acc_out">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="acc_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="shift_reg">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="shift_reg"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="coeffs_1">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="coeffs_1"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.float"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitSelect.i1.i6.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_auto.floatP0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="acc_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="1" slack="0"/>
+<pin id="52" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="acc/1 "/>
+</bind>
+</comp>
+
+<comp id="54" class="1004" name="i_fu_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="1" slack="0"/>
+<pin id="56" dir="1" index="1" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="i/1 "/>
+</bind>
+</comp>
+
+<comp id="58" class="1004" name="x_read_read_fu_58">
+<pin_list>
+<pin id="59" dir="0" index="0" bw="32" slack="0"/>
+<pin id="60" dir="0" index="1" bw="32" slack="0"/>
+<pin id="61" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="x_read/1 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="mul_read_read_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="32" slack="0"/>
+<pin id="66" dir="0" index="1" bw="32" slack="0"/>
+<pin id="67" dir="1" index="2" bw="32" slack="6"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="mul_read/1 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="write_ln0_write_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="0" slack="0"/>
+<pin id="72" dir="0" index="1" bw="32" slack="0"/>
+<pin id="73" dir="0" index="2" bw="32" slack="0"/>
+<pin id="74" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/7 "/>
+</bind>
+</comp>
+
+<comp id="77" class="1004" name="shift_reg_addr_gep_fu_77">
+<pin_list>
+<pin id="78" dir="0" index="0" bw="32" slack="0"/>
+<pin id="79" dir="0" index="1" bw="1" slack="0"/>
+<pin id="80" dir="0" index="2" bw="5" slack="0"/>
+<pin id="81" dir="1" index="3" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="shift_reg_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="grp_access_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="5" slack="0"/>
+<pin id="86" dir="0" index="1" bw="32" slack="0"/>
+<pin id="87" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="88" dir="1" index="3" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="store"/>
+<opset="shift_reg_load/1 store_ln28/1 store_ln30/2 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1004" name="coeffs_1_addr_gep_fu_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="32" slack="0"/>
+<pin id="92" dir="0" index="1" bw="1" slack="0"/>
+<pin id="93" dir="0" index="2" bw="6" slack="0"/>
+<pin id="94" dir="1" index="3" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="coeffs_1_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="97" class="1004" name="grp_access_fu_97">
+<pin_list>
+<pin id="98" dir="0" index="0" bw="5" slack="0"/>
+<pin id="99" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="100" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="101" dir="1" index="3" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="coeffs_1_load/1 "/>
+</bind>
+</comp>
+
+<comp id="105" class="1004" name="shift_reg_addr_1_gep_fu_105">
+<pin_list>
+<pin id="106" dir="0" index="0" bw="32" slack="0"/>
+<pin id="107" dir="0" index="1" bw="1" slack="0"/>
+<pin id="108" dir="0" index="2" bw="6" slack="1"/>
+<pin id="109" dir="1" index="3" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="shift_reg_addr_1/2 "/>
+</bind>
+</comp>
+
+<comp id="114" class="1005" name="mul_pn_reg_114">
+<pin_list>
+<pin id="115" dir="0" index="0" bw="32" slack="1"/>
+<pin id="116" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="mul_pn (phireg) "/>
+</bind>
+</comp>
+
+<comp id="117" class="1004" name="mul_pn_phi_fu_117">
+<pin_list>
+<pin id="118" dir="0" index="0" bw="32" slack="6"/>
+<pin id="119" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="120" dir="0" index="2" bw="32" slack="1"/>
+<pin id="121" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="122" dir="1" index="4" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="mul_pn/7 "/>
+</bind>
+</comp>
+
+<comp id="124" class="1004" name="grp_fu_124">
+<pin_list>
+<pin id="125" dir="0" index="0" bw="32" slack="0"/>
+<pin id="126" dir="0" index="1" bw="32" slack="0"/>
+<pin id="127" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fadd(9) " fcode="fadd"/>
+<opset="acc_1/7 "/>
+</bind>
+</comp>
+
+<comp id="129" class="1004" name="grp_fu_129">
+<pin_list>
+<pin id="130" dir="0" index="0" bw="32" slack="1"/>
+<pin id="131" dir="0" index="1" bw="32" slack="1"/>
+<pin id="132" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fmul(13) " fcode="fmul"/>
+<opset="mul8/3 "/>
+</bind>
+</comp>
+
+<comp id="133" class="1004" name="store_ln0_store_fu_133">
+<pin_list>
+<pin id="134" dir="0" index="0" bw="6" slack="0"/>
+<pin id="135" dir="0" index="1" bw="6" slack="0"/>
+<pin id="136" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="138" class="1004" name="store_ln0_store_fu_138">
+<pin_list>
+<pin id="139" dir="0" index="0" bw="32" slack="0"/>
+<pin id="140" dir="0" index="1" bw="32" slack="0"/>
+<pin id="141" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="143" class="1004" name="i_1_load_fu_143">
+<pin_list>
+<pin id="144" dir="0" index="0" bw="6" slack="0"/>
+<pin id="145" dir="1" index="1" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="i_1/1 "/>
+</bind>
+</comp>
+
+<comp id="146" class="1004" name="tmp_fu_146">
+<pin_list>
+<pin id="147" dir="0" index="0" bw="1" slack="0"/>
+<pin id="148" dir="0" index="1" bw="6" slack="0"/>
+<pin id="149" dir="0" index="2" bw="4" slack="0"/>
+<pin id="150" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="bitselect(1000) " fcode="bitselect"/>
+<opset="tmp/1 "/>
+</bind>
+</comp>
+
+<comp id="154" class="1004" name="i_cast1_fu_154">
+<pin_list>
+<pin id="155" dir="0" index="0" bw="6" slack="0"/>
+<pin id="156" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="i_cast1/1 "/>
+</bind>
+</comp>
+
+<comp id="159" class="1004" name="empty_fu_159">
+<pin_list>
+<pin id="160" dir="0" index="0" bw="6" slack="0"/>
+<pin id="161" dir="1" index="1" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="empty/1 "/>
+</bind>
+</comp>
+
+<comp id="163" class="1004" name="icmp_ln26_fu_163">
+<pin_list>
+<pin id="164" dir="0" index="0" bw="6" slack="0"/>
+<pin id="165" dir="0" index="1" bw="6" slack="0"/>
+<pin id="166" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln26/1 "/>
+</bind>
+</comp>
+
+<comp id="169" class="1004" name="add_ln30_fu_169">
+<pin_list>
+<pin id="170" dir="0" index="0" bw="5" slack="0"/>
+<pin id="171" dir="0" index="1" bw="1" slack="0"/>
+<pin id="172" dir="1" index="2" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln30/1 "/>
+</bind>
+</comp>
+
+<comp id="175" class="1004" name="zext_ln30_fu_175">
+<pin_list>
+<pin id="176" dir="0" index="0" bw="5" slack="0"/>
+<pin id="177" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln30/1 "/>
+</bind>
+</comp>
+
+<comp id="180" class="1004" name="add_ln25_fu_180">
+<pin_list>
+<pin id="181" dir="0" index="0" bw="6" slack="4"/>
+<pin id="182" dir="0" index="1" bw="1" slack="0"/>
+<pin id="183" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln25/5 "/>
+</bind>
+</comp>
+
+<comp id="185" class="1004" name="store_ln25_store_fu_185">
+<pin_list>
+<pin id="186" dir="0" index="0" bw="6" slack="0"/>
+<pin id="187" dir="0" index="1" bw="6" slack="4"/>
+<pin id="188" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln25/5 "/>
+</bind>
+</comp>
+
+<comp id="190" class="1004" name="acc_load_load_fu_190">
+<pin_list>
+<pin id="191" dir="0" index="0" bw="32" slack="6"/>
+<pin id="192" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="acc_load/7 "/>
+</bind>
+</comp>
+
+<comp id="194" class="1004" name="store_ln25_store_fu_194">
+<pin_list>
+<pin id="195" dir="0" index="0" bw="32" slack="1"/>
+<pin id="196" dir="0" index="1" bw="32" slack="11"/>
+<pin id="197" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln25/12 "/>
+</bind>
+</comp>
+
+<comp id="198" class="1004" name="acc_load_1_load_fu_198">
+<pin_list>
+<pin id="199" dir="0" index="0" bw="32" slack="6"/>
+<pin id="200" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="acc_load_1/7 "/>
+</bind>
+</comp>
+
+<comp id="202" class="1005" name="acc_reg_202">
+<pin_list>
+<pin id="203" dir="0" index="0" bw="32" slack="0"/>
+<pin id="204" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opset="acc "/>
+</bind>
+</comp>
+
+<comp id="210" class="1005" name="i_reg_210">
+<pin_list>
+<pin id="211" dir="0" index="0" bw="6" slack="0"/>
+<pin id="212" dir="1" index="1" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opset="i "/>
+</bind>
+</comp>
+
+<comp id="217" class="1005" name="mul_read_reg_217">
+<pin_list>
+<pin id="218" dir="0" index="0" bw="32" slack="6"/>
+<pin id="219" dir="1" index="1" bw="32" slack="6"/>
+</pin_list>
+<bind>
+<opset="mul_read "/>
+</bind>
+</comp>
+
+<comp id="222" class="1005" name="i_1_reg_222">
+<pin_list>
+<pin id="223" dir="0" index="0" bw="6" slack="4"/>
+<pin id="224" dir="1" index="1" bw="6" slack="4"/>
+</pin_list>
+<bind>
+<opset="i_1 "/>
+</bind>
+</comp>
+
+<comp id="227" class="1005" name="tmp_reg_227">
+<pin_list>
+<pin id="228" dir="0" index="0" bw="1" slack="1"/>
+<pin id="229" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp "/>
+</bind>
+</comp>
+
+<comp id="231" class="1005" name="i_cast1_reg_231">
+<pin_list>
+<pin id="232" dir="0" index="0" bw="64" slack="1"/>
+<pin id="233" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="i_cast1 "/>
+</bind>
+</comp>
+
+<comp id="236" class="1005" name="icmp_ln26_reg_236">
+<pin_list>
+<pin id="237" dir="0" index="0" bw="1" slack="1"/>
+<pin id="238" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="icmp_ln26 "/>
+</bind>
+</comp>
+
+<comp id="240" class="1005" name="shift_reg_addr_reg_240">
+<pin_list>
+<pin id="241" dir="0" index="0" bw="5" slack="1"/>
+<pin id="242" dir="1" index="1" bw="5" slack="1"/>
+</pin_list>
+<bind>
+<opset="shift_reg_addr "/>
+</bind>
+</comp>
+
+<comp id="245" class="1005" name="coeffs_1_addr_reg_245">
+<pin_list>
+<pin id="246" dir="0" index="0" bw="5" slack="1"/>
+<pin id="247" dir="1" index="1" bw="5" slack="1"/>
+</pin_list>
+<bind>
+<opset="coeffs_1_addr "/>
+</bind>
+</comp>
+
+<comp id="250" class="1005" name="shift_reg_load_reg_250">
+<pin_list>
+<pin id="251" dir="0" index="0" bw="32" slack="1"/>
+<pin id="252" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="shift_reg_load "/>
+</bind>
+</comp>
+
+<comp id="255" class="1005" name="coeffs_1_load_reg_255">
+<pin_list>
+<pin id="256" dir="0" index="0" bw="32" slack="1"/>
+<pin id="257" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="coeffs_1_load "/>
+</bind>
+</comp>
+
+<comp id="260" class="1005" name="mul8_reg_260">
+<pin_list>
+<pin id="261" dir="0" index="0" bw="32" slack="1"/>
+<pin id="262" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="mul8 "/>
+</bind>
+</comp>
+
+<comp id="265" class="1005" name="acc_load_reg_265">
+<pin_list>
+<pin id="266" dir="0" index="0" bw="32" slack="1"/>
+<pin id="267" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="acc_load "/>
+</bind>
+</comp>
+
+<comp id="270" class="1005" name="acc_1_reg_270">
+<pin_list>
+<pin id="271" dir="0" index="0" bw="32" slack="1"/>
+<pin id="272" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="acc_1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="53"><net_src comp="10" pin="0"/><net_sink comp="50" pin=0"/></net>
+
+<net id="57"><net_src comp="10" pin="0"/><net_sink comp="54" pin=0"/></net>
+
+<net id="62"><net_src comp="12" pin="0"/><net_sink comp="58" pin=0"/></net>
+
+<net id="63"><net_src comp="2" pin="0"/><net_sink comp="58" pin=1"/></net>
+
+<net id="68"><net_src comp="12" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="69"><net_src comp="0" pin="0"/><net_sink comp="64" pin=1"/></net>
+
+<net id="75"><net_src comp="48" pin="0"/><net_sink comp="70" pin=0"/></net>
+
+<net id="76"><net_src comp="4" pin="0"/><net_sink comp="70" pin=1"/></net>
+
+<net id="82"><net_src comp="6" pin="0"/><net_sink comp="77" pin=0"/></net>
+
+<net id="83"><net_src comp="42" pin="0"/><net_sink comp="77" pin=1"/></net>
+
+<net id="89"><net_src comp="77" pin="3"/><net_sink comp="84" pin=0"/></net>
+
+<net id="95"><net_src comp="8" pin="0"/><net_sink comp="90" pin=0"/></net>
+
+<net id="96"><net_src comp="42" pin="0"/><net_sink comp="90" pin=1"/></net>
+
+<net id="102"><net_src comp="90" pin="3"/><net_sink comp="97" pin=0"/></net>
+
+<net id="103"><net_src comp="58" pin="2"/><net_sink comp="84" pin=1"/></net>
+
+<net id="104"><net_src comp="44" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="110"><net_src comp="6" pin="0"/><net_sink comp="105" pin=0"/></net>
+
+<net id="111"><net_src comp="42" pin="0"/><net_sink comp="105" pin=1"/></net>
+
+<net id="112"><net_src comp="84" pin="3"/><net_sink comp="84" pin=1"/></net>
+
+<net id="113"><net_src comp="105" pin="3"/><net_sink comp="84" pin=0"/></net>
+
+<net id="123"><net_src comp="117" pin="4"/><net_sink comp="114" pin=0"/></net>
+
+<net id="128"><net_src comp="117" pin="4"/><net_sink comp="124" pin=1"/></net>
+
+<net id="137"><net_src comp="14" pin="0"/><net_sink comp="133" pin=0"/></net>
+
+<net id="142"><net_src comp="16" pin="0"/><net_sink comp="138" pin=0"/></net>
+
+<net id="151"><net_src comp="26" pin="0"/><net_sink comp="146" pin=0"/></net>
+
+<net id="152"><net_src comp="143" pin="1"/><net_sink comp="146" pin=1"/></net>
+
+<net id="153"><net_src comp="28" pin="0"/><net_sink comp="146" pin=2"/></net>
+
+<net id="157"><net_src comp="143" pin="1"/><net_sink comp="154" pin=0"/></net>
+
+<net id="158"><net_src comp="154" pin="1"/><net_sink comp="90" pin=2"/></net>
+
+<net id="162"><net_src comp="143" pin="1"/><net_sink comp="159" pin=0"/></net>
+
+<net id="167"><net_src comp="143" pin="1"/><net_sink comp="163" pin=0"/></net>
+
+<net id="168"><net_src comp="38" pin="0"/><net_sink comp="163" pin=1"/></net>
+
+<net id="173"><net_src comp="159" pin="1"/><net_sink comp="169" pin=0"/></net>
+
+<net id="174"><net_src comp="40" pin="0"/><net_sink comp="169" pin=1"/></net>
+
+<net id="178"><net_src comp="169" pin="2"/><net_sink comp="175" pin=0"/></net>
+
+<net id="179"><net_src comp="175" pin="1"/><net_sink comp="77" pin=2"/></net>
+
+<net id="184"><net_src comp="46" pin="0"/><net_sink comp="180" pin=1"/></net>
+
+<net id="189"><net_src comp="180" pin="2"/><net_sink comp="185" pin=0"/></net>
+
+<net id="193"><net_src comp="190" pin="1"/><net_sink comp="124" pin=0"/></net>
+
+<net id="201"><net_src comp="198" pin="1"/><net_sink comp="70" pin=2"/></net>
+
+<net id="205"><net_src comp="50" pin="1"/><net_sink comp="202" pin=0"/></net>
+
+<net id="206"><net_src comp="202" pin="1"/><net_sink comp="138" pin=1"/></net>
+
+<net id="207"><net_src comp="202" pin="1"/><net_sink comp="190" pin=0"/></net>
+
+<net id="208"><net_src comp="202" pin="1"/><net_sink comp="194" pin=1"/></net>
+
+<net id="209"><net_src comp="202" pin="1"/><net_sink comp="198" pin=0"/></net>
+
+<net id="213"><net_src comp="54" pin="1"/><net_sink comp="210" pin=0"/></net>
+
+<net id="214"><net_src comp="210" pin="1"/><net_sink comp="133" pin=1"/></net>
+
+<net id="215"><net_src comp="210" pin="1"/><net_sink comp="143" pin=0"/></net>
+
+<net id="216"><net_src comp="210" pin="1"/><net_sink comp="185" pin=1"/></net>
+
+<net id="220"><net_src comp="64" pin="2"/><net_sink comp="217" pin=0"/></net>
+
+<net id="221"><net_src comp="217" pin="1"/><net_sink comp="117" pin=0"/></net>
+
+<net id="225"><net_src comp="143" pin="1"/><net_sink comp="222" pin=0"/></net>
+
+<net id="226"><net_src comp="222" pin="1"/><net_sink comp="180" pin=0"/></net>
+
+<net id="230"><net_src comp="146" pin="3"/><net_sink comp="227" pin=0"/></net>
+
+<net id="234"><net_src comp="154" pin="1"/><net_sink comp="231" pin=0"/></net>
+
+<net id="235"><net_src comp="231" pin="1"/><net_sink comp="105" pin=2"/></net>
+
+<net id="239"><net_src comp="163" pin="2"/><net_sink comp="236" pin=0"/></net>
+
+<net id="243"><net_src comp="77" pin="3"/><net_sink comp="240" pin=0"/></net>
+
+<net id="244"><net_src comp="240" pin="1"/><net_sink comp="84" pin=0"/></net>
+
+<net id="248"><net_src comp="90" pin="3"/><net_sink comp="245" pin=0"/></net>
+
+<net id="249"><net_src comp="245" pin="1"/><net_sink comp="97" pin=0"/></net>
+
+<net id="253"><net_src comp="84" pin="3"/><net_sink comp="250" pin=0"/></net>
+
+<net id="254"><net_src comp="250" pin="1"/><net_sink comp="129" pin=0"/></net>
+
+<net id="258"><net_src comp="97" pin="3"/><net_sink comp="255" pin=0"/></net>
+
+<net id="259"><net_src comp="255" pin="1"/><net_sink comp="129" pin=1"/></net>
+
+<net id="263"><net_src comp="129" pin="2"/><net_sink comp="260" pin=0"/></net>
+
+<net id="264"><net_src comp="260" pin="1"/><net_sink comp="117" pin=2"/></net>
+
+<net id="268"><net_src comp="190" pin="1"/><net_sink comp="265" pin=0"/></net>
+
+<net id="269"><net_src comp="265" pin="1"/><net_sink comp="124" pin=0"/></net>
+
+<net id="273"><net_src comp="124" pin="2"/><net_sink comp="270" pin=0"/></net>
+
+<net id="274"><net_src comp="270" pin="1"/><net_sink comp="194" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: acc_out | {7 }
+	Port: shift_reg | {1 2 }
+	Port: coeffs_1 | {}
+ - Input state : 
+	Port: adap_fir_Pipeline_Shift_Accum_Loop : mul | {1 }
+	Port: adap_fir_Pipeline_Shift_Accum_Loop : x | {1 }
+	Port: adap_fir_Pipeline_Shift_Accum_Loop : shift_reg | {1 2 }
+	Port: adap_fir_Pipeline_Shift_Accum_Loop : coeffs_1 | {1 2 }
+  - Chain level:
+	State 1
+		store_ln0 : 1
+		store_ln0 : 1
+		i_1 : 1
+		tmp : 2
+		br_ln25 : 3
+		i_cast1 : 2
+		empty : 2
+		icmp_ln26 : 2
+		br_ln26 : 3
+		add_ln30 : 3
+		zext_ln30 : 4
+		shift_reg_addr : 5
+		shift_reg_load : 6
+		coeffs_1_addr : 3
+		coeffs_1_load : 4
+	State 2
+		store_ln30 : 1
+	State 3
+	State 4
+	State 5
+		store_ln25 : 1
+	State 6
+	State 7
+		acc_1 : 1
+		write_ln0 : 1
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-----------------------|---------|---------|---------|
+| Operation|    Functional Unit    |   DSP   |    FF   |   LUT   |
+|----------|-----------------------|---------|---------|---------|
+|   fadd   |       grp_fu_124      |    2    |   205   |   390   |
+|----------|-----------------------|---------|---------|---------|
+|   fmul   |       grp_fu_129      |    3    |   143   |   321   |
+|----------|-----------------------|---------|---------|---------|
+|    add   |    add_ln30_fu_169    |    0    |    0    |    13   |
+|          |    add_ln25_fu_180    |    0    |    0    |    14   |
+|----------|-----------------------|---------|---------|---------|
+|   icmp   |    icmp_ln26_fu_163   |    0    |    0    |    14   |
+|----------|-----------------------|---------|---------|---------|
+|   read   |   x_read_read_fu_58   |    0    |    0    |    0    |
+|          |  mul_read_read_fu_64  |    0    |    0    |    0    |
+|----------|-----------------------|---------|---------|---------|
+|   write  | write_ln0_write_fu_70 |    0    |    0    |    0    |
+|----------|-----------------------|---------|---------|---------|
+| bitselect|       tmp_fu_146      |    0    |    0    |    0    |
+|----------|-----------------------|---------|---------|---------|
+|   zext   |     i_cast1_fu_154    |    0    |    0    |    0    |
+|          |    zext_ln30_fu_175   |    0    |    0    |    0    |
+|----------|-----------------------|---------|---------|---------|
+|   trunc  |      empty_fu_159     |    0    |    0    |    0    |
+|----------|-----------------------|---------|---------|---------|
+|   Total  |                       |    5    |   348   |   752   |
+|----------|-----------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++----------------------+--------+
+|                      |   FF   |
++----------------------+--------+
+|     acc_1_reg_270    |   32   |
+|   acc_load_reg_265   |   32   |
+|      acc_reg_202     |   32   |
+| coeffs_1_addr_reg_245|    5   |
+| coeffs_1_load_reg_255|   32   |
+|      i_1_reg_222     |    6   |
+|    i_cast1_reg_231   |   64   |
+|       i_reg_210      |    6   |
+|   icmp_ln26_reg_236  |    1   |
+|     mul8_reg_260     |   32   |
+|    mul_pn_reg_114    |   32   |
+|   mul_read_reg_217   |   32   |
+|shift_reg_addr_reg_240|    5   |
+|shift_reg_load_reg_250|   32   |
+|      tmp_reg_227     |    1   |
++----------------------+--------+
+|         Total        |   344  |
++----------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------|------|------|------|--------||---------||---------|
+|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_84 |  p0  |   4  |   5  |   20   ||    20   |
+| grp_access_fu_84 |  p1  |   2  |  32  |   64   ||    9    |
+| grp_access_fu_97 |  p0  |   2  |   5  |   10   ||    9    |
+|    grp_fu_124    |  p0  |   2  |  32  |   64   ||    9    |
+|------------------|------|------|------|--------||---------||---------|
+|       Total      |      |      |      |   158  ||  6.5906 ||    47   |
+|------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    5   |    -   |   348  |   752  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    6   |    -   |   47   |
+|  Register |    -   |    -   |   344  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    5   |    6   |   692  |   799  |
++-----------+--------+--------+--------+--------+

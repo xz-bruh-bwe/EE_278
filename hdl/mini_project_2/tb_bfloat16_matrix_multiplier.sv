@@ -32,13 +32,13 @@ module tb_bfloat16_matrix_multiplier;
 bfloat16_matrix_multiplier #(.N   (N),
                              .SIZE(SIZE))
     bfloat16_matrix_multiplier(
-        .clk      (clk) ,
-        .rst_n    (rst_n) ,
-        .A        (A) , // 4x4 matrix A (16-bit bfloat16 elements)
-        .B        (B) , // 4x4 matrix B (16-bit bfloat16 elements)
-        .OP_START (OP_START) , // OP FINISH size is SIZE*SIZE
-        .OP_FINISH(OP_FINISH) ,
-        .C        (C) // 4x4 matrix C (16-bit bfloat16 results)
+        .clk      (clk)         ,  
+        .rst_n    (rst_n)       ,
+        .A        (A)           , // 4x4 matrix A (16-bit bfloat16 elements)
+        .B        (B)           , // 4x4 matrix B (16-bit bfloat16 elements)
+        .OP_START (OP_START)    , // OP FINISH size is SIZE*SIZE
+        .OP_FINISH(OP_FINISH)   ,
+        .C        (C)           // 4x4 matrix C (16-bit bfloat16 results)
     );
 
 ////////////////////////////////////////////////////////////////////////

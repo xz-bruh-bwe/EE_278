@@ -24,7 +24,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log bfloat16_matrix_multiplier.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bfloat16_matrix_multiplier.tcl" );
+         "-log bfloat16_matrix_multiplier_4x4.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bfloat16_matrix_multiplier_4x4.tcl" );
 
 
 

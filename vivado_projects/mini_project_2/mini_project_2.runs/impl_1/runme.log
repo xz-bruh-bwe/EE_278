@@ -1,0 +1,298 @@
+
+*** Running vivado
+    with args -log bfloat16_matrix_multiplier_4x4.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source bfloat16_matrix_multiplier_4x4.tcl -notrace
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bfloat16_matrix_multiplier_4x4.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 454.945 ; gain = 161.926
+Command: link_design -top bfloat16_matrix_multiplier_4x4 -part xczu7ev-ffvf1517-1LV-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xczu7ev-ffvf1517-1LV-i
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1725.105 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4897 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1938.375 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 545 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 545 instances
+
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.375 ; gain = 1478.855
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1954.957 ; gain = 16.582
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: bf7d30c8
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2293.555 ; gain = 338.598
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 53766 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 11365276c
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2722.008 ; gain = 63.703
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 11966a989
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2722.008 ; gain = 63.703
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 4585a72c
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2722.008 ; gain = 63.703
+INFO: [Opt 31-389] Phase Sweep created 4321 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+INFO: [Opt 31-129] Inserted BUFG to drive high-fanout reset|set|enable net. BUFG cell: rst_n_IBUF_BUFG_inst, Net: rst_n_IBUF
+Phase 4 BUFG optimization | Checksum: 9dd71ba8
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 2722.008 ; gain = 63.703
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 16483abcd
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 2722.008 ; gain = 63.703
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 16483abcd
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 2722.008 ; gain = 63.703
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               1  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |            4321  |               0  |                                              0  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.311 . Memory (MB): peak = 2722.008 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 16483abcd
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:34 . Memory (MB): peak = 2722.008 ; gain = 63.703
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 16483abcd
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.138 . Memory (MB): peak = 2722.008 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 16483abcd
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2722.008 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2722.008 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 16483abcd
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 2722.008 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:47 . Memory (MB): peak = 2722.008 ; gain = 783.633
+INFO: [runtcl-4] Executing : report_drc -file bfloat16_matrix_multiplier_4x4_drc_opted.rpt -pb bfloat16_matrix_multiplier_4x4_drc_opted.pb -rpx bfloat16_matrix_multiplier_4x4_drc_opted.rpx
+Command: report_drc -file bfloat16_matrix_multiplier_4x4_drc_opted.rpt -pb bfloat16_matrix_multiplier_4x4_drc_opted.pb -rpx bfloat16_matrix_multiplier_4x4_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'Z:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/impl_1/bfloat16_matrix_multiplier_4x4_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:02:22 ; elapsed = 00:01:59 . Memory (MB): peak = 4540.750 ; gain = 1818.742
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/impl_1/bfloat16_matrix_multiplier_4x4_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 4540.750 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 4551.160 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 9d533f3a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 4551.160 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 4551.160 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 4897 I/O ports
+ while the target  device: xczu7ev package: ffvf1517, contains only 843 available user I/O. The target device has 843 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__0/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__0/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__1/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__1/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__10/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__10/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__11/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__11/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__12/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__12/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__13/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__13/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__14/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__14/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__2/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__2/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__3/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__3/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__4/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__4/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__5/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__5/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__6/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__6/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__7/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__7/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__8/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__8/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__9/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[0]_i_1__9/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__0/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__0/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__1/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__1/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__10/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__10/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__11/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__11/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__12/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__12/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__13/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__13/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__14/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__14/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__2/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__2/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__3/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__3/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__4/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__4/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__5/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__5/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__6/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__6/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__7/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__7/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__8/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__8/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__9/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[10]_i_1__9/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__0/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__0/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__1/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__1/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__10/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__10/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__11/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__11/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__12/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__12/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__13/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__13/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__14/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__14/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__2/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__2/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__3/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__3/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__4/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__4/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__5/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__5/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__6/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__6/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__7/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__7/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__8/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__8/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__9/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[11]_i_1__9/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[12]_i_1/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[12]_i_1/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[12]_i_1__0/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance A_out_reg[12]_i_1__0/INBUF_INST (INBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: c48813b4
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 4562.895 ; gain = 11.734
+Phase 1 Placer Initialization | Checksum: c48813b4
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 4562.895 ; gain = 11.734
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: c48813b4
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 4562.895 ; gain = 11.734
+INFO: [Common 17-83] Releasing license: Implementation
+43 Infos, 0 Warnings, 0 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 31 19:48:16 2024...

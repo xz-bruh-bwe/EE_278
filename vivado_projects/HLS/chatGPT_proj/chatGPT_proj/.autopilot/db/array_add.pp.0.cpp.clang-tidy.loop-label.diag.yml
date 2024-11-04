@@ -1,0 +1,58 @@
+---
+MainSourceFile:  'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/.autopilot/db/array_add.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        'Z:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp'
+        Offset:          55269
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'Z:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp'
+        Offset:          282593
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'Z:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp'
+        Offset:          283057
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'Z:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp'
+        Offset:          283522
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'Z:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp'
+        Offset:          566199
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_1:  '
+    FileOffset:      13
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\array_add.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp'
+        Offset:          934602
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_1: '
+...

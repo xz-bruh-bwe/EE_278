@@ -1,0 +1,58 @@
+
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\sim\verilog>set PATH= 
+
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\sim\verilog>call Z:/Xilinx/Vivado/2023.1/bin/xelab xil_defaultlib.apatb_array_add_top glbl -Oenable_linking_all_libraries  -prj array_add.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib "ieee_proposed=./ieee_proposed" -s array_add -debug all 
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: Z:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_array_add_top glbl -Oenable_linking_all_libraries -prj array_add.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s array_add -debug all 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/AESL_axi_slave_AXI_LITE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_AXI_LITE
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/array_add.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_array_add_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/array_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_add
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/array_add_AXI_LITE_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_add_AXI_LITE_s_axi
+INFO: [VRFC 10-311] analyzing module array_add_AXI_LITE_s_axi_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.array_add_AXI_LITE_s_axi_ram(MEM...
+Compiling module xil_defaultlib.array_add_AXI_LITE_s_axi_ram(DEP...
+Compiling module xil_defaultlib.array_add_AXI_LITE_s_axi
+Compiling module xil_defaultlib.array_add
+Compiling module xil_defaultlib.AESL_axi_slave_AXI_LITE
+WARNING: [XSIM 43-3373] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/AESL_axi_slave_AXI_LITE.v" Line 671. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/AESL_axi_slave_AXI_LITE.v" Line 680. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/AESL_axi_slave_AXI_LITE.v" Line 721. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/AESL_axi_slave_AXI_LITE.v" Line 788. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/AESL_axi_slave_AXI_LITE.v" Line 797. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/chatGPT_proj/chatGPT_proj/sim/verilog/AESL_axi_slave_AXI_LITE.v" Line 838. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_array_add_top
+Compiling module work.glbl
+Built simulation snapshot array_add
+ECHO is off.
+ECHO is off.
+
+****** xsim v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+start_gui

@@ -1,0 +1,4 @@
+array_add_AXI_LITE_s_axi.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/array_add_AXI_LITE_s_axi.v,incdir="../../../../pixel_control.gen/sources_1/ip/array_add_0_2/drivers/array_add_v1_0/src"
+array_add.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/array_add.v,incdir="../../../../pixel_control.gen/sources_1/ip/array_add_0_2/drivers/array_add_v1_0/src"
+array_add_0.v,verilog,xil_defaultlib,../../../../pixel_control.gen/sources_1/ip/array_add_0_2/sim/array_add_0.v,incdir="../../../../pixel_control.gen/sources_1/ip/array_add_0_2/drivers/array_add_v1_0/src"
+glbl.v,Verilog,xil_defaultlib,glbl.v

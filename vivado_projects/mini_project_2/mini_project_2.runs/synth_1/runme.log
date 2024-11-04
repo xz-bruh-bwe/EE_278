@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log bfloat16_matrix_multiplier.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bfloat16_matrix_multiplier.tcl
+    with args -log bfloat16_matrix_multiplier_4x4.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bfloat16_matrix_multiplier_4x4.tcl
 
 
 ECHO is off.
@@ -13,52 +13,57 @@ ECHO is off.
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source bfloat16_matrix_multiplier.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 454.770 ; gain = 158.297
+source bfloat16_matrix_multiplier_4x4.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 455.754 ; gain = 159.434
 Command: read_checkpoint -auto_incremental -incremental C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.srcs/utils_1/imports/synth_1/bfloat16_adder_pipelined.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.srcs/utils_1/imports/synth_1/bfloat16_adder_pipelined.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top bfloat16_matrix_multiplier -part xc7z020clg400-1
+Command: synth_design -top bfloat16_matrix_multiplier_4x4 -part xczu7ev-ffvf1517-1LV-i
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17876
+INFO: [Synth 8-7075] Helper process launched with PID 3596
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 900.301 ; gain = 412.668
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 897.805 ; gain = 410.332
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'bfloat16_matrix_multiplier' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'bfloat16_matrix_multiplier_4x4' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier_4x4.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'bfloat16_partial_element' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_partial_element.v:1]
+	Parameter N bound to: 5'b10000 
 INFO: [Synth 8-6157] synthesizing module 'bfloat16_mult_pipelined' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_mult_pipelined.v:1]
 	Parameter N bound to: 5'b10000 
 INFO: [Synth 8-6155] done synthesizing module 'bfloat16_mult_pipelined' (0#1) [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_mult_pipelined.v:1]
 INFO: [Synth 8-6157] synthesizing module 'bfloat16_adder_pipelined' [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:1]
 	Parameter N bound to: 5'b10000 
 INFO: [Synth 8-6155] done synthesizing module 'bfloat16_adder_pipelined' (0#1) [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bfloat16_matrix_multiplier' (0#1) [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'bfloat16_partial_element' (0#1) [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_partial_element.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bfloat16_matrix_multiplier_4x4' (0#1) [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier_4x4.sv:1]
 WARNING: [Synth 8-7137] Register op_fin_reg[3] in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:100]
 WARNING: [Synth 8-7137] Register mant_sum_reg in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:103]
 WARNING: [Synth 8-7137] Register mant_diff_reg in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:104]
 WARNING: [Synth 8-7137] Register op_fin_reg[5] in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:138]
 WARNING: [Synth 8-7137] Register op_fin_reg[4] in module bfloat16_adder_pipelined has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v:138]
+WARNING: [Synth 8-7129] Port OP_START[31] in module bfloat16_matrix_multiplier_4x4 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 991.789 ; gain = 504.156
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1004.520 ; gain = 517.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 991.789 ; gain = 504.156
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1004.520 ; gain = 517.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xc7z020clg400-1
+Loading part: xczu7ev-ffvf1517-1LV-i
+INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 991.789 ; gain = 504.156
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1004.520 ; gain = 517.047
 ---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvf1517-1LV-i
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 991.789 ; gain = 504.156
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1004.520 ; gain = 517.047
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -66,25 +71,25 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input    9 Bit       Adders := 45    
-	   2 Input    9 Bit       Adders := 18    
-	   2 Input    8 Bit       Adders := 45    
-	   3 Input    8 Bit       Adders := 18    
+	   3 Input    9 Bit       Adders := 512   
+	   2 Input    9 Bit       Adders := 256   
+	   2 Input    8 Bit       Adders := 512   
+	   3 Input    8 Bit       Adders := 256   
 +---XORs : 
-	   2 Input      1 Bit         XORs := 27    
+	   2 Input      1 Bit         XORs := 256   
 +---Registers : 
-	               16 Bit    Registers := 72    
-	                9 Bit    Registers := 108   
-	                8 Bit    Registers := 324   
-	                7 Bit    Registers := 18    
-	                1 Bit    Registers := 432   
+	               16 Bit    Registers := 1792  
+	                9 Bit    Registers := 1280  
+	                8 Bit    Registers := 3840  
+	                7 Bit    Registers := 256   
+	                1 Bit    Registers := 5120  
 +---Muxes : 
-	   2 Input   16 Bit        Muxes := 90    
-	   2 Input    9 Bit        Muxes := 36    
-	   2 Input    8 Bit        Muxes := 99    
-	   2 Input    7 Bit        Muxes := 36    
-	   2 Input    2 Bit        Muxes := 18    
-	   2 Input    1 Bit        Muxes := 18    
+	   2 Input   16 Bit        Muxes := 1024  
+	   2 Input    9 Bit        Muxes := 512   
+	   2 Input    8 Bit        Muxes := 1280  
+	   2 Input    7 Bit        Muxes := 512   
+	   2 Input    2 Bit        Muxes := 256   
+	   2 Input    1 Bit        Muxes := 256   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -92,8 +97,8 @@ Finished RTL Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 220 (col length:60)
-BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -101,22 +106,125 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port OP_START[31] in module bfloat16_matrix_multiplier_4x4 is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[15]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/signA_stage1_reg'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[0]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[1]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[2]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[3]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[4]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[5]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[6]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[8]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[9]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[10]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[11]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[12]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[13]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[14]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[14].element/A_out_reg[7]' (FDC) to 'row_loop[10].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[15]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/signA_stage1_reg'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[0]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[1]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[2]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[3]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[4]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[5]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[6]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[8]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[9]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[10]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[11]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[12]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[13]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[14]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[13].element/A_out_reg[7]' (FDC) to 'row_loop[10].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[15]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/signA_stage1_reg'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[0]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[1]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[2]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[3]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[4]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[5]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[6]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[8]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[9]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[10]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[11]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[12]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[13]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[14]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'row_loop[10].col_loop[12].element/A_out_reg[7]' (FDC) to 'row_loop[10].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[15]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/signA_stage1_reg'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[0]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[1]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[2]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[3]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[4]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[5]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[6]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/mantA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[8]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[9]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[10]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[11]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[12]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[13]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[14]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[14].element/A_out_reg[7]' (FDC) to 'row_loop[9].col_loop[14].element/bfloat16_mult_pipelined/expA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[15]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/signA_stage1_reg'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[0]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[1]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[2]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[3]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[4]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[5]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[6]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/mantA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[8]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[9]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[10]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[11]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[12]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[13]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[14]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[13].element/A_out_reg[7]' (FDC) to 'row_loop[9].col_loop[13].element/bfloat16_mult_pipelined/expA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[15]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/signA_stage1_reg'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[0]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[1]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[2]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[3]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[4]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[5]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[6]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/mantA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[8]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[9]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[10]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[11]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[12]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[13]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[14]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[12].element/A_out_reg[7]' (FDC) to 'row_loop[9].col_loop[12].element/bfloat16_mult_pipelined/expA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[11].element/A_out_reg[15]' (FDC) to 'row_loop[9].col_loop[11].element/bfloat16_mult_pipelined/signA_stage1_reg'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[11].element/A_out_reg[0]' (FDC) to 'row_loop[9].col_loop[11].element/bfloat16_mult_pipelined/mantA_stage1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[11].element/A_out_reg[1]' (FDC) to 'row_loop[9].col_loop[11].element/bfloat16_mult_pipelined/mantA_stage1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'row_loop[9].col_loop[11].element/A_out_reg[2]' (FDC) to 'row_loop[9].col_loop[11].element/bfloat16_mult_pipelined/mantA_stage1_reg[2]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1264.914 ; gain = 777.281
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:44 ; elapsed = 00:03:25 . Memory (MB): peak = 2212.152 ; gain = 1724.680
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1264.914 ; gain = 777.281
+Finished Timing Optimization : Time (s): cpu = 00:02:48 ; elapsed = 00:03:29 . Memory (MB): peak = 2212.152 ; gain = 1724.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1297.609 ; gain = 809.977
+Finished Technology Mapping : Time (s): cpu = 00:03:07 ; elapsed = 00:03:49 . Memory (MB): peak = 2212.152 ; gain = 1724.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -134,51 +242,51 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1310.836 ; gain = 823.203
+Finished IO Insertion : Time (s): cpu = 00:03:27 ; elapsed = 00:04:10 . Memory (MB): peak = 2292.742 ; gain = 1805.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1310.836 ; gain = 823.203
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:28 ; elapsed = 00:04:10 . Memory (MB): peak = 2292.742 ; gain = 1805.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1310.836 ; gain = 823.203
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:41 ; elapsed = 00:04:24 . Memory (MB): peak = 2292.742 ; gain = 1805.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1310.836 ; gain = 823.203
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:41 ; elapsed = 00:04:24 . Memory (MB): peak = 2292.742 ; gain = 1805.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1310.836 ; gain = 823.203
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:43 ; elapsed = 00:04:26 . Memory (MB): peak = 2292.742 ; gain = 1805.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1310.836 ; gain = 823.203
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:44 ; elapsed = 00:04:27 . Memory (MB): peak = 2292.742 ; gain = 1805.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+---------------------------+---------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name                | RTL Name                                                                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+---------------------------+---------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|bfloat16_matrix_multiplier | adder_blocks[0].bfloat16_adder_pipelined_partial_adder_0/op_fin_reg[5]    | 3      | 18    | NO           | NO                 | NO                | 18     | 0       | 
-|bfloat16_matrix_multiplier | row[0].col[0].dep[0].bfloat16_mult_pipelined/op_fin_reg[3]                | 4      | 27    | YES          | NO                 | YES               | 27     | 0       | 
-|bfloat16_matrix_multiplier | adder_blocks[0].bfloat16_adder_pipelined_partial_adder_0/signB_stage2_reg | 5      | 27    | YES          | NO                 | YES               | 27     | 0       | 
-|bfloat16_matrix_multiplier | adder_blocks[0].bfloat16_adder_pipelined_final_adder/signA_stage2_reg     | 4      | 9     | YES          | NO                 | YES               | 9      | 0       | 
-+---------------------------+---------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++-------------------------------+---------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                    | RTL Name                                                                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------------------+---------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|bfloat16_matrix_multiplier_4x4 | row_loop[8].col_loop[5].element/bfloat16_adder_pipelined/op_fin_reg[5]    | 3      | 256   | NO           | NO                 | NO                | 256    | 0       | 
+|bfloat16_matrix_multiplier_4x4 | row_loop[8].col_loop[5].element/bfloat16_adder_pipelined/op_fin_reg[2]    | 7      | 256   | YES          | NO                 | YES               | 256    | 0       | 
+|bfloat16_matrix_multiplier_4x4 | row_loop[8].col_loop[5].element/bfloat16_adder_pipelined/signB_stage2_reg | 5      | 256   | YES          | NO                 | YES               | 256    | 0       | 
+|bfloat16_matrix_multiplier_4x4 | row_loop[10].col_loop[15].C_reg[10][15][15]                               | 4      | 256   | YES          | NO                 | YES               | 256    | 0       | 
++-------------------------------+---------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -198,92 +306,818 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |   585|
-|3     |LUT1   |    64|
-|4     |LUT2   |  1350|
-|5     |LUT3   |   918|
-|6     |LUT4   |  1440|
-|7     |LUT5   |   567|
-|8     |LUT6   |  1854|
-|9     |SRL16E |    81|
-|10    |FDCE   |  3829|
-|11    |FDRE   |   387|
-|12    |IBUF   |   317|
-|13    |OBUF   |   153|
+|2     |CARRY8 |  4352|
+|3     |LUT1   |   513|
+|4     |LUT2   | 14336|
+|5     |LUT3   | 11520|
+|6     |LUT4   | 17664|
+|7     |LUT5   |  7680|
+|8     |LUT6   | 18944|
+|9     |SRL16E |  1024|
+|10    |FDCE   | 53766|
+|11    |FDRE   |  5376|
+|12    |IBUF   |   545|
+|13    |OBUF   |  4352|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+-------------------------------------------------------------+----------------------------+------+
-|      |Instance                                                     |Module                      |Cells |
-+------+-------------------------------------------------------------+----------------------------+------+
-|1     |top                                                          |                            | 11546|
-|2     |  \adder_blocks[0].bfloat16_adder_pipelined_final_adder      |bfloat16_adder_pipelined    |   288|
-|3     |  \adder_blocks[0].bfloat16_adder_pipelined_partial_adder_0  |bfloat16_adder_pipelined_0  |   288|
-|4     |  \adder_blocks[1].bfloat16_adder_pipelined_final_adder      |bfloat16_adder_pipelined_1  |   288|
-|5     |  \adder_blocks[1].bfloat16_adder_pipelined_partial_adder_0  |bfloat16_adder_pipelined_2  |   288|
-|6     |  \adder_blocks[2].bfloat16_adder_pipelined_final_adder      |bfloat16_adder_pipelined_3  |   288|
-|7     |  \adder_blocks[2].bfloat16_adder_pipelined_partial_adder_0  |bfloat16_adder_pipelined_4  |   288|
-|8     |  \adder_blocks[3].bfloat16_adder_pipelined_final_adder      |bfloat16_adder_pipelined_5  |   288|
-|9     |  \adder_blocks[3].bfloat16_adder_pipelined_partial_adder_0  |bfloat16_adder_pipelined_6  |   288|
-|10    |  \adder_blocks[4].bfloat16_adder_pipelined_final_adder      |bfloat16_adder_pipelined_7  |   288|
-|11    |  \adder_blocks[4].bfloat16_adder_pipelined_partial_adder_0  |bfloat16_adder_pipelined_8  |   288|
-|12    |  \adder_blocks[5].bfloat16_adder_pipelined_final_adder      |bfloat16_adder_pipelined_9  |   288|
-|13    |  \adder_blocks[5].bfloat16_adder_pipelined_partial_adder_0  |bfloat16_adder_pipelined_10 |   288|
-|14    |  \adder_blocks[6].bfloat16_adder_pipelined_final_adder      |bfloat16_adder_pipelined_11 |   288|
-|15    |  \adder_blocks[6].bfloat16_adder_pipelined_partial_adder_0  |bfloat16_adder_pipelined_12 |   288|
-|16    |  \adder_blocks[7].bfloat16_adder_pipelined_final_adder      |bfloat16_adder_pipelined_13 |   288|
-|17    |  \adder_blocks[7].bfloat16_adder_pipelined_partial_adder_0  |bfloat16_adder_pipelined_14 |   288|
-|18    |  \adder_blocks[8].bfloat16_adder_pipelined_final_adder      |bfloat16_adder_pipelined_15 |   289|
-|19    |  \adder_blocks[8].bfloat16_adder_pipelined_partial_adder_0  |bfloat16_adder_pipelined_16 |   288|
-|20    |  \row[0].col[0].dep[0].bfloat16_mult_pipelined              |bfloat16_mult_pipelined     |   149|
-|21    |  \row[0].col[0].dep[1].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_17  |   148|
-|22    |  \row[0].col[0].dep[2].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_18  |   148|
-|23    |  \row[0].col[1].dep[0].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_19  |   149|
-|24    |  \row[0].col[1].dep[1].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_20  |   148|
-|25    |  \row[0].col[1].dep[2].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_21  |   148|
-|26    |  \row[0].col[2].dep[0].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_22  |   240|
-|27    |  \row[0].col[2].dep[1].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_23  |   239|
-|28    |  \row[0].col[2].dep[2].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_24  |   239|
-|29    |  \row[1].col[0].dep[0].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_25  |   149|
-|30    |  \row[1].col[0].dep[1].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_26  |   148|
-|31    |  \row[1].col[0].dep[2].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_27  |   148|
-|32    |  \row[1].col[1].dep[0].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_28  |   149|
-|33    |  \row[1].col[1].dep[1].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_29  |   148|
-|34    |  \row[1].col[1].dep[2].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_30  |   148|
-|35    |  \row[1].col[2].dep[0].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_31  |   240|
-|36    |  \row[1].col[2].dep[1].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_32  |   239|
-|37    |  \row[1].col[2].dep[2].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_33  |   239|
-|38    |  \row[2].col[0].dep[0].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_34  |   271|
-|39    |  \row[2].col[0].dep[1].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_35  |   270|
-|40    |  \row[2].col[0].dep[2].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_36  |   270|
-|41    |  \row[2].col[1].dep[0].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_37  |   271|
-|42    |  \row[2].col[1].dep[1].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_38  |   270|
-|43    |  \row[2].col[1].dep[2].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_39  |   270|
-|44    |  \row[2].col[2].dep[0].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_40  |   350|
-|45    |  \row[2].col[2].dep[1].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_41  |   349|
-|46    |  \row[2].col[2].dep[2].bfloat16_mult_pipelined              |bfloat16_mult_pipelined_42  |   349|
-+------+-------------------------------------------------------------+----------------------------+------+
++------+--------------------------------------+-----------------------------+-------+
+|      |Instance                              |Module                       |Cells  |
++------+--------------------------------------+-----------------------------+-------+
+|1     |top                                   |                             | 140073|
+|2     |  \row_loop[0].col_loop[0].element    |bfloat16_partial_element     |    512|
+|3     |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_763 |    298|
+|4     |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_764  |    165|
+|5     |  \row_loop[0].col_loop[10].element   |bfloat16_partial_element_0   |    512|
+|6     |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_761 |    298|
+|7     |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_762  |    165|
+|8     |  \row_loop[0].col_loop[11].element   |bfloat16_partial_element_1   |    512|
+|9     |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_759 |    266|
+|10    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_760  |    213|
+|11    |  \row_loop[0].col_loop[12].element   |bfloat16_partial_element_2   |    512|
+|12    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_757 |    266|
+|13    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_758  |    213|
+|14    |  \row_loop[0].col_loop[13].element   |bfloat16_partial_element_3   |    512|
+|15    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_755 |    266|
+|16    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_756  |    213|
+|17    |  \row_loop[0].col_loop[14].element   |bfloat16_partial_element_4   |    512|
+|18    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_753 |    266|
+|19    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_754  |    213|
+|20    |  \row_loop[0].col_loop[15].element   |bfloat16_partial_element_5   |    512|
+|21    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_751 |    266|
+|22    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_752  |    213|
+|23    |  \row_loop[0].col_loop[1].element    |bfloat16_partial_element_6   |    512|
+|24    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_749 |    298|
+|25    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_750  |    165|
+|26    |  \row_loop[0].col_loop[2].element    |bfloat16_partial_element_7   |    512|
+|27    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_747 |    298|
+|28    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_748  |    165|
+|29    |  \row_loop[0].col_loop[3].element    |bfloat16_partial_element_8   |    512|
+|30    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_745 |    298|
+|31    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_746  |    165|
+|32    |  \row_loop[0].col_loop[4].element    |bfloat16_partial_element_9   |    512|
+|33    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_743 |    298|
+|34    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_744  |    165|
+|35    |  \row_loop[0].col_loop[5].element    |bfloat16_partial_element_10  |    512|
+|36    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_741 |    298|
+|37    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_742  |    165|
+|38    |  \row_loop[0].col_loop[6].element    |bfloat16_partial_element_11  |    512|
+|39    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_739 |    298|
+|40    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_740  |    165|
+|41    |  \row_loop[0].col_loop[7].element    |bfloat16_partial_element_12  |    512|
+|42    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_737 |    298|
+|43    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_738  |    165|
+|44    |  \row_loop[0].col_loop[8].element    |bfloat16_partial_element_13  |    512|
+|45    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_735 |    298|
+|46    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_736  |    165|
+|47    |  \row_loop[0].col_loop[9].element    |bfloat16_partial_element_14  |    512|
+|48    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_733 |    298|
+|49    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_734  |    165|
+|50    |  \row_loop[10].col_loop[0].element   |bfloat16_partial_element_15  |    512|
+|51    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_731 |    298|
+|52    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_732  |    165|
+|53    |  \row_loop[10].col_loop[10].element  |bfloat16_partial_element_16  |    512|
+|54    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_729 |    298|
+|55    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_730  |    165|
+|56    |  \row_loop[10].col_loop[11].element  |bfloat16_partial_element_17  |    512|
+|57    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_727 |    298|
+|58    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_728  |    165|
+|59    |  \row_loop[10].col_loop[12].element  |bfloat16_partial_element_18  |    512|
+|60    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_725 |    266|
+|61    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_726  |    213|
+|62    |  \row_loop[10].col_loop[13].element  |bfloat16_partial_element_19  |    512|
+|63    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_723 |    266|
+|64    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_724  |    213|
+|65    |  \row_loop[10].col_loop[14].element  |bfloat16_partial_element_20  |    512|
+|66    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_721 |    266|
+|67    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_722  |    213|
+|68    |  \row_loop[10].col_loop[15].element  |bfloat16_partial_element_21  |    512|
+|69    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_719 |    266|
+|70    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_720  |    213|
+|71    |  \row_loop[10].col_loop[1].element   |bfloat16_partial_element_22  |    512|
+|72    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_717 |    298|
+|73    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_718  |    165|
+|74    |  \row_loop[10].col_loop[2].element   |bfloat16_partial_element_23  |    512|
+|75    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_715 |    298|
+|76    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_716  |    165|
+|77    |  \row_loop[10].col_loop[3].element   |bfloat16_partial_element_24  |    512|
+|78    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_713 |    298|
+|79    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_714  |    165|
+|80    |  \row_loop[10].col_loop[4].element   |bfloat16_partial_element_25  |    512|
+|81    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_711 |    298|
+|82    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_712  |    165|
+|83    |  \row_loop[10].col_loop[5].element   |bfloat16_partial_element_26  |    512|
+|84    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_709 |    298|
+|85    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_710  |    165|
+|86    |  \row_loop[10].col_loop[6].element   |bfloat16_partial_element_27  |    512|
+|87    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_707 |    298|
+|88    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_708  |    165|
+|89    |  \row_loop[10].col_loop[7].element   |bfloat16_partial_element_28  |    512|
+|90    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_705 |    298|
+|91    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_706  |    165|
+|92    |  \row_loop[10].col_loop[8].element   |bfloat16_partial_element_29  |    512|
+|93    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_703 |    298|
+|94    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_704  |    165|
+|95    |  \row_loop[10].col_loop[9].element   |bfloat16_partial_element_30  |    512|
+|96    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_701 |    298|
+|97    |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_702  |    165|
+|98    |  \row_loop[11].col_loop[0].element   |bfloat16_partial_element_31  |    512|
+|99    |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_699 |    298|
+|100   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_700  |    165|
+|101   |  \row_loop[11].col_loop[10].element  |bfloat16_partial_element_32  |    512|
+|102   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_697 |    298|
+|103   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_698  |    165|
+|104   |  \row_loop[11].col_loop[11].element  |bfloat16_partial_element_33  |    512|
+|105   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_695 |    298|
+|106   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_696  |    165|
+|107   |  \row_loop[11].col_loop[12].element  |bfloat16_partial_element_34  |    512|
+|108   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_693 |    298|
+|109   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_694  |    165|
+|110   |  \row_loop[11].col_loop[13].element  |bfloat16_partial_element_35  |    512|
+|111   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_691 |    298|
+|112   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_692  |    165|
+|113   |  \row_loop[11].col_loop[14].element  |bfloat16_partial_element_36  |    512|
+|114   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_689 |    298|
+|115   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_690  |    165|
+|116   |  \row_loop[11].col_loop[15].element  |bfloat16_partial_element_37  |    512|
+|117   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_687 |    266|
+|118   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_688  |    213|
+|119   |  \row_loop[11].col_loop[1].element   |bfloat16_partial_element_38  |    512|
+|120   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_685 |    298|
+|121   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_686  |    165|
+|122   |  \row_loop[11].col_loop[2].element   |bfloat16_partial_element_39  |    512|
+|123   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_683 |    298|
+|124   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_684  |    165|
+|125   |  \row_loop[11].col_loop[3].element   |bfloat16_partial_element_40  |    512|
+|126   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_681 |    298|
+|127   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_682  |    165|
+|128   |  \row_loop[11].col_loop[4].element   |bfloat16_partial_element_41  |    512|
+|129   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_679 |    298|
+|130   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_680  |    165|
+|131   |  \row_loop[11].col_loop[5].element   |bfloat16_partial_element_42  |    512|
+|132   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_677 |    298|
+|133   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_678  |    165|
+|134   |  \row_loop[11].col_loop[6].element   |bfloat16_partial_element_43  |    512|
+|135   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_675 |    298|
+|136   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_676  |    165|
+|137   |  \row_loop[11].col_loop[7].element   |bfloat16_partial_element_44  |    512|
+|138   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_673 |    298|
+|139   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_674  |    165|
+|140   |  \row_loop[11].col_loop[8].element   |bfloat16_partial_element_45  |    512|
+|141   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_671 |    298|
+|142   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_672  |    165|
+|143   |  \row_loop[11].col_loop[9].element   |bfloat16_partial_element_46  |    512|
+|144   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_669 |    298|
+|145   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_670  |    165|
+|146   |  \row_loop[12].col_loop[0].element   |bfloat16_partial_element_47  |    512|
+|147   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_667 |    298|
+|148   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_668  |    165|
+|149   |  \row_loop[12].col_loop[10].element  |bfloat16_partial_element_48  |    512|
+|150   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_665 |    266|
+|151   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_666  |    213|
+|152   |  \row_loop[12].col_loop[11].element  |bfloat16_partial_element_49  |    512|
+|153   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_663 |    266|
+|154   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_664  |    213|
+|155   |  \row_loop[12].col_loop[12].element  |bfloat16_partial_element_50  |    512|
+|156   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_661 |    266|
+|157   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_662  |    213|
+|158   |  \row_loop[12].col_loop[13].element  |bfloat16_partial_element_51  |    512|
+|159   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_659 |    266|
+|160   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_660  |    213|
+|161   |  \row_loop[12].col_loop[14].element  |bfloat16_partial_element_52  |    512|
+|162   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_657 |    266|
+|163   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_658  |    213|
+|164   |  \row_loop[12].col_loop[15].element  |bfloat16_partial_element_53  |    512|
+|165   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_655 |    266|
+|166   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_656  |    213|
+|167   |  \row_loop[12].col_loop[1].element   |bfloat16_partial_element_54  |    512|
+|168   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_653 |    298|
+|169   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_654  |    165|
+|170   |  \row_loop[12].col_loop[2].element   |bfloat16_partial_element_55  |    512|
+|171   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_651 |    269|
+|172   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_652  |    210|
+|173   |  \row_loop[12].col_loop[3].element   |bfloat16_partial_element_56  |    512|
+|174   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_649 |    298|
+|175   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_650  |    165|
+|176   |  \row_loop[12].col_loop[4].element   |bfloat16_partial_element_57  |    512|
+|177   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_647 |    298|
+|178   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_648  |    165|
+|179   |  \row_loop[12].col_loop[5].element   |bfloat16_partial_element_58  |    512|
+|180   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_645 |    298|
+|181   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_646  |    165|
+|182   |  \row_loop[12].col_loop[6].element   |bfloat16_partial_element_59  |    512|
+|183   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_643 |    298|
+|184   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_644  |    165|
+|185   |  \row_loop[12].col_loop[7].element   |bfloat16_partial_element_60  |    512|
+|186   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_641 |    298|
+|187   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_642  |    165|
+|188   |  \row_loop[12].col_loop[8].element   |bfloat16_partial_element_61  |    512|
+|189   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_639 |    298|
+|190   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_640  |    165|
+|191   |  \row_loop[12].col_loop[9].element   |bfloat16_partial_element_62  |    512|
+|192   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_637 |    266|
+|193   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_638  |    213|
+|194   |  \row_loop[13].col_loop[0].element   |bfloat16_partial_element_63  |    512|
+|195   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_635 |    269|
+|196   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_636  |    210|
+|197   |  \row_loop[13].col_loop[10].element  |bfloat16_partial_element_64  |    512|
+|198   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_633 |    266|
+|199   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_634  |    213|
+|200   |  \row_loop[13].col_loop[11].element  |bfloat16_partial_element_65  |    512|
+|201   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_631 |    266|
+|202   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_632  |    213|
+|203   |  \row_loop[13].col_loop[12].element  |bfloat16_partial_element_66  |    512|
+|204   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_629 |    266|
+|205   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_630  |    213|
+|206   |  \row_loop[13].col_loop[13].element  |bfloat16_partial_element_67  |    512|
+|207   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_627 |    266|
+|208   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_628  |    213|
+|209   |  \row_loop[13].col_loop[14].element  |bfloat16_partial_element_68  |    512|
+|210   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_625 |    266|
+|211   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_626  |    213|
+|212   |  \row_loop[13].col_loop[15].element  |bfloat16_partial_element_69  |    512|
+|213   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_623 |    266|
+|214   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_624  |    213|
+|215   |  \row_loop[13].col_loop[1].element   |bfloat16_partial_element_70  |    512|
+|216   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_621 |    269|
+|217   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_622  |    210|
+|218   |  \row_loop[13].col_loop[2].element   |bfloat16_partial_element_71  |    512|
+|219   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_619 |    298|
+|220   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_620  |    165|
+|221   |  \row_loop[13].col_loop[3].element   |bfloat16_partial_element_72  |    512|
+|222   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_617 |    298|
+|223   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_618  |    165|
+|224   |  \row_loop[13].col_loop[4].element   |bfloat16_partial_element_73  |    512|
+|225   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_615 |    298|
+|226   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_616  |    165|
+|227   |  \row_loop[13].col_loop[5].element   |bfloat16_partial_element_74  |    512|
+|228   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_613 |    298|
+|229   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_614  |    165|
+|230   |  \row_loop[13].col_loop[6].element   |bfloat16_partial_element_75  |    512|
+|231   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_611 |    298|
+|232   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_612  |    165|
+|233   |  \row_loop[13].col_loop[7].element   |bfloat16_partial_element_76  |    512|
+|234   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_609 |    298|
+|235   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_610  |    165|
+|236   |  \row_loop[13].col_loop[8].element   |bfloat16_partial_element_77  |    512|
+|237   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_607 |    298|
+|238   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_608  |    165|
+|239   |  \row_loop[13].col_loop[9].element   |bfloat16_partial_element_78  |    512|
+|240   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_605 |    266|
+|241   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_606  |    213|
+|242   |  \row_loop[14].col_loop[0].element   |bfloat16_partial_element_79  |    512|
+|243   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_603 |    269|
+|244   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_604  |    210|
+|245   |  \row_loop[14].col_loop[10].element  |bfloat16_partial_element_80  |    512|
+|246   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_601 |    266|
+|247   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_602  |    213|
+|248   |  \row_loop[14].col_loop[11].element  |bfloat16_partial_element_81  |    512|
+|249   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_599 |    266|
+|250   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_600  |    213|
+|251   |  \row_loop[14].col_loop[12].element  |bfloat16_partial_element_82  |    512|
+|252   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_597 |    266|
+|253   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_598  |    213|
+|254   |  \row_loop[14].col_loop[13].element  |bfloat16_partial_element_83  |    512|
+|255   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_595 |    266|
+|256   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_596  |    213|
+|257   |  \row_loop[14].col_loop[14].element  |bfloat16_partial_element_84  |    512|
+|258   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_593 |    266|
+|259   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_594  |    213|
+|260   |  \row_loop[14].col_loop[15].element  |bfloat16_partial_element_85  |    512|
+|261   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_591 |    266|
+|262   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_592  |    229|
+|263   |  \row_loop[14].col_loop[1].element   |bfloat16_partial_element_86  |    512|
+|264   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_589 |    298|
+|265   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_590  |    165|
+|266   |  \row_loop[14].col_loop[2].element   |bfloat16_partial_element_87  |    512|
+|267   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_587 |    269|
+|268   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_588  |    210|
+|269   |  \row_loop[14].col_loop[3].element   |bfloat16_partial_element_88  |    512|
+|270   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_585 |    298|
+|271   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_586  |    165|
+|272   |  \row_loop[14].col_loop[4].element   |bfloat16_partial_element_89  |    512|
+|273   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_583 |    298|
+|274   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_584  |    165|
+|275   |  \row_loop[14].col_loop[5].element   |bfloat16_partial_element_90  |    512|
+|276   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_581 |    298|
+|277   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_582  |    165|
+|278   |  \row_loop[14].col_loop[6].element   |bfloat16_partial_element_91  |    512|
+|279   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_579 |    298|
+|280   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_580  |    165|
+|281   |  \row_loop[14].col_loop[7].element   |bfloat16_partial_element_92  |    512|
+|282   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_577 |    266|
+|283   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_578  |    213|
+|284   |  \row_loop[14].col_loop[8].element   |bfloat16_partial_element_93  |    512|
+|285   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_575 |    266|
+|286   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_576  |    213|
+|287   |  \row_loop[14].col_loop[9].element   |bfloat16_partial_element_94  |    512|
+|288   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_573 |    266|
+|289   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_574  |    213|
+|290   |  \row_loop[15].col_loop[0].element   |bfloat16_partial_element_95  |    512|
+|291   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_571 |    269|
+|292   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_572  |    210|
+|293   |  \row_loop[15].col_loop[10].element  |bfloat16_partial_element_96  |    512|
+|294   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_569 |    269|
+|295   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_570  |    210|
+|296   |  \row_loop[15].col_loop[11].element  |bfloat16_partial_element_97  |    512|
+|297   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_567 |    269|
+|298   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_568  |    210|
+|299   |  \row_loop[15].col_loop[12].element  |bfloat16_partial_element_98  |    512|
+|300   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_565 |    269|
+|301   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_566  |    210|
+|302   |  \row_loop[15].col_loop[13].element  |bfloat16_partial_element_99  |    512|
+|303   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_563 |    269|
+|304   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_564  |    210|
+|305   |  \row_loop[15].col_loop[14].element  |bfloat16_partial_element_100 |    512|
+|306   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_561 |    269|
+|307   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_562  |    210|
+|308   |  \row_loop[15].col_loop[15].element  |bfloat16_partial_element_101 |    512|
+|309   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_559 |    266|
+|310   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_560  |    229|
+|311   |  \row_loop[15].col_loop[1].element   |bfloat16_partial_element_102 |    512|
+|312   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_557 |    269|
+|313   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_558  |    210|
+|314   |  \row_loop[15].col_loop[2].element   |bfloat16_partial_element_103 |    512|
+|315   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_555 |    269|
+|316   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_556  |    210|
+|317   |  \row_loop[15].col_loop[3].element   |bfloat16_partial_element_104 |    512|
+|318   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_553 |    266|
+|319   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_554  |    229|
+|320   |  \row_loop[15].col_loop[4].element   |bfloat16_partial_element_105 |    512|
+|321   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_551 |    266|
+|322   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_552  |    229|
+|323   |  \row_loop[15].col_loop[5].element   |bfloat16_partial_element_106 |    512|
+|324   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_549 |    269|
+|325   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_550  |    210|
+|326   |  \row_loop[15].col_loop[6].element   |bfloat16_partial_element_107 |    512|
+|327   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_547 |    269|
+|328   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_548  |    210|
+|329   |  \row_loop[15].col_loop[7].element   |bfloat16_partial_element_108 |    512|
+|330   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_545 |    269|
+|331   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_546  |    210|
+|332   |  \row_loop[15].col_loop[8].element   |bfloat16_partial_element_109 |    512|
+|333   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_543 |    269|
+|334   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_544  |    210|
+|335   |  \row_loop[15].col_loop[9].element   |bfloat16_partial_element_110 |    512|
+|336   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_541 |    269|
+|337   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_542  |    210|
+|338   |  \row_loop[1].col_loop[0].element    |bfloat16_partial_element_111 |    513|
+|339   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_539 |    299|
+|340   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_540  |    165|
+|341   |  \row_loop[1].col_loop[10].element   |bfloat16_partial_element_112 |    512|
+|342   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_537 |    266|
+|343   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_538  |    213|
+|344   |  \row_loop[1].col_loop[11].element   |bfloat16_partial_element_113 |    512|
+|345   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_535 |    266|
+|346   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_536  |    213|
+|347   |  \row_loop[1].col_loop[12].element   |bfloat16_partial_element_114 |    512|
+|348   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_533 |    266|
+|349   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_534  |    213|
+|350   |  \row_loop[1].col_loop[13].element   |bfloat16_partial_element_115 |    512|
+|351   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_531 |    266|
+|352   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_532  |    213|
+|353   |  \row_loop[1].col_loop[14].element   |bfloat16_partial_element_116 |    512|
+|354   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_529 |    266|
+|355   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_530  |    213|
+|356   |  \row_loop[1].col_loop[15].element   |bfloat16_partial_element_117 |    512|
+|357   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_527 |    266|
+|358   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_528  |    213|
+|359   |  \row_loop[1].col_loop[1].element    |bfloat16_partial_element_118 |    512|
+|360   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_525 |    298|
+|361   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_526  |    165|
+|362   |  \row_loop[1].col_loop[2].element    |bfloat16_partial_element_119 |    512|
+|363   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_523 |    298|
+|364   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_524  |    165|
+|365   |  \row_loop[1].col_loop[3].element    |bfloat16_partial_element_120 |    512|
+|366   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_521 |    298|
+|367   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_522  |    165|
+|368   |  \row_loop[1].col_loop[4].element    |bfloat16_partial_element_121 |    512|
+|369   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_519 |    298|
+|370   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_520  |    165|
+|371   |  \row_loop[1].col_loop[5].element    |bfloat16_partial_element_122 |    512|
+|372   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_517 |    298|
+|373   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_518  |    165|
+|374   |  \row_loop[1].col_loop[6].element    |bfloat16_partial_element_123 |    512|
+|375   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_515 |    298|
+|376   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_516  |    165|
+|377   |  \row_loop[1].col_loop[7].element    |bfloat16_partial_element_124 |    512|
+|378   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_513 |    298|
+|379   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_514  |    165|
+|380   |  \row_loop[1].col_loop[8].element    |bfloat16_partial_element_125 |    512|
+|381   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_511 |    298|
+|382   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_512  |    165|
+|383   |  \row_loop[1].col_loop[9].element    |bfloat16_partial_element_126 |    512|
+|384   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_509 |    266|
+|385   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_510  |    213|
+|386   |  \row_loop[2].col_loop[0].element    |bfloat16_partial_element_127 |    512|
+|387   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_507 |    298|
+|388   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_508  |    165|
+|389   |  \row_loop[2].col_loop[10].element   |bfloat16_partial_element_128 |    512|
+|390   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_505 |    266|
+|391   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_506  |    213|
+|392   |  \row_loop[2].col_loop[11].element   |bfloat16_partial_element_129 |    512|
+|393   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_503 |    266|
+|394   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_504  |    213|
+|395   |  \row_loop[2].col_loop[12].element   |bfloat16_partial_element_130 |    512|
+|396   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_501 |    266|
+|397   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_502  |    213|
+|398   |  \row_loop[2].col_loop[13].element   |bfloat16_partial_element_131 |    512|
+|399   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_499 |    266|
+|400   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_500  |    213|
+|401   |  \row_loop[2].col_loop[14].element   |bfloat16_partial_element_132 |    512|
+|402   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_497 |    266|
+|403   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_498  |    213|
+|404   |  \row_loop[2].col_loop[15].element   |bfloat16_partial_element_133 |    512|
+|405   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_495 |    266|
+|406   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_496  |    213|
+|407   |  \row_loop[2].col_loop[1].element    |bfloat16_partial_element_134 |    512|
+|408   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_493 |    298|
+|409   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_494  |    165|
+|410   |  \row_loop[2].col_loop[2].element    |bfloat16_partial_element_135 |    512|
+|411   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_491 |    298|
+|412   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_492  |    165|
+|413   |  \row_loop[2].col_loop[3].element    |bfloat16_partial_element_136 |    512|
+|414   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_489 |    298|
+|415   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_490  |    165|
+|416   |  \row_loop[2].col_loop[4].element    |bfloat16_partial_element_137 |    512|
+|417   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_487 |    298|
+|418   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_488  |    165|
+|419   |  \row_loop[2].col_loop[5].element    |bfloat16_partial_element_138 |    512|
+|420   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_485 |    298|
+|421   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_486  |    165|
+|422   |  \row_loop[2].col_loop[6].element    |bfloat16_partial_element_139 |    512|
+|423   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_483 |    298|
+|424   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_484  |    165|
+|425   |  \row_loop[2].col_loop[7].element    |bfloat16_partial_element_140 |    512|
+|426   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_481 |    298|
+|427   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_482  |    165|
+|428   |  \row_loop[2].col_loop[8].element    |bfloat16_partial_element_141 |    512|
+|429   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_479 |    298|
+|430   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_480  |    165|
+|431   |  \row_loop[2].col_loop[9].element    |bfloat16_partial_element_142 |    512|
+|432   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_477 |    266|
+|433   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_478  |    213|
+|434   |  \row_loop[3].col_loop[0].element    |bfloat16_partial_element_143 |    512|
+|435   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_475 |    298|
+|436   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_476  |    165|
+|437   |  \row_loop[3].col_loop[10].element   |bfloat16_partial_element_144 |    512|
+|438   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_473 |    266|
+|439   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_474  |    213|
+|440   |  \row_loop[3].col_loop[11].element   |bfloat16_partial_element_145 |    512|
+|441   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_471 |    266|
+|442   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_472  |    213|
+|443   |  \row_loop[3].col_loop[12].element   |bfloat16_partial_element_146 |    512|
+|444   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_469 |    266|
+|445   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_470  |    213|
+|446   |  \row_loop[3].col_loop[13].element   |bfloat16_partial_element_147 |    512|
+|447   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_467 |    266|
+|448   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_468  |    213|
+|449   |  \row_loop[3].col_loop[14].element   |bfloat16_partial_element_148 |    512|
+|450   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_465 |    266|
+|451   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_466  |    213|
+|452   |  \row_loop[3].col_loop[15].element   |bfloat16_partial_element_149 |    512|
+|453   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_463 |    266|
+|454   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_464  |    213|
+|455   |  \row_loop[3].col_loop[1].element    |bfloat16_partial_element_150 |    512|
+|456   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_461 |    298|
+|457   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_462  |    165|
+|458   |  \row_loop[3].col_loop[2].element    |bfloat16_partial_element_151 |    512|
+|459   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_459 |    298|
+|460   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_460  |    165|
+|461   |  \row_loop[3].col_loop[3].element    |bfloat16_partial_element_152 |    512|
+|462   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_457 |    298|
+|463   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_458  |    165|
+|464   |  \row_loop[3].col_loop[4].element    |bfloat16_partial_element_153 |    512|
+|465   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_455 |    298|
+|466   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_456  |    165|
+|467   |  \row_loop[3].col_loop[5].element    |bfloat16_partial_element_154 |    512|
+|468   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_453 |    298|
+|469   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_454  |    165|
+|470   |  \row_loop[3].col_loop[6].element    |bfloat16_partial_element_155 |    512|
+|471   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_451 |    298|
+|472   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_452  |    165|
+|473   |  \row_loop[3].col_loop[7].element    |bfloat16_partial_element_156 |    512|
+|474   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_449 |    298|
+|475   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_450  |    165|
+|476   |  \row_loop[3].col_loop[8].element    |bfloat16_partial_element_157 |    512|
+|477   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_447 |    298|
+|478   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_448  |    165|
+|479   |  \row_loop[3].col_loop[9].element    |bfloat16_partial_element_158 |    512|
+|480   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_445 |    266|
+|481   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_446  |    213|
+|482   |  \row_loop[4].col_loop[0].element    |bfloat16_partial_element_159 |    512|
+|483   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_443 |    298|
+|484   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_444  |    165|
+|485   |  \row_loop[4].col_loop[10].element   |bfloat16_partial_element_160 |    512|
+|486   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_441 |    298|
+|487   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_442  |    165|
+|488   |  \row_loop[4].col_loop[11].element   |bfloat16_partial_element_161 |    512|
+|489   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_439 |    298|
+|490   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_440  |    165|
+|491   |  \row_loop[4].col_loop[12].element   |bfloat16_partial_element_162 |    512|
+|492   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_437 |    298|
+|493   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_438  |    165|
+|494   |  \row_loop[4].col_loop[13].element   |bfloat16_partial_element_163 |    512|
+|495   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_435 |    298|
+|496   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_436  |    165|
+|497   |  \row_loop[4].col_loop[14].element   |bfloat16_partial_element_164 |    512|
+|498   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_433 |    266|
+|499   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_434  |    213|
+|500   |  \row_loop[4].col_loop[15].element   |bfloat16_partial_element_165 |    512|
+|501   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_431 |    266|
+|502   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_432  |    213|
+|503   |  \row_loop[4].col_loop[1].element    |bfloat16_partial_element_166 |    512|
+|504   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_429 |    298|
+|505   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_430  |    165|
+|506   |  \row_loop[4].col_loop[2].element    |bfloat16_partial_element_167 |    512|
+|507   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_427 |    298|
+|508   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_428  |    165|
+|509   |  \row_loop[4].col_loop[3].element    |bfloat16_partial_element_168 |    512|
+|510   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_425 |    298|
+|511   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_426  |    165|
+|512   |  \row_loop[4].col_loop[4].element    |bfloat16_partial_element_169 |    512|
+|513   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_423 |    298|
+|514   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_424  |    165|
+|515   |  \row_loop[4].col_loop[5].element    |bfloat16_partial_element_170 |    512|
+|516   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_421 |    298|
+|517   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_422  |    165|
+|518   |  \row_loop[4].col_loop[6].element    |bfloat16_partial_element_171 |    512|
+|519   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_419 |    298|
+|520   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_420  |    165|
+|521   |  \row_loop[4].col_loop[7].element    |bfloat16_partial_element_172 |    512|
+|522   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_417 |    298|
+|523   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_418  |    165|
+|524   |  \row_loop[4].col_loop[8].element    |bfloat16_partial_element_173 |    512|
+|525   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_415 |    298|
+|526   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_416  |    165|
+|527   |  \row_loop[4].col_loop[9].element    |bfloat16_partial_element_174 |    512|
+|528   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_413 |    298|
+|529   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_414  |    165|
+|530   |  \row_loop[5].col_loop[0].element    |bfloat16_partial_element_175 |    512|
+|531   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_411 |    298|
+|532   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_412  |    165|
+|533   |  \row_loop[5].col_loop[10].element   |bfloat16_partial_element_176 |    512|
+|534   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_409 |    298|
+|535   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_410  |    165|
+|536   |  \row_loop[5].col_loop[11].element   |bfloat16_partial_element_177 |    512|
+|537   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_407 |    298|
+|538   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_408  |    165|
+|539   |  \row_loop[5].col_loop[12].element   |bfloat16_partial_element_178 |    512|
+|540   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_405 |    298|
+|541   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_406  |    165|
+|542   |  \row_loop[5].col_loop[13].element   |bfloat16_partial_element_179 |    512|
+|543   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_403 |    298|
+|544   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_404  |    165|
+|545   |  \row_loop[5].col_loop[14].element   |bfloat16_partial_element_180 |    512|
+|546   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_401 |    266|
+|547   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_402  |    213|
+|548   |  \row_loop[5].col_loop[15].element   |bfloat16_partial_element_181 |    512|
+|549   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_399 |    266|
+|550   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_400  |    213|
+|551   |  \row_loop[5].col_loop[1].element    |bfloat16_partial_element_182 |    512|
+|552   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_397 |    298|
+|553   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_398  |    165|
+|554   |  \row_loop[5].col_loop[2].element    |bfloat16_partial_element_183 |    512|
+|555   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_395 |    298|
+|556   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_396  |    165|
+|557   |  \row_loop[5].col_loop[3].element    |bfloat16_partial_element_184 |    512|
+|558   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_393 |    298|
+|559   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_394  |    165|
+|560   |  \row_loop[5].col_loop[4].element    |bfloat16_partial_element_185 |    512|
+|561   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_391 |    266|
+|562   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_392  |    213|
+|563   |  \row_loop[5].col_loop[5].element    |bfloat16_partial_element_186 |    512|
+|564   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_389 |    298|
+|565   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_390  |    165|
+|566   |  \row_loop[5].col_loop[6].element    |bfloat16_partial_element_187 |    512|
+|567   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_387 |    298|
+|568   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_388  |    165|
+|569   |  \row_loop[5].col_loop[7].element    |bfloat16_partial_element_188 |    512|
+|570   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_385 |    298|
+|571   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_386  |    165|
+|572   |  \row_loop[5].col_loop[8].element    |bfloat16_partial_element_189 |    512|
+|573   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_383 |    298|
+|574   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_384  |    165|
+|575   |  \row_loop[5].col_loop[9].element    |bfloat16_partial_element_190 |    512|
+|576   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_381 |    298|
+|577   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_382  |    165|
+|578   |  \row_loop[6].col_loop[0].element    |bfloat16_partial_element_191 |    512|
+|579   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_379 |    298|
+|580   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_380  |    165|
+|581   |  \row_loop[6].col_loop[10].element   |bfloat16_partial_element_192 |    512|
+|582   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_377 |    298|
+|583   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_378  |    165|
+|584   |  \row_loop[6].col_loop[11].element   |bfloat16_partial_element_193 |    512|
+|585   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_375 |    298|
+|586   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_376  |    165|
+|587   |  \row_loop[6].col_loop[12].element   |bfloat16_partial_element_194 |    512|
+|588   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_373 |    298|
+|589   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_374  |    165|
+|590   |  \row_loop[6].col_loop[13].element   |bfloat16_partial_element_195 |    512|
+|591   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_371 |    298|
+|592   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_372  |    165|
+|593   |  \row_loop[6].col_loop[14].element   |bfloat16_partial_element_196 |    512|
+|594   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_369 |    266|
+|595   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_370  |    213|
+|596   |  \row_loop[6].col_loop[15].element   |bfloat16_partial_element_197 |    512|
+|597   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_367 |    266|
+|598   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_368  |    213|
+|599   |  \row_loop[6].col_loop[1].element    |bfloat16_partial_element_198 |    512|
+|600   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_365 |    298|
+|601   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_366  |    165|
+|602   |  \row_loop[6].col_loop[2].element    |bfloat16_partial_element_199 |    512|
+|603   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_363 |    298|
+|604   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_364  |    165|
+|605   |  \row_loop[6].col_loop[3].element    |bfloat16_partial_element_200 |    512|
+|606   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_361 |    266|
+|607   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_362  |    213|
+|608   |  \row_loop[6].col_loop[4].element    |bfloat16_partial_element_201 |    512|
+|609   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_359 |    298|
+|610   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_360  |    165|
+|611   |  \row_loop[6].col_loop[5].element    |bfloat16_partial_element_202 |    512|
+|612   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_357 |    298|
+|613   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_358  |    165|
+|614   |  \row_loop[6].col_loop[6].element    |bfloat16_partial_element_203 |    512|
+|615   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_355 |    298|
+|616   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_356  |    165|
+|617   |  \row_loop[6].col_loop[7].element    |bfloat16_partial_element_204 |    512|
+|618   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_353 |    298|
+|619   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_354  |    165|
+|620   |  \row_loop[6].col_loop[8].element    |bfloat16_partial_element_205 |    512|
+|621   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_351 |    298|
+|622   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_352  |    165|
+|623   |  \row_loop[6].col_loop[9].element    |bfloat16_partial_element_206 |    512|
+|624   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_349 |    298|
+|625   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_350  |    165|
+|626   |  \row_loop[7].col_loop[0].element    |bfloat16_partial_element_207 |    512|
+|627   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_347 |    298|
+|628   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_348  |    165|
+|629   |  \row_loop[7].col_loop[10].element   |bfloat16_partial_element_208 |    512|
+|630   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_345 |    298|
+|631   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_346  |    165|
+|632   |  \row_loop[7].col_loop[11].element   |bfloat16_partial_element_209 |    512|
+|633   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_343 |    266|
+|634   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_344  |    213|
+|635   |  \row_loop[7].col_loop[12].element   |bfloat16_partial_element_210 |    512|
+|636   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_341 |    266|
+|637   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_342  |    213|
+|638   |  \row_loop[7].col_loop[13].element   |bfloat16_partial_element_211 |    512|
+|639   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_339 |    266|
+|640   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_340  |    213|
+|641   |  \row_loop[7].col_loop[14].element   |bfloat16_partial_element_212 |    512|
+|642   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_337 |    266|
+|643   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_338  |    213|
+|644   |  \row_loop[7].col_loop[15].element   |bfloat16_partial_element_213 |    512|
+|645   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_335 |    266|
+|646   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_336  |    213|
+|647   |  \row_loop[7].col_loop[1].element    |bfloat16_partial_element_214 |    512|
+|648   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_333 |    298|
+|649   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_334  |    165|
+|650   |  \row_loop[7].col_loop[2].element    |bfloat16_partial_element_215 |    512|
+|651   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_331 |    298|
+|652   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_332  |    165|
+|653   |  \row_loop[7].col_loop[3].element    |bfloat16_partial_element_216 |    512|
+|654   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_329 |    298|
+|655   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_330  |    165|
+|656   |  \row_loop[7].col_loop[4].element    |bfloat16_partial_element_217 |    512|
+|657   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_327 |    298|
+|658   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_328  |    165|
+|659   |  \row_loop[7].col_loop[5].element    |bfloat16_partial_element_218 |    512|
+|660   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_325 |    298|
+|661   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_326  |    165|
+|662   |  \row_loop[7].col_loop[6].element    |bfloat16_partial_element_219 |    512|
+|663   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_323 |    298|
+|664   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_324  |    165|
+|665   |  \row_loop[7].col_loop[7].element    |bfloat16_partial_element_220 |    512|
+|666   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_321 |    298|
+|667   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_322  |    165|
+|668   |  \row_loop[7].col_loop[8].element    |bfloat16_partial_element_221 |    512|
+|669   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_319 |    298|
+|670   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_320  |    165|
+|671   |  \row_loop[7].col_loop[9].element    |bfloat16_partial_element_222 |    512|
+|672   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_317 |    298|
+|673   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_318  |    165|
+|674   |  \row_loop[8].col_loop[0].element    |bfloat16_partial_element_223 |    512|
+|675   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_315 |    298|
+|676   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_316  |    165|
+|677   |  \row_loop[8].col_loop[10].element   |bfloat16_partial_element_224 |    512|
+|678   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_313 |    266|
+|679   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_314  |    213|
+|680   |  \row_loop[8].col_loop[11].element   |bfloat16_partial_element_225 |    512|
+|681   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_311 |    266|
+|682   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_312  |    213|
+|683   |  \row_loop[8].col_loop[12].element   |bfloat16_partial_element_226 |    512|
+|684   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_309 |    266|
+|685   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_310  |    213|
+|686   |  \row_loop[8].col_loop[13].element   |bfloat16_partial_element_227 |    512|
+|687   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_307 |    266|
+|688   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_308  |    213|
+|689   |  \row_loop[8].col_loop[14].element   |bfloat16_partial_element_228 |    512|
+|690   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_305 |    266|
+|691   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_306  |    213|
+|692   |  \row_loop[8].col_loop[15].element   |bfloat16_partial_element_229 |    512|
+|693   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_303 |    266|
+|694   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_304  |    213|
+|695   |  \row_loop[8].col_loop[1].element    |bfloat16_partial_element_230 |    512|
+|696   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_301 |    298|
+|697   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_302  |    165|
+|698   |  \row_loop[8].col_loop[2].element    |bfloat16_partial_element_231 |    512|
+|699   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_299 |    298|
+|700   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_300  |    165|
+|701   |  \row_loop[8].col_loop[3].element    |bfloat16_partial_element_232 |    512|
+|702   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_297 |    298|
+|703   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_298  |    165|
+|704   |  \row_loop[8].col_loop[4].element    |bfloat16_partial_element_233 |    512|
+|705   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_295 |    298|
+|706   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_296  |    165|
+|707   |  \row_loop[8].col_loop[5].element    |bfloat16_partial_element_234 |    512|
+|708   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_293 |    266|
+|709   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_294  |    213|
+|710   |  \row_loop[8].col_loop[6].element    |bfloat16_partial_element_235 |    512|
+|711   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_291 |    266|
+|712   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_292  |    213|
+|713   |  \row_loop[8].col_loop[7].element    |bfloat16_partial_element_236 |    512|
+|714   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_289 |    266|
+|715   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_290  |    213|
+|716   |  \row_loop[8].col_loop[8].element    |bfloat16_partial_element_237 |    512|
+|717   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_287 |    266|
+|718   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_288  |    213|
+|719   |  \row_loop[8].col_loop[9].element    |bfloat16_partial_element_238 |    512|
+|720   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_285 |    266|
+|721   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_286  |    213|
+|722   |  \row_loop[9].col_loop[0].element    |bfloat16_partial_element_239 |    512|
+|723   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_283 |    298|
+|724   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_284  |    165|
+|725   |  \row_loop[9].col_loop[10].element   |bfloat16_partial_element_240 |    512|
+|726   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_281 |    266|
+|727   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_282  |    213|
+|728   |  \row_loop[9].col_loop[11].element   |bfloat16_partial_element_241 |    512|
+|729   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_279 |    266|
+|730   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_280  |    213|
+|731   |  \row_loop[9].col_loop[12].element   |bfloat16_partial_element_242 |    512|
+|732   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_277 |    266|
+|733   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_278  |    213|
+|734   |  \row_loop[9].col_loop[13].element   |bfloat16_partial_element_243 |    512|
+|735   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_275 |    266|
+|736   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_276  |    213|
+|737   |  \row_loop[9].col_loop[14].element   |bfloat16_partial_element_244 |    512|
+|738   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_273 |    266|
+|739   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_274  |    213|
+|740   |  \row_loop[9].col_loop[15].element   |bfloat16_partial_element_245 |    512|
+|741   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_271 |    266|
+|742   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_272  |    213|
+|743   |  \row_loop[9].col_loop[1].element    |bfloat16_partial_element_246 |    512|
+|744   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_269 |    298|
+|745   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_270  |    165|
+|746   |  \row_loop[9].col_loop[2].element    |bfloat16_partial_element_247 |    512|
+|747   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_267 |    298|
+|748   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_268  |    165|
+|749   |  \row_loop[9].col_loop[3].element    |bfloat16_partial_element_248 |    512|
+|750   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_265 |    298|
+|751   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_266  |    165|
+|752   |  \row_loop[9].col_loop[4].element    |bfloat16_partial_element_249 |    512|
+|753   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_263 |    298|
+|754   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_264  |    165|
+|755   |  \row_loop[9].col_loop[5].element    |bfloat16_partial_element_250 |    512|
+|756   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_261 |    266|
+|757   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_262  |    213|
+|758   |  \row_loop[9].col_loop[6].element    |bfloat16_partial_element_251 |    512|
+|759   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_259 |    266|
+|760   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_260  |    213|
+|761   |  \row_loop[9].col_loop[7].element    |bfloat16_partial_element_252 |    512|
+|762   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_257 |    266|
+|763   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_258  |    213|
+|764   |  \row_loop[9].col_loop[8].element    |bfloat16_partial_element_253 |    512|
+|765   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined_255 |    266|
+|766   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined_256  |    213|
+|767   |  \row_loop[9].col_loop[9].element    |bfloat16_partial_element_254 |    512|
+|768   |    bfloat16_adder_pipelined          |bfloat16_adder_pipelined     |    266|
+|769   |    bfloat16_mult_pipelined           |bfloat16_mult_pipelined      |    213|
++------+--------------------------------------+-----------------------------+-------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1310.836 ; gain = 823.203
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:44 ; elapsed = 00:04:27 . Memory (MB): peak = 2292.742 ; gain = 1805.270
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1310.836 ; gain = 823.203
-Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1310.836 ; gain = 823.203
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:44 ; elapsed = 00:04:28 . Memory (MB): peak = 2292.742 ; gain = 1805.270
+Synthesis Optimization Complete : Time (s): cpu = 00:03:44 ; elapsed = 00:04:28 . Memory (MB): peak = 2292.742 ; gain = 1805.270
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.227 . Memory (MB): peak = 1322.922 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 585 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2309.020 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4898 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1365.797 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2479.375 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 546 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 545 instances
 
-Synth Design complete | Checksum: ac158071
+Synth Design complete | Checksum: 6c015d76
 INFO: [Common 17-83] Releasing license: Synthesis
-22 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+128 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1365.797 ; gain = 886.195
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1/bfloat16_matrix_multiplier.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file bfloat16_matrix_multiplier_utilization_synth.rpt -pb bfloat16_matrix_multiplier_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 25 14:06:24 2024...
+synth_design: Time (s): cpu = 00:04:23 ; elapsed = 00:05:07 . Memory (MB): peak = 2479.375 ; gain = 1998.754
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.runs/synth_1/bfloat16_matrix_multiplier_4x4.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 2479.375 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file bfloat16_matrix_multiplier_4x4_utilization_synth.rpt -pb bfloat16_matrix_multiplier_4x4_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 31 19:44:12 2024...

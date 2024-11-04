@@ -1,7 +1,3 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_adder_pipelined.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bfloat16_adder_pipelined
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_mult_pipelined.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bfloat16_mult_pipelined
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/bfloat16_matrix_multiplier.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module bfloat16_matrix_multiplier
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/hdl/mini_project_2/tb_bfloat16_matrix_multiplier.sv" into library xil_defaultlib

@@ -1,0 +1,30 @@
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:1321:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:1321:7: note: FIX-IT applied suggested code changes
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:2295:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:2295:5: note: FIX-IT applied suggested code changes
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:2309:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:2309:5: note: FIX-IT applied suggested code changes
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:2323:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:2323:5: note: FIX-IT applied suggested code changes
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:3934:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:3934:7: note: FIX-IT applied suggested code changes
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:5727:2: warning: Added loop label VITIS_LOOP_13_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 10; i++) {
+ ^~~
+ VITIS_LOOP_13_1: 
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\chatGPT_proj\chatGPT_proj\.autopilot\db\array_add.pp.0.cpp:5727:2: note: FIX-IT applied suggested code changes

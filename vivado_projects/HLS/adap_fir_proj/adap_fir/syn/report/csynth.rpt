@@ -1,0 +1,131 @@
+
+
+================================================================
+== Synthesis Summary Report of 'adap_fir'
+================================================================
++ General Information: 
+    * Date:           Sun Nov  3 12:02:31 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        adap_fir_proj
+    * Solution:       adap_fir (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+    |                 Modules                | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |          |           |            |     |
+    |                 & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF    |     LUT    | URAM|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+    |+ adap_fir                              |     -|  0.04|      181|  1.810e+03|         -|      182|     -|        no|     -|  10 (12%)|  1669 (4%)|  2264 (12%)|    -|
+    | + adap_fir_Pipeline_Shift_Accum_Loop   |     -|  0.04|      128|  1.280e+03|         -|      128|     -|        no|     -|         -|  286 (~0%)|    234 (1%)|    -|
+    |  o Shift_Accum_Loop                    |    II|  7.30|      126|  1.260e+03|        12|        5|    24|       yes|     -|         -|          -|           -|    -|
+    | + adap_fir_Pipeline_Coeff_Update_Loop  |     -|  0.04|       40|    400.000|         -|       40|     -|        no|     -|    3 (3%)|   408 (1%)|    417 (2%)|    -|
+    |  o Coeff_Update_Loop                   |     -|  7.30|       38|    380.000|        16|        1|    24|       yes|     -|         -|          -|           -|    -|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++--------------+------------+---------------+--------+----------+
+| Interface    | Data Width | Address Width | Offset | Register |
++--------------+------------+---------------+--------+----------+
+| s_axi_fir_io | 32         | 6             | 16     | 0        |
++--------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++--------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface    | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++--------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_fir_io | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_fir_io | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_fir_io | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_fir_io | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_fir_io | y        | 0x10   | 32    | R      | Data signal of y                 |                                                                      |
+| s_axi_fir_io | y_ctrl   | 0x14   | 32    | R      | Control signal of y              | 0=y_ap_vld                                                           |
+| s_axi_fir_io | x        | 0x20   | 32    | W      | Data signal of x                 |                                                                      |
+| s_axi_fir_io | d        | 0x28   | 32    | W      | Data signal of d                 |                                                                      |
++--------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| y        | out       | float*   |
+| x        | in        | float    |
+| d        | in        | float    |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+----------+----------------------------------+
+| Argument | HW Interface | HW Type  | HW Info                          |
++----------+--------------+----------+----------------------------------+
+| y        | s_axi_fir_io | register | name=y offset=0x10 range=32      |
+| y        | s_axi_fir_io | register | name=y_ctrl offset=0x14 range=32 |
+| x        | s_axi_fir_io | register | name=x offset=0x20 range=32      |
+| d        | s_axi_fir_io | register | name=d offset=0x28 range=32      |
++----------+--------------+----------+----------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+-----+--------+----------+------+---------+---------+
+| Name                                   | DSP | Pragma | Variable | Op   | Impl    | Latency |
++----------------------------------------+-----+--------+----------+------+---------+---------+
+| + adap_fir                             | 10  |        |          |      |         |         |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U15    | 3   |        | mul      | fmul | maxdsp  | 3       |
+|   fsub_32ns_32ns_32_5_full_dsp_1_U14   | 2   |        | error    | fsub | fulldsp | 4       |
+|  + adap_fir_Pipeline_Shift_Accum_Loop  | 0   |        |          |      |         |         |
+|    add_ln30_fu_169_p2                  | -   |        | add_ln30 | add  | fabric  | 0       |
+|    add_ln25_fu_180_p2                  | -   |        | add_ln25 | add  | fabric  | 0       |
+|  + adap_fir_Pipeline_Coeff_Update_Loop | 3   |        |          |      |         |         |
+|    add_ln42_fu_102_p2                  | -   |        | add_ln42 | add  | fabric  | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U10   | 3   |        | div      | fmul | maxdsp  | 3       |
++----------------------------------------+-----+--------+----------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------+------+------+--------+-----------+---------+------+---------+
+| Name          | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
++---------------+------+------+--------+-----------+---------+------+---------+
+| + adap_fir    | 0    | 0    |        |           |         |      |         |
+|   shift_reg_U | -    | -    |        | shift_reg | ram_1p  | auto | 1       |
+|   coeffs_1_U  | -    | -    |        | coeffs_1  | ram_s2p | auto | 1       |
++---------------+------+------+--------+-----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-------------------------------------+--------------------------------------------+
+| Type      | Options                             | Location                                   |
++-----------+-------------------------------------+--------------------------------------------+
+| interface | s_axilite bundle=fir_io port=return | HLS_Code/adap_fir.c:11 in adap_fir, return |
+| interface | s_axilite bundle=fir_io port=y      | HLS_Code/adap_fir.c:12 in adap_fir, y      |
+| interface | s_axilite bundle=fir_io port=x      | HLS_Code/adap_fir.c:13 in adap_fir, x      |
+| interface | s_axilite bundle=fir_io port=d      | HLS_Code/adap_fir.c:14 in adap_fir, d      |
++-----------+-------------------------------------+--------------------------------------------+
+
+

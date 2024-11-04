@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/adap_fir_proj/adap_fir/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="adap_fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=adap_fir" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/adap_fir_proj/adap_fir/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="adap_fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=adap_fir" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/adap_fir.c:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="adap_fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite bundle=fir_io port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/adap_fir.c:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="adap_fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite bundle=fir_io port=y" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/adap_fir.c:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="adap_fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite bundle=fir_io port=x" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_Code/adap_fir.c:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="adap_fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite bundle=fir_io port=d" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

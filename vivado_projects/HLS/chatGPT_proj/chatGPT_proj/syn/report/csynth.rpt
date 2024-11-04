@@ -1,0 +1,118 @@
+
+
+================================================================
+== Synthesis Summary Report of 'array_add'
+================================================================
++ General Information: 
+    * Date:           Sat Nov  2 16:17:13 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        chatGPT_proj
+    * Solution:       chatGPT_proj (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |   Modules   | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |           |          |     |
+    |   & Loops   | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT   | URAM|
+    +-------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |+ array_add  |    II|  0.10|       10|  100.000|         -|       10|     -|       yes|     -|   -|  288 (~0%)|  560 (1%)|    -|
+    +-------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++----------------+------------+---------------+--------+----------+
+| Interface      | Data Width | Address Width | Offset | Register |
++----------------+------------+---------------+--------+----------+
+| s_axi_AXI_LITE | 32         | 8             | 64     | 0        |
++----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface      | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_AXI_LITE | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_AXI_LITE | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_AXI_LITE | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_AXI_LITE | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------+
+| Argument | Direction | Datatype    |
++----------+-----------+-------------+
+| a        | in        | int const * |
+| b        | in        | int const * |
+| result   | out       | int*        |
++----------+-----------+-------------+
+
+* SW-to-HW Mapping
++----------+----------------+---------+---------------------------------+
+| Argument | HW Interface   | HW Type | HW Info                         |
++----------+----------------+---------+---------------------------------+
+| a        | s_axi_AXI_LITE | memory  | name=a offset=64 range=64       |
+| b        | s_axi_AXI_LITE | memory  | name=b offset=128 range=64      |
+| result   | s_axi_AXI_LITE | memory  | name=result offset=192 range=64 |
++----------+----------------+---------+---------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------+-----+--------+------------+-----+--------+---------+
+| Name        | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++-------------+-----+--------+------------+-----+--------+---------+
+| + array_add | 0   |        |            |     |        |         |
+|   result_d0 | -   |        | add_ln14   | add | fabric | 0       |
+|   result_d0 | -   |        | add_ln14_1 | add | fabric | 0       |
+|   result_d0 | -   |        | add_ln14_2 | add | fabric | 0       |
+|   result_d0 | -   |        | add_ln14_3 | add | fabric | 0       |
+|   result_d0 | -   |        | add_ln14_4 | add | fabric | 0       |
+|   result_d0 | -   |        | add_ln14_5 | add | fabric | 0       |
+|   result_d0 | -   |        | add_ln14_6 | add | fabric | 0       |
+|   result_d0 | -   |        | add_ln14_7 | add | fabric | 0       |
+|   result_d0 | -   |        | add_ln14_8 | add | fabric | 0       |
+|   result_d0 | -   |        | add_ln14_9 | add | fabric | 0       |
++-------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------------+-----------------------------------------------+
+| Type      | Options                               | Location                                      |
++-----------+---------------------------------------+-----------------------------------------------+
+| interface | s_axilite port=a bundle=AXI_LITE      | HLS_Code/array_add.cpp:6 in array_add, a      |
+| interface | s_axilite port=b bundle=AXI_LITE      | HLS_Code/array_add.cpp:7 in array_add, b      |
+| interface | s_axilite port=result bundle=AXI_LITE | HLS_Code/array_add.cpp:8 in array_add, result |
+| interface | s_axilite port=return bundle=AXI_LITE | HLS_Code/array_add.cpp:9 in array_add, return |
+| pipeline  | II=1                                  | HLS_Code/array_add.cpp:11 in array_add        |
++-----------+---------------------------------------+-----------------------------------------------+
+
+

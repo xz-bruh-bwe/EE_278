@@ -1,0 +1,3 @@
+array_add.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/array_add.v,
+array_add_0.v,verilog,xil_defaultlib,../../../../pixel_control.gen/sources_1/ip/array_add_0_1/sim/array_add_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

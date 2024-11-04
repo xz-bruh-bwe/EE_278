@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="adap_fir.c" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\adap_fir.c"/>
+    <originFiles name="adap_fir.h" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\adap_fir.h"/>
+  </source>
+  <testbench>
+    <originFiles name="adap_fir_tb.cpp" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\adap_fir_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

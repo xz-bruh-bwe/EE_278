@@ -1,0 +1,7 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_axi_slave_AXI_LITE.v"
+sv xil_defaultlib "array_add.autotb.v"
+sv xil_defaultlib "array_add.v"
+sv xil_defaultlib "array_add_AXI_LITE_s_axi.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

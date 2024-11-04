@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="array_add.cpp" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\array_add.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="array_add_tb.cpp" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\HLS_Code\array_add_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

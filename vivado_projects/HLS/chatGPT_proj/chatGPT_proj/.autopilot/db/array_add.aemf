@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1730589433415">
+  <ports id="1" name="a" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="b" type="PortType" coreName="RAM_1P" coreId="3834512688" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="result" type="PortType" coreName="RAM_1P" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="10">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="91" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="96" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@ports.2"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="107" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="112" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="115" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="117" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@ports.2"/>
+  <edges id="121" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="123" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="128" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="131" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="133" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@ports.2"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="139" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="144" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@ports.2"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="155" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="159" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="160" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="163" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="164" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="165" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@ports.2"/>
+  <edges id="169" source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="170" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="171" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.35"/>
+  <edges id="175" source_obj="//@regions.0/@basic_blocks.0/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="176" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.37"/>
+  <edges id="179" source_obj="//@regions.0/@basic_blocks.0/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.38"/>
+  <edges id="180" source_obj="//@regions.0/@basic_blocks.0/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.39"/>
+  <edges id="181" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.39"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.0/@node_objs.40" sink_obj="//@ports.2"/>
+  <edges id="185" source_obj="//@regions.0/@basic_blocks.0/@node_objs.39" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.41"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.0/@node_objs.40" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.41"/>
+  <edges id="187" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.42"/>
+  <edges id="191" source_obj="//@regions.0/@basic_blocks.0/@node_objs.42" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.43"/>
+  <edges id="192" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.44"/>
+  <edges id="195" source_obj="//@regions.0/@basic_blocks.0/@node_objs.44" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.45"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.0/@node_objs.45" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.46"/>
+  <edges id="197" source_obj="//@regions.0/@basic_blocks.0/@node_objs.43" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.46"/>
+  <edges id="198" source_obj="//@regions.0/@basic_blocks.0/@node_objs.47" sink_obj="//@ports.2"/>
+  <edges id="201" source_obj="//@regions.0/@basic_blocks.0/@node_objs.46" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.48"/>
+  <edges id="202" source_obj="//@regions.0/@basic_blocks.0/@node_objs.47" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.48"/>
+  <edges id="203" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.49"/>
+  <edges id="207" source_obj="//@regions.0/@basic_blocks.0/@node_objs.49" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.50"/>
+  <edges id="208" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.51"/>
+  <edges id="211" source_obj="//@regions.0/@basic_blocks.0/@node_objs.51" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.52"/>
+  <edges id="212" source_obj="//@regions.0/@basic_blocks.0/@node_objs.52" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.53"/>
+  <edges id="213" source_obj="//@regions.0/@basic_blocks.0/@node_objs.50" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.53"/>
+  <edges id="214" source_obj="//@regions.0/@basic_blocks.0/@node_objs.54" sink_obj="//@ports.2"/>
+  <edges id="217" source_obj="//@regions.0/@basic_blocks.0/@node_objs.53" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.55"/>
+  <edges id="218" source_obj="//@regions.0/@basic_blocks.0/@node_objs.54" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.55"/>
+  <edges id="219" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.56"/>
+  <edges id="223" source_obj="//@regions.0/@basic_blocks.0/@node_objs.56" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.57"/>
+  <edges id="224" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.58"/>
+  <edges id="227" source_obj="//@regions.0/@basic_blocks.0/@node_objs.58" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.59"/>
+  <edges id="228" source_obj="//@regions.0/@basic_blocks.0/@node_objs.59" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.60"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.0/@node_objs.57" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.60"/>
+  <edges id="230" source_obj="//@regions.0/@basic_blocks.0/@node_objs.61" sink_obj="//@ports.2"/>
+  <edges id="233" source_obj="//@regions.0/@basic_blocks.0/@node_objs.60" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.62"/>
+  <edges id="234" source_obj="//@regions.0/@basic_blocks.0/@node_objs.61" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.62"/>
+  <edges id="235" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.63"/>
+  <edges id="239" source_obj="//@regions.0/@basic_blocks.0/@node_objs.63" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.64"/>
+  <edges id="240" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.65"/>
+  <edges id="243" source_obj="//@regions.0/@basic_blocks.0/@node_objs.65" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.66"/>
+  <edges id="244" source_obj="//@regions.0/@basic_blocks.0/@node_objs.66" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.67"/>
+  <edges id="245" source_obj="//@regions.0/@basic_blocks.0/@node_objs.64" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.67"/>
+  <edges id="246" source_obj="//@regions.0/@basic_blocks.0/@node_objs.68" sink_obj="//@ports.2"/>
+  <edges id="249" source_obj="//@regions.0/@basic_blocks.0/@node_objs.67" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.69"/>
+  <edges id="250" source_obj="//@regions.0/@basic_blocks.0/@node_objs.68" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.69"/>
+  <regions anchor_node="-1" region_type="8" interval="10" typeName="Pipeline" iiViolation="Resource Limitation;mFailedII=9;mDependenceDistancedII=-1;mLimitedResource=1;nodes=20__core/RAM_1P/a//load/store,27__core/RAM_1P/a//load/store,34__core/RAM_1P/a//load/store,41__core/RAM_1P/a//load/store,48__core/RAM_1P/a//load/store,55__core/RAM_1P/a//load/store,62__core/RAM_1P/a//load/store,69__core/RAM_1P/a//load/store,83__core/RAM_1P/a//load/store,76__;" id="366" pipe_depth="11" RegionName="array_add">
+    <basic_blocks id="90" name="array_add" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="a_addr" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="3620571368" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="a_load" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLatency="1" m_display="1" m_delay="2.32" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="b_addr" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="762013795" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="b_load" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="add_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.55" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="result_addr" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="32" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="result_addr_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="1.0" m_display="0" m_delay="2.32" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="a_addr_1" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="32" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="a_load_1" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="1" m_delay="2.32" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="b_addr_1" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="3641903248" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="b_load_1" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="add_ln14_1" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="2.0" m_display="0" m_delay="2.55" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="result_addr_1" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="4128860" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="result_addr_1_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="2.0" m_display="0" m_delay="2.32" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="a_addr_2" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="a_load_2" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="1" m_delay="2.32" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="b_addr_2" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="b_load_2" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="add_ln14_2" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="3.0" m_display="0" m_delay="2.55" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="result_addr_2" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="3642690288" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="result_addr_2_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="3.0" m_display="0" m_delay="2.32" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="a_addr_3" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="a_load_3" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="1" m_delay="2.32" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="b_addr_3" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="3646853264" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="b_load_3" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="add_ln14_3" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="4.0" m_display="0" m_delay="2.55" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="result_addr_3" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="result_addr_3_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="4.0" m_display="0" m_delay="2.32" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="a_addr_4" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="3646856592" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="a_load_4" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="b_addr_4" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="b_load_4" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="add_ln14_4" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="5.0" m_display="0" m_delay="2.55" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="result_addr_4" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="3642689232" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="result_addr_4_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="5.0" m_display="0" m_delay="2.32" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="a_addr_5" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="a_load_5" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="b_addr_5" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="b_load_5" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="add_ln14_5" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="6.0" m_display="0" m_delay="2.55" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="result_addr_5" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="result_addr_5_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="6.0" m_display="0" m_delay="2.32" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="a_addr_6" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="a_load_6" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="1" m_delay="2.32" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="b_addr_6" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="b_load_6" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="add_ln14_6" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="7.0" m_display="0" m_delay="2.55" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="result_addr_6" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="result_addr_6_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="7.0" m_display="0" m_delay="2.32" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="a_addr_7" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="a_load_7" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="b_addr_7" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="b_load_7" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="add_ln14_7" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="8.0" m_display="0" m_delay="2.55" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="result_addr_7" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="result_addr_7_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="8.0" m_display="0" m_delay="2.32" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="a_addr_8" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="a_load_8" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="8.0" nodeLatency="1" m_display="1" m_delay="2.32" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="b_addr_8" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="b_load_8" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="add_ln14_8" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="9.0" m_display="0" m_delay="2.55" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="result_addr_8" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="result_addr_8_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="9.0" m_display="0" m_delay="2.32" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="a_addr_9" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="a_load_9" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="b_addr_9" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="b_load_9" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" bitwidth="32" opcode="load" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="67" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="add_ln14_9" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." rtlName="result_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="array_add" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_delay="2.55" m_topoIndex="68" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="result_addr_9" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" bitwidth="4" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataOutputObjs>result</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="result_addr_9_write_ln14" lineNumber="14" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="array_add" opcode="store" nodeLabel="10.0" m_display="0" m_delay="2.32" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="14" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="_ln16" lineNumber="16" fileName="HLS_Code/array_add.cpp" fileDirectory="../." coreId="0" contextFuncName="array_add" opcode="ret" nodeLabel="10.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS_Code/array_add.cpp" linenumber="16" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="array_add"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="HLS_Code/array_add.cpp">
+        <validLinenumbers>14</validLinenumbers>
+        <validLinenumbers>16</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <regnodes realName="b_addr_8_reg_439">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_2_reg_374">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_7_reg_429">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_3_reg_384">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_reg_359">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_reg_354">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_4_reg_399">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_5_reg_404">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_9_reg_449">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_3_reg_389">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_1_reg_364">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_6_reg_414">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_2_reg_379">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_7_reg_424">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_1_reg_369">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_8_reg_434">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_9_reg_444">
+    <nodeIds>82</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_6_reg_419">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_4_reg_394">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_5_reg_409">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <expressionNodes realName="result_addr_4_gep_fu_203">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_347">
+    <nodeIds>23</nodeIds>
+    <nodeIds>30</nodeIds>
+    <nodeIds>37</nodeIds>
+    <nodeIds>44</nodeIds>
+    <nodeIds>51</nodeIds>
+    <nodeIds>58</nodeIds>
+    <nodeIds>65</nodeIds>
+    <nodeIds>72</nodeIds>
+    <nodeIds>79</nodeIds>
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_addr_9_gep_fu_338">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_8_gep_fu_293">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_addr_6_gep_fu_257">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_7_gep_fu_266">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_gep_fu_76">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_2_gep_fu_131">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_5_gep_fu_221">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_5_gep_fu_212">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_8_gep_fu_302">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_addr_3_gep_fu_176">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_addr_1_gep_fu_122">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_2_gep_fu_140">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_3_gep_fu_158">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_6_gep_fu_248">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_7_gep_fu_275">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_4_gep_fu_185">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_6_gep_fu_239">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_addr_2_gep_fu_149">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_9_gep_fu_329">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_4_gep_fu_194">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_addr_8_gep_fu_311">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_addr_gep_fu_90">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_3_gep_fu_167">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_1_gep_fu_113">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_1_gep_fu_104">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_9_gep_fu_320">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_addr_5_gep_fu_230">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_gep_fu_62">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_addr_7_gep_fu_284">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <memoryPorts dataString="a">
+    <nodeIds>20</nodeIds>
+    <nodeIds>27</nodeIds>
+    <nodeIds>34</nodeIds>
+    <nodeIds>41</nodeIds>
+    <nodeIds>48</nodeIds>
+    <nodeIds>55</nodeIds>
+    <nodeIds>62</nodeIds>
+    <nodeIds>69</nodeIds>
+    <nodeIds>76</nodeIds>
+    <nodeIds>83</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="b">
+    <nodeIds>22</nodeIds>
+    <nodeIds>29</nodeIds>
+    <nodeIds>36</nodeIds>
+    <nodeIds>43</nodeIds>
+    <nodeIds>50</nodeIds>
+    <nodeIds>57</nodeIds>
+    <nodeIds>64</nodeIds>
+    <nodeIds>71</nodeIds>
+    <nodeIds>78</nodeIds>
+    <nodeIds>85</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="result">
+    <nodeIds>25</nodeIds>
+    <nodeIds>32</nodeIds>
+    <nodeIds>39</nodeIds>
+    <nodeIds>46</nodeIds>
+    <nodeIds>53</nodeIds>
+    <nodeIds>60</nodeIds>
+    <nodeIds>67</nodeIds>
+    <nodeIds>74</nodeIds>
+    <nodeIds>81</nodeIds>
+    <nodeIds>88</nodeIds>
+  </memoryPorts>
+  <ioPorts name="a(p0)">
+    <contents name="load">
+      <nodeIds>20</nodeIds>
+      <nodeIds>27</nodeIds>
+      <nodeIds>34</nodeIds>
+      <nodeIds>41</nodeIds>
+      <nodeIds>48</nodeIds>
+      <nodeIds>55</nodeIds>
+      <nodeIds>62</nodeIds>
+      <nodeIds>69</nodeIds>
+      <nodeIds>76</nodeIds>
+      <nodeIds>83</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b(p0)">
+    <contents name="load">
+      <nodeIds>22</nodeIds>
+      <nodeIds>29</nodeIds>
+      <nodeIds>36</nodeIds>
+      <nodeIds>43</nodeIds>
+      <nodeIds>50</nodeIds>
+      <nodeIds>57</nodeIds>
+      <nodeIds>64</nodeIds>
+      <nodeIds>71</nodeIds>
+      <nodeIds>78</nodeIds>
+      <nodeIds>85</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="result(p0)">
+    <contents name="store">
+      <nodeIds>25</nodeIds>
+      <nodeIds>32</nodeIds>
+      <nodeIds>39</nodeIds>
+      <nodeIds>46</nodeIds>
+      <nodeIds>53</nodeIds>
+      <nodeIds>60</nodeIds>
+      <nodeIds>67</nodeIds>
+      <nodeIds>74</nodeIds>
+      <nodeIds>81</nodeIds>
+      <nodeIds>88</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="2" latency="2"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="20" stage="1" latency="2"/>
+      <operations id="22" stage="1" latency="2"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="2" latency="2"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="27" stage="1" latency="2"/>
+      <operations id="29" stage="1" latency="2"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="2" latency="2"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="34" stage="1" latency="2"/>
+      <operations id="36" stage="1" latency="2"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="2" latency="2"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="41" stage="1" latency="2"/>
+      <operations id="43" stage="1" latency="2"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="2" latency="2"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="48" stage="1" latency="2"/>
+      <operations id="50" stage="1" latency="2"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="2" latency="2"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="55" stage="1" latency="2"/>
+      <operations id="57" stage="1" latency="2"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="2" latency="2"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="62" stage="1" latency="2"/>
+      <operations id="64" stage="1" latency="2"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="2" latency="2"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="69" stage="1" latency="2"/>
+      <operations id="71" stage="1" latency="2"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="2" latency="2"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="76" stage="1" latency="2"/>
+      <operations id="78" stage="1" latency="2"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="2" latency="2"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="2"/>
+      <operations id="85" stage="1" latency="2"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="array_add" mII="10" mDepth="11" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="10" mMaxLatency="10">
+      <basicBlocks>90</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
