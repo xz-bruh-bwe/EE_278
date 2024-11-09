@@ -91,12 +91,12 @@ set RtlHierarchyInfo {[
 			{"Name" : "d", "Type" : "None", "Direction" : "I"},
 			{"Name" : "shift_reg", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_adap_fir_Pipeline_Coeff_Update_Loop_fu_88", "Port" : "shift_reg", "Inst_start_state" : "13", "Inst_end_state" : "14"},
-					{"ID" : "3", "SubInstance" : "grp_adap_fir_Pipeline_Shift_Accum_Loop_fu_77", "Port" : "shift_reg", "Inst_start_state" : "7", "Inst_end_state" : "8"}]},
+					{"ID" : "3", "SubInstance" : "grp_adap_fir_Pipeline_Shift_Accum_Loop_fu_77", "Port" : "shift_reg", "Inst_start_state" : "7", "Inst_end_state" : "8"},
+					{"ID" : "5", "SubInstance" : "grp_adap_fir_Pipeline_Coeff_Update_Loop_fu_88", "Port" : "shift_reg", "Inst_start_state" : "13", "Inst_end_state" : "14"}]},
 			{"Name" : "coeffs_1", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_adap_fir_Pipeline_Coeff_Update_Loop_fu_88", "Port" : "coeffs_1", "Inst_start_state" : "13", "Inst_end_state" : "14"},
-					{"ID" : "3", "SubInstance" : "grp_adap_fir_Pipeline_Shift_Accum_Loop_fu_77", "Port" : "coeffs_1", "Inst_start_state" : "7", "Inst_end_state" : "8"}]}]},
+					{"ID" : "3", "SubInstance" : "grp_adap_fir_Pipeline_Shift_Accum_Loop_fu_77", "Port" : "coeffs_1", "Inst_start_state" : "7", "Inst_end_state" : "8"},
+					{"ID" : "5", "SubInstance" : "grp_adap_fir_Pipeline_Coeff_Update_Loop_fu_88", "Port" : "coeffs_1", "Inst_start_state" : "13", "Inst_end_state" : "14"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.shift_reg_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.coeffs_1_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_adap_fir_Pipeline_Shift_Accum_Loop_fu_77", "Parent" : "0", "Child" : ["4"],

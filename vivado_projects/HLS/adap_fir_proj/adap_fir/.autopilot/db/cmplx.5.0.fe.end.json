@@ -1,25 +1,5 @@
 {
     "1": {
-        "name": "adap_fir_Pipeline_Coeff_Update_Loop",
-        "file": "adap_fir.c",
-        "fileloc": "0",
-        "instructions": "23",
-        "total_instructions": "23",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "G": "2",
-            "L": "1"
-        },
-        "stores": {
-            "G": "1",
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "2": {
         "name": "adap_fir_Pipeline_Shift_Accum_Loop",
         "file": "adap_fir.c",
         "fileloc": "0",
@@ -39,13 +19,33 @@
             "L": "1"
         }
     },
+    "2": {
+        "name": "adap_fir_Pipeline_Coeff_Update_Loop",
+        "file": "adap_fir.c",
+        "fileloc": "0",
+        "instructions": "23",
+        "total_instructions": "23",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "2",
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
     "0": {
         "name": "adap_fir",
         "file": "adap_fir.c",
         "fileloc": "6",
         "instructions": "23",
         "total_instructions": "85",
-        "calls": "2 1",
+        "calls": "1 2",
         "basicblocks": "1",
         "loads": {
             "G": "1",

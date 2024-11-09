@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1730664151932">
-  <ports id="1" name="y" type="PortType" originalName="y" coreId="1868787791" bitwidth="32" direction="DirOut">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1730776607431">
+  <ports id="1" name="y" type="PortType" originalName="y" coreId="1702129263" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="2" name="x" type="PortType" originalName="x" coreId="1635147636" bitwidth="32">
+  <ports id="2" name="x" type="PortType" originalName="x" coreId="1850293280" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="d" type="PortType" originalName="d" coreId="1702129263" bitwidth="32">
+  <ports id="3" name="d" type="PortType" originalName="d" coreId="657601646" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="32" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -41,7 +41,7 @@
       <dataOutputObjs>fmul</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="acc_loc" coreId="1523358032" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="acc_loc" coreId="1730486374" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -55,13 +55,13 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="_ln0" rtlName="grp_adap_fir_Pipeline_Shift_Accum_Loop_fu_77" coreId="1310737748" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="_ln0" rtlName="grp_adap_fir_Pipeline_Shift_Accum_Loop_fu_77" coreId="0" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>fmul</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>adap_fir_Pipeline_Shift_Accum_Loop</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="acc_loc_load" coreId="1310737748" bitwidth="32" opcode="load" nodeLabel="8.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="acc_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="8.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <dataOutputObjs>fsub</dataOutputObjs>
@@ -82,12 +82,12 @@
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="_ln39" lineNumber="39" fileName="HLS_Code/adap_fir.c" fileDirectory="../." rtlName="grp_adap_fir_Pipeline_Coeff_Update_Loop_fu_88" coreId="1310737748" contextFuncName="adap_fir" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="_ln39" lineNumber="39" fileName="HLS_Code/adap_fir.c" fileDirectory="../." rtlName="grp_adap_fir_Pipeline_Coeff_Update_Loop_fu_88" coreId="4294967295" contextFuncName="adap_fir" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="HLS_Code/adap_fir.c" linenumber="39" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="adap_fir"/>
       <dataInputObjs>fsub</dataInputObjs>
       <constName>adap_fir_Pipeline_Coeff_Update_Loop</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln45" lineNumber="45" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="1701602675" contextFuncName="adap_fir" opcode="ret" nodeLabel="13.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln45" lineNumber="45" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="1680154734" contextFuncName="adap_fir" opcode="ret" nodeLabel="13.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="HLS_Code/adap_fir.c" linenumber="45" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="adap_fir"/>
     </node_objs>
     <fileValidLineNumbers fileName="HLS_Code/adap_fir.c">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1730664151156">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1730776606652">
   <ports id="1" name="mul" type="PortType" coreId="1702129263" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
@@ -15,7 +15,7 @@
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="5" name="coeffs_1" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" iftype="IfTypeRegister" arraysize="24">
+  <ports id="5" name="coeffs_1" type="PortType" coreName="RAM" coreId="4098576288" bitwidth="32" iftype="IfTypeRegister" arraysize="24">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
   <edges id="57" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.2"/>
@@ -87,36 +87,36 @@
   <edges id="-118" source_obj="//@regions.0/@basic_blocks.2/@node_objs.4" sink_obj="//@ports.3"/>
   <blocks id="13" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.body</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="acc" originalName="acc" coreId="1395389880" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="acc" originalName="acc" coreId="4203371552" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i" originalName="i" coreId="1521759312" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i" originalName="i" coreId="1814920992" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="x_read" coreId="7274604" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="x_read" coreId="0" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>x</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="mul_read" coreId="7274604" bitwidth="32" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="mul_read" coreId="0" bitwidth="32" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>mul</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i_write_ln0" coreId="1395388200" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i_write_ln0" coreId="4173226504" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="acc_write_ln0" coreId="1395386520" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="acc_write_ln0" coreId="17" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln0" coreId="544501365" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln0" coreId="4203365664" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <controlInputObjs>for.body</controlInputObjs>
     </node_objs>
   </blocks>
@@ -141,7 +141,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.end.exitStub</controlOutputObjs>
       <controlOutputObjs>for.body.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="i_1" originalName="i" coreId="6619251" bitwidth="6" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="i_1" originalName="i" coreId="762078072" bitwidth="6" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>bitselect</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -155,7 +155,7 @@
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="br_ln25" lineNumber="25" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="778399865" contextFuncName="adap_fir" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="br_ln25" lineNumber="25" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="0" contextFuncName="adap_fir" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="HLS_Code/adap_fir.c" linenumber="25" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="adap_fir"/>
         <dataInputObjs>bitselect</dataInputObjs>
         <controlInputObjs>for.body.split</controlInputObjs>
@@ -170,12 +170,12 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>if.then</controlOutputObjs>
       <controlOutputObjs>if.else</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="i_cast1" rtlName="i_cast1_fu_154_p1" coreId="1953853550" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="i_cast1" rtlName="i_cast1_fu_154_p1" coreId="4173231544" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="empty" rtlName="empty_fu_159_p1" coreId="1521758544" bitwidth="5" opcode="trunc" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="empty" rtlName="empty_fu_159_p1" coreId="0" bitwidth="5" opcode="trunc" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
@@ -185,7 +185,7 @@
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln26" lineNumber="26" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="1527564736" contextFuncName="adap_fir" opcode="br" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln26" lineNumber="26" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="0" contextFuncName="adap_fir" opcode="br" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="HLS_Code/adap_fir.c" linenumber="26" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="adap_fir"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>if.else</controlInputObjs>
@@ -206,12 +206,12 @@
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="zext_ln30" lineNumber="30" fileName="HLS_Code/adap_fir.c" fileDirectory="../." rtlName="zext_ln30_fu_175_p1" coreId="4294967295" contextFuncName="adap_fir" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="zext_ln30" lineNumber="30" fileName="HLS_Code/adap_fir.c" fileDirectory="../." rtlName="zext_ln30_fu_175_p1" coreId="4231148432" contextFuncName="adap_fir" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="HLS_Code/adap_fir.c" linenumber="30" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="adap_fir"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="shift_reg_addr" lineNumber="30" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="4294967295" contextFuncName="adap_fir" bitwidth="5" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="shift_reg_addr" lineNumber="30" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="4226252192" contextFuncName="adap_fir" bitwidth="5" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="HLS_Code/adap_fir.c" linenumber="30" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="adap_fir"/>
         <dataInputObjs>shift_reg</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -225,7 +225,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <dataOutputObjs>fmul</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="shift_reg_addr_1" lineNumber="30" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="4294967295" contextFuncName="adap_fir" bitwidth="5" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="shift_reg_addr_1" lineNumber="30" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="0" contextFuncName="adap_fir" bitwidth="5" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="HLS_Code/adap_fir.c" linenumber="30" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="adap_fir"/>
         <dataInputObjs>shift_reg</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -238,7 +238,7 @@
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="coeffs_1_addr" lineNumber="31" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="1527564736" contextFuncName="adap_fir" bitwidth="5" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="coeffs_1_addr" lineNumber="31" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="0" contextFuncName="adap_fir" bitwidth="5" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="HLS_Code/adap_fir.c" linenumber="31" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="adap_fir"/>
         <dataInputObjs>coeffs_1</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -256,7 +256,7 @@
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln0" coreId="1527564736" opcode="br" nodeLabel="5.0" m_display="0" m_delay="1.58" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln0" coreId="4231151792" opcode="br" nodeLabel="5.0" m_display="0" m_delay="1.58" m_topoIndex="28" m_clusterGroupNumber="-1">
         <controlInputObjs>for.inc</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="HLS_Code/adap_fir.c">
@@ -274,7 +274,7 @@
         <dataInputObjs>read</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln29" lineNumber="29" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="4294967295" contextFuncName="adap_fir" opcode="br" m_display="0" m_delay="1.58" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln29" lineNumber="29" fileName="HLS_Code/adap_fir.c" fileDirectory="../." coreId="0" contextFuncName="adap_fir" opcode="br" m_display="0" m_delay="1.58" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="HLS_Code/adap_fir.c" linenumber="29" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="adap_fir"/>
         <controlInputObjs>for.inc</controlInputObjs>
       </node_objs>

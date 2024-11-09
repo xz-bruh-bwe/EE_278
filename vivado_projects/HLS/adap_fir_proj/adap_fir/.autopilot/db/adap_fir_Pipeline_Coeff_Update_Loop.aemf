@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1730664151412">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1730776606942">
   <ports id="1" name="error" type="PortType" coreId="0" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="shift_reg" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="24">
+  <ports id="2" name="shift_reg" type="PortType" coreName="RAM" coreId="3164318449" bitwidth="32" iftype="IfTypeRegister" arraysize="24">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
   <ports id="3" name="coeffs_1" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="24">
