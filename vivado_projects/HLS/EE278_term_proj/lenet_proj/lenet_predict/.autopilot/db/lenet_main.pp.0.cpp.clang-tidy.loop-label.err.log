@@ -1,0 +1,3 @@
+26 errors generated.
+Error while processing C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_proj\lenet_predict\.autopilot\db\lenet_main.pp.0.cpp.
+clang-tidy applied 131 of 131 suggested fixes.
