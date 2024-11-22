@@ -1,0 +1,295 @@
+
+
+================================================================
+== Synthesis Summary Report of 'lenet_predict'
+================================================================
++ General Information: 
+    * Date:           Thu Nov 21 22:03:25 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        lenet_proj
+    * Solution:       lenet_predict (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvf1517-3-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+------------+------------+-----+
+    |                           Modules                          |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |          |            |            |     |
+    |                           & Loops                          |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |     FF     |     LUT    | URAM|
+    +------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+------------+------------+-----+
+    |+ lenet_predict                                             |  Timing|  -0.13|  1233047|  1.233e+07|         -|  1233048|     -|        no|  68 (10%)|  14 (~0%)|   7218 (1%)|  11744 (5%)|    -|
+    | + conv2d_3                                                 |       -|   0.00|   752641|  7.526e+06|         -|   752641|     -|        no|         -|         -|  1462 (~0%)|   2363 (1%)|    -|
+    |  o VITIS_LOOP_30_1_VITIS_LOOP_31_2_VITIS_LOOP_32_3         |       -|   7.30|   752640|  7.526e+06|       320|        -|  2352|        no|         -|         -|           -|           -|    -|
+    |   + conv2d_3_Pipeline_VITIS_LOOP_35_4                      |       -|   0.00|      155|  1.550e+03|         -|      155|     -|        no|         -|         -|   609 (~0%)|   680 (~0%)|    -|
+    |    o VITIS_LOOP_35_4                                       |      II|   7.30|      152|  1.520e+03|        53|       40|     3|       yes|         -|         -|           -|           -|    -|
+    |   + conv2d_3_Pipeline_VITIS_LOOP_35_45                     |       -|   0.00|      155|  1.550e+03|         -|      155|     -|        no|         -|         -|   599 (~0%)|   690 (~0%)|    -|
+    |    o VITIS_LOOP_35_4                                       |      II|   7.30|      152|  1.520e+03|        53|       40|     3|       yes|         -|         -|           -|           -|    -|
+    | + lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_2   |       -|   1.48|      202|  2.020e+03|         -|      202|     -|        no|         -|         -|   484 (~0%)|   888 (~0%)|    -|
+    |  o VITIS_LOOP_52_1_VITIS_LOOP_53_2                         |       -|   7.30|      200|  2.000e+03|         6|        1|   196|       yes|         -|         -|           -|           -|    -|
+    | + conv2d                                                   |  Timing|  -0.13|   241601|  2.416e+06|         -|   241601|     -|        no|         -|         -|  1540 (~0%)|  2262 (~0%)|    -|
+    |  o VITIS_LOOP_30_1_VITIS_LOOP_31_2_VITIS_LOOP_32_3         |       -|   7.30|   241600|  2.416e+06|       302|        -|   800|        no|         -|         -|           -|           -|    -|
+    |   + conv2d_Pipeline_VITIS_LOOP_35_4                        |  Timing|  -0.13|      146|  1.460e+03|         -|      146|     -|        no|         -|         -|   651 (~0%)|   679 (~0%)|    -|
+    |    o VITIS_LOOP_35_4                                       |      II|   7.30|      143|  1.430e+03|        44|       40|     3|       yes|         -|         -|           -|           -|    -|
+    |   + conv2d_Pipeline_VITIS_LOOP_35_46                       |  Timing|  -0.13|      146|  1.460e+03|         -|      146|     -|        no|         -|         -|   651 (~0%)|   693 (~0%)|    -|
+    |    o VITIS_LOOP_35_4                                       |      II|   7.30|      143|  1.430e+03|        44|       40|     3|       yes|         -|         -|           -|           -|    -|
+    | + lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_22  |       -|   1.48|       31|    310.000|         -|       31|     -|        no|         -|         -|   475 (~0%)|   819 (~0%)|    -|
+    |  o VITIS_LOOP_52_1_VITIS_LOOP_53_2                         |       -|   7.30|       29|    290.000|         6|        1|    25|       yes|         -|         -|           -|           -|    -|
+    | + lenet_predict_Pipeline_VITIS_LOOP_12_1                   |       -|   3.66|       12|    120.000|         -|       12|     -|        no|         -|         -|   106 (~0%)|   210 (~0%)|    -|
+    |  o VITIS_LOOP_12_1                                         |       -|   7.30|       10|    100.000|         3|        1|     9|       yes|         -|         -|           -|           -|    -|
+    | + lenet_predict_Pipeline_VITIS_LOOP_16_2                   |       -|   0.12|       43|    430.000|         -|       43|     -|        no|         -|   7 (~0%)|   440 (~0%)|  1112 (~0%)|    -|
+    |  o VITIS_LOOP_16_2                                         |      II|   7.30|       41|    410.000|        15|        3|    10|       yes|         -|         -|           -|           -|    -|
+    | + lenet_predict_Pipeline_VITIS_LOOP_20_3                   |       -|   0.05|       21|    210.000|         -|       21|     -|        no|         -|         -|   157 (~0%)|    94 (~0%)|    -|
+    |  o VITIS_LOOP_20_3                                         |       -|   7.30|       19|    190.000|        11|        1|    10|       yes|         -|         -|           -|           -|    -|
+    | + lenet_predict_Pipeline_VITIS_LOOP_51_1                   |       -|   3.66|       12|    120.000|         -|       12|     -|        no|         -|         -|   146 (~0%)|   251 (~0%)|    -|
+    |  o VITIS_LOOP_51_1                                         |       -|   7.30|       10|    100.000|         3|        1|     9|       yes|         -|         -|           -|           -|    -|
+    | o VITIS_LOOP_70_1                                          |       -|   7.30|   193560|  1.936e+06|      1613|        -|   120|        no|         -|         -|           -|           -|    -|
+    |  + lenet_predict_Pipeline_VITIS_LOOP_72_2                  |       -|   0.11|     1605|  1.605e+04|         -|     1605|     -|        no|         -|         -|   181 (~0%)|   197 (~0%)|    -|
+    |   o VITIS_LOOP_72_2                                        |      II|   7.30|     1603|  1.603e+04|        12|        8|   200|       yes|         -|         -|           -|           -|    -|
+    | o VITIS_LOOP_70_1                                          |       -|   7.30|    41412|  4.141e+05|       493|        -|    84|        no|         -|         -|           -|           -|    -|
+    |  + lenet_predict_Pipeline_VITIS_LOOP_72_23                 |       -|   0.11|      485|  4.850e+03|         -|      485|     -|        no|         -|         -|   179 (~0%)|   191 (~0%)|    -|
+    |   o VITIS_LOOP_72_2                                        |      II|   7.30|      483|  4.830e+03|        12|        8|    60|       yes|         -|         -|           -|           -|    -|
+    | o VITIS_LOOP_70_1                                          |       -|   7.30|     3490|  3.490e+04|       349|        -|    10|        no|         -|         -|           -|           -|    -|
+    |  + lenet_predict_Pipeline_VITIS_LOOP_72_24                 |       -|   0.11|      341|  3.410e+03|         -|      341|     -|        no|         -|         -|   179 (~0%)|   191 (~0%)|    -|
+    |   o VITIS_LOOP_72_2                                        |      II|   7.30|      339|  3.390e+03|        12|        8|    42|       yes|         -|         -|           -|           -|    -|
+    +------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 5             | 16     | 0        |
+| s_axi_control_r | 32         | 5             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+----------------------+--------+-------+--------+-----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register             | Offset | Width | Access | Description                       | Bit Fields                                                           |
++-----------------+----------------------+--------+-------+--------+-----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL                 | 0x00   | 32    | RW     | Control signals                   | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER                 | 0x04   | 32    | RW     | Global Interrupt Enable Register  | 0=Enable                                                             |
+| s_axi_control   | IP_IER               | 0x08   | 32    | RW     | IP Interrupt Enable Register      | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR               | 0x0c   | 32    | RW     | IP Interrupt Status Register      | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control   | predicted_class      | 0x10   | 32    | R      | Data signal of predicted_class    |                                                                      |
+| s_axi_control   | predicted_class_ctrl | 0x14   | 32    | R      | Control signal of predicted_class | 0=predicted_class_ap_vld                                             |
+| s_axi_control_r | input_r_1            | 0x10   | 32    | W      | Data signal of input_r            |                                                                      |
+| s_axi_control_r | input_r_2            | 0x14   | 32    | W      | Data signal of input_r            |                                                                      |
++-----------------+----------------------+--------+-------+--------+-----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------+-----------+----------+
+| Argument        | Direction | Datatype |
++-----------------+-----------+----------+
+| input           | in        | float*   |
+| predicted_class | out       | int*     |
++-----------------+-----------+----------+
+
+* SW-to-HW Mapping
++-----------------+-----------------+-----------+----------+------------------------------------------------+
+| Argument        | HW Interface    | HW Type   | HW Usage | HW Info                                        |
++-----------------+-----------------+-----------+----------+------------------------------------------------+
+| input           | m_axi_gmem      | interface |          |                                                |
+| input           | s_axi_control_r | interface | offset   |                                                |
+| predicted_class | s_axi_control   | register  |          | name=predicted_class offset=0x10 range=32      |
+| predicted_class | s_axi_control   | register  |          | name=predicted_class_ctrl offset=0x14 range=32 |
++-----------------+-----------------+-----------+----------+------------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+-----------------+-------------------------+
+| HW Interface | Direction | Length | Width | Loop            | Loop Location           |
++--------------+-----------+--------+-------+-----------------+-------------------------+
+| m_axi_gmem   | read      | 5      | 32    | VITIS_LOOP_37_5 | lenet_support.cpp:37:19 |
++--------------+-----------+--------+-------+-----------------+-------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+-------------------------+-----------+--------------+--------+-----------------+-------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location         | Direction | Burst Status | Length | Loop            | Loop Location           | Resolution | Problem                                                                                                 |
++--------------+----------+-------------------------+-----------+--------------+--------+-----------------+-------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | input    | lenet_support.cpp:38:32 | read      | Widen Fail   |        | VITIS_LOOP_37_5 | lenet_support.cpp:37:19 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | input    | lenet_support.cpp:38:32 | read      | Inferred     | 5      | VITIS_LOOP_37_5 | lenet_support.cpp:37:19 |            |                                                                                                         |
++--------------+----------+-------------------------+-----------+--------------+--------+-----------------+-------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------------------+-----+--------+------------+------+---------+---------+
+| Name                                                       | DSP | Pragma | Variable   | Op   | Impl    | Latency |
++------------------------------------------------------------+-----+--------+------------+------+---------+---------+
+| + lenet_predict                                            | 14  |        |            |      |         |         |
+|   add_ln70_fu_338_p2                                       | -   |        | add_ln70   | add  | fabric  | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U98                        | 2   |        | x_assign_1 | fadd | fulldsp | 3       |
+|   add_ln70_1_fu_422_p2                                     | -   |        | add_ln70_1 | add  | fabric  | 0       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U95                   | 2   |        | x_assign_2 | fadd | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U98                        | -   |        | add_ln70_2 | add  | fabric  | 0       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U95                   | 2   |        | x_assign_3 | fadd | fulldsp | 3       |
+|  + conv2d_3                                                | 0   |        |            |      |         |         |
+|    mul_3ns_11ns_13_1_1_U22                                 | -   |        | empty      | mul  | auto    | 0       |
+|    empty_43_fu_263_p2                                      | -   |        | empty_43   | sub  | fabric  | 0       |
+|    empty_44_fu_273_p2                                      | -   |        | empty_44   | add  | fabric  | 0       |
+|    add_ln30_fu_285_p2                                      | -   |        | add_ln30   | add  | fabric  | 0       |
+|    add_ln30_1_fu_319_p2                                    | -   |        | add_ln30_1 | add  | fabric  | 0       |
+|    mul_3ns_11ns_13_1_1_U23                                 | -   |        | p_mid115   | mul  | auto    | 0       |
+|    add_ln31_fu_379_p2                                      | -   |        | add_ln31   | add  | fabric  | 0       |
+|    p_mid14_fu_427_p2                                       | -   |        | p_mid14    | sub  | fabric  | 0       |
+|    p_mid16_fu_437_p2                                       | -   |        | p_mid16    | add  | fabric  | 0       |
+|    add_ln42_fu_593_p2                                      | -   |        | add_ln42   | add  | fabric  | 0       |
+|    add_ln42_1_fu_606_p2                                    | -   |        | add_ln42_1 | add  | fabric  | 0       |
+|    add_ln32_fu_460_p2                                      | -   |        | add_ln32   | add  | fabric  | 0       |
+|    add_ln31_1_fu_466_p2                                    | -   |        | add_ln31_1 | add  | fabric  | 0       |
+|   + conv2d_3_Pipeline_VITIS_LOOP_35_4                      | 0   |        |            |      |         |         |
+|     add_ln35_1_fu_254_p2                                   | -   |        | add_ln35_1 | add  | fabric  | 0       |
+|     tmp_fu_272_p2                                          | -   |        | tmp        | add  | fabric  | 0       |
+|     empty_39_fu_300_p2                                     | -   |        | empty_39   | add  | fabric  | 0       |
+|     empty_41_fu_345_p2                                     | -   |        | empty_41   | add  | fabric  | 0       |
+|     empty_42_fu_363_p2                                     | -   |        | empty_42   | add  | fabric  | 0       |
+|     add_ln35_fu_400_p2                                     | -   |        | add_ln35   | add  | fabric  | 0       |
+|   + conv2d_3_Pipeline_VITIS_LOOP_35_45                     | 0   |        |            |      |         |         |
+|     add_ln35_fu_260_p2                                     | -   |        | add_ln35   | add  | fabric  | 0       |
+|     tmp3_fu_287_p2                                         | -   |        | tmp3       | add  | fabric  | 0       |
+|     empty_35_fu_316_p2                                     | -   |        | empty_35   | add  | fabric  | 0       |
+|     empty_37_fu_361_p2                                     | -   |        | empty_37   | add  | fabric  | 0       |
+|     empty_38_fu_379_p2                                     | -   |        | empty_38   | add  | fabric  | 0       |
+|     add_ln35_1_fu_416_p2                                   | -   |        | add_ln35_1 | add  | fabric  | 0       |
+|  + lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_2  | 0   |        |            |      |         |         |
+|    empty_fu_205_p2                                         | -   |        | empty      | sub  | fabric  | 0       |
+|    empty_28_fu_235_p2                                      | -   |        | empty_28   | sub  | fabric  | 0       |
+|    add_ln52_1_fu_247_p2                                    | -   |        | add_ln52_1 | add  | fabric  | 0       |
+|    add_ln52_fu_270_p2                                      | -   |        | add_ln52   | add  | fabric  | 0       |
+|    p_mid1_fu_300_p2                                        | -   |        | p_mid1     | sub  | fabric  | 0       |
+|    p_mid13_fu_338_p2                                       | -   |        | p_mid13    | sub  | fabric  | 0       |
+|    add_ln58_fu_380_p2                                      | -   |        | add_ln58   | add  | fabric  | 0       |
+|    add_ln58_3_fu_402_p2                                    | -   |        | add_ln58_3 | add  | fabric  | 0       |
+|    add_ln58_1_fu_412_p2                                    | -   |        | add_ln58_1 | add  | fabric  | 0       |
+|    add_ln62_fu_434_p2                                      | -   |        | add_ln62   | add  | fabric  | 0       |
+|    add_ln53_fu_440_p2                                      | -   |        | add_ln53   | add  | fabric  | 0       |
+|  + conv2d                                                  | 0   |        |            |      |         |         |
+|    mul_5ns_8ns_11_1_1_U52                                  | -   |        | mul_ln31   | mul  | auto    | 0       |
+|    add_ln30_fu_250_p2                                      | -   |        | add_ln30   | add  | fabric  | 0       |
+|    add_ln30_2_fu_284_p2                                    | -   |        | add_ln30_2 | add  | fabric  | 0       |
+|    mul_5ns_8ns_11_1_1_U53                                  | -   |        | mul_ln31_1 | mul  | auto    | 0       |
+|    add_ln31_fu_336_p2                                      | -   |        | add_ln31   | add  | fabric  | 0       |
+|    add_ln42_fu_537_p2                                      | -   |        | add_ln42   | add  | fabric  | 0       |
+|    add_ln42_2_fu_550_p2                                    | -   |        | add_ln42_2 | add  | fabric  | 0       |
+|    add_ln32_fu_404_p2                                      | -   |        | add_ln32   | add  | fabric  | 0       |
+|    add_ln31_2_fu_410_p2                                    | -   |        | add_ln31_2 | add  | fabric  | 0       |
+|   + conv2d_Pipeline_VITIS_LOOP_35_4                        | 0   |        |            |      |         |         |
+|     empty_33_fu_272_p2                                     | -   |        | empty_33   | add  | fabric  | 0       |
+|     add_ln38_1_fu_395_p2                                   | -   |        | add_ln38_1 | add  | fabric  | 0       |
+|     add_ln38_2_fu_405_p2                                   | -   |        | add_ln38_2 | add  | fabric  | 0       |
+|     add_ln38_3_fu_415_p2                                   | -   |        | add_ln38_3 | add  | fabric  | 0       |
+|     empty_fu_344_p2                                        | -   |        | empty      | add  | fabric  | 0       |
+|     add_ln38_5_fu_439_p2                                   | -   |        | add_ln38_5 | add  | fabric  | 0       |
+|     add_ln38_6_fu_449_p2                                   | -   |        | add_ln38_6 | add  | fabric  | 0       |
+|     add_ln38_7_fu_459_p2                                   | -   |        | add_ln38_7 | add  | fabric  | 0       |
+|     add_ln35_fu_384_p2                                     | -   |        | add_ln35   | add  | fabric  | 0       |
+|   + conv2d_Pipeline_VITIS_LOOP_35_46                       | 0   |        |            |      |         |         |
+|     empty_30_fu_272_p2                                     | -   |        | empty_30   | add  | fabric  | 0       |
+|     add_ln38_1_fu_317_p2                                   | -   |        | add_ln38_1 | add  | fabric  | 0       |
+|     add_ln38_2_fu_395_p2                                   | -   |        | add_ln38_2 | add  | fabric  | 0       |
+|     add_ln38_3_fu_405_p2                                   | -   |        | add_ln38_3 | add  | fabric  | 0       |
+|     add_ln38_4_fu_415_p2                                   | -   |        | add_ln38_4 | add  | fabric  | 0       |
+|     empty_fu_344_p2                                        | -   |        | empty      | add  | fabric  | 0       |
+|     add_ln38_6_fu_429_p2                                   | -   |        | add_ln38_6 | add  | fabric  | 0       |
+|     add_ln38_7_fu_439_p2                                   | -   |        | add_ln38_7 | add  | fabric  | 0       |
+|     add_ln38_8_fu_449_p2                                   | -   |        | add_ln38_8 | add  | fabric  | 0       |
+|     add_ln38_9_fu_459_p2                                   | -   |        | add_ln38_9 | add  | fabric  | 0       |
+|     add_ln35_fu_384_p2                                     | -   |        | add_ln35   | add  | fabric  | 0       |
+|  + lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_22 | 0   |        |            |      |         |         |
+|    empty_fu_199_p2                                         | -   |        | empty      | add  | fabric  | 0       |
+|    add_ln52_fu_211_p2                                      | -   |        | add_ln52   | add  | fabric  | 0       |
+|    add_ln52_1_fu_234_p2                                    | -   |        | add_ln52_1 | add  | fabric  | 0       |
+|    p_mid110_fu_280_p2                                      | -   |        | p_mid110   | add  | fabric  | 0       |
+|    add_ln58_fu_314_p2                                      | -   |        | add_ln58   | add  | fabric  | 0       |
+|    add_ln58_1_fu_336_p2                                    | -   |        | add_ln58_1 | add  | fabric  | 0       |
+|    add_ln58_2_fu_346_p2                                    | -   |        | add_ln58_2 | add  | fabric  | 0       |
+|    add_ln62_fu_368_p2                                      | -   |        | add_ln62   | add  | fabric  | 0       |
+|    add_ln62_1_fu_378_p2                                    | -   |        | add_ln62_1 | add  | fabric  | 0       |
+|    add_ln53_fu_384_p2                                      | -   |        | add_ln53   | add  | fabric  | 0       |
+|  + lenet_predict_Pipeline_VITIS_LOOP_72_2                  | 0   |        |            |      |         |         |
+|    add_ln72_fu_121_p2                                      | -   |        | add_ln72   | add  | fabric  | 0       |
+|  + lenet_predict_Pipeline_VITIS_LOOP_72_23                 | 0   |        |            |      |         |         |
+|    add_ln72_fu_121_p2                                      | -   |        | add_ln72   | add  | fabric  | 0       |
+|  + lenet_predict_Pipeline_VITIS_LOOP_72_24                 | 0   |        |            |      |         |         |
+|    add_ln72_fu_121_p2                                      | -   |        | add_ln72   | add  | fabric  | 0       |
+|  + lenet_predict_Pipeline_VITIS_LOOP_12_1                  | 0   |        |            |      |         |         |
+|    add_ln12_fu_107_p2                                      | -   |        | add_ln12   | add  | fabric  | 0       |
+|  + lenet_predict_Pipeline_VITIS_LOOP_16_2                  | 7   |        |            |      |         |         |
+|    add_ln16_fu_103_p2                                      | -   |        | add_ln16   | add  | fabric  | 0       |
+|    fexp_32ns_32ns_32_6_full_dsp_1_U82                      | 7   |        | tmp        | fexp | fulldsp | 5       |
+|  + lenet_predict_Pipeline_VITIS_LOOP_20_3                  | 0   |        |            |      |         |         |
+|    add_ln20_fu_77_p2                                       | -   |        | add_ln20   | add  | fabric  | 0       |
+|    fdiv_32ns_32ns_32_8_no_dsp_1_U87                        | -   |        | div_i      | fdiv | fabric  | 7       |
+|  + lenet_predict_Pipeline_VITIS_LOOP_51_1                  | 0   |        |            |      |         |         |
+|    add_ln51_fu_116_p2                                      | -   |        | add_ln51   | add  | fabric  | 0       |
++------------------------------------------------------------+-----+--------+------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------------------------------+------+------+--------+--------------+---------+------+---------+
+| Name                                     | BRAM | URAM | Pragma | Variable     | Storage | Impl | Latency |
++------------------------------------------+------+------+--------+--------------+---------+------+---------+
+| + lenet_predict                          | 68   | 0    |        |              |         |      |         |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U95 | 14   | -    |        | conv1_output | rom_np  | auto | 1       |
+|   pool1_output_U                         | 4    | -    |        | pool1_output | rom_np  | auto | 1       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U95 | 4    | -    |        | conv2_output | rom_np  | auto | 1       |
+|   pool2_output_U                         | 2    | -    |        | pool2_output | ram_s2p | auto | 1       |
+|   fc1_output_U                           | 2    | -    |        | fc1_output   | ram_s2p | auto | 1       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U98      | 2    | -    |        | fc2_output   | ram_s2p | auto | 1       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U95 | -    | -    |        | fc3_output   | ram_s2p | auto | 1       |
++------------------------------------------+------+------+--------+--------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------------------------+-----------------------------------------------------+
+| Type      | Options                                       | Location                                            |
++-----------+-----------------------------------------------+-----------------------------------------------------+
+| interface | m_axi port=input offset=slave bundle=gmem     | lenet_main.cpp:14 in lenet_predict, input           |
+| interface | s_axilite port=predicted_class bundle=control | lenet_main.cpp:15 in lenet_predict, predicted_class |
+| interface | s_axilite port=return bundle=control          | lenet_main.cpp:16 in lenet_predict, return          |
+| unroll    | factor=2                                      | lenet_support.cpp:33 in conv2d                      |
+| unroll    | factor=2                                      | lenet_support.cpp:36 in conv2d                      |
+| unroll    | factor=2                                      | lenet_support.cpp:56 in maxpool2d                   |
+| unroll    | factor=2                                      | lenet_support.cpp:73 in fully_connected             |
++-----------+-----------------------------------------------+-----------------------------------------------------+
+
+

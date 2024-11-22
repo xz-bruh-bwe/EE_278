@@ -5,5 +5,7 @@
     <originFiles name="lenet_support.cpp" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_support.cpp"/>
     <originFiles name="lenet_support.h" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_support.h"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="lenet_testbench.cpp" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_testbench.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -8,15 +8,14 @@
 #define FC1_UNITS     120
 #define FC2_UNITS     84
 
+
+
 void lenet_predict(float input[IMG_WIDTH * IMG_HEIGHT], int *predicted_class) {
-#pragma HLS INTERFACE m_axi port=input offset=slave bundle=gmem
-#pragma HLS INTERFACE s_axilite port=predicted_class bundle=control
-#pragma HLS INTERFACE s_axilite port=return bundle=control
-#pragma HLS pipeline II=1
+    #pragma HLS INTERFACE m_axi port=input offset=slave bundle=gmem
+    #pragma HLS INTERFACE s_axilite port=predicted_class bundle=control
+    #pragma HLS INTERFACE s_axilite port=return bundle=control
 
 
-
-    // Define weights and biases (pre-trained values are assumed)
     static float conv1_filters[CONV1_FILTERS * 5 * 5];
     static float conv1_bias[CONV1_FILTERS];
     static float conv2_filters[CONV2_FILTERS * 5 * 5 * CONV1_FILTERS];
@@ -28,7 +27,7 @@ void lenet_predict(float input[IMG_WIDTH * IMG_HEIGHT], int *predicted_class) {
     static float fc3_weights[NUM_CLASSES * FC2_UNITS];
     static float fc3_bias[NUM_CLASSES];
 
-    // Intermediate buffers
+
     float conv1_output[CONV1_FILTERS * 28 * 28];
     float pool1_output[CONV1_FILTERS * 14 * 14];
     float conv2_output[CONV2_FILTERS * 10 * 10];
@@ -37,7 +36,6 @@ void lenet_predict(float input[IMG_WIDTH * IMG_HEIGHT], int *predicted_class) {
     float fc2_output[FC2_UNITS];
     float fc3_output[NUM_CLASSES];
 
-    // Forward pass
     conv2d(input, conv1_output, conv1_filters, conv1_bias, 32, 5, CONV1_FILTERS);
     maxpool2d(conv1_output, pool1_output, 28, 2);
     conv2d(pool1_output, conv2_output, conv2_filters, conv2_bias, 14, 5, CONV2_FILTERS);
@@ -46,10 +44,8 @@ void lenet_predict(float input[IMG_WIDTH * IMG_HEIGHT], int *predicted_class) {
     fully_connected(fc1_output, fc2_output, fc2_weights, fc2_bias, FC1_UNITS, FC2_UNITS);
     fully_connected(fc2_output, fc3_output, fc3_weights, fc3_bias, FC2_UNITS, NUM_CLASSES);
 
-    // Apply softmax
     softmax(fc3_output, NUM_CLASSES);
 
-    // Get predicted class
     *predicted_class = 0;
     float max_prob = fc3_output[0];
     for (int i = 1; i < NUM_CLASSES; i++) {

@@ -3,8 +3,11 @@
 
 #include <hls_math.h> // For HLS-specific math functions
 
+#define IMG_WIDTH 32
+#define IMG_HEIGHT 32
 
-//# These are the function prototypes
+void lenet_predict(float input[IMG_WIDTH * IMG_HEIGHT], int *predicted_class);
+
 // Activation function (ReLU)
 float relu(float x);
 

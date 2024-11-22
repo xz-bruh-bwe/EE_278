@@ -57,6 +57,11 @@
 			<location>C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_support.h</location>
 		</link>
 		<link>
+			<name>testbench/lenet_testbench.cpp</name>
+			<type>1</type>
+			<location>C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_testbench.cpp</location>
+		</link>
+		<link>
 			<name>lenet_predict/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/lenet_predict.directive</location>

@@ -1,0 +1,167 @@
+
+
+================================================================
+== Vitis HLS Report for 'lenet_predict_Pipeline_VITIS_LOOP_72_24'
+================================================================
+* Date:           Thu Nov 21 22:03:21 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        lenet_proj
+* Solution:       lenet_predict (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvf1517-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.186 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      341|      341|  3.410 us|  3.410 us|  341|  341|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_72_2  |      339|      339|        12|          8|          1|    42|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      37|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     154|    -|
+|Register         |        -|     -|     179|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     179|     191|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+----+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+----+---+----+------------+------------+
+    |add_ln72_fu_121_p2  |         +|   0|  0|  14|           7|           2|
+    |icmp_ln72_fu_99_p2  |      icmp|   0|  0|  14|           7|           7|
+    |or_ln72_fu_110_p2   |        or|   0|  0|   7|           7|           1|
+    |ap_enable_pp0       |       xor|   0|  0|   2|           1|           2|
+    +--------------------+----------+----+---+----+------------+------------+
+    |Total               |          |   0|  0|  37|          22|          12|
+    +--------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  49|          9|    1|          9|
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0_reg  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_1         |   9|          2|    7|         14|
+    |grp_fu_76_p0                 |  14|          3|   32|         96|
+    |grp_fu_76_p1                 |  14|          3|   32|         96|
+    |grp_fu_80_p0                 |  14|          3|   32|         96|
+    |j_fu_40                      |   9|          2|    7|         14|
+    |sum_fu_36                    |   9|          2|   32|         64|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 154|         32|  147|        397|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   8|   0|    8|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |fc2_output_load_1_reg_179    |  32|   0|   32|          0|
+    |icmp_ln72_reg_160            |   1|   0|    1|          0|
+    |j_fu_40                      |   7|   0|    7|          0|
+    |mul7_1_i2_reg_194            |  32|   0|   32|          0|
+    |mul7_i2_reg_184              |  32|   0|   32|          0|
+    |sum_1_reg_199                |  32|   0|   32|          0|
+    |sum_fu_36                    |  32|   0|   32|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 179|   0|  179|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+-----------------------------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++---------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|grp_fu_303_p_din0    |  out|   32|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|grp_fu_303_p_din1    |  out|   32|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|grp_fu_303_p_opcode  |  out|    1|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|grp_fu_303_p_dout0   |   in|   32|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|grp_fu_303_p_ce      |  out|    1|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|grp_fu_698_p_din0    |  out|   32|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|grp_fu_698_p_din1    |  out|   32|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|grp_fu_698_p_dout0   |   in|   32|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|grp_fu_698_p_ce      |  out|    1|  ap_ctrl_hs|  lenet_predict_Pipeline_VITIS_LOOP_72_24|  return value|
+|fc2_output_address0  |  out|    7|   ap_memory|                               fc2_output|         array|
+|fc2_output_ce0       |  out|    1|   ap_memory|                               fc2_output|         array|
+|fc2_output_q0        |   in|   32|   ap_memory|                               fc2_output|         array|
+|fc2_output_address1  |  out|    7|   ap_memory|                               fc2_output|         array|
+|fc2_output_ce1       |  out|    1|   ap_memory|                               fc2_output|         array|
+|fc2_output_q1        |   in|   32|   ap_memory|                               fc2_output|         array|
+|sum_8_out            |  out|   32|      ap_vld|                                sum_8_out|       pointer|
+|sum_8_out_ap_vld     |  out|    1|      ap_vld|                                sum_8_out|       pointer|
++---------------------+-----+-----+------------+-----------------------------------------+--------------+
+

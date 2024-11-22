@@ -726,8 +726,8 @@ C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\le
        ^~~
        VITIS_LOOP_195_3: 
 C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_proj\lenet_predict\.autopilot\db\lenet_main.pp.0.cpp:24148:8: note: FIX-IT applied suggested code changes
-C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_proj\lenet_predict\.autopilot\db\lenet_main.pp.0.cpp:26438:5: warning: Added loop label VITIS_LOOP_55_1:   [xilinx-label-all-loops]
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_proj\lenet_predict\.autopilot\db\lenet_main.pp.0.cpp:26439:5: warning: Added loop label VITIS_LOOP_51_1:   [xilinx-label-all-loops]
     for (int i = 1; i < 10; i++) {
     ^~~
-    VITIS_LOOP_55_1: 
-C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_proj\lenet_predict\.autopilot\db\lenet_main.pp.0.cpp:26438:5: note: FIX-IT applied suggested code changes
+    VITIS_LOOP_51_1: 
+C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_proj\lenet_predict\.autopilot\db\lenet_main.pp.0.cpp:26439:5: note: FIX-IT applied suggested code changes

@@ -1,0 +1,97 @@
+{
+  "0": {
+    "basicblocks": 25,
+    "calls": "2 4 5 1 3",
+    "file": "lenet_main.cpp",
+    "fileloc": 13,
+    "instructions": 153,
+    "loads": {
+      "L": 10
+    },
+    "name": "lenet_predict",
+    "stores": {
+      "L": 4,
+      "T": 2
+    },
+    "total_instructions": 534
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "lenet_support.cpp",
+    "fileloc": 68,
+    "instructions": 35,
+    "loads": {
+      "G": 3,
+      "L": 2
+    },
+    "name": "fully_connected",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 35
+  },
+  "2": {
+    "basicblocks": 21,
+    "calls": "",
+    "file": "lenet_support.cpp",
+    "fileloc": 26,
+    "instructions": 143,
+    "loads": {
+      "G": 5
+    },
+    "name": "conv2d",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 143
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "lenet_support.cpp",
+    "fileloc": 68,
+    "instructions": 35,
+    "loads": {
+      "G": 3,
+      "L": 2
+    },
+    "name": "fully_connected",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 35
+  },
+  "4": {
+    "basicblocks": 21,
+    "calls": "",
+    "file": "lenet_support.cpp",
+    "fileloc": 26,
+    "instructions": 133,
+    "loads": {
+      "G": 5,
+      "L": 4
+    },
+    "name": "conv2d",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 133
+  },
+  "5": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "lenet_support.cpp",
+    "fileloc": 68,
+    "instructions": 35,
+    "loads": {
+      "G": 3,
+      "L": 2
+    },
+    "name": "fully_connected",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 35
+  }
+}

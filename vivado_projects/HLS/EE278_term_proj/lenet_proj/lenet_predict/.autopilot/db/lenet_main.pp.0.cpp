@@ -26370,6 +26370,9 @@ namespace hls {
 
 
 
+__attribute__((sdx_kernel("lenet_predict", 0))) void lenet_predict(float input[32 * 32], int *predicted_class);
+
+
 float relu(float x);
 
 
@@ -26386,18 +26389,19 @@ void maxpool2d(float *input, float *output, int input_size, int pool_size);
 void fully_connected(float *input, float *output, float *weights, float *bias,
                      int input_len, int output_len);
 # 2 "lenet_main.cpp" 2
-# 11 "lenet_main.cpp"
+# 13 "lenet_main.cpp"
 __attribute__((sdx_kernel("lenet_predict", 0))) void lenet_predict(float input[32 * 32], int *predicted_class) {
-#line 16 "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/csynth.tcl"
+#line 17 "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=lenet_predict
-# 11 "lenet_main.cpp"
+# 13 "lenet_main.cpp"
+
+#line 7 "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=lenet_predict
+# 13 "lenet_main.cpp"
 
 #pragma HLS INTERFACE m_axi port=input offset=slave bundle=gmem
 #pragma HLS INTERFACE s_axilite port=predicted_class bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
-#pragma HLS pipeline II=1
-
-
 
 
  static float conv1_filters[6 * 5 * 5];
@@ -26420,7 +26424,6 @@ __attribute__((sdx_kernel("lenet_predict", 0))) void lenet_predict(float input[3
     float fc2_output[84];
     float fc3_output[10];
 
-
     conv2d(input, conv1_output, conv1_filters, conv1_bias, 32, 5, 6);
     maxpool2d(conv1_output, pool1_output, 28, 2);
     conv2d(pool1_output, conv2_output, conv2_filters, conv2_bias, 14, 5, 16);
@@ -26429,13 +26432,11 @@ __attribute__((sdx_kernel("lenet_predict", 0))) void lenet_predict(float input[3
     fully_connected(fc1_output, fc2_output, fc2_weights, fc2_bias, 120, 84);
     fully_connected(fc2_output, fc3_output, fc3_weights, fc3_bias, 84, 10);
 
-
     softmax(fc3_output, 10);
-
 
     *predicted_class = 0;
     float max_prob = fc3_output[0];
-    VITIS_LOOP_55_1: for (int i = 1; i < 10; i++) {
+    VITIS_LOOP_51_1: for (int i = 1; i < 10; i++) {
         if (fc3_output[i] > max_prob) {
             max_prob = fc3_output[i];
             *predicted_class = i;

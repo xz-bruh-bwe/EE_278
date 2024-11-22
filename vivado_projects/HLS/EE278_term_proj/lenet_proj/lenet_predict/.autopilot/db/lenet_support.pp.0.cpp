@@ -26370,6 +26370,9 @@ namespace hls {
 
 
 
+void lenet_predict(float input[32 * 32], int *predicted_class);
+
+
 float relu(float x);
 
 

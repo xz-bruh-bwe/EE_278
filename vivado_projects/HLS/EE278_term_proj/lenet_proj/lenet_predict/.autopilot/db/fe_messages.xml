@@ -602,20 +602,20 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Z:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hypot_apfixed.h:196:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hypot_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/csynth.tcl:16:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/csynth.tcl:17:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="lenet_predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=lenet_predict" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="lenet_main.cpp:12:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="lenet_predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=input offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="lenet_main.cpp:13:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="lenet_predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=predicted_class bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lenet_predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=lenet_predict" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="lenet_main.cpp:14:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="lenet_predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="lenet_predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=input offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="lenet_main.cpp:15:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="lenet_predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="lenet_predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=predicted_class bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="lenet_main.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Z:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\utils/x_hls_utils.h:250:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="reg" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
@@ -1231,6 +1231,45 @@
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="lenet_support.cpp:73:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="fully_connected" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib\hlsmath\src\c++\expfloat.cpp:22:9" msg_body="Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)'">
+        <args Callee="exp_reduce_::exp(float)" Callee-DebugLoc="File {C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib\hlsmath\src\common\hls_exp_float.cpp} Line 15 Column 0" Caller="hls::expf(float)" Caller-DebugLoc="File {C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib\hlsmath\src\c++\expfloat.cpp} Line 20 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="lenet_support.cpp:17:20" msg_body="Inlining function 'hls::expf(float)' into 'softmax(float*, int)'">
+        <args Callee="hls::expf(float)" Callee-DebugLoc="File {C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib\hlsmath\src\c++\expfloat.cpp} Line 20 Column 0" Caller="softmax(float*, int)" Caller-DebugLoc="File lenet_support.cpp Line 10 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="lenet_support.cpp:69:0" msg_body="Unrolling loop 'VITIS_LOOP_72_2' (lenet_support.cpp:72:26) in function 'fully_connected' partially with a factor of 2">
+        <args Factor="2" LoopLoc="lenet_support.cpp:72:26" LoopName="VITIS_LOOP_72_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="lenet_support.cpp:49:0" msg_body="Unrolling loop 'VITIS_LOOP_55_3' (lenet_support.cpp:55:30) in function 'maxpool2d': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=2).">
+        <args Factor="2" LoopLoc="lenet_support.cpp:55:30" LoopName="VITIS_LOOP_55_3" TripCount="2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="lenet_support.cpp:49:0" msg_body="Unrolling loop 'VITIS_LOOP_55_3' (lenet_support.cpp:55:30) in function 'maxpool2d' completely with a factor of 2">
+        <args Factor="2" LoopLoc="lenet_support.cpp:55:30" LoopName="VITIS_LOOP_55_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="lenet_support.cpp:27:0" msg_body="Unrolling loop 'VITIS_LOOP_32_3' (lenet_support.cpp:32:30) in function 'conv2d' partially with a factor of 2">
+        <args Factor="2" LoopLoc="lenet_support.cpp:32:30" LoopName="VITIS_LOOP_32_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="lenet_support.cpp:27:0" msg_body="Unrolling loop 'VITIS_LOOP_35_4' (lenet_support.cpp:35:34) in function 'conv2d' partially with a factor of 2">
+        <args Factor="2" LoopLoc="lenet_support.cpp:35:34" LoopName="VITIS_LOOP_35_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="lenet_main.cpp:39:5" msg_body="Duplicating function 'conv2d(float*, float*, float*, float*, int, int, int)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
+        <args Name="conv2d(float*, float*, float*, float*, int, int, int)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="lenet_support.cpp:27:0" msg_body="Inlining function 'relu(float)' into 'conv2d(float*, float*, float*, float*, int, int, int) (.1)'">
+        <args Callee="relu(float)" Callee-DebugLoc="File lenet_support.cpp Line 5 Column 0" Caller="conv2d(float*, float*, float*, float*, int, int, int) (.1)" Caller-DebugLoc="File lenet_support.cpp Line 27 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="lenet_support.cpp:27:0" msg_body="Inlining function 'relu(float)' into 'conv2d(float*, float*, float*, float*, int, int, int)'">
+        <args Callee="relu(float)" Callee-DebugLoc="File lenet_support.cpp Line 5 Column 0" Caller="conv2d(float*, float*, float*, float*, int, int, int)" Caller-DebugLoc="File lenet_support.cpp Line 27 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="lenet_support.cpp:69:0" msg_body="Inlining function 'relu(float)' into 'fully_connected(float*, float*, float*, float*, int, int)'">
+        <args Callee="relu(float)" Callee-DebugLoc="File lenet_support.cpp Line 5 Column 0" Caller="fully_connected(float*, float*, float*, float*, int, int)" Caller-DebugLoc="File lenet_support.cpp Line 69 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="lenet_main.cpp:13:0" msg_body="Inlining function 'maxpool2d(float*, float*, int, int)' into 'lenet_predict(float*, int*)'">
+        <args Callee="maxpool2d(float*, float*, int, int)" Callee-DebugLoc="File lenet_support.cpp Line 49 Column 0" Caller="lenet_predict(float*, int*)" Caller-DebugLoc="File lenet_main.cpp Line 13 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="lenet_main.cpp:13:0" msg_body="Inlining function 'softmax(float*, int)' into 'lenet_predict(float*, int*)'">
+        <args Callee="softmax(float*, int)" Callee-DebugLoc="File lenet_support.cpp Line 10 Column 0" Caller="lenet_predict(float*, int*)" Caller-DebugLoc="File lenet_main.cpp Line 13 Column 0"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

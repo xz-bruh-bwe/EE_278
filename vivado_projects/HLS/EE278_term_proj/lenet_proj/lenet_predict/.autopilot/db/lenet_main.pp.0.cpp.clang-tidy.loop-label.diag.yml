@@ -1302,12 +1302,12 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_195_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_55_1:  '
-    FileOffset:      55
+    Message:         'Added loop label VITIS_LOOP_51_1:  '
+    FileOffset:      51
     FilePath:        lenet_main.cpp
     Replacements:    
       - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj\lenet_proj\lenet_predict\.autopilot\db\lenet_main.pp.0.cpp'
-        Offset:          1656776
+        Offset:          1657054
         Length:          0
-        ReplacementText: 'VITIS_LOOP_55_1: '
+        ReplacementText: 'VITIS_LOOP_51_1: '
 ...
