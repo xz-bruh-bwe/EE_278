@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732255400678">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732334472221">
   <ports id="1" name="pool2_output" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" iftype="IfTypeRegister" arraysize="400">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -54,20 +54,20 @@
   <edges id="2147483647" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5" is_back_edge="1"/>
   <blocks id="8" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.inc.0.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="sum_2" originalName="sum" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="sum_2" originalName="sum" coreId="1718511904" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="j_2" originalName="j" coreId="0" bitwidth="9" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="j_2" originalName="j" coreId="1313415680" bitwidth="9" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="j_2_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="j_2_write_ln0" coreId="824196384" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
@@ -82,7 +82,7 @@
   <blocks id="36" name="for.inc14.i.exitStub" type="BlockType">
     <controlInputObjs>for.inc.0.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="sum_2_load_1" coreId="0" bitwidth="32" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="sum_2_load_1" coreId="1735289197" bitwidth="32" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
@@ -134,13 +134,13 @@
       <controlInputObjs>for.inc.0.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc.0.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="sum_2_load" lineNumber="74" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="fully_connected" bitwidth="32" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="sum_2_load" lineNumber="74" fileName="lenet_support.cpp" fileDirectory="../." coreId="1919950848" contextFuncName="fully_connected" bitwidth="32" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="43" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="74" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="fully_connected"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>fadd</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="j_2_cast13" lineNumber="72" fileName="lenet_support.cpp" fileDirectory="../." rtlName="j_2_cast13_fu_105_p1" coreId="0" contextFuncName="fully_connected" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="j_2_cast13" lineNumber="72" fileName="lenet_support.cpp" fileDirectory="../." rtlName="j_2_cast13_fu_105_p1" coreId="539767072" contextFuncName="fully_connected" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="43" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="72" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="fully_connected"/>
         <dataInputObjs>load</dataInputObjs>
@@ -175,7 +175,7 @@
         <dataInputObjs>fadd</dataInputObjs>
         <dataOutputObjs>fadd</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="or_ln72" lineNumber="72" fileName="lenet_support.cpp" fileDirectory="../." rtlName="or_ln72_fu_110_p2" coreId="0" contextFuncName="fully_connected" bitwidth="9" opcode="or" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="or_ln72" lineNumber="72" fileName="lenet_support.cpp" fileDirectory="../." rtlName="or_ln72_fu_110_p2" coreId="1159736947" contextFuncName="fully_connected" bitwidth="9" opcode="or" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="43" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="72" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="fully_connected"/>
         <dataInputObjs>load</dataInputObjs>
@@ -230,7 +230,7 @@
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sum_2_write_ln72" lineNumber="72" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="fully_connected" opcode="store" nodeLabel="11.0" m_display="0" m_delay="0.4" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sum_2_write_ln72" lineNumber="72" fileName="lenet_support.cpp" fileDirectory="../." coreId="1936090735" contextFuncName="fully_connected" opcode="store" nodeLabel="11.0" m_display="0" m_delay="0.4" m_topoIndex="26" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="43" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="72" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="fully_connected"/>
         <dataInputObjs>fadd</dataInputObjs>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732255397839">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732334469386">
   <ports id="1" name="select_ln31_11" type="PortType" coreId="1702129263" bitwidth="4">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="zext_ln32_1" type="PortType" coreId="1008746035" bitwidth="4">
+  <ports id="2" name="zext_ln32_1" type="PortType" coreId="1702129263" bitwidth="4">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="input_r" type="PortType" coreName="RAM_1WnR" coreId="1702129263" bitwidth="32" iftype="IfTypeRegister" arraysize="1176">
+  <ports id="3" name="input_r" type="PortType" coreName="RAM_1WnR" coreId="1851876457" bitwidth="32" iftype="IfTypeRegister" arraysize="1176">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -18,7 +18,7 @@
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="4" name="sum_out" type="PortType" coreId="1702129263" bitwidth="32" direction="DirOut">
+  <ports id="4" name="sum_out" type="PortType" coreId="1668178276" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
   </ports>
@@ -182,42 +182,42 @@
   <edges source_obj="//@blocks.3/@node_objs.1" sink_obj="//@ports.5"/>
   <blocks id="14" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>VITIS_LOOP_37_5.0.0</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sum" originalName="sum" coreId="1816469550" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sum" originalName="sum" coreId="1701978146" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="fi" originalName="fi" coreId="1869903201" bitwidth="3" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="fi" originalName="fi" coreId="1986948963" bitwidth="3" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="zext_ln32_1_read" coreId="2037588053" bitwidth="4" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="zext_ln32_1_read" coreId="1952539760" bitwidth="4" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>zext_ln32_1</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="select_ln31_11_read" coreId="673201011" bitwidth="4" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="select_ln31_11_read" coreId="1635000320" bitwidth="4" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>select_ln31_11</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="zext_ln32_1_cast" rtlName="zext_ln32_1_cast_fu_245_p1" coreId="1852383273" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="zext_ln32_1_cast" rtlName="zext_ln32_1_cast_fu_245_p1" coreId="1881145423" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="fi_write_ln0" coreId="1852140584" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="fi_write_ln0" coreId="1864379441" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="sum_write_ln0" coreId="2020173413" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="sum_write_ln0" coreId="1717989152" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln0" coreId="1684370032" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln0" coreId="1230260566" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <controlInputObjs>VITIS_LOOP_37_5.0.0</controlInputObjs>
     </node_objs>
   </blocks>
@@ -226,17 +226,17 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="sum_out_write_ln38" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="1043276396" contextFuncName="conv2d" opcode="write" nodeLabel="45.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="sum_out_write_ln38" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="conv2d" opcode="write" nodeLabel="45.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>sum_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="sum_22_4_out_write_ln38" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="171847458" contextFuncName="conv2d" opcode="write" nodeLabel="45.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="sum_22_4_out_write_ln38" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="conv2d" opcode="write" nodeLabel="45.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>sum_22_4_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="br_ln0" coreId="151666223" opcode="br" nodeLabel="45.0" m_display="0" m_delay="0.4" m_topoIndex="96" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="br_ln0" coreId="0" opcode="br" nodeLabel="45.0" m_display="0" m_delay="0.4" m_topoIndex="96" m_clusterGroupNumber="-1">
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="lenet_support.cpp">
@@ -265,13 +265,13 @@
     <controlInputObjs>VITIS_LOOP_37_5.0.0.for.inc42.0_crit_edge.exitStub</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="UnifiedRetVal" coreId="574453865" bitwidth="1" opcode="phi" nodeLabel="47.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="UnifiedRetVal" coreId="4294967295" bitwidth="1" opcode="phi" nodeLabel="47.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
       <dataOutputObjs>ret</dataOutputObjs>
       <controlInputObjs>VITIS_LOOP_37_5.0.0.for.inc42.0_crit_edge.exitStub</controlInputObjs>
       <controlInputObjs>VITIS_LOOP_37_5.0.0.split.for.inc42.0_crit_edge.exitStub</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="_ln0" coreId="1112559439" opcode="ret" nodeLabel="47.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="_ln0" coreId="0" opcode="ret" nodeLabel="47.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>ap_return</dataOutputObjs>
     </node_objs>
@@ -284,7 +284,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>VITIS_LOOP_37_5.0.0.split</controlOutputObjs>
       <controlOutputObjs>VITIS_LOOP_37_5.0.0.for.inc42.0_crit_edge.exitStub</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="fi_2" lineNumber="35" originalName="fi" fileName="lenet_support.cpp" fileDirectory="../." coreId="1819243365" contextFuncName="conv2d" bitwidth="3" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="fi_2" lineNumber="35" originalName="fi" fileName="lenet_support.cpp" fileDirectory="../." coreId="1699560457" contextFuncName="conv2d" bitwidth="3" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -298,7 +298,7 @@
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln35" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." coreId="543516513" contextFuncName="conv2d" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln35" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." coreId="1397508187" contextFuncName="conv2d" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>VITIS_LOOP_37_5.0.0.for.inc42.0_crit_edge.exitStub</controlInputObjs>
@@ -313,13 +313,13 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>VITIS_LOOP_37_5.0.1</controlOutputObjs>
       <controlOutputObjs>VITIS_LOOP_37_5.0.0.split.for.inc42.0_crit_edge.exitStub</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="sum_load" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="539113012" contextFuncName="conv2d" bitwidth="32" opcode="load" nodeLabel="5.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="sum_load" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="1953849632" contextFuncName="conv2d" bitwidth="32" opcode="load" nodeLabel="5.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
         <dataOutputObjs>fadd</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="fi_cast" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="fi_cast_fu_268_p1" coreId="1853187616" contextFuncName="conv2d" bitwidth="4" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="fi_cast" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="fi_cast_fu_268_p1" coreId="757935405" contextFuncName="conv2d" bitwidth="4" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -331,24 +331,24 @@
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="p_shl2" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl2_fu_277_p3" coreId="1297239878" contextFuncName="conv2d" bitwidth="8" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="p_shl2" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl2_fu_277_p3" coreId="1717989152" contextFuncName="conv2d" bitwidth="8" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="p_shl2_cast" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl2_cast_fu_285_p1" coreId="1768713327" contextFuncName="conv2d" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="p_shl2_cast" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl2_cast_fu_285_p1" coreId="0" contextFuncName="conv2d" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>sub</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="p_shl3" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl3_fu_289_p3" coreId="1295780106" contextFuncName="conv2d" bitwidth="5" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="p_shl3" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl3_fu_289_p3" coreId="980447331" contextFuncName="conv2d" bitwidth="5" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="p_shl3_cast" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl3_cast_fu_297_p1" coreId="539113784" contextFuncName="conv2d" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="p_shl3_cast" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl3_cast_fu_297_p1" coreId="1936018748" contextFuncName="conv2d" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>sub</dataOutputObjs>
@@ -369,12 +369,12 @@
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sext_ln38" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_fu_312_p1" coreId="1834972261" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sext_ln38" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_fu_312_p1" coreId="7959657" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="input_addr" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="1734439795" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="input_addr" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="1313415680" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
@@ -399,18 +399,18 @@
         <dataInputObjs>fadd</dataInputObjs>
         <dataOutputObjs>fadd</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="or_ln38" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="or_ln38_fu_317_p2" coreId="1869639797" contextFuncName="conv2d" bitwidth="9" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="or_ln38" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="or_ln38_fu_317_p2" coreId="7955819" contextFuncName="conv2d" bitwidth="9" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="sext_ln38_1" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_1_fu_323_p1" coreId="1734553453" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="sext_ln38_1" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_1_fu_323_p1" coreId="1835627552" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>or</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="input_addr_1" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="542329928" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="input_addr_1" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="824208751" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
@@ -440,12 +440,12 @@
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="sext_ln38_2" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_2_fu_400_p1" coreId="171847458" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="sext_ln38_2" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_2_fu_400_p1" coreId="1394737268" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="input_addr_2" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="1330010146" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="input_addr_2" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="536885304" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
@@ -475,12 +475,12 @@
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln38_3" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_3_fu_410_p1" coreId="997420912" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln38_3" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_3_fu_410_p1" coreId="539113017" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="input_addr_3" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="574106982" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="input_addr_3" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="540682555" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
@@ -510,12 +510,12 @@
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="sext_ln38_4" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_4_fu_420_p1" coreId="1936028192" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="sext_ln38_4" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_4_fu_420_p1" coreId="1482367488" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="input_addr_4" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="151666223" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="input_addr_4" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="1701865808" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
@@ -558,7 +558,7 @@
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln35" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="conv2d" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln35" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="conv2d" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>VITIS_LOOP_37_5.0.0.split.for.inc42.0_crit_edge.exitStub</controlInputObjs>
@@ -586,12 +586,12 @@
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="p_shl6_cast" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl6_cast_fu_357_p1" coreId="460" contextFuncName="conv2d" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="p_shl6_cast" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl6_cast_fu_357_p1" coreId="0" contextFuncName="conv2d" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>sub</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="p_shl7" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl7_fu_361_p3" coreId="1936683105" contextFuncName="conv2d" bitwidth="5" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="p_shl7" lineNumber="35" fileName="lenet_support.cpp" fileDirectory="../." rtlName="p_shl7_fu_361_p3" coreId="0" contextFuncName="conv2d" bitwidth="5" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="35" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
@@ -623,7 +623,7 @@
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="input_addr_5" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="1734439968" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="input_addr_5" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
@@ -647,18 +647,18 @@
         <dataInputObjs>fmul</dataInputObjs>
         <dataOutputObjs>fadd</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="or_ln38_1" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="or_ln38_1_fu_429_p2" coreId="791624304" contextFuncName="conv2d" bitwidth="9" opcode="or" nodeLabel="4.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="or_ln38_1" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="or_ln38_1_fu_429_p2" coreId="0" contextFuncName="conv2d" bitwidth="9" opcode="or" nodeLabel="4.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="sext_ln38_6" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_6_fu_434_p1" coreId="0" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="sext_ln38_6" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_6_fu_434_p1" coreId="4294967295" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>or</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="input_addr_6" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="input_addr_6" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
@@ -728,7 +728,7 @@
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="input_addr_8" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="790785133" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="input_addr_8" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
@@ -758,12 +758,12 @@
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="sext_ln38_9" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_9_fu_464_p1" coreId="0" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="5.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="sext_ln38_9" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." rtlName="sext_ln38_9_fu_464_p1" coreId="4294967295" contextFuncName="conv2d" bitwidth="64" opcode="sext" nodeLabel="5.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="input_addr_9" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="574452846" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="input_addr_9" lineNumber="38" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="conv2d" bitwidth="11" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="38" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="conv2d"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>

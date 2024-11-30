@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2d_3_Pipeline_VITIS_LOOP_35_4'" level="0">
-<item name = "Date">Thu Nov 21 22:03:13 2024
+<item name = "Date">Fri Nov 22 20:01:04 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">lenet_proj</item>

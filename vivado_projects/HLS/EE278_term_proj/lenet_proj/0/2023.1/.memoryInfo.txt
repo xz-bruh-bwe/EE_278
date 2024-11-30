@@ -1,0 +1,55 @@
+
+Host Name:                 LAPTOP-NR37E6DI
+OS Name:                   Microsoft Windows 11 Home
+OS Version:                10.0.22631 N/A Build 22631
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          Baron
+Registered Organization:   HP
+Product ID:                00325-96597-09991-AAOEM
+Original Install Date:     2/4/2023, 9:33:30 PM
+System Boot Time:          11/22/2024, 2:46:23 PM
+System Manufacturer:       HP
+System Model:              HP Laptop 15-dy1xxx
+System Type:               x64-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: Intel64 Family 6 Model 126 Stepping 5 GenuineIntel ~1501 Mhz
+BIOS Version:              AMI F.30, 7/4/2023
+Windows Directory:         C:\WINDOWS
+System Directory:          C:\WINDOWS\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             en-us;English (United States)
+Input Locale:              en-us;English (United States)
+Time Zone:                 (UTC-08:00) Pacific Time (US & Canada)
+Total Physical Memory:     16,072 MB
+Available Physical Memory: 5,021 MB
+Virtual Memory: Max Size:  18,504 MB
+Virtual Memory: Available: 6,666 MB
+Virtual Memory: In Use:    11,838 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    WORKGROUP
+Logon Server:              \\LAPTOP-NR37E6DI
+Hotfix(s):                 7 Hotfix(s) Installed.
+                           [01]: KB5044033
+                           [02]: KB5045935
+                           [03]: KB5012170
+                           [04]: KB5027397
+                           [05]: KB5046633
+                           [06]: KB5046247
+                           [07]: KB5044620
+Network Card(s):           2 NIC(s) Installed.
+                           [01]: Realtek RTL8821CE 802.11ac PCIe Adapter
+                                 Connection Name: Wi-Fi
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     192.168.1.254
+                                 IP address(es)
+                                 [01]: 192.168.1.240
+                                 [02]: fe80::3b32:1a14:1d92:ea21
+                                 [03]: 2600:1700:9ff0:b3d0:d09:1617:33aa:ee23
+                                 [04]: 2600:1700:9ff0:b3d0:bbbd:e6f0:52bf:c4d4
+                                 [05]: 2600:1700:9ff0:b3d0::45
+                           [02]: Cisco AnyConnect Virtual Miniport Adapter for Windows x64
+                                 Connection Name: Ethernet 2
+                                 Status:          Hardware not present
+Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.

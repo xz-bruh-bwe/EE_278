@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vitis HLS Report for 'softmax_Pipeline_VITIS_LOOP_68_1'
+================================================================
+* Date:           Tue Nov 26 16:15:58 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        lenet_proj
+* Solution:       lenet_predict (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvf1517-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.644 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_68_1  |       11|       11|         3|          1|          1|    10|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     156|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      54|    -|
+|Register         |        -|     -|     106|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     106|     210|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln68_fu_96_p2      |         +|   0|  0|  12|           4|           1|
+    |and_ln69_1_fu_192_p2   |       and|   0|  0|   2|           1|           1|
+    |and_ln69_fu_186_p2     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln68_fu_90_p2     |      icmp|   0|  0|  12|           4|           4|
+    |icmp_ln69_1_fu_156_p2  |      icmp|   0|  0|  30|          23|           1|
+    |icmp_ln69_2_fu_168_p2  |      icmp|   0|  0|  15|           8|           2|
+    |icmp_ln69_3_fu_174_p2  |      icmp|   0|  0|  30|          23|           1|
+    |icmp_ln69_fu_150_p2    |      icmp|   0|  0|  15|           8|           2|
+    |or_ln69_1_fu_180_p2    |        or|   0|  0|   2|           1|           1|
+    |or_ln69_fu_162_p2      |        or|   0|  0|   2|           1|           1|
+    |max_val_2_fu_198_p3    |    select|   0|  0|  32|           1|          32|
+    |ap_enable_pp0          |       xor|   0|  0|   2|           1|           2|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 156|          76|          49|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1          |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_2             |   9|          2|    4|          8|
+    |ap_sig_allocacmp_max_val_load_1  |   9|          2|   32|         64|
+    |i_fu_48                          |   9|          2|    4|          8|
+    |max_val_fu_44                    |   9|          2|   32|         64|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            |  54|         12|   74|        148|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |i_fu_48                           |   4|   0|    4|          0|
+    |icmp_ln68_reg_228                 |   1|   0|    1|          0|
+    |max_val_1_reg_244                 |  32|   0|   32|          0|
+    |max_val_fu_44                     |  32|   0|   32|          0|
+    |max_val_load_1_reg_237            |  32|   0|   32|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 106|   0|  106|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+----------------------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++--------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|grp_fu_66_p_din0    |  out|   32|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|grp_fu_66_p_din1    |  out|   32|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|grp_fu_66_p_opcode  |  out|    5|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|grp_fu_66_p_dout0   |   in|    1|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|grp_fu_66_p_ce      |  out|    1|  ap_ctrl_hs|  softmax_Pipeline_VITIS_LOOP_68_1|  return value|
+|input_r_address0    |  out|    4|   ap_memory|                           input_r|         array|
+|input_r_ce0         |  out|    1|   ap_memory|                           input_r|         array|
+|input_r_q0          |   in|   32|   ap_memory|                           input_r|         array|
+|max_val_out         |  out|   32|      ap_vld|                       max_val_out|       pointer|
+|max_val_out_ap_vld  |  out|    1|      ap_vld|                       max_val_out|       pointer|
++--------------------+-----+-----+------------+----------------------------------+--------------+
+

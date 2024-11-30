@@ -1,0 +1,110 @@
+{
+  "0": {
+    "basicblocks": 9,
+    "calls": "4 7 5 4 7 5 3 7 3 7 3 6",
+    "file": "lenet_main_1.cpp",
+    "fileloc": 7,
+    "instructions": 103,
+    "loads": {
+      "L": 3
+    },
+    "name": "lenet_predict",
+    "stores": {
+      "T": 2
+    },
+    "total_instructions": 686
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "expfloat.cpp",
+    "fileloc": 20,
+    "instructions": 2,
+    "name": "expf",
+    "total_instructions": 4
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_exp_float.cpp",
+    "fileloc": 15,
+    "instructions": 2,
+    "name": "exp",
+    "total_instructions": 2
+  },
+  "3": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "lenet_support_1.cpp",
+    "fileloc": 50,
+    "instructions": 36,
+    "loads": {
+      "L": 3
+    },
+    "name": "fully_connected",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 36
+  },
+  "4": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "lenet_support_1.cpp",
+    "fileloc": 6,
+    "instructions": 86,
+    "loads": {
+      "L": 3
+    },
+    "name": "conv2d",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 86
+  },
+  "5": {
+    "basicblocks": 33,
+    "calls": "",
+    "file": "lenet_support_1.cpp",
+    "fileloc": 27,
+    "instructions": 73,
+    "loads": {
+      "L": 1
+    },
+    "name": "maxpool2d",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 73
+  },
+  "6": {
+    "basicblocks": 21,
+    "calls": "1",
+    "file": "lenet_support_1.cpp",
+    "fileloc": 65,
+    "instructions": 57,
+    "loads": {
+      "L": 5
+    },
+    "name": "softmax",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 61
+  },
+  "7": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "lenet_support_1.cpp",
+    "fileloc": 85,
+    "instructions": 24,
+    "loads": {
+      "L": 2
+    },
+    "name": "relu",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 24
+  }
+}

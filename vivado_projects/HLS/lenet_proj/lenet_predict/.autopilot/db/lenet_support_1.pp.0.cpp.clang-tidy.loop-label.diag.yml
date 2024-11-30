@@ -1,0 +1,1448 @@
+---
+MainSourceFile:  'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/lenet_proj/lenet_predict/.autopilot/db/lenet_support_1.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          875160
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1102484
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1102948
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1103413
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1385694
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      117
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      118
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      119
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      120
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      121
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      151
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      152
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      153
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      154
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      155
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      156
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      157
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      158
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      159
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      160
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      210
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      211
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      212
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      239
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      240
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      241
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      242
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      243
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      244
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      280
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      281
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_87_1:  '
+    FileOffset:      87
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1837005
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_87_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_1:  '
+    FileOffset:      143
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1837819
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_315_1:  '
+    FileOffset:      315
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1840466
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_315_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_475_1:  '
+    FileOffset:      475
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1843189
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_475_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_655_1:  '
+    FileOffset:      655
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1846350
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_655_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_659_2:  '
+    FileOffset:      659
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1846431
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_659_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_769_1:  '
+    FileOffset:      769
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1848740
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_769_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_866_1:  '
+    FileOffset:      866
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1850234
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_866_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_885_2:  '
+    FileOffset:      885
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1850464
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_885_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1199_1:  '
+    FileOffset:      1199
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1856646
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1199_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1282_1:  '
+    FileOffset:      1282
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1858249
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1282_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_94_1:  '
+    FileOffset:      94
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1866097
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_94_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_2:  '
+    FileOffset:      100
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1866247
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_104_3:  '
+    FileOffset:      104
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1866344
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_104_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_171_4:  '
+    FileOffset:      171
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1868204
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_171_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_177_5:  '
+    FileOffset:      177
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1868354
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_177_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_181_6:  '
+    FileOffset:      181
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1868451
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_181_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_196_7:  '
+    FileOffset:      196
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1868832
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_196_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_8:  '
+    FileOffset:      204
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1869063
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_269_9:  '
+    FileOffset:      269
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1872510
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_269_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_275_10:  '
+    FileOffset:      275
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1872662
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_275_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_279_11:  '
+    FileOffset:      279
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1872762
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_279_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_294_12:  '
+    FileOffset:      294
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1873144
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_294_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_302_13:  '
+    FileOffset:      302
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1873382
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_302_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_531_14:  '
+    FileOffset:      531
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1888937
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_531_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_537_15:  '
+    FileOffset:      537
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1889089
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_537_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_541_16:  '
+    FileOffset:      541
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1889188
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_541_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_551_17:  '
+    FileOffset:      551
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1889365
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_551_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_555_18:  '
+    FileOffset:      555
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1889463
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_555_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_565_19:  '
+    FileOffset:      565
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1889748
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_565_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_573_20:  '
+    FileOffset:      573
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1890003
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_573_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_934_21:  '
+    FileOffset:      934
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1922242
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_934_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_940_22:  '
+    FileOffset:      940
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1922394
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_940_22: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_944_23:  '
+    FileOffset:      944
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1922494
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_944_23: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1060_1:  '
+    FileOffset:      1060
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1925170
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1060_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1066_2:  '
+    FileOffset:      1066
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1925320
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1066_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1070_3:  '
+    FileOffset:      1070
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1925418
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1070_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1157_4:  '
+    FileOffset:      1157
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1928888
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1157_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1163_5:  '
+    FileOffset:      1163
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1929039
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1163_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1167_6:  '
+    FileOffset:      1167
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1929138
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1167_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1186_7:  '
+    FileOffset:      1186
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1929618
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1186_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1193_8:  '
+    FileOffset:      1193
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1929860
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1193_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1309_9:  '
+    FileOffset:      1309
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1935432
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1309_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1315_10:  '
+    FileOffset:      1315
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1935584
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1315_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1319_11:  '
+    FileOffset:      1319
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1935683
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1319_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1339_12:  '
+    FileOffset:      1339
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1936192
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1339_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1346_13:  '
+    FileOffset:      1346
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1936441
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1346_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1608_14:  '
+    FileOffset:      1608
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1953798
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1608_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1614_15:  '
+    FileOffset:      1614
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1953950
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1614_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1618_16:  '
+    FileOffset:      1618
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1954050
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1618_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1642_17:  '
+    FileOffset:      1642
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1954524
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1642_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1649_18:  '
+    FileOffset:      1649
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1954791
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1649_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2079_19:  '
+    FileOffset:      2079
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1993362
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2079_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2085_20:  '
+    FileOffset:      2085
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1993514
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2085_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2089_21:  '
+    FileOffset:      2089
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1993614
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2089_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2219_1:  '
+    FileOffset:      2219
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1996234
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2219_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2226_2:  '
+    FileOffset:      2226
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1996397
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2226_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2230_3:  '
+    FileOffset:      2230
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1996489
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2230_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2277_4:  '
+    FileOffset:      2277
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1998098
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2277_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2284_5:  '
+    FileOffset:      2284
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1998260
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2284_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2288_6:  '
+    FileOffset:      2288
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1998352
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2288_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2306_7:  '
+    FileOffset:      2306
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          1998725
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2306_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2361_8:  '
+    FileOffset:      2361
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2001191
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2361_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2368_9:  '
+    FileOffset:      2368
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2001358
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2368_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2372_10:  '
+    FileOffset:      2372
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2001451
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2372_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2390_11:  '
+    FileOffset:      2390
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2001832
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2390_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2479_12:  '
+    FileOffset:      2479
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2007273
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2479_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2486_13:  '
+    FileOffset:      2486
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2007441
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2486_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2490_14:  '
+    FileOffset:      2490
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2007535
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2490_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2500_15:  '
+    FileOffset:      2500
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2007706
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2500_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2504_16:  '
+    FileOffset:      2504
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2007797
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2504_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2515_17:  '
+    FileOffset:      2515
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2008079
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2515_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2523_18:  '
+    FileOffset:      2523
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2008266
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2523_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2848_19:  '
+    FileOffset:      2848
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2042736
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2848_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2855_20:  '
+    FileOffset:      2855
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2042904
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2855_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2859_21:  '
+    FileOffset:      2859
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2042998
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2859_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2947_1:  '
+    FileOffset:      2947
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2044800
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2947_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2954_2:  '
+    FileOffset:      2954
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2044908
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2954_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2958_3:  '
+    FileOffset:      2958
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2044979
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2958_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2973_4:  '
+    FileOffset:      2973
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2045267
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2973_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3005_5:  '
+    FileOffset:      3005
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2046481
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3005_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3012_6:  '
+    FileOffset:      3012
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2046592
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3012_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3016_7:  '
+    FileOffset:      3016
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2046665
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3016_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3031_8:  '
+    FileOffset:      3031
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2046960
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3031_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3081_9:  '
+    FileOffset:      3081
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2050293
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3081_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3088_10:  '
+    FileOffset:      3088
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2050404
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3088_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3092_11:  '
+    FileOffset:      3092
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2050477
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3092_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3107_12:  '
+    FileOffset:      3107
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2050773
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3107_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3244_13:  '
+    FileOffset:      3244
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2070085
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3244_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3251_14:  '
+    FileOffset:      3251
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2070199
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3251_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3255_15:  '
+    FileOffset:      3255
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2070274
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3255_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3270_16:  '
+    FileOffset:      3270
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2070561
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3270_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3430_17:  '
+    FileOffset:      3430
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2096171
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3430_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3437_18:  '
+    FileOffset:      3437
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2096285
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3437_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3441_19:  '
+    FileOffset:      3441
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2096362
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3441_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_729_1:  '
+    FileOffset:      729
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_log_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2130430
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_729_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_947_1:  '
+    FileOffset:      947
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_log_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2138819
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_947_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1371_1:  '
+    FileOffset:      1371
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_log_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2157793
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1371_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_266_1:  '
+    FileOffset:      266
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2172728
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_266_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_294_2:  '
+    FileOffset:      294
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2173249
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_294_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_1:  '
+    FileOffset:      74
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2189250
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_135_2:  '
+    FileOffset:      135
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2190400
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_135_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_149_3:  '
+    FileOffset:      149
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2190709
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_149_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_179_4:  '
+    FileOffset:      179
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2191219
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_179_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_307_1:  '
+    FileOffset:      307
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2193133
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_307_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_327_2:  '
+    FileOffset:      327
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2193498
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_327_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_341_3:  '
+    FileOffset:      341
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2193806
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_341_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_459_1:  '
+    FileOffset:      459
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2195634
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_459_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_473_2:  '
+    FileOffset:      473
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2195959
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_473_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_1:  '
+    FileOffset:      59
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_diff_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2198689
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_209_1:  '
+    FileOffset:      209
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_diff_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2201582
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_209_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_274_1:  '
+    FileOffset:      274
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_diff_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2202869
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_274_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_42_1:  '
+    FileOffset:      42
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2213931
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_42_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_53_1:  '
+    FileOffset:      53
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2214106
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_53_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_64_1:  '
+    FileOffset:      64
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2214267
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_64_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_1:  '
+    FileOffset:      75
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2214429
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_86_1:  '
+    FileOffset:      86
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2214603
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_86_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_97_1:  '
+    FileOffset:      97
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2214778
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_97_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_108_1:  '
+    FileOffset:      108
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2214939
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_108_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_1:  '
+    FileOffset:      119
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2215101
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_23_1:  '
+    FileOffset:      23
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_mad_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2286128
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_23_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_66_1:  '
+    FileOffset:      66
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cbrt_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2287872
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_66_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_1:  '
+    FileOffset:      75
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hypot_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2292379
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_107_2:  '
+    FileOffset:      107
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hypot_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2293111
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_107_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_195_3:  '
+    FileOffset:      195
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hypot_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2294796
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_195_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_12_1:  '
+    FileOffset:      12
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2350967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_12_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_2:  '
+    FileOffset:      13
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2351015
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_14_3:  '
+    FileOffset:      14
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2351082
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_14_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_16_4:  '
+    FileOffset:      16
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2351190
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_16_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_17_5:  '
+    FileOffset:      17
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2351250
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_17_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_32_1:  '
+    FileOffset:      32
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2351843
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_32_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_33_2:  '
+    FileOffset:      33
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2351881
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_33_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_34_3:  '
+    FileOffset:      34
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2351931
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_34_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_36_4:  '
+    FileOffset:      36
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2352035
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_36_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_37_5:  '
+    FileOffset:      37
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2352093
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_37_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_56_1:  '
+    FileOffset:      56
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2352913
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_56_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_58_2:  '
+    FileOffset:      58
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2352990
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_58_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_68_1:  '
+    FileOffset:      68
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2353243
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_68_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_2:  '
+    FileOffset:      75
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2353396
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_80_3:  '
+    FileOffset:      80
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2353526
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_80_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_87_1:  '
+    FileOffset:      87
+    FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_predict\.autopilot\db\lenet_support_1.pp.0.cpp'
+        Offset:          2353665
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_87_1: '
+...

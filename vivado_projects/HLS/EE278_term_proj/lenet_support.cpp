@@ -39,7 +39,9 @@ void conv2d(float *input, float *output, float *filters, float *bias,
                                filters[f * filter_size * filter_size + fi * filter_size + fj];
                     }
                 }
+                sum += bias[f];
                 output[f * output_size * output_size + i * output_size + j] = relu(sum + bias[f]);
+                
             }
         }
     }

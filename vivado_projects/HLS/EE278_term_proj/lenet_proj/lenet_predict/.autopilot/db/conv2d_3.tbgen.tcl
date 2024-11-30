@@ -200,8 +200,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_conv2d_3_Pipeline_VITIS_LOOP_35_4_fu_155", "Port" : "gmem", "Inst_start_state" : "2", "Inst_end_state" : "3"},
-					{"ID" : "2", "SubInstance" : "grp_conv2d_3_Pipeline_VITIS_LOOP_35_45_fu_167", "Port" : "gmem", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "2", "SubInstance" : "grp_conv2d_3_Pipeline_VITIS_LOOP_35_45_fu_167", "Port" : "gmem", "Inst_start_state" : "4", "Inst_end_state" : "5"},
+					{"ID" : "1", "SubInstance" : "grp_conv2d_3_Pipeline_VITIS_LOOP_35_4_fu_155", "Port" : "gmem", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
 			{"Name" : "input_r", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [

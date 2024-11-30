@@ -1,0 +1,537 @@
+
+
+================================================================
+== Vitis HLS Report for 'softmax'
+================================================================
+* Date:           Tue Nov 26 16:16:00 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        lenet_proj
+* Solution:       lenet_predict (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvf1517-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.246 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       82|       82|  0.820 us|  0.820 us|   82|   82|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                            |                                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                  Instance                  |              Module              |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_softmax_Pipeline_VITIS_LOOP_68_1_fu_18  |softmax_Pipeline_VITIS_LOOP_68_1  |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
+        |grp_softmax_Pipeline_VITIS_LOOP_75_2_fu_25  |softmax_Pipeline_VITIS_LOOP_75_2  |       43|       43|  0.430 us|  0.430 us|   43|   43|       no|
+        |grp_softmax_Pipeline_VITIS_LOOP_80_3_fu_33  |softmax_Pipeline_VITIS_LOOP_80_3  |       21|       21|  0.210 us|  0.210 us|   21|   21|       no|
+        +--------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       -|       -|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     7|     703|    1416|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     132|    -|
+|Register         |        -|     -|       9|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     7|     712|    1548|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|    ~0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------+----------------------------------+---------+----+-----+------+-----+
+    |                  Instance                  |              Module              | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +--------------------------------------------+----------------------------------+---------+----+-----+------+-----+
+    |grp_softmax_Pipeline_VITIS_LOOP_68_1_fu_18  |softmax_Pipeline_VITIS_LOOP_68_1  |        0|   0|  106|   210|    0|
+    |grp_softmax_Pipeline_VITIS_LOOP_75_2_fu_25  |softmax_Pipeline_VITIS_LOOP_75_2  |        0|   7|  440|  1112|    0|
+    |grp_softmax_Pipeline_VITIS_LOOP_80_3_fu_33  |softmax_Pipeline_VITIS_LOOP_80_3  |        0|   0|  157|    94|    0|
+    +--------------------------------------------+----------------------------------+---------+----+-----+------+-----+
+    |Total                                       |                                  |        0|   7|  703|  1416|    0|
+    +--------------------------------------------+----------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm         |  37|          7|    1|          7|
+    |grp_fu_66_ce      |   9|          2|    1|          2|
+    |grp_fu_70_ce      |   9|          2|    1|          2|
+    |input_r_address0  |  20|          4|    4|         16|
+    |input_r_ce0       |  20|          4|    1|          4|
+    |input_r_ce1       |   9|          2|    1|          2|
+    |input_r_d0        |  14|          3|   32|         96|
+    |input_r_we0       |  14|          3|    1|          3|
+    +------------------+----+-----------+-----+-----------+
+    |Total             | 132|         27|   42|        132|
+    +------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------+---+----+-----+-----------+
+    |                           Name                          | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                |  6|   0|    6|          0|
+    |grp_softmax_Pipeline_VITIS_LOOP_68_1_fu_18_ap_start_reg  |  1|   0|    1|          0|
+    |grp_softmax_Pipeline_VITIS_LOOP_75_2_fu_25_ap_start_reg  |  1|   0|    1|          0|
+    |grp_softmax_Pipeline_VITIS_LOOP_80_3_fu_33_ap_start_reg  |  1|   0|    1|          0|
+    +---------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                    |  9|   0|    9|          0|
+    +---------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------+-----+-----+------------+--------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|       softmax|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|       softmax|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|       softmax|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|       softmax|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|       softmax|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_413_p_din0    |  out|   32|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_413_p_din1    |  out|   32|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_413_p_opcode  |  out|    5|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_413_p_dout0   |   in|    1|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_413_p_ce      |  out|    1|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_405_p_din0    |  out|   32|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_405_p_din1    |  out|   32|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_405_p_opcode  |  out|    2|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_405_p_dout0   |   in|   32|  ap_ctrl_hs|       softmax|  return value|
+|grp_fu_405_p_ce      |  out|    1|  ap_ctrl_hs|       softmax|  return value|
+|input_r_address0     |  out|    4|   ap_memory|       input_r|         array|
+|input_r_ce0          |  out|    1|   ap_memory|       input_r|         array|
+|input_r_we0          |  out|    1|   ap_memory|       input_r|         array|
+|input_r_d0           |  out|   32|   ap_memory|       input_r|         array|
+|input_r_q0           |   in|   32|   ap_memory|       input_r|         array|
+|input_r_address1     |  out|    4|   ap_memory|       input_r|         array|
+|input_r_ce1          |  out|    1|   ap_memory|       input_r|         array|
+|input_r_q1           |   in|   32|   ap_memory|       input_r|         array|
++---------------------+-----+-----+------------+--------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%sum_exp_loc = alloca i64 1"   --->   Operation 7 'alloca' 'sum_exp_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%max_val_loc = alloca i64 1"   --->   Operation 8 'alloca' 'max_val_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [2/2] (0.00ns)   --->   "%call_ln0 = call void @softmax_Pipeline_VITIS_LOOP_68_1, i32 %input_r, i32 %max_val_loc"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 10 [1/2] (0.00ns)   --->   "%call_ln0 = call void @softmax_Pipeline_VITIS_LOOP_68_1, i32 %input_r, i32 %max_val_loc"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%max_val_loc_load = load i32 %max_val_loc"   --->   Operation 11 'load' 'max_val_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [2/2] (0.00ns)   --->   "%call_ln0 = call void @softmax_Pipeline_VITIS_LOOP_75_2, i32 %input_r, i32 %max_val_loc_load, i32 %sum_exp_loc"   --->   Operation 12 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 13 [1/2] (0.00ns)   --->   "%call_ln0 = call void @softmax_Pipeline_VITIS_LOOP_75_2, i32 %input_r, i32 %max_val_loc_load, i32 %sum_exp_loc"   --->   Operation 13 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 14 [1/1] (0.00ns)   --->   "%sum_exp_loc_load = load i32 %sum_exp_loc"   --->   Operation 14 'load' 'sum_exp_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 15 [2/2] (0.00ns)   --->   "%call_ln0 = call void @softmax_Pipeline_VITIS_LOOP_80_3, i32 %input_r, i32 %sum_exp_loc_load"   --->   Operation 15 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 16 [1/2] (0.00ns)   --->   "%call_ln0 = call void @softmax_Pipeline_VITIS_LOOP_80_3, i32 %input_r, i32 %sum_exp_loc_load"   --->   Operation 16 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%ret_ln83 = ret" [lenet_proj/lenet_support_1.cpp:83]   --->   Operation 17 'ret' 'ret_ln83' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ input_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[21]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+sum_exp_loc      (alloca) [ 0011110]
+max_val_loc      (alloca) [ 0111000]
+call_ln0         (call  ) [ 0000000]
+max_val_loc_load (load  ) [ 0000100]
+call_ln0         (call  ) [ 0000000]
+sum_exp_loc_load (load  ) [ 0000001]
+call_ln0         (call  ) [ 0000000]
+ret_ln83         (ret   ) [ 0000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="input_r">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="input_r"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="softmax_Pipeline_VITIS_LOOP_68_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="softmax_Pipeline_VITIS_LOOP_75_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="softmax_Pipeline_VITIS_LOOP_80_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1004" name="sum_exp_loc_fu_10">
+<pin_list>
+<pin id="11" dir="0" index="0" bw="1" slack="0"/>
+<pin id="12" dir="1" index="1" bw="32" slack="2"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="sum_exp_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="14" class="1004" name="max_val_loc_fu_14">
+<pin_list>
+<pin id="15" dir="0" index="0" bw="1" slack="0"/>
+<pin id="16" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="max_val_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="18" class="1004" name="grp_softmax_Pipeline_VITIS_LOOP_68_1_fu_18">
+<pin_list>
+<pin id="19" dir="0" index="0" bw="0" slack="0"/>
+<pin id="20" dir="0" index="1" bw="32" slack="0"/>
+<pin id="21" dir="0" index="2" bw="32" slack="0"/>
+<pin id="22" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="25" class="1004" name="grp_softmax_Pipeline_VITIS_LOOP_75_2_fu_25">
+<pin_list>
+<pin id="26" dir="0" index="0" bw="0" slack="0"/>
+<pin id="27" dir="0" index="1" bw="32" slack="0"/>
+<pin id="28" dir="0" index="2" bw="32" slack="0"/>
+<pin id="29" dir="0" index="3" bw="32" slack="2"/>
+<pin id="30" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/3 "/>
+</bind>
+</comp>
+
+<comp id="33" class="1004" name="grp_softmax_Pipeline_VITIS_LOOP_80_3_fu_33">
+<pin_list>
+<pin id="34" dir="0" index="0" bw="0" slack="0"/>
+<pin id="35" dir="0" index="1" bw="32" slack="0"/>
+<pin id="36" dir="0" index="2" bw="32" slack="0"/>
+<pin id="37" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/5 "/>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="max_val_loc_load_load_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="32" slack="2"/>
+<pin id="42" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="max_val_loc_load/3 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="sum_exp_loc_load_load_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="32" slack="4"/>
+<pin id="46" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="sum_exp_loc_load/5 "/>
+</bind>
+</comp>
+
+<comp id="48" class="1005" name="sum_exp_loc_reg_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="32" slack="2"/>
+<pin id="50" dir="1" index="1" bw="32" slack="2"/>
+</pin_list>
+<bind>
+<opset="sum_exp_loc "/>
+</bind>
+</comp>
+
+<comp id="54" class="1005" name="max_val_loc_reg_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="32" slack="0"/>
+<pin id="56" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opset="max_val_loc "/>
+</bind>
+</comp>
+
+<comp id="66" class="1004" name="grp_fu_66">
+<pin_list>
+<pin id="67" dir="0" index="0" bw="32" slack="2147483647"/>
+<pin id="68" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="69" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="fcmp(46) " fcode="fcmp"/>
+<opset="tmp_3/2 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="grp_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="32" slack="2147483647"/>
+<pin id="72" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="73" dir="1" index="2" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="fadd(9) fsub(11) " fcode="fadd"/>
+<opset="x_assign/2 sum_exp_1/12 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="13"><net_src comp="2" pin="0"/><net_sink comp="10" pin=0"/></net>
+
+<net id="17"><net_src comp="2" pin="0"/><net_sink comp="14" pin=0"/></net>
+
+<net id="23"><net_src comp="4" pin="0"/><net_sink comp="18" pin=0"/></net>
+
+<net id="24"><net_src comp="0" pin="0"/><net_sink comp="18" pin=1"/></net>
+
+<net id="31"><net_src comp="6" pin="0"/><net_sink comp="25" pin=0"/></net>
+
+<net id="32"><net_src comp="0" pin="0"/><net_sink comp="25" pin=1"/></net>
+
+<net id="38"><net_src comp="8" pin="0"/><net_sink comp="33" pin=0"/></net>
+
+<net id="39"><net_src comp="0" pin="0"/><net_sink comp="33" pin=1"/></net>
+
+<net id="43"><net_src comp="40" pin="1"/><net_sink comp="25" pin=2"/></net>
+
+<net id="47"><net_src comp="44" pin="1"/><net_sink comp="33" pin=2"/></net>
+
+<net id="51"><net_src comp="10" pin="1"/><net_sink comp="48" pin=0"/></net>
+
+<net id="52"><net_src comp="48" pin="1"/><net_sink comp="25" pin=3"/></net>
+
+<net id="53"><net_src comp="48" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="57"><net_src comp="14" pin="1"/><net_sink comp="54" pin=0"/></net>
+
+<net id="58"><net_src comp="54" pin="1"/><net_sink comp="18" pin=2"/></net>
+
+<net id="59"><net_src comp="54" pin="1"/><net_sink comp="40" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: input_r | {3 4 5 6 }
+ - Input state : 
+	Port: softmax : input_r | {1 2 3 4 5 6 }
+  - Chain level:
+	State 1
+		call_ln0 : 1
+	State 2
+	State 3
+		call_ln0 : 1
+	State 4
+	State 5
+		call_ln0 : 1
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------------------------|---------|---------|---------|---------|
+| Operation|               Functional Unit              |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+|          | grp_softmax_Pipeline_VITIS_LOOP_68_1_fu_18 |    0    |  1.206  |   105   |   181   |
+|   call   | grp_softmax_Pipeline_VITIS_LOOP_75_2_fu_25 |    9    | 1.29457 |   623   |   1163  |
+|          | grp_softmax_Pipeline_VITIS_LOOP_80_3_fu_33 |    0    |  0.402  |   105   |    33   |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+|   fadd   |                  grp_fu_70                 |    2    |    0    |   227   |   218   |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+|   fcmp   |                  grp_fu_66                 |    0    |    0    |    0    |    0    |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                            |    11   | 2.90257 |   1060  |   1595  |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------+--------+
+|                  |   FF   |
++------------------+--------+
+|max_val_loc_reg_54|   32   |
+|sum_exp_loc_reg_48|   32   |
++------------------+--------+
+|       Total      |   64   |
++------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |   11   |    2   |  1060  |  1595  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |   64   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |   11   |    2   |  1124  |  1595  |
++-----------+--------+--------+--------+--------+

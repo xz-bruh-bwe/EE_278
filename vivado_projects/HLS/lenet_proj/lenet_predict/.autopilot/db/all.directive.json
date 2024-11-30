@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "lenet_predict",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "lenet_predict"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/lenet_proj/lenet_predict/csynth.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]

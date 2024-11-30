@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Nov  8 23:51:01 2024
+# Process ID: 15264
+# Current directory: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10956 C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\mini_project_2\mini_project_2.xpr
+# Log file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/vivado.log
+# Journal file: C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2\vivado.jou
+# Running On: LAPTOP-NR37E6DI, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 16852 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/mini_project_2.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/tb_bfloat16_matrix_multiplier_behav.wcfg
+source tb_bfloat16_matrix_multiplier_4x4.tcl
+save_wave_config {C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/tb_bfloat16_matrix_multiplier_behav.wcfg}
+relaunch_sim
+set_property is_enabled false [get_files  C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/mini_project_2/tb_bfloat16_matrix_multiplier_behav.wcfg]
+close_sim

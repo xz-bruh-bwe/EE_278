@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../lenet_testbench_1.cpp in debug mode
+   Generating csim.exe
+Loading binary files...
+Input image (first 10 pixels): 0 0 0 0 0 0 0 0 0 0.00784314 
+Conv1 filters (first 10 values): 0.00537475 -0.0114293 -0.064419 0.0108646 0.106968 -0.00392431 0.0238164 -0.0889049 -0.0025517 0.0133665 
+Conv1 biases (first 10 values): -0.000343845 0.0164552 0.00172529 -0.0572157 0.0681776 0.00235096 4.4081e-038 0 0.00537475 -0.0114293 
+Running lenet_predict...
+Conv1 output (first 10 values): 0 0 0 0 0 0 0 0 0 0.00784314 
+Output probabilities: Class 0: 0 Class 1: 0 Class 2: 0 Class 3: 0 Class 4: 0 Class 5: 0 Class 6: 0 Class 7: 0 Class 8: 0 Class 9: 0.00784314 
+Predicted class: 6
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

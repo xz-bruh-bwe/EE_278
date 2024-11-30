@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732255402997">
-  <ports id="1" name="max_prob" type="PortType" coreId="1717920800" bitwidth="32">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732334474923">
+  <ports id="1" name="max_prob" type="PortType" coreId="1931485194" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="2" name="fc3_output" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="3" name="i_023_out" type="PortType" coreId="1702129263" bitwidth="32" direction="DirOut">
+  <ports id="3" name="i_023_out" type="PortType" coreId="543973741" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="59" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.3"/>
@@ -80,7 +80,7 @@
   <edges id="172" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
   <blocks id="12" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.body</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="max_prob_1" originalName="max_prob" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="max_prob_1" originalName="max_prob" coreId="32" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -99,7 +99,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="max_prob_read" coreId="0" bitwidth="32" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="max_prob_read" coreId="3748025336" bitwidth="32" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>max_prob</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
@@ -107,11 +107,11 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_023_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_023_write_ln0" coreId="3748014992" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="max_prob_1_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="max_prob_1_write_ln0" coreId="3746369568" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
@@ -122,7 +122,7 @@
   <blocks id="52" name="for.end.exitStub" type="BlockType">
     <controlInputObjs>for.body</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="i_023_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="i_023_load" coreId="3747887040" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
@@ -130,7 +130,7 @@
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>i_023_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln0" coreId="0" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln0" coreId="3748010744" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="202" pipe_depth="3" RegionName="VITIS_LOOP_51_1">
     <basic_blocks id="17" name="for.body" type="BlockType">
@@ -140,7 +140,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.end.exitStub</controlOutputObjs>
       <controlOutputObjs>for.body.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i_3" lineNumber="51" originalName="i" fileName="lenet_main.cpp" fileDirectory="../." coreId="0" contextFuncName="lenet_predict" bitwidth="4" opcode="load" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i_3" lineNumber="51" originalName="i" fileName="lenet_main.cpp" fileDirectory="../." coreId="3748032912" contextFuncName="lenet_predict" bitwidth="4" opcode="load" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="51" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -154,7 +154,7 @@
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="br_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="0" contextFuncName="lenet_predict" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="br_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="1397508096" contextFuncName="lenet_predict" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="51" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.body.split</controlInputObjs>
@@ -175,17 +175,17 @@
         <dataOutputObjs>fcmp</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="i_023_load_1" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." coreId="0" contextFuncName="lenet_predict" bitwidth="32" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="i_023_load_1" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." coreId="7955712" contextFuncName="lenet_predict" bitwidth="32" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="52" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="trunc_ln52_cast" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." rtlName="trunc_ln52_cast_fu_111_p1" coreId="0" contextFuncName="lenet_predict" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="trunc_ln52_cast" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." rtlName="trunc_ln52_cast_fu_111_p1" coreId="3748003832" contextFuncName="lenet_predict" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="51" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="fc3_output_addr" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." coreId="0" contextFuncName="lenet_predict" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="fc3_output_addr" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." coreId="1717924352" contextFuncName="lenet_predict" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="52" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>fc3_output</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -199,13 +199,13 @@
         <dataOutputObjs>fcmp</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="bitcast_ln52" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." rtlName="bitcast_ln52_fu_134_p1" coreId="0" contextFuncName="lenet_predict" bitwidth="32" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="bitcast_ln52" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." rtlName="bitcast_ln52_fu_134_p1" coreId="6775040" contextFuncName="lenet_predict" bitwidth="32" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="52" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp_s" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." rtlName="tmp_s_fu_137_p4" coreId="0" contextFuncName="lenet_predict" bitwidth="8" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp_s" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." rtlName="tmp_s_fu_137_p4" coreId="3748032760" contextFuncName="lenet_predict" bitwidth="8" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="52" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>bitcast</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -216,7 +216,7 @@
         <dataInputObjs>bitcast</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="bitcast_ln52_1" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." rtlName="bitcast_ln52_1_fu_151_p1" coreId="0" contextFuncName="lenet_predict" bitwidth="32" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="bitcast_ln52_1" lineNumber="52" fileName="lenet_main.cpp" fileDirectory="../." rtlName="bitcast_ln52_1_fu_151_p1" coreId="3748031224" contextFuncName="lenet_predict" bitwidth="32" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="52" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
@@ -313,22 +313,22 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="i_write_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="0" contextFuncName="lenet_predict" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="i_write_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="1702257920" contextFuncName="lenet_predict" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="51" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="i_023_write_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="1162363731" contextFuncName="lenet_predict" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.4" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="i_023_write_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="1414092327" contextFuncName="lenet_predict" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.4" m_topoIndex="40" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="51" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="max_prob_1_write_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="0" contextFuncName="lenet_predict" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.4" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="max_prob_1_write_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="3748034448" contextFuncName="lenet_predict" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.4" m_topoIndex="41" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="51" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="br_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="0" contextFuncName="lenet_predict" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="br_ln51" lineNumber="51" fileName="lenet_main.cpp" fileDirectory="../." coreId="3747912432" contextFuncName="lenet_predict" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="51" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <controlInputObjs>for.body</controlInputObjs>
       </node_objs>

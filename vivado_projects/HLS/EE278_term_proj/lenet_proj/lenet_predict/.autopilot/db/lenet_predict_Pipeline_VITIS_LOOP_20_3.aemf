@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732255402617">
-  <ports id="1" name="fc3_output" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="10">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732334474504">
+  <ports id="1" name="fc3_output" type="PortType" coreName="RAM" coreId="3004" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="10">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="2" name="sum_reload" type="PortType" coreId="1702129263" bitwidth="32">
+  <ports id="2" name="sum_reload" type="PortType" coreId="3742624504" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="30" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -69,7 +69,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z7softmaxPfi.exit.exitStub</controlOutputObjs>
       <controlOutputObjs>for.inc26.i.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i_4" lineNumber="20" originalName="i" fileName="lenet_support.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="softmax" bitwidth="4" opcode="load" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i_4" lineNumber="20" originalName="i" fileName="lenet_support.cpp" fileDirectory="../." coreId="3621216858" contextFuncName="softmax" bitwidth="4" opcode="load" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="47" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="20" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="softmax"/>
         <dataInputObjs>alloca</dataInputObjs>
@@ -91,7 +91,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln20" lineNumber="20" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="softmax" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln20" lineNumber="20" fileName="lenet_support.cpp" fileDirectory="../." coreId="2" contextFuncName="softmax" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="47" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="20" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="softmax"/>
         <dataInputObjs>icmp</dataInputObjs>
@@ -144,7 +144,7 @@
         <dataInputObjs>fdiv</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="i_write_ln20" lineNumber="20" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="softmax" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="i_write_ln20" lineNumber="20" fileName="lenet_support.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="softmax" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="47" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="20" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="softmax"/>
         <dataInputObjs>add</dataInputObjs>

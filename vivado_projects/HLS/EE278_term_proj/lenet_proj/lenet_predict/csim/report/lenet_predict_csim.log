@@ -1,5 +1,9 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-make: 'csim.exe' is up to date.
-ERR: [SIM 100] 'csim_design' failed: nonzero return value.
+   Compiling ../../../../lenet_testbench.cpp in debug mode
+   Generating csim.exe
+Conv1 output (first 10 values): 0 0 0 0 0 0.00113771 0 0 0 0.00330163 
+Conv1 output (filter 0, first row): 0 0 0 0 0 0.00113771 0 0 0 0.00330163 0.00316622 0.00179808 0.00224399 0.00225152 0.00105086 0.00383479 0.00486048 0.00843639 0.00291973 0 0.00233862 0.00884894 0 0 0.00264358 0.00719266 0.00393475 0.000689693 
+Predicted class: 0
+INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

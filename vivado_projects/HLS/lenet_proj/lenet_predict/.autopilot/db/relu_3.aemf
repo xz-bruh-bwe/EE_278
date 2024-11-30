@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732666556117">
+  <ports id="1" name="input_r" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="120">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <edges id="36" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="37" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="38" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="39" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="42" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="45" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="46" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="47" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="48" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="49" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="53" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="54" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="57" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="66" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="70" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="71" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="82" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="83" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="104" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="105" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="106" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="107" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="108" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="109" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="110" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="111" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="-49" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@ports.0"/>
+  <blocks id="5" name="entry" type="BlockType">
+    <controlOutputObjs>for.body</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="2" name="i" originalName="i" coreId="0" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="i_write_ln87" lineNumber="87" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreId="0" contextFuncName="relu" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="87" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="br_ln87" lineNumber="87" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreId="0" contextFuncName="relu" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="87" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+      <controlInputObjs>for.body</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="lenet_proj/lenet_support_1.cpp">
+      <validLinenumbers>87</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="31" name="for.end" type="BlockType">
+    <controlInputObjs>for.body</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="_ln91" lineNumber="91" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreId="0" contextFuncName="relu" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="91" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="lenet_proj/lenet_support_1.cpp">
+      <validLinenumbers>91</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="126" pipe_depth="3" RegionName="VITIS_LOOP_87_1">
+    <basic_blocks id="11" name="for.body" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>for.body.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.end</controlOutputObjs>
+      <controlOutputObjs>for.body.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i_4" lineNumber="87" originalName="i" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreId="0" contextFuncName="relu" bitwidth="7" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="87" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="icmp_ln87" lineNumber="87" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="icmp_ln87_fu_75_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.7" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="87" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="add_ln87" lineNumber="87" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="add_ln87_fu_81_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu" bitwidth="7" opcode="add" m_display="0" m_delay="0.7" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="87" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln87" lineNumber="87" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreId="0" contextFuncName="relu" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="87" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.body.split</controlInputObjs>
+        <controlInputObjs>for.end</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="lenet_proj/lenet_support_1.cpp">
+        <validLinenumbers>87</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="29" name="for.body.split" type="BlockType">
+      <controlInputObjs>for.body</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.body</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="zext_ln87" lineNumber="87" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="zext_ln87_fu_87_p1" coreId="0" contextFuncName="relu" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="87" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="input_addr" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreId="0" contextFuncName="relu" bitwidth="7" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>input_r</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>input_r</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="input_load" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="relu" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.09" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>fcmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="bitcast_ln89" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="bitcast_ln89_fu_97_p1" coreId="0" contextFuncName="relu" bitwidth="32" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="tmp" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="tmp_fu_100_p4" coreId="0" contextFuncName="relu" bitwidth="8" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="trunc_ln89" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="trunc_ln89_fu_110_p1" coreId="0" contextFuncName="relu" bitwidth="23" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="icmp_ln89" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="icmp_ln89_fu_114_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.7" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="icmp_ln89_2" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="icmp_ln89_2_fu_120_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.88" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="or_ln89" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="or_ln89_fu_126_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="relu" bitwidth="1" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="tmp_5" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="relu" bitwidth="1" opcode="fcmp" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.57" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="and_ln89" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="and_ln89_fu_132_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="relu" bitwidth="1" opcode="and" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>fcmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="select_ln89" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." rtlName="input_r_d0" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu" bitwidth="32" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.41" m_topoIndex="21" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="input_addr_write_ln89" lineNumber="89" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="relu" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.09" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="89" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="i_write_ln87" lineNumber="87" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreId="0" contextFuncName="relu" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="87" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln87" lineNumber="87" fileName="lenet_proj/lenet_support_1.cpp" fileDirectory="../." coreId="0" contextFuncName="relu" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lenet_proj/lenet_support_1.cpp" linenumber="87" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS" functionName="relu"/>
+        <controlInputObjs>for.body</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="lenet_proj/lenet_support_1.cpp">
+        <validLinenumbers>87</validLinenumbers>
+        <validLinenumbers>89</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="icmp_ln87_reg_153">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="input_load_reg_163">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_146">
+    <nodeIds>2</nodeIds>
+  </regnodes>
+  <regnodes realName="input_addr_reg_157">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln89_2_fu_120">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_100">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln87_fu_75">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln89_fu_114">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln89_fu_138">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_40">
+    <nodeIds>2</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln89_fu_126">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln87_fu_87">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln87_fu_81">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln89_fu_110">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln89_fu_97">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="input_addr_gep_fu_44">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln89_fu_132">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_61">
+    <nodeIds>23</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="store_ln87_store_fu_92">
+    <nodeIds>27</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_4_load_fu_72">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln87_store_fu_67">
+    <nodeIds>3</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="input_r">
+    <nodeIds>26</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="input_r" portID="1">
+    <nodeIds>16</nodeIds>
+  </memoryPorts>
+  <ioPorts name="input_r(p0)">
+    <contents name="store">
+      <nodeIds>26</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_r(p1)">
+    <contents name="load">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="2" stage="1" latency="1"/>
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="2" latency="2"/>
+      <operations id="27" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="16" stage="1" latency="2"/>
+      <operations id="23" stage="2" latency="2"/>
+      <operations id="30" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="2"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="relu_3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="123" mMaxLatency="123">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>5</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_87_1" mII="1" mDepth="3" mMinTripCount="120" mMaxTripCount="120" mMinLatency="121" mMaxLatency="121" mType="1">
+      <basicBlocks>11</basicBlocks>
+      <basicBlocks>29</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>31</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

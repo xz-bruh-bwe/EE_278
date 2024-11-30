@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lenet_main_1.cpp" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_main_1.cpp"/>
+    <originFiles name="lenet_support_1.cpp" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.cpp"/>
+    <originFiles name="lenet_support_1.h" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_support_1.h"/>
+  </source>
+  <testbench>
+    <originFiles name="lenet_testbench_1.cpp" path="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\lenet_proj\lenet_testbench_1.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

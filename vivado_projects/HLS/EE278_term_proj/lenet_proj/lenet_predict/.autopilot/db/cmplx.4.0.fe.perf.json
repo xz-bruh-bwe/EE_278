@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 37,
-    "calls": "4 3 5 2 1",
+    "calls": "5 3 2 4 1",
     "file": "lenet_main.cpp",
     "fileloc": 13,
     "instructions": 191,
@@ -64,21 +64,6 @@
     "total_instructions": 160
   },
   "4": {
-    "basicblocks": 30,
-    "calls": "",
-    "file": "lenet_support.cpp",
-    "fileloc": 26,
-    "instructions": 182,
-    "loads": {
-      "G": 5
-    },
-    "name": "conv2d",
-    "stores": {
-      "L": 2
-    },
-    "total_instructions": 182
-  },
-  "5": {
     "basicblocks": 7,
     "calls": "",
     "file": "lenet_support.cpp",
@@ -93,5 +78,20 @@
       "L": 1
     },
     "total_instructions": 40
+  },
+  "5": {
+    "basicblocks": 30,
+    "calls": "",
+    "file": "lenet_support.cpp",
+    "fileloc": 26,
+    "instructions": 182,
+    "loads": {
+      "G": 5
+    },
+    "name": "conv2d",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 182
   }
 }

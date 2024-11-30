@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732255400293">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732334471803">
   <ports id="1" name="conv2_output" type="PortType" coreName="RAM_1WnR" coreId="1702129263" bitwidth="32" iftype="IfTypeRegister" arraysize="1600">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="2" name="pool2_output" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="400">
+  <ports id="2" name="pool2_output" type="PortType" coreName="RAM" coreId="1668183366" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="400">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
   <edges id="137" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
@@ -224,7 +224,7 @@
   <blocks id="130" name="VITIS_LOOP_72_2.i.preheader.exitStub" type="BlockType">
     <controlInputObjs>VITIS_LOOP_57_4.i14</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="_ln0" coreId="0" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="_ln0" coreId="1952805734" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="524" pipe_depth="6" RegionName="VITIS_LOOP_52_1_VITIS_LOOP_53_2">
     <basic_blocks id="21" name="VITIS_LOOP_57_4.i14" type="BlockType">
@@ -310,7 +310,7 @@
       <controlInputObjs>VITIS_LOOP_57_4.i14</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>VITIS_LOOP_57_4.i14</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="j_1_load" lineNumber="53" fileName="lenet_support.cpp" fileDirectory="../." coreId="1918989395" contextFuncName="maxpool2d" bitwidth="3" opcode="load" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="j_1_load" lineNumber="53" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="maxpool2d" bitwidth="3" opcode="load" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="42" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="53" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="maxpool2d"/>
         <dataInputObjs>alloca</dataInputObjs>
@@ -446,7 +446,7 @@
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="conv2_output_addr" lineNumber="58" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="maxpool2d" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="conv2_output_addr" lineNumber="58" fileName="lenet_support.cpp" fileDirectory="../." coreId="1918989395" contextFuncName="maxpool2d" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="42" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="58" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="maxpool2d"/>
         <dataInputObjs>conv2_output</dataInputObjs>
@@ -570,7 +570,7 @@
         <dataOutputObjs>icmp</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln59_1" lineNumber="59" fileName="lenet_support.cpp" fileDirectory="../." rtlName="trunc_ln59_1_fu_467_p1" coreId="0" contextFuncName="maxpool2d" bitwidth="23" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln59_1" lineNumber="59" fileName="lenet_support.cpp" fileDirectory="../." rtlName="trunc_ln59_1_fu_467_p1" coreId="1768843590" contextFuncName="maxpool2d" bitwidth="23" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="42" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="59" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="maxpool2d"/>
         <dataInputObjs>bitcast</dataInputObjs>
@@ -985,13 +985,13 @@
         <dataInputObjs>select</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="120" name="zext_ln62_1" lineNumber="62" fileName="lenet_support.cpp" fileDirectory="../." rtlName="zext_ln62_1_fu_721_p1" coreId="0" contextFuncName="maxpool2d" bitwidth="64" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="120" name="zext_ln62_1" lineNumber="62" fileName="lenet_support.cpp" fileDirectory="../." rtlName="zext_ln62_1_fu_721_p1" coreId="7959657" contextFuncName="maxpool2d" bitwidth="64" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="42" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="62" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="maxpool2d"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="pool2_output_addr" lineNumber="62" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="maxpool2d" bitwidth="9" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="pool2_output_addr" lineNumber="62" fileName="lenet_support.cpp" fileDirectory="../." coreId="1769104758" contextFuncName="maxpool2d" bitwidth="9" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="42" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="62" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="maxpool2d"/>
         <dataInputObjs>zext</dataInputObjs>
@@ -1018,7 +1018,7 @@
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="i_write_ln53" lineNumber="53" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="maxpool2d" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="i_write_ln53" lineNumber="53" fileName="lenet_support.cpp" fileDirectory="../." coreId="1701519360" contextFuncName="maxpool2d" opcode="store" m_display="0" m_delay="0.4" m_topoIndex="56" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="42" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="53" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="maxpool2d"/>
         <dataInputObjs>select</dataInputObjs>
@@ -1030,7 +1030,7 @@
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="br_ln53" lineNumber="53" fileName="lenet_support.cpp" fileDirectory="../." coreId="0" contextFuncName="maxpool2d" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="br_ln53" lineNumber="53" fileName="lenet_support.cpp" fileDirectory="../." coreId="1293956145" contextFuncName="maxpool2d" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="lenet_main.cpp" linenumber="42" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="lenet_predict"/>
         <inlineStackInfo fileName="lenet_support.cpp" linenumber="53" fileDirectory="C:\Users\Baron\Desktop\EE_278_Repo\EE_278\vivado_projects\HLS\EE278_term_proj" functionName="maxpool2d"/>
         <controlInputObjs>VITIS_LOOP_57_4.i14</controlInputObjs>
