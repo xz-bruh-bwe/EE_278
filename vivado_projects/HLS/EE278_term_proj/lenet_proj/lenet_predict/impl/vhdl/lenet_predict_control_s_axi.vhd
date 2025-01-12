@@ -35,8 +35,8 @@ port (
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
     interrupt             :out  STD_LOGIC;
-    predicted_class       :in   STD_LOGIC_VECTOR(31 downto 0);
-    predicted_class_ap_vld :in   STD_LOGIC;
+    predicted_class_74    :in   STD_LOGIC_VECTOR(31 downto 0);
+    predicted_class_74_ap_vld :in   STD_LOGIC;
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
@@ -64,10 +64,10 @@ end entity lenet_predict_control_s_axi;
 --        bit 0 - ap_done (Read/TOW)
 --        bit 1 - ap_ready (Read/TOW)
 --        others - reserved
--- 0x10 : Data signal of predicted_class
---        bit 31~0 - predicted_class[31:0] (Read)
--- 0x14 : Control signal of predicted_class
---        bit 0  - predicted_class_ap_vld (Read/COR)
+-- 0x10 : Data signal of predicted_class_74
+--        bit 31~0 - predicted_class_74[31:0] (Read)
+-- 0x14 : Control signal of predicted_class_74
+--        bit 0  - predicted_class_74_ap_vld (Read/COR)
 --        others - reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
@@ -76,12 +76,12 @@ architecture behave of lenet_predict_control_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_AP_CTRL                : INTEGER := 16#00#;
-    constant ADDR_GIE                    : INTEGER := 16#04#;
-    constant ADDR_IER                    : INTEGER := 16#08#;
-    constant ADDR_ISR                    : INTEGER := 16#0c#;
-    constant ADDR_PREDICTED_CLASS_DATA_0 : INTEGER := 16#10#;
-    constant ADDR_PREDICTED_CLASS_CTRL   : INTEGER := 16#14#;
+    constant ADDR_AP_CTRL                   : INTEGER := 16#00#;
+    constant ADDR_GIE                       : INTEGER := 16#04#;
+    constant ADDR_IER                       : INTEGER := 16#08#;
+    constant ADDR_ISR                       : INTEGER := 16#0c#;
+    constant ADDR_PREDICTED_CLASS_74_DATA_0 : INTEGER := 16#10#;
+    constant ADDR_PREDICTED_CLASS_74_CTRL   : INTEGER := 16#14#;
     constant ADDR_BITS         : INTEGER := 5;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -110,8 +110,8 @@ architecture behave of lenet_predict_control_s_axi is
     signal int_gie             : STD_LOGIC := '0';
     signal int_ier             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
-    signal int_predicted_class_ap_vld : STD_LOGIC;
-    signal int_predicted_class : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_predicted_class_74_ap_vld : STD_LOGIC;
+    signal int_predicted_class_74 : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -240,10 +240,10 @@ begin
                         rdata_data(1 downto 0) <= int_ier;
                     when ADDR_ISR =>
                         rdata_data(1 downto 0) <= int_isr;
-                    when ADDR_PREDICTED_CLASS_DATA_0 =>
-                        rdata_data <= RESIZE(int_predicted_class(31 downto 0), 32);
-                    when ADDR_PREDICTED_CLASS_CTRL =>
-                        rdata_data(0) <= int_predicted_class_ap_vld;
+                    when ADDR_PREDICTED_CLASS_74_DATA_0 =>
+                        rdata_data <= RESIZE(int_predicted_class_74(31 downto 0), 32);
+                    when ADDR_PREDICTED_CLASS_74_CTRL =>
+                        rdata_data(0) <= int_predicted_class_74_ap_vld;
                     when others =>
                         NULL;
                     end case;
@@ -433,10 +433,10 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_predicted_class <= (others => '0');
+                int_predicted_class_74 <= (others => '0');
             elsif (ACLK_EN = '1') then
-                if (predicted_class_ap_vld = '1') then
-                    int_predicted_class <= UNSIGNED(predicted_class);
+                if (predicted_class_74_ap_vld = '1') then
+                    int_predicted_class_74 <= UNSIGNED(predicted_class_74);
                 end if;
             end if;
         end if;
@@ -446,12 +446,12 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_predicted_class_ap_vld <= '0';
+                int_predicted_class_74_ap_vld <= '0';
             elsif (ACLK_EN = '1') then
-                if (predicted_class_ap_vld = '1') then
-                    int_predicted_class_ap_vld <= '1';
-                elsif (ar_hs = '1' and raddr = ADDR_PREDICTED_CLASS_CTRL) then
-                    int_predicted_class_ap_vld <= '0'; -- clear on read
+                if (predicted_class_74_ap_vld = '1') then
+                    int_predicted_class_74_ap_vld <= '1';
+                elsif (ar_hs = '1' and raddr = ADDR_PREDICTED_CLASS_74_CTRL) then
+                    int_predicted_class_74_ap_vld <= '0'; -- clear on read
                 end if;
             end if;
         end if;

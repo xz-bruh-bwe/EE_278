@@ -1,11 +1,11 @@
 ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'Baron' on host 'laptop-nr37e6di' (Windows NT_amd64 version 6.2) on Tue Nov 26 14:55:40 -0800 2024
+INFO: [HLS 200-10] Running 'Z:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Baron' on host 'desktop-d2nna1u' (Windows NT_amd64 version 6.2) on Sat Dec 07 11:04:22 -0800 2024
 INFO: [HLS 200-10] In directory 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj'
-Sourcing Tcl script 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/csim.tcl'
-INFO: [HLS 200-1510] Running: source C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/csim.tcl
+Sourcing Tcl script 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/csynth.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj/lenet_predict/csynth.tcl
 INFO: [HLS 200-1510] Running: open_project lenet_proj 
 INFO: [HLS 200-10] Opening project 'C:/Users/Baron/Desktop/EE_278_Repo/EE_278/vivado_projects/HLS/EE278_term_proj/lenet_proj'.
 INFO: [HLS 200-1510] Running: set_top lenet_predict 
@@ -27,35 +27,575 @@ INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvf1517-3-e
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: source ./lenet_proj/lenet_predict/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name lenet_predict lenet_predict 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-INFO: [HLS 200-2036] Building debug C Simulation binaries
-   Compiling ../../../../lenet_testbench.cpp in debug mode
-   Generating csim.exe
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_math.h:41,
-                 from ../../../../lenet_support.h:4,
-                 from ../../../../lenet_testbench.cpp:3:
-C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_math.h:41,
-                 from ../../../../lenet_support.h:4,
-                 from ../../../../lenet_testbench.cpp:3:
-C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-Conv1 output (first 10 values): 0 0 0 0 0 0.00113771 0 0 0 0.00330163 
-Conv1 output (filter 0, first row): 0 0 0 0 0 0.00113771 0 0 0 0.00330163 0.00316622 0.00179808 0.00224399 0.00225152 0.00105086 0.00383479 0.00486048 0.00843639 0.00291973 0 0.00233862 0.00884894 0 0 0.00264358 0.00719266 0.00393475 0.000689693 
-Predicted class: 0
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.409 seconds; current allocated memory: 0.523 MB.
-INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 11.609 seconds; peak allocated memory: 113.723 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 112.859 MB.
+INFO: [HLS 200-10] Analyzing design file 'lenet_main.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'lenet_support.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'bias' (lenet_support.cpp:28:69)
+WARNING: [HLS 207-5292] unused parameter 'bias' (lenet_support.cpp:74:78)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 54.64 seconds; current allocated memory: 121.094 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)' (C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib\hlsmath\src\c++\expfloat.cpp:22:9)
+INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'softmax(float*, int)' (lenet_support.cpp:18:20)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_61_3' (lenet_support.cpp:61:30) in function 'maxpool2d': changing partial unrolling into complete unrolling since the unrolling factor (=1) is no less than the loop trip count (=1). (lenet_support.cpp:55:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_61_3' (lenet_support.cpp:61:30) in function 'maxpool2d' completely with a factor of 1 (lenet_support.cpp:55:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_34_3' (lenet_support.cpp:34:30) in function 'conv2d' partially with a factor of 2 (lenet_support.cpp:29:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_38_4' (lenet_support.cpp:38:34) in function 'conv2d' partially with a factor of 2 (lenet_support.cpp:29:0)
+WARNING: [HLS 214-366] Duplicating function 'conv2d(float*, float*, float*, float*, int, int, int)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (lenet_main.cpp:45:5)
+INFO: [HLS 214-178] Inlining function 'relu(float)' into 'conv2d(float*, float*, float*, float*, int, int, int)' (lenet_support.cpp:29:0)
+INFO: [HLS 214-178] Inlining function 'relu(float)' into 'conv2d(float*, float*, float*, float*, int, int, int) (.1)' (lenet_support.cpp:29:0)
+INFO: [HLS 214-178] Inlining function 'relu(float)' into 'fully_connected(float*, float*, float*, float*, int, int)' (lenet_support.cpp:75:0)
+INFO: [HLS 214-178] Inlining function 'maxpool2d(float*, float*, int, int)' into 'lenet_predict(float*, int*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*)' (lenet_main.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'fully_connected(float*, float*, float*, float*, int, int)' into 'lenet_predict(float*, int*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*)' (lenet_main.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'softmax(float*, int)' into 'lenet_predict(float*, int*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*)' (lenet_main.cpp:16:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_79_2' (lenet_support.cpp:79:26) in function 'lenet_predict' partially with a factor of 2 (lenet_main.cpp:16:0)
+INFO: [HLS 214-115] Multiple burst reads of length 5 and bit width 32 in loop 'VITIS_LOOP_40_5'(lenet_support.cpp:40:19) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (lenet_support.cpp:40:19)
+INFO: [HLS 214-115] Multiple burst reads of length 48000 and bit width 32 in loop 'VITIS_LOOP_76_1'(lenet_support.cpp:76:22) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (lenet_support.cpp:76:22)
+INFO: [HLS 214-115] Multiple burst reads of length 10080 and bit width 32 in loop 'VITIS_LOOP_76_1'(lenet_support.cpp:76:22) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (lenet_support.cpp:76:22)
+INFO: [HLS 214-115] Multiple burst reads of length 840 and bit width 32 in loop 'VITIS_LOOP_76_1'(lenet_support.cpp:76:22) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (lenet_support.cpp:76:22)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.599 seconds; current allocated memory: 122.219 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 122.219 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 5.643 seconds; current allocated memory: 130.848 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 5.62 seconds; current allocated memory: 133.246 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_4' (lenet_support.cpp:38) in function 'conv2d.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_4' (lenet_support.cpp:38) in function 'conv2d.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_4' (lenet_support.cpp:38) in function 'conv2d' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_4' (lenet_support.cpp:38) in function 'conv2d' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_59_2' (lenet_support.cpp:59) in function 'lenet_predict' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_59_2' (lenet_support.cpp:59) in function 'lenet_predict' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_79_2' (lenet_support.cpp:79) in function 'lenet_predict' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_79_2' (lenet_support.cpp:79) in function 'lenet_predict' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_79_2' (lenet_support.cpp:79) in function 'lenet_predict' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_13_1' (lenet_support.cpp:13) in function 'lenet_predict' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_17_2' (lenet_support.cpp:17) in function 'lenet_predict' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_3' (lenet_support.cpp:21) in function 'lenet_predict' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_56_1' (lenet_main.cpp:56) in function 'lenet_predict' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_38_4' (lenet_support.cpp:38) in function 'conv2d.1' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_38_4' (lenet_support.cpp:38) in function 'conv2d.1' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_38_4' (lenet_support.cpp:38) in function 'conv2d' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_38_4' (lenet_support.cpp:38) in function 'conv2d' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_40_5' (lenet_support.cpp:40) in function 'conv2d.1' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_40_5' (lenet_support.cpp:40) in function 'conv2d' completely with a factor of 5.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2d' (lenet_support.cpp:7:34)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 6.06 seconds; current allocated memory: 158.156 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_58_1' (lenet_support.cpp:58:22) in function 'lenet_predict'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_58_1' (lenet_support.cpp:58:22) in function 'lenet_predict'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_76_1' (lenet_support.cpp:76:22) in function 'lenet_predict' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_76_1' (lenet_support.cpp:76:22) in function 'lenet_predict' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_76_1' (lenet_support.cpp:76:22) in function 'lenet_predict' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_34_3' (lenet_support.cpp:34:30) in function 'conv2d.1' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_33_2' (lenet_support.cpp:33:26) in function 'conv2d.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_32_1' (lenet_support.cpp:32:22) in function 'conv2d.1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_34_3' (lenet_support.cpp:34:30) in function 'conv2d' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_33_2' (lenet_support.cpp:33:26) in function 'conv2d'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_32_1' (lenet_support.cpp:32:22) in function 'conv2d'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.643 seconds; current allocated memory: 288.293 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet_predict' ...
+WARNING: [SYN 201-103] Legalizing function name 'conv2d.1_Pipeline_VITIS_LOOP_38_4' to 'conv2d_1_Pipeline_VITIS_LOOP_38_4'.
+WARNING: [SYN 201-103] Legalizing function name 'conv2d.1_Pipeline_VITIS_LOOP_38_44' to 'conv2d_1_Pipeline_VITIS_LOOP_38_44'.
+WARNING: [SYN 201-103] Legalizing function name 'conv2d.1' to 'conv2d_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2d_Pipeline_VITIS_LOOP_38_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_4'.
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('sum_32_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('sum_32_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('sum_32_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('sum_32_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between 'fadd' operation ('sum_32_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 1) between 'fadd' operation ('sum_32_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 40, Depth = 54, loop 'VITIS_LOOP_38_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.518 seconds; current allocated memory: 296.633 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.825 seconds; current allocated memory: 297.855 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2d_Pipeline_VITIS_LOOP_38_45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_4'.
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_45' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('sum_39_4', lenet_support.cpp:41) and 'fadd' operation ('sum_5', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_45' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('sum_39_4', lenet_support.cpp:41) and 'fadd' operation ('sum_5', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_45' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('sum_39_4', lenet_support.cpp:41) and 'fadd' operation ('sum_5', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_45' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('sum_39_4', lenet_support.cpp:41) and 'fadd' operation ('sum_5', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_45' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between 'fadd' operation ('sum_39_4', lenet_support.cpp:41) and 'fadd' operation ('sum_5', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_Pipeline_VITIS_LOOP_38_45' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 1) between 'fadd' operation ('sum_39_4', lenet_support.cpp:41) and 'fadd' operation ('sum_5', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 40, Depth = 54, loop 'VITIS_LOOP_38_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.47 seconds; current allocated memory: 300.520 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.836 seconds; current allocated memory: 300.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.549 seconds; current allocated memory: 301.340 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.186 seconds; current allocated memory: 301.633 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'pool1_output'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_58_1_VITIS_LOOP_59_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_58_1_VITIS_LOOP_59_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.302 seconds; current allocated memory: 302.023 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 302.027 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2d_1_Pipeline_VITIS_LOOP_38_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'input_r'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_4'.
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('sum_19_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('sum_19_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('sum_19_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('sum_19_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between 'fadd' operation ('sum_19_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_4' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 1) between 'fadd' operation ('sum_19_4', lenet_support.cpp:41) and 'fadd' operation ('sum_s', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 40, Depth = 53, loop 'VITIS_LOOP_38_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.128 seconds; current allocated memory: 303.672 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.788 seconds; current allocated memory: 304.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2d_1_Pipeline_VITIS_LOOP_38_44' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'input_r'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_4'.
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_44' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('sum_26_4', lenet_support.cpp:41) and 'fadd' operation ('sum_2', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_44' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('sum_26_4', lenet_support.cpp:41) and 'fadd' operation ('sum_2', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_44' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('sum_26_4', lenet_support.cpp:41) and 'fadd' operation ('sum_2', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_44' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('sum_26_4', lenet_support.cpp:41) and 'fadd' operation ('sum_2', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_44' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between 'fadd' operation ('sum_26_4', lenet_support.cpp:41) and 'fadd' operation ('sum_2', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2d_1_Pipeline_VITIS_LOOP_38_44' (loop 'VITIS_LOOP_38_4'): Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 1) between 'fadd' operation ('sum_26_4', lenet_support.cpp:41) and 'fadd' operation ('sum_2', lenet_support.cpp:41).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 40, Depth = 53, loop 'VITIS_LOOP_38_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.303 seconds; current allocated memory: 305.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.791 seconds; current allocated memory: 305.777 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2d_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.496 seconds; current allocated memory: 306.234 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 306.375 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_58_1_VITIS_LOOP_59_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_58_1_VITIS_LOOP_59_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.318 seconds; current allocated memory: 306.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 306.926 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict_Pipeline_VITIS_LOOP_79_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_79_2'.
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_2' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_2' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_2' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_2' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_2' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:47).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 13, loop 'VITIS_LOOP_79_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.746 seconds; current allocated memory: 307.586 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 307.637 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict_Pipeline_VITIS_LOOP_79_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_79_2'.
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_22' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_22' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_22' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_22' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_22' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:48).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 13, loop 'VITIS_LOOP_79_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.781 seconds; current allocated memory: 307.863 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.248 seconds; current allocated memory: 307.973 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict_Pipeline_VITIS_LOOP_79_23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_79_2'.
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_23' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_23' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_23' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_23' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_79_23' (loop 'VITIS_LOOP_79_2'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49) and 'fadd' operation ('sum', lenet_support.cpp:81->lenet_main.cpp:49).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 13, loop 'VITIS_LOOP_79_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.772 seconds; current allocated memory: 308.594 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 308.598 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_13_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 308.930 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 308.930 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict_Pipeline_VITIS_LOOP_17_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_2'.
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_17_2' (loop 'VITIS_LOOP_17_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln17', lenet_support.cpp:17->lenet_main.cpp:52) of variable 'sum', lenet_support.cpp:19->lenet_main.cpp:52 on local variable 'sum' and 'load' operation ('sum_load_4', lenet_support.cpp:19->lenet_main.cpp:52) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_predict_Pipeline_VITIS_LOOP_17_2' (loop 'VITIS_LOOP_17_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln17', lenet_support.cpp:17->lenet_main.cpp:52) of variable 'sum', lenet_support.cpp:19->lenet_main.cpp:52 on local variable 'sum' and 'load' operation ('sum_load_4', lenet_support.cpp:19->lenet_main.cpp:52) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 15, loop 'VITIS_LOOP_17_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.762 seconds; current allocated memory: 309.102 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.289 seconds; current allocated memory: 309.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict_Pipeline_VITIS_LOOP_21_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_21_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.213 seconds; current allocated memory: 309.477 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.226 seconds; current allocated memory: 309.527 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict_Pipeline_VITIS_LOOP_56_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_56_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_56_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.209 seconds; current allocated memory: 309.906 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 310.207 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_predict' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 311.512 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.815 seconds; current allocated memory: 312.254 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2d_Pipeline_VITIS_LOOP_38_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2d_Pipeline_VITIS_LOOP_38_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.504 seconds; current allocated memory: 317.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2d_Pipeline_VITIS_LOOP_38_45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2d_Pipeline_VITIS_LOOP_38_45'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.299 seconds; current allocated memory: 324.801 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_11ns_13_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_6ns_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2d'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.334 seconds; current allocated memory: 330.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2' pipeline 'VITIS_LOOP_58_1_VITIS_LOOP_59_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.726 seconds; current allocated memory: 332.949 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2d_1_Pipeline_VITIS_LOOP_38_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2d_1_Pipeline_VITIS_LOOP_38_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.429 seconds; current allocated memory: 336.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2d_1_Pipeline_VITIS_LOOP_38_44' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2d_1_Pipeline_VITIS_LOOP_38_44'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.262 seconds; current allocated memory: 340.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2d_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_6ns_9_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_8ns_11_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2d_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.266 seconds; current allocated memory: 344.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21' pipeline 'VITIS_LOOP_58_1_VITIS_LOOP_59_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.706 seconds; current allocated memory: 346.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict_Pipeline_VITIS_LOOP_79_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_predict_Pipeline_VITIS_LOOP_79_2' pipeline 'VITIS_LOOP_79_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_2/m_axi_gmem_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict_Pipeline_VITIS_LOOP_79_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.602 seconds; current allocated memory: 348.395 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict_Pipeline_VITIS_LOOP_79_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_predict_Pipeline_VITIS_LOOP_79_22' pipeline 'VITIS_LOOP_79_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_22/m_axi_gmem_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict_Pipeline_VITIS_LOOP_79_22'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.664 seconds; current allocated memory: 350.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict_Pipeline_VITIS_LOOP_79_23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_predict_Pipeline_VITIS_LOOP_79_23' pipeline 'VITIS_LOOP_79_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_predict_Pipeline_VITIS_LOOP_79_23/m_axi_gmem_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict_Pipeline_VITIS_LOOP_79_23'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.649 seconds; current allocated memory: 351.418 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_predict_Pipeline_VITIS_LOOP_13_1' pipeline 'VITIS_LOOP_13_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict_Pipeline_VITIS_LOOP_13_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.368 seconds; current allocated memory: 352.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict_Pipeline_VITIS_LOOP_17_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_17_2' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_predict_Pipeline_VITIS_LOOP_17_2' pipeline 'VITIS_LOOP_17_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_6_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict_Pipeline_VITIS_LOOP_17_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.344 seconds; current allocated memory: 353.949 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict_Pipeline_VITIS_LOOP_21_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_21_3' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_predict_Pipeline_VITIS_LOOP_21_3' pipeline 'VITIS_LOOP_21_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_8_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict_Pipeline_VITIS_LOOP_21_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.336 seconds; current allocated memory: 355.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict_Pipeline_VITIS_LOOP_56_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_predict_Pipeline_VITIS_LOOP_56_1' pipeline 'VITIS_LOOP_56_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict_Pipeline_VITIS_LOOP_56_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.274 seconds; current allocated memory: 356.152 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_predict' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/input_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/predicted_class_74' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/conv1_filters_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/conv1_bias_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/conv2_filters_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/conv2_bias_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/fc1_weights_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/fc1_bias_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/fc2_weights_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/fc2_bias_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/fc3_weights_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_predict/fc3_bias_74' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet_predict' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'predicted_class_74' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Bundling port 'input_74', 'conv1_filters_74', 'conv1_bias_74', 'conv2_filters_74', 'conv2_bias_74', 'fc1_weights_74', 'fc1_bias_74', 'fc2_weights_74', 'fc2_bias_74', 'fc3_weights_74' and 'fc3_bias_74' to AXI-Lite port control_r.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_predict'.
+INFO: [RTMG 210-278] Implementing memory 'lenet_predict_conv1_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_predict_pool1_output_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_predict_conv2_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_predict_pool2_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_predict_fc1_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_predict_fc2_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_predict_fc3_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.9 seconds; current allocated memory: 361.324 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 3.512 seconds; current allocated memory: 368.031 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 3.273 seconds; current allocated memory: 381.172 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_predict.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_predict.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 57 seconds. CPU system time: 6 seconds. Elapsed time: 125.016 seconds; current allocated memory: 268.574 MB.
+INFO: [HLS 200-112] Total CPU user time: 59 seconds. Total CPU system time: 7 seconds. Total elapsed time: 127.053 seconds; peak allocated memory: 381.363 MB.

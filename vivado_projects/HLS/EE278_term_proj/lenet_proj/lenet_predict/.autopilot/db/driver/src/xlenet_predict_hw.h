@@ -25,33 +25,103 @@
 //        bit 0 - ap_done (Read/TOW)
 //        bit 1 - ap_ready (Read/TOW)
 //        others - reserved
-// 0x10 : Data signal of predicted_class
-//        bit 31~0 - predicted_class[31:0] (Read)
-// 0x14 : Control signal of predicted_class
-//        bit 0  - predicted_class_ap_vld (Read/COR)
+// 0x10 : Data signal of predicted_class_74
+//        bit 31~0 - predicted_class_74[31:0] (Read)
+// 0x14 : Control signal of predicted_class_74
+//        bit 0  - predicted_class_74_ap_vld (Read/COR)
 //        others - reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
-#define XLENET_PREDICT_CONTROL_ADDR_AP_CTRL              0x00
-#define XLENET_PREDICT_CONTROL_ADDR_GIE                  0x04
-#define XLENET_PREDICT_CONTROL_ADDR_IER                  0x08
-#define XLENET_PREDICT_CONTROL_ADDR_ISR                  0x0c
-#define XLENET_PREDICT_CONTROL_ADDR_PREDICTED_CLASS_DATA 0x10
-#define XLENET_PREDICT_CONTROL_BITS_PREDICTED_CLASS_DATA 32
-#define XLENET_PREDICT_CONTROL_ADDR_PREDICTED_CLASS_CTRL 0x14
+#define XLENET_PREDICT_CONTROL_ADDR_AP_CTRL                 0x00
+#define XLENET_PREDICT_CONTROL_ADDR_GIE                     0x04
+#define XLENET_PREDICT_CONTROL_ADDR_IER                     0x08
+#define XLENET_PREDICT_CONTROL_ADDR_ISR                     0x0c
+#define XLENET_PREDICT_CONTROL_ADDR_PREDICTED_CLASS_74_DATA 0x10
+#define XLENET_PREDICT_CONTROL_BITS_PREDICTED_CLASS_74_DATA 32
+#define XLENET_PREDICT_CONTROL_ADDR_PREDICTED_CLASS_74_CTRL 0x14
 
 // control_r
 // 0x00 : reserved
 // 0x04 : reserved
 // 0x08 : reserved
 // 0x0c : reserved
-// 0x10 : Data signal of input_r
-//        bit 31~0 - input_r[31:0] (Read/Write)
-// 0x14 : Data signal of input_r
-//        bit 31~0 - input_r[63:32] (Read/Write)
+// 0x10 : Data signal of input_74
+//        bit 31~0 - input_74[31:0] (Read/Write)
+// 0x14 : Data signal of input_74
+//        bit 31~0 - input_74[63:32] (Read/Write)
 // 0x18 : reserved
+// 0x1c : Data signal of conv1_filters_74
+//        bit 31~0 - conv1_filters_74[31:0] (Read/Write)
+// 0x20 : Data signal of conv1_filters_74
+//        bit 31~0 - conv1_filters_74[63:32] (Read/Write)
+// 0x24 : reserved
+// 0x28 : Data signal of conv1_bias_74
+//        bit 31~0 - conv1_bias_74[31:0] (Read/Write)
+// 0x2c : Data signal of conv1_bias_74
+//        bit 31~0 - conv1_bias_74[63:32] (Read/Write)
+// 0x30 : reserved
+// 0x34 : Data signal of conv2_filters_74
+//        bit 31~0 - conv2_filters_74[31:0] (Read/Write)
+// 0x38 : Data signal of conv2_filters_74
+//        bit 31~0 - conv2_filters_74[63:32] (Read/Write)
+// 0x3c : reserved
+// 0x40 : Data signal of conv2_bias_74
+//        bit 31~0 - conv2_bias_74[31:0] (Read/Write)
+// 0x44 : Data signal of conv2_bias_74
+//        bit 31~0 - conv2_bias_74[63:32] (Read/Write)
+// 0x48 : reserved
+// 0x4c : Data signal of fc1_weights_74
+//        bit 31~0 - fc1_weights_74[31:0] (Read/Write)
+// 0x50 : Data signal of fc1_weights_74
+//        bit 31~0 - fc1_weights_74[63:32] (Read/Write)
+// 0x54 : reserved
+// 0x58 : Data signal of fc1_bias_74
+//        bit 31~0 - fc1_bias_74[31:0] (Read/Write)
+// 0x5c : Data signal of fc1_bias_74
+//        bit 31~0 - fc1_bias_74[63:32] (Read/Write)
+// 0x60 : reserved
+// 0x64 : Data signal of fc2_weights_74
+//        bit 31~0 - fc2_weights_74[31:0] (Read/Write)
+// 0x68 : Data signal of fc2_weights_74
+//        bit 31~0 - fc2_weights_74[63:32] (Read/Write)
+// 0x6c : reserved
+// 0x70 : Data signal of fc2_bias_74
+//        bit 31~0 - fc2_bias_74[31:0] (Read/Write)
+// 0x74 : Data signal of fc2_bias_74
+//        bit 31~0 - fc2_bias_74[63:32] (Read/Write)
+// 0x78 : reserved
+// 0x7c : Data signal of fc3_weights_74
+//        bit 31~0 - fc3_weights_74[31:0] (Read/Write)
+// 0x80 : Data signal of fc3_weights_74
+//        bit 31~0 - fc3_weights_74[63:32] (Read/Write)
+// 0x84 : reserved
+// 0x88 : Data signal of fc3_bias_74
+//        bit 31~0 - fc3_bias_74[31:0] (Read/Write)
+// 0x8c : Data signal of fc3_bias_74
+//        bit 31~0 - fc3_bias_74[63:32] (Read/Write)
+// 0x90 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
-#define XLENET_PREDICT_CONTROL_R_ADDR_INPUT_R_DATA 0x10
-#define XLENET_PREDICT_CONTROL_R_BITS_INPUT_R_DATA 64
+#define XLENET_PREDICT_CONTROL_R_ADDR_INPUT_74_DATA         0x10
+#define XLENET_PREDICT_CONTROL_R_BITS_INPUT_74_DATA         64
+#define XLENET_PREDICT_CONTROL_R_ADDR_CONV1_FILTERS_74_DATA 0x1c
+#define XLENET_PREDICT_CONTROL_R_BITS_CONV1_FILTERS_74_DATA 64
+#define XLENET_PREDICT_CONTROL_R_ADDR_CONV1_BIAS_74_DATA    0x28
+#define XLENET_PREDICT_CONTROL_R_BITS_CONV1_BIAS_74_DATA    64
+#define XLENET_PREDICT_CONTROL_R_ADDR_CONV2_FILTERS_74_DATA 0x34
+#define XLENET_PREDICT_CONTROL_R_BITS_CONV2_FILTERS_74_DATA 64
+#define XLENET_PREDICT_CONTROL_R_ADDR_CONV2_BIAS_74_DATA    0x40
+#define XLENET_PREDICT_CONTROL_R_BITS_CONV2_BIAS_74_DATA    64
+#define XLENET_PREDICT_CONTROL_R_ADDR_FC1_WEIGHTS_74_DATA   0x4c
+#define XLENET_PREDICT_CONTROL_R_BITS_FC1_WEIGHTS_74_DATA   64
+#define XLENET_PREDICT_CONTROL_R_ADDR_FC1_BIAS_74_DATA      0x58
+#define XLENET_PREDICT_CONTROL_R_BITS_FC1_BIAS_74_DATA      64
+#define XLENET_PREDICT_CONTROL_R_ADDR_FC2_WEIGHTS_74_DATA   0x64
+#define XLENET_PREDICT_CONTROL_R_BITS_FC2_WEIGHTS_74_DATA   64
+#define XLENET_PREDICT_CONTROL_R_ADDR_FC2_BIAS_74_DATA      0x70
+#define XLENET_PREDICT_CONTROL_R_BITS_FC2_BIAS_74_DATA      64
+#define XLENET_PREDICT_CONTROL_R_ADDR_FC3_WEIGHTS_74_DATA   0x7c
+#define XLENET_PREDICT_CONTROL_R_BITS_FC3_WEIGHTS_74_DATA   64
+#define XLENET_PREDICT_CONTROL_R_ADDR_FC3_BIAS_74_DATA      0x88
+#define XLENET_PREDICT_CONTROL_R_BITS_FC3_BIAS_74_DATA      64
 

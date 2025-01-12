@@ -17,17 +17,17 @@
 //        bit 0 - ap_done (Read/TOW)
 //        bit 1 - ap_ready (Read/TOW)
 //        others - reserved
-// 0x10 : Data signal of predicted_class
-//        bit 31~0 - predicted_class[31:0] (Read)
-// 0x14 : Control signal of predicted_class
-//        bit 0  - predicted_class_ap_vld (Read/COR)
+// 0x10 : Data signal of predicted_class_74
+//        bit 31~0 - predicted_class_74[31:0] (Read)
+// 0x14 : Control signal of predicted_class_74
+//        bit 0  - predicted_class_74_ap_vld (Read/COR)
 //        others - reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
-#define CONTROL_ADDR_AP_CTRL              0x00
-#define CONTROL_ADDR_GIE                  0x04
-#define CONTROL_ADDR_IER                  0x08
-#define CONTROL_ADDR_ISR                  0x0c
-#define CONTROL_ADDR_PREDICTED_CLASS_DATA 0x10
-#define CONTROL_BITS_PREDICTED_CLASS_DATA 32
-#define CONTROL_ADDR_PREDICTED_CLASS_CTRL 0x14
+#define CONTROL_ADDR_AP_CTRL                 0x00
+#define CONTROL_ADDR_GIE                     0x04
+#define CONTROL_ADDR_IER                     0x08
+#define CONTROL_ADDR_ISR                     0x0c
+#define CONTROL_ADDR_PREDICTED_CLASS_74_DATA 0x10
+#define CONTROL_BITS_PREDICTED_CLASS_74_DATA 32
+#define CONTROL_ADDR_PREDICTED_CLASS_74_CTRL 0x14

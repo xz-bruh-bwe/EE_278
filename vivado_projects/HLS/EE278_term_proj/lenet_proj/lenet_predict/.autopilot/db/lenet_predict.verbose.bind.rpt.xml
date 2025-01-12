@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'lenet_predict'" level="0">
-<item name = "Date">Fri Nov 22 20:01:03 2024
+<item name = "Date">Sat Dec  7 11:06:07 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">lenet_proj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.427 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,31 +24,31 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1233047, 1233047, 12.330 ms, 12.330 ms, 1233048, 1233048, no</column>
+<column name="">1239580, 1239580, 12.396 ms, 12.396 ms, 1239581, 1239581, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv2d_3_fu_230">conv2d_3, 752641, 752641, 7.526 ms, 7.526 ms, 752641, 752641, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_2_fu_240">lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_2, 202, 202, 2.020 us, 2.020 us, 202, 202, no</column>
-<column name="grp_conv2d_fu_246">conv2d, 241601, 241601, 2.416 ms, 2.416 ms, 241601, 241601, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_22_fu_252">lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_22, 31, 31, 0.310 us, 0.310 us, 31, 31, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_2_fu_258">lenet_predict_Pipeline_VITIS_LOOP_72_2, 1605, 1605, 16.050 us, 16.050 us, 1605, 1605, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_23_fu_264">lenet_predict_Pipeline_VITIS_LOOP_72_23, 485, 485, 4.850 us, 4.850 us, 485, 485, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_24_fu_270">lenet_predict_Pipeline_VITIS_LOOP_72_24, 341, 341, 3.410 us, 3.410 us, 341, 341, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_12_1_fu_276">lenet_predict_Pipeline_VITIS_LOOP_12_1, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_16_2_fu_283">lenet_predict_Pipeline_VITIS_LOOP_16_2, 43, 43, 0.430 us, 0.430 us, 43, 43, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_20_3_fu_290">lenet_predict_Pipeline_VITIS_LOOP_20_3, 21, 21, 0.210 us, 0.210 us, 21, 21, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_51_1_fu_296">lenet_predict_Pipeline_VITIS_LOOP_51_1, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
+<column name="grp_conv2d_fu_336">conv2d, 747937, 747937, 7.479 ms, 7.479 ms, 747937, 747937, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2_fu_348">lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2, 787, 787, 7.870 us, 7.870 us, 787, 787, no</column>
+<column name="grp_conv2d_1_fu_354">conv2d_1, 252801, 252801, 2.528 ms, 2.528 ms, 252801, 252801, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21_fu_363">lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21, 103, 103, 1.030 us, 1.030 us, 103, 103, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_2_fu_369">lenet_predict_Pipeline_VITIS_LOOP_79_2, 1606, 1606, 16.060 us, 16.060 us, 1606, 1606, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_22_fu_378">lenet_predict_Pipeline_VITIS_LOOP_79_22, 486, 486, 4.860 us, 4.860 us, 486, 486, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_23_fu_387">lenet_predict_Pipeline_VITIS_LOOP_79_23, 342, 342, 3.420 us, 3.420 us, 342, 342, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_13_1_fu_396">lenet_predict_Pipeline_VITIS_LOOP_13_1, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_17_2_fu_403">lenet_predict_Pipeline_VITIS_LOOP_17_2, 43, 43, 0.430 us, 0.430 us, 43, 43, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_21_3_fu_410">lenet_predict_Pipeline_VITIS_LOOP_21_3, 21, 21, 0.210 us, 0.210 us, 21, 21, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_56_1_fu_416">lenet_predict_Pipeline_VITIS_LOOP_56_1, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_70_1">193560, 193560, 1613, -, -, 120, no</column>
-<column name="- VITIS_LOOP_70_1">41412, 41412, 493, -, -, 84, no</column>
-<column name="- VITIS_LOOP_70_1">3490, 3490, 349, -, -, 10, no</column>
+<column name="- VITIS_LOOP_76_1">193200, 193200, 1610, -, -, 120, no</column>
+<column name="- VITIS_LOOP_76_1">41160, 41160, 490, -, -, 84, no</column>
+<column name="- VITIS_LOOP_76_1">3460, 3460, 346, -, -, 10, no</column>
 </table>
 </item>
 </section>

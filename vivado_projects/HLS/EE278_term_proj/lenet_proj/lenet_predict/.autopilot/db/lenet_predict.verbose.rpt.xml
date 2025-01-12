@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'lenet_predict'" level="0">
-<item name = "Date">Fri Nov 22 20:01:15 2024
+<item name = "Date">Sat Dec  7 11:06:21 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">lenet_proj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.427 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,31 +24,31 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1233047, 1233047, 12.330 ms, 12.330 ms, 1233048, 1233048, no</column>
+<column name="">1239580, 1239580, 12.396 ms, 12.396 ms, 1239581, 1239581, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv2d_3_fu_230">conv2d_3, 752641, 752641, 7.526 ms, 7.526 ms, 752641, 752641, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_2_fu_240">lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_2, 202, 202, 2.020 us, 2.020 us, 202, 202, no</column>
-<column name="grp_conv2d_fu_246">conv2d, 241601, 241601, 2.416 ms, 2.416 ms, 241601, 241601, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_22_fu_252">lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_22, 31, 31, 0.310 us, 0.310 us, 31, 31, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_2_fu_258">lenet_predict_Pipeline_VITIS_LOOP_72_2, 1605, 1605, 16.050 us, 16.050 us, 1605, 1605, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_23_fu_264">lenet_predict_Pipeline_VITIS_LOOP_72_23, 485, 485, 4.850 us, 4.850 us, 485, 485, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_24_fu_270">lenet_predict_Pipeline_VITIS_LOOP_72_24, 341, 341, 3.410 us, 3.410 us, 341, 341, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_12_1_fu_276">lenet_predict_Pipeline_VITIS_LOOP_12_1, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_16_2_fu_283">lenet_predict_Pipeline_VITIS_LOOP_16_2, 43, 43, 0.430 us, 0.430 us, 43, 43, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_20_3_fu_290">lenet_predict_Pipeline_VITIS_LOOP_20_3, 21, 21, 0.210 us, 0.210 us, 21, 21, no</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_51_1_fu_296">lenet_predict_Pipeline_VITIS_LOOP_51_1, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
+<column name="grp_conv2d_fu_336">conv2d, 747937, 747937, 7.479 ms, 7.479 ms, 747937, 747937, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2_fu_348">lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2, 787, 787, 7.870 us, 7.870 us, 787, 787, no</column>
+<column name="grp_conv2d_1_fu_354">conv2d_1, 252801, 252801, 2.528 ms, 2.528 ms, 252801, 252801, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21_fu_363">lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21, 103, 103, 1.030 us, 1.030 us, 103, 103, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_2_fu_369">lenet_predict_Pipeline_VITIS_LOOP_79_2, 1606, 1606, 16.060 us, 16.060 us, 1606, 1606, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_22_fu_378">lenet_predict_Pipeline_VITIS_LOOP_79_22, 486, 486, 4.860 us, 4.860 us, 486, 486, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_23_fu_387">lenet_predict_Pipeline_VITIS_LOOP_79_23, 342, 342, 3.420 us, 3.420 us, 342, 342, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_13_1_fu_396">lenet_predict_Pipeline_VITIS_LOOP_13_1, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_17_2_fu_403">lenet_predict_Pipeline_VITIS_LOOP_17_2, 43, 43, 0.430 us, 0.430 us, 43, 43, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_21_3_fu_410">lenet_predict_Pipeline_VITIS_LOOP_21_3, 21, 21, 0.210 us, 0.210 us, 21, 21, no</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_56_1_fu_416">lenet_predict_Pipeline_VITIS_LOOP_56_1, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_70_1">193560, 193560, 1613, -, -, 120, no</column>
-<column name="- VITIS_LOOP_70_1">41412, 41412, 493, -, -, 84, no</column>
-<column name="- VITIS_LOOP_70_1">3490, 3490, 349, -, -, 10, no</column>
+<column name="- VITIS_LOOP_76_1">193200, 193200, 1610, -, -, 120, no</column>
+<column name="- VITIS_LOOP_76_1">41160, 41160, 490, -, -, 84, no</column>
+<column name="- VITIS_LOOP_76_1">3460, 3460, 346, -, -, 10, no</column>
 </table>
 </item>
 </section>
@@ -63,39 +63,35 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 323, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">4, 14, 6935, 10117, 0</column>
-<column name="Memory">64, -, 64, 5, 0</column>
-<column name="Multiplexer">-, -, -, 1299, -</column>
-<column name="Register">-, -, 219, -, -</column>
+<column name="Instance">4, 12, 11420, 14206, 0</column>
+<column name="Memory">28, -, 64, 5, 0</column>
+<column name="Multiplexer">-, -, -, 1220, -</column>
+<column name="Register">-, -, 639, -, -</column>
 <specialColumn name="Available">624, 1728, 460800, 230400, 96</specialColumn>
-<specialColumn name="Utilization (%)">10, ~0, 1, 5, 0</specialColumn>
+<specialColumn name="Utilization (%)">5, ~0, 2, 6, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="control_r_s_axi_U">control_r_s_axi, 0, 0, 100, 168, 0</column>
+<column name="control_r_s_axi_U">control_r_s_axi, 0, 0, 800, 1448, 0</column>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 74, 104, 0</column>
-<column name="grp_conv2d_fu_246">conv2d, 0, 0, 1540, 2262, 0</column>
-<column name="grp_conv2d_3_fu_230">conv2d_3, 0, 0, 1462, 2363, 0</column>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U97">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 218, 0</column>
-<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U95">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 218, 0</column>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U96">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U99">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U100">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U101">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fmul_32ns_32ns_32_3_max_dsp_1_U98">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 137, 0</column>
+<column name="grp_conv2d_fu_336">conv2d, 0, 0, 5364, 5545, 0</column>
+<column name="grp_conv2d_1_fu_354">conv2d_1, 0, 0, 2166, 3181, 0</column>
+<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U115">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 218, 0</column>
+<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U114">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fmul_32ns_32ns_32_3_max_dsp_1_U116">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 137, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 4, 0, 830, 694, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_12_1_fu_276">lenet_predict_Pipeline_VITIS_LOOP_12_1, 0, 0, 106, 210, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_16_2_fu_283">lenet_predict_Pipeline_VITIS_LOOP_16_2, 0, 7, 440, 1112, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_20_3_fu_290">lenet_predict_Pipeline_VITIS_LOOP_20_3, 0, 0, 157, 94, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_51_1_fu_296">lenet_predict_Pipeline_VITIS_LOOP_51_1, 0, 0, 146, 251, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_2_fu_240">lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_2, 0, 0, 484, 888, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_22_fu_252">lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_22, 0, 0, 475, 819, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_2_fu_258">lenet_predict_Pipeline_VITIS_LOOP_72_2, 0, 0, 181, 197, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_23_fu_264">lenet_predict_Pipeline_VITIS_LOOP_72_23, 0, 0, 179, 191, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_24_fu_270">lenet_predict_Pipeline_VITIS_LOOP_72_24, 0, 0, 179, 191, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_13_1_fu_396">lenet_predict_Pipeline_VITIS_LOOP_13_1, 0, 0, 106, 210, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_17_2_fu_403">lenet_predict_Pipeline_VITIS_LOOP_17_2, 0, 7, 440, 1112, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_21_3_fu_410">lenet_predict_Pipeline_VITIS_LOOP_21_3, 0, 0, 157, 94, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_56_1_fu_416">lenet_predict_Pipeline_VITIS_LOOP_56_1, 0, 0, 146, 251, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2_fu_348">lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2, 0, 0, 185, 299, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21_fu_363">lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21, 0, 0, 66, 253, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_2_fu_369">lenet_predict_Pipeline_VITIS_LOOP_79_2, 0, 0, 245, 224, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_22_fu_378">lenet_predict_Pipeline_VITIS_LOOP_79_22, 0, 0, 243, 218, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_23_fu_387">lenet_predict_Pipeline_VITIS_LOOP_79_23, 0, 0, 243, 218, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -104,8 +100,8 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="conv1_output_U">conv1_output_RAM_1WNR_AUTO_1R1W, 42, 0, 0, 0, 4704, 32, 1, 150528</column>
-<column name="conv2_output_U">conv2_output_RAM_1WNR_AUTO_1R1W, 12, 0, 0, 0, 1600, 32, 1, 51200</column>
+<column name="conv1_output_U">conv1_output_RAM_AUTO_1R1W, 14, 0, 0, 0, 4704, 32, 1, 150528</column>
+<column name="conv2_output_U">conv2_output_RAM_AUTO_1R1W, 4, 0, 0, 0, 1600, 32, 1, 51200</column>
 <column name="fc1_output_U">fc1_output_RAM_AUTO_1R1W, 2, 0, 0, 0, 120, 32, 1, 3840</column>
 <column name="fc2_output_U">fc2_output_RAM_AUTO_1R1W, 2, 0, 0, 0, 84, 32, 1, 2688</column>
 <column name="fc3_output_U">fc3_output_RAM_AUTO_1R1W, 0, 64, 5, 0, 10, 32, 1, 320</column>
@@ -119,43 +115,37 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln70_1_fu_422_p2">+, 0, 0, 14, 7, 1</column>
-<column name="add_ln70_2_fu_506_p2">+, 0, 0, 12, 4, 1</column>
-<column name="add_ln70_fu_338_p2">+, 0, 0, 14, 7, 1</column>
-<column name="and_ln6_1_fu_482_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln6_2_fu_561_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln6_fu_398_p2">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln6_1_fu_386_p2">icmp, 0, 0, 30, 23, 1</column>
-<column name="icmp_ln6_2_fu_464_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="icmp_ln6_3_fu_470_p2">icmp, 0, 0, 30, 23, 1</column>
-<column name="icmp_ln6_4_fu_543_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="icmp_ln6_5_fu_549_p2">icmp, 0, 0, 30, 23, 1</column>
-<column name="icmp_ln6_fu_380_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="icmp_ln70_1_fu_416_p2">icmp, 0, 0, 14, 7, 7</column>
-<column name="icmp_ln70_2_fu_500_p2">icmp, 0, 0, 12, 4, 4</column>
-<column name="icmp_ln70_fu_332_p2">icmp, 0, 0, 14, 7, 5</column>
-<column name="or_ln6_1_fu_476_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln6_2_fu_555_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln6_fu_392_p2">or, 0, 0, 2, 1, 1</column>
+<column name="add_ln76_1_fu_569_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln76_2_fu_670_p2">+, 0, 0, 12, 4, 1</column>
+<column name="add_ln76_fu_468_p2">+, 0, 0, 14, 7, 1</column>
+<column name="and_ln7_1_fu_637_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln7_2_fu_724_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln7_fu_536_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln76_1_fu_563_p2">icmp, 0, 0, 14, 7, 7</column>
+<column name="icmp_ln76_2_fu_664_p2">icmp, 0, 0, 12, 4, 4</column>
+<column name="icmp_ln76_fu_462_p2">icmp, 0, 0, 14, 7, 5</column>
+<column name="icmp_ln7_1_fu_524_p2">icmp, 0, 0, 30, 23, 1</column>
+<column name="icmp_ln7_2_fu_619_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="icmp_ln7_3_fu_625_p2">icmp, 0, 0, 30, 23, 1</column>
+<column name="icmp_ln7_4_fu_706_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="icmp_ln7_5_fu_712_p2">icmp, 0, 0, 30, 23, 1</column>
+<column name="icmp_ln7_fu_518_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="or_ln7_1_fu_631_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln7_2_fu_718_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln7_fu_530_p2">or, 0, 0, 2, 1, 1</column>
 <column name="fc1_output_d0">select, 0, 0, 32, 1, 32</column>
 <column name="fc2_output_d0">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln6_2_fu_567_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln7_2_fu_730_p3">select, 0, 0, 32, 1, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">197, 45, 1, 45</column>
+<column name="ap_NS_fsm">237, 55, 1, 55</column>
 <column name="conv1_output_address0">14, 3, 13, 39</column>
 <column name="conv1_output_ce0">14, 3, 1, 3</column>
-<column name="conv1_output_ce1">9, 2, 1, 2</column>
-<column name="conv1_output_ce2">9, 2, 1, 2</column>
-<column name="conv1_output_ce3">9, 2, 1, 2</column>
 <column name="conv1_output_we0">9, 2, 1, 2</column>
 <column name="conv2_output_address0">14, 3, 11, 33</column>
 <column name="conv2_output_ce0">14, 3, 1, 3</column>
-<column name="conv2_output_ce1">9, 2, 1, 2</column>
-<column name="conv2_output_ce2">9, 2, 1, 2</column>
-<column name="conv2_output_ce3">9, 2, 1, 2</column>
 <column name="conv2_output_we0">9, 2, 1, 2</column>
 <column name="fc1_output_address0">14, 3, 7, 21</column>
 <column name="fc1_output_ce0">14, 3, 1, 3</column>
@@ -163,42 +153,30 @@
 <column name="fc2_output_address0">14, 3, 7, 21</column>
 <column name="fc2_output_ce0">14, 3, 1, 3</column>
 <column name="fc2_output_ce1">9, 2, 1, 2</column>
-<column name="fc3_output_address0">37, 7, 4, 28</column>
+<column name="fc3_output_address0">43, 8, 4, 32</column>
 <column name="fc3_output_ce0">31, 6, 1, 6</column>
 <column name="fc3_output_ce1">9, 2, 1, 2</column>
 <column name="fc3_output_d0">20, 4, 32, 128</column>
 <column name="fc3_output_we0">20, 4, 1, 4</column>
-<column name="gmem_ARVALID">9, 2, 1, 2</column>
-<column name="gmem_RREADY">9, 2, 1, 2</column>
-<column name="grp_fu_303_ce">37, 7, 1, 7</column>
-<column name="grp_fu_303_opcode">43, 8, 2, 16</column>
-<column name="grp_fu_303_p0">54, 10, 32, 320</column>
-<column name="grp_fu_303_p1">43, 8, 32, 256</column>
-<column name="grp_fu_308_ce">37, 7, 1, 7</column>
-<column name="grp_fu_308_opcode">43, 8, 5, 40</column>
-<column name="grp_fu_308_p0">43, 8, 32, 256</column>
-<column name="grp_fu_308_p1">43, 8, 32, 256</column>
-<column name="grp_fu_694_ce">14, 3, 1, 3</column>
-<column name="grp_fu_694_p0">14, 3, 32, 96</column>
-<column name="grp_fu_694_p1">14, 3, 32, 96</column>
-<column name="grp_fu_698_ce">31, 6, 1, 6</column>
-<column name="grp_fu_698_p0">31, 6, 32, 192</column>
-<column name="grp_fu_698_p1">31, 6, 32, 192</column>
-<column name="grp_fu_702_ce">14, 3, 1, 3</column>
-<column name="grp_fu_702_opcode">14, 3, 5, 15</column>
-<column name="grp_fu_702_p0">14, 3, 32, 96</column>
-<column name="grp_fu_702_p1">14, 3, 32, 96</column>
-<column name="grp_fu_706_ce">14, 3, 1, 3</column>
-<column name="grp_fu_706_opcode">14, 3, 5, 15</column>
-<column name="grp_fu_706_p0">14, 3, 32, 96</column>
-<column name="grp_fu_706_p1">14, 3, 32, 96</column>
-<column name="grp_fu_710_ce">14, 3, 1, 3</column>
-<column name="grp_fu_710_opcode">14, 3, 5, 15</column>
-<column name="grp_fu_710_p0">14, 3, 32, 96</column>
-<column name="grp_fu_710_p1">14, 3, 32, 96</column>
-<column name="i_5_fu_166">9, 2, 7, 14</column>
-<column name="i_7_fu_170">9, 2, 4, 8</column>
-<column name="i_fu_110">9, 2, 7, 14</column>
+<column name="gmem_ARADDR">49, 9, 64, 576</column>
+<column name="gmem_ARLEN">49, 9, 32, 288</column>
+<column name="gmem_ARVALID">37, 7, 1, 7</column>
+<column name="gmem_RREADY">31, 6, 1, 6</column>
+<column name="gmem_blk_n_AR">9, 2, 1, 2</column>
+<column name="grp_fu_423_ce">37, 7, 1, 7</column>
+<column name="grp_fu_423_opcode">43, 8, 5, 40</column>
+<column name="grp_fu_423_p0">54, 10, 32, 320</column>
+<column name="grp_fu_423_p1">43, 8, 32, 256</column>
+<column name="grp_fu_909_ce">37, 7, 1, 7</column>
+<column name="grp_fu_909_opcode">37, 7, 2, 14</column>
+<column name="grp_fu_909_p0">37, 7, 32, 224</column>
+<column name="grp_fu_909_p1">37, 7, 32, 224</column>
+<column name="grp_fu_913_ce">31, 6, 1, 6</column>
+<column name="grp_fu_913_p0">31, 6, 32, 192</column>
+<column name="grp_fu_913_p1">31, 6, 32, 192</column>
+<column name="i_2_fu_164">9, 2, 7, 14</column>
+<column name="i_3_fu_220">9, 2, 7, 14</column>
+<column name="i_4_fu_224">9, 2, 4, 8</column>
 <column name="pool1_output_address0">14, 3, 11, 33</column>
 <column name="pool1_output_ce0">14, 3, 1, 3</column>
 <column name="pool1_output_ce1">9, 2, 1, 2</column>
@@ -211,27 +189,33 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">44, 0, 44, 0</column>
-<column name="grp_conv2d_3_fu_230_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv2d_fu_246_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_12_1_fu_276_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_16_2_fu_283_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_20_3_fu_290_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_51_1_fu_296_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_22_fu_252_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_52_1_VITIS_LOOP_53_2_fu_240_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_23_fu_264_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_24_fu_270_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_72_2_fu_258_ap_start_reg">1, 0, 1, 0</column>
-<column name="i_5_fu_166">7, 0, 7, 0</column>
-<column name="i_6_reg_636">7, 0, 7, 0</column>
-<column name="i_7_fu_170">4, 0, 4, 0</column>
-<column name="i_8_reg_654">7, 0, 7, 0</column>
-<column name="i_9_reg_677">4, 0, 4, 0</column>
-<column name="i_fu_110">7, 0, 7, 0</column>
-<column name="input_r_read_reg_595">64, 0, 64, 0</column>
-<column name="reg_313">32, 0, 32, 0</column>
-<column name="reg_318">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">54, 0, 54, 0</column>
+<column name="conv1_filters_74_read_reg_772">64, 0, 64, 0</column>
+<column name="conv2_filters_74_read_reg_767">64, 0, 64, 0</column>
+<column name="fc2_weights_74_read_reg_762">64, 0, 64, 0</column>
+<column name="fc3_weights_74_read_reg_757">64, 0, 64, 0</column>
+<column name="grp_conv2d_1_fu_354_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv2d_fu_336_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_13_1_fu_396_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_17_2_fu_403_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_21_3_fu_410_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_56_1_fu_416_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_21_fu_363_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_58_1_VITIS_LOOP_59_2_fu_348_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_22_fu_378_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_23_fu_387_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_lenet_predict_Pipeline_VITIS_LOOP_79_2_fu_369_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_2_fu_164">7, 0, 7, 0</column>
+<column name="i_3_fu_220">7, 0, 7, 0</column>
+<column name="i_4_fu_224">4, 0, 4, 0</column>
+<column name="i_6_reg_858">7, 0, 7, 0</column>
+<column name="i_7_reg_887">4, 0, 4, 0</column>
+<column name="i_reg_829">7, 0, 7, 0</column>
+<column name="input_74_read_reg_777">64, 0, 64, 0</column>
+<column name="reg_428">32, 0, 32, 0</column>
+<column name="trunc_ln1_reg_818">62, 0, 62, 0</column>
+<column name="trunc_ln76_1_reg_844">62, 0, 62, 0</column>
+<column name="trunc_ln76_2_reg_873">62, 0, 62, 0</column>
 </table>
 </item>
 </section>
@@ -260,14 +244,14 @@
 <column name="s_axi_control_BRESP">out, 2, s_axi, control, pointer</column>
 <column name="s_axi_control_r_AWVALID">in, 1, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_AWREADY">out, 1, s_axi, control_r, scalar</column>
-<column name="s_axi_control_r_AWADDR">in, 5, s_axi, control_r, scalar</column>
+<column name="s_axi_control_r_AWADDR">in, 8, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_WVALID">in, 1, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_WREADY">out, 1, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_WDATA">in, 32, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_WSTRB">in, 4, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_ARVALID">in, 1, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_ARREADY">out, 1, s_axi, control_r, scalar</column>
-<column name="s_axi_control_r_ARADDR">in, 5, s_axi, control_r, scalar</column>
+<column name="s_axi_control_r_ARADDR">in, 8, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_RVALID">out, 1, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_RREADY">in, 1, s_axi, control_r, scalar</column>
 <column name="s_axi_control_r_RDATA">out, 32, s_axi, control_r, scalar</column>

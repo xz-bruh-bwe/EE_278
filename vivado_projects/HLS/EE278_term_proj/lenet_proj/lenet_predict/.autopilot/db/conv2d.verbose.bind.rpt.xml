@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2d'" level="0">
-<item name = "Date">Fri Nov 22 20:00:50 2024
+<item name = "Date">Sat Dec  7 11:05:50 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">lenet_proj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.427 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,20 +24,20 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">241601, 241601, 2.416 ms, 2.416 ms, 241601, 241601, no</column>
+<column name="">747937, 747937, 7.479 ms, 7.479 ms, 747937, 747937, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv2d_Pipeline_VITIS_LOOP_35_4_fu_129">conv2d_Pipeline_VITIS_LOOP_35_4, 146, 146, 1.460 us, 1.460 us, 146, 146, no</column>
-<column name="grp_conv2d_Pipeline_VITIS_LOOP_35_46_fu_139">conv2d_Pipeline_VITIS_LOOP_35_46, 146, 146, 1.460 us, 1.460 us, 146, 146, no</column>
+<column name="grp_conv2d_Pipeline_VITIS_LOOP_38_4_fu_167">conv2d_Pipeline_VITIS_LOOP_38_4, 156, 156, 1.560 us, 1.560 us, 156, 156, no</column>
+<column name="grp_conv2d_Pipeline_VITIS_LOOP_38_45_fu_182">conv2d_Pipeline_VITIS_LOOP_38_45, 156, 156, 1.560 us, 1.560 us, 156, 156, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_30_1_VITIS_LOOP_31_2_VITIS_LOOP_32_3">241600, 241600, 302, -, -, 800, no</column>
+<column name="- VITIS_LOOP_32_1_VITIS_LOOP_33_2_VITIS_LOOP_34_3">747936, 747936, 318, -, -, 2352, no</column>
 </table>
 </item>
 </section>

@@ -32,8 +32,8 @@ module lenet_predict_control_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire                          interrupt,
-    input  wire [31:0]                   predicted_class,
-    input  wire                          predicted_class_ap_vld,
+    input  wire [31:0]                   predicted_class_74,
+    input  wire                          predicted_class_74_ap_vld,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
@@ -59,28 +59,28 @@ module lenet_predict_control_s_axi
 //        bit 0 - ap_done (Read/TOW)
 //        bit 1 - ap_ready (Read/TOW)
 //        others - reserved
-// 0x10 : Data signal of predicted_class
-//        bit 31~0 - predicted_class[31:0] (Read)
-// 0x14 : Control signal of predicted_class
-//        bit 0  - predicted_class_ap_vld (Read/COR)
+// 0x10 : Data signal of predicted_class_74
+//        bit 31~0 - predicted_class_74[31:0] (Read)
+// 0x14 : Control signal of predicted_class_74
+//        bit 0  - predicted_class_74_ap_vld (Read/COR)
 //        others - reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL                = 5'h00,
-    ADDR_GIE                    = 5'h04,
-    ADDR_IER                    = 5'h08,
-    ADDR_ISR                    = 5'h0c,
-    ADDR_PREDICTED_CLASS_DATA_0 = 5'h10,
-    ADDR_PREDICTED_CLASS_CTRL   = 5'h14,
-    WRIDLE                      = 2'd0,
-    WRDATA                      = 2'd1,
-    WRRESP                      = 2'd2,
-    WRRESET                     = 2'd3,
-    RDIDLE                      = 2'd0,
-    RDDATA                      = 2'd1,
-    RDRESET                     = 2'd2,
+    ADDR_AP_CTRL                   = 5'h00,
+    ADDR_GIE                       = 5'h04,
+    ADDR_IER                       = 5'h08,
+    ADDR_ISR                       = 5'h0c,
+    ADDR_PREDICTED_CLASS_74_DATA_0 = 5'h10,
+    ADDR_PREDICTED_CLASS_74_CTRL   = 5'h14,
+    WRIDLE                         = 2'd0,
+    WRDATA                         = 2'd1,
+    WRRESP                         = 2'd2,
+    WRRESET                        = 2'd3,
+    RDIDLE                         = 2'd0,
+    RDDATA                         = 2'd1,
+    RDRESET                        = 2'd2,
     ADDR_BITS                = 5;
 
 //------------------------Local signal-------------------
@@ -110,8 +110,8 @@ localparam
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
-    reg                           int_predicted_class_ap_vld;
-    reg  [31:0]                   int_predicted_class = 'b0;
+    reg                           int_predicted_class_74_ap_vld;
+    reg  [31:0]                   int_predicted_class_74 = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -221,11 +221,11 @@ always @(posedge ACLK) begin
                 ADDR_ISR: begin
                     rdata <= int_isr;
                 end
-                ADDR_PREDICTED_CLASS_DATA_0: begin
-                    rdata <= int_predicted_class[31:0];
+                ADDR_PREDICTED_CLASS_74_DATA_0: begin
+                    rdata <= int_predicted_class_74[31:0];
                 end
-                ADDR_PREDICTED_CLASS_CTRL: begin
-                    rdata[0] <= int_predicted_class_ap_vld;
+                ADDR_PREDICTED_CLASS_74_CTRL: begin
+                    rdata[0] <= int_predicted_class_74_ap_vld;
                 end
             endcase
         end
@@ -371,25 +371,25 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_predicted_class
+// int_predicted_class_74
 always @(posedge ACLK) begin
     if (ARESET)
-        int_predicted_class <= 0;
+        int_predicted_class_74 <= 0;
     else if (ACLK_EN) begin
-        if (predicted_class_ap_vld)
-            int_predicted_class <= predicted_class;
+        if (predicted_class_74_ap_vld)
+            int_predicted_class_74 <= predicted_class_74;
     end
 end
 
-// int_predicted_class_ap_vld
+// int_predicted_class_74_ap_vld
 always @(posedge ACLK) begin
     if (ARESET)
-        int_predicted_class_ap_vld <= 1'b0;
+        int_predicted_class_74_ap_vld <= 1'b0;
     else if (ACLK_EN) begin
-        if (predicted_class_ap_vld)
-            int_predicted_class_ap_vld <= 1'b1;
-        else if (ar_hs && raddr == ADDR_PREDICTED_CLASS_CTRL)
-            int_predicted_class_ap_vld <= 1'b0; // clear on read
+        if (predicted_class_74_ap_vld)
+            int_predicted_class_74_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_PREDICTED_CLASS_74_CTRL)
+            int_predicted_class_74_ap_vld <= 1'b0; // clear on read
     end
 end
 

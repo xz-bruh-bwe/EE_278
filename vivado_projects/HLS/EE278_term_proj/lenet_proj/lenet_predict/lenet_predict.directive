@@ -5,6 +5,11 @@
                 <option name="name" value="lenet_predict"/>
             </pragma>
         </directive>
+        <directive functionName="lenet_predict" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="lenet_predict"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

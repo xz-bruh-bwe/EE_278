@@ -18,16 +18,36 @@
 using namespace std;
 
 // wrapc file define:
-#define AUTOTB_TVIN_input_r "../tv/cdatafile/c.lenet_predict.autotvin_input_r.dat"
-#define AUTOTB_TVOUT_input_r "../tv/cdatafile/c.lenet_predict.autotvout_input_r.dat"
-#define AUTOTB_TVIN_predicted_class "../tv/cdatafile/c.lenet_predict.autotvin_predicted_class.dat"
-#define AUTOTB_TVOUT_predicted_class "../tv/cdatafile/c.lenet_predict.autotvout_predicted_class.dat"
+#define AUTOTB_TVIN_input_74 "../tv/cdatafile/c.lenet_predict.autotvin_input_74.dat"
+#define AUTOTB_TVOUT_input_74 "../tv/cdatafile/c.lenet_predict.autotvout_input_74.dat"
+#define AUTOTB_TVIN_predicted_class_74 "../tv/cdatafile/c.lenet_predict.autotvin_predicted_class_74.dat"
+#define AUTOTB_TVOUT_predicted_class_74 "../tv/cdatafile/c.lenet_predict.autotvout_predicted_class_74.dat"
+#define AUTOTB_TVIN_conv1_filters_74 "../tv/cdatafile/c.lenet_predict.autotvin_conv1_filters_74.dat"
+#define AUTOTB_TVOUT_conv1_filters_74 "../tv/cdatafile/c.lenet_predict.autotvout_conv1_filters_74.dat"
+#define AUTOTB_TVIN_conv1_bias_74 "../tv/cdatafile/c.lenet_predict.autotvin_conv1_bias_74.dat"
+#define AUTOTB_TVOUT_conv1_bias_74 "../tv/cdatafile/c.lenet_predict.autotvout_conv1_bias_74.dat"
+#define AUTOTB_TVIN_conv2_filters_74 "../tv/cdatafile/c.lenet_predict.autotvin_conv2_filters_74.dat"
+#define AUTOTB_TVOUT_conv2_filters_74 "../tv/cdatafile/c.lenet_predict.autotvout_conv2_filters_74.dat"
+#define AUTOTB_TVIN_conv2_bias_74 "../tv/cdatafile/c.lenet_predict.autotvin_conv2_bias_74.dat"
+#define AUTOTB_TVOUT_conv2_bias_74 "../tv/cdatafile/c.lenet_predict.autotvout_conv2_bias_74.dat"
+#define AUTOTB_TVIN_fc1_weights_74 "../tv/cdatafile/c.lenet_predict.autotvin_fc1_weights_74.dat"
+#define AUTOTB_TVOUT_fc1_weights_74 "../tv/cdatafile/c.lenet_predict.autotvout_fc1_weights_74.dat"
+#define AUTOTB_TVIN_fc1_bias_74 "../tv/cdatafile/c.lenet_predict.autotvin_fc1_bias_74.dat"
+#define AUTOTB_TVOUT_fc1_bias_74 "../tv/cdatafile/c.lenet_predict.autotvout_fc1_bias_74.dat"
+#define AUTOTB_TVIN_fc2_weights_74 "../tv/cdatafile/c.lenet_predict.autotvin_fc2_weights_74.dat"
+#define AUTOTB_TVOUT_fc2_weights_74 "../tv/cdatafile/c.lenet_predict.autotvout_fc2_weights_74.dat"
+#define AUTOTB_TVIN_fc2_bias_74 "../tv/cdatafile/c.lenet_predict.autotvin_fc2_bias_74.dat"
+#define AUTOTB_TVOUT_fc2_bias_74 "../tv/cdatafile/c.lenet_predict.autotvout_fc2_bias_74.dat"
+#define AUTOTB_TVIN_fc3_weights_74 "../tv/cdatafile/c.lenet_predict.autotvin_fc3_weights_74.dat"
+#define AUTOTB_TVOUT_fc3_weights_74 "../tv/cdatafile/c.lenet_predict.autotvout_fc3_weights_74.dat"
+#define AUTOTB_TVIN_fc3_bias_74 "../tv/cdatafile/c.lenet_predict.autotvin_fc3_bias_74.dat"
+#define AUTOTB_TVOUT_fc3_bias_74 "../tv/cdatafile/c.lenet_predict.autotvout_fc3_bias_74.dat"
 #define AUTOTB_TVIN_gmem "../tv/cdatafile/c.lenet_predict.autotvin_gmem.dat"
 #define AUTOTB_TVOUT_gmem "../tv/cdatafile/c.lenet_predict.autotvout_gmem.dat"
 
 
 // tvout file define:
-#define AUTOTB_TVOUT_PC_predicted_class "../tv/rtldatafile/rtl.lenet_predict.autotvout_predicted_class.dat"
+#define AUTOTB_TVOUT_PC_predicted_class_74 "../tv/rtldatafile/rtl.lenet_predict.autotvout_predicted_class_74.dat"
 #define AUTOTB_TVOUT_PC_gmem "../tv/rtldatafile/rtl.lenet_predict.autotvout_gmem.dat"
 
 
@@ -1137,39 +1157,159 @@ namespace hls::sim
 
 
 extern "C"
-void lenet_predict_hw_stub_wrapper(void*, void*);
+void lenet_predict_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
 
 extern "C"
-void apatb_lenet_predict_hw(void* __xlx_apatb_param_input_r, void* __xlx_apatb_param_predicted_class)
+void apatb_lenet_predict_hw(void* __xlx_apatb_param_input_74, void* __xlx_apatb_param_predicted_class_74, void* __xlx_apatb_param_conv1_filters_74, void* __xlx_apatb_param_conv1_bias_74, void* __xlx_apatb_param_conv2_filters_74, void* __xlx_apatb_param_conv2_bias_74, void* __xlx_apatb_param_fc1_weights_74, void* __xlx_apatb_param_fc1_bias_74, void* __xlx_apatb_param_fc2_weights_74, void* __xlx_apatb_param_fc2_bias_74, void* __xlx_apatb_param_fc3_weights_74, void* __xlx_apatb_param_fc3_bias_74)
 {
-  hls::sim::Byte<4> __xlx_offset_byte_param_input_r;
+  hls::sim::Byte<4> __xlx_offset_byte_param_input_74;
   static hls::sim::Register port0 {
-    .name = "input_r",
+    .name = "input_74",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_input_r),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_input_74),
 #endif
   };
-  port0.param = &__xlx_offset_byte_param_input_r;
+  port0.param = &__xlx_offset_byte_param_input_74;
 
   static hls::sim::Register port1 {
-    .name = "predicted_class",
+    .name = "predicted_class_74",
     .width = 32,
 #ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_predicted_class),
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_predicted_class_74),
 #else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_predicted_class),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_predicted_class),
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_predicted_class_74),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_predicted_class_74),
 #endif
   };
-  port1.param = __xlx_apatb_param_predicted_class;
+  port1.param = __xlx_apatb_param_predicted_class_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_conv1_filters_74;
+  static hls::sim::Register port2 {
+    .name = "conv1_filters_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_conv1_filters_74),
+#endif
+  };
+  port2.param = &__xlx_offset_byte_param_conv1_filters_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_conv1_bias_74;
+  static hls::sim::Register port3 {
+    .name = "conv1_bias_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_conv1_bias_74),
+#endif
+  };
+  port3.param = &__xlx_offset_byte_param_conv1_bias_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_conv2_filters_74;
+  static hls::sim::Register port4 {
+    .name = "conv2_filters_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_conv2_filters_74),
+#endif
+  };
+  port4.param = &__xlx_offset_byte_param_conv2_filters_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_conv2_bias_74;
+  static hls::sim::Register port5 {
+    .name = "conv2_bias_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_conv2_bias_74),
+#endif
+  };
+  port5.param = &__xlx_offset_byte_param_conv2_bias_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_fc1_weights_74;
+  static hls::sim::Register port6 {
+    .name = "fc1_weights_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_fc1_weights_74),
+#endif
+  };
+  port6.param = &__xlx_offset_byte_param_fc1_weights_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_fc1_bias_74;
+  static hls::sim::Register port7 {
+    .name = "fc1_bias_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_fc1_bias_74),
+#endif
+  };
+  port7.param = &__xlx_offset_byte_param_fc1_bias_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_fc2_weights_74;
+  static hls::sim::Register port8 {
+    .name = "fc2_weights_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_fc2_weights_74),
+#endif
+  };
+  port8.param = &__xlx_offset_byte_param_fc2_weights_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_fc2_bias_74;
+  static hls::sim::Register port9 {
+    .name = "fc2_bias_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_fc2_bias_74),
+#endif
+  };
+  port9.param = &__xlx_offset_byte_param_fc2_bias_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_fc3_weights_74;
+  static hls::sim::Register port10 {
+    .name = "fc3_weights_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_fc3_weights_74),
+#endif
+  };
+  port10.param = &__xlx_offset_byte_param_fc3_weights_74;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_fc3_bias_74;
+  static hls::sim::Register port11 {
+    .name = "fc3_bias_74",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_fc3_bias_74),
+#endif
+  };
+  port11.param = &__xlx_offset_byte_param_fc3_bias_74;
 
 #ifdef USE_BINARY_TV_FILE
-  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port2 {
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port12 {
 #else
-  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port2 {
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port12 {
 #endif
     .width = 32,
     .asize = 4,
@@ -1185,10 +1325,21 @@ void apatb_lenet_predict_hw(void* __xlx_apatb_param_input_r, void* __xlx_apatb_p
 #endif
 #endif
   };
-  port2.param = { __xlx_apatb_param_input_r };
-  port2.nbytes = { 4096 };
-  port2.offset = {  };
-  port2.hasWrite = { false };
+  __xlx_offset_byte_param_input_74 = 0*4;
+  __xlx_offset_byte_param_conv1_filters_74 = 1024*4;
+  __xlx_offset_byte_param_conv1_bias_74 = 1174*4;
+  __xlx_offset_byte_param_conv2_filters_74 = 1180*4;
+  __xlx_offset_byte_param_conv2_bias_74 = 3580*4;
+  __xlx_offset_byte_param_fc1_weights_74 = 3596*4;
+  __xlx_offset_byte_param_fc1_bias_74 = 51596*4;
+  __xlx_offset_byte_param_fc2_weights_74 = 51716*4;
+  __xlx_offset_byte_param_fc2_bias_74 = 61796*4;
+  __xlx_offset_byte_param_fc3_weights_74 = 61880*4;
+  __xlx_offset_byte_param_fc3_bias_74 = 62720*4;
+  port12.param = { __xlx_apatb_param_input_74, __xlx_apatb_param_conv1_filters_74, __xlx_apatb_param_conv1_bias_74, __xlx_apatb_param_conv2_filters_74, __xlx_apatb_param_conv2_bias_74, __xlx_apatb_param_fc1_weights_74, __xlx_apatb_param_fc1_bias_74, __xlx_apatb_param_fc2_weights_74, __xlx_apatb_param_fc2_bias_74, __xlx_apatb_param_fc3_weights_74, __xlx_apatb_param_fc3_bias_74 };
+  port12.nbytes = { 4096, 600, 24, 9600, 64, 192000, 480, 40320, 336, 3360, 40 };
+  port12.offset = { 0, 1024, 1174, 1180, 3580, 3596, 51596, 51716, 61796, 61880, 62720 };
+  port12.hasWrite = { false, false, false, false, false, false, false, false, false, false, false };
 
   try {
 #ifdef POST_CHECK
@@ -1200,11 +1351,31 @@ void apatb_lenet_predict_hw(void* __xlx_apatb_param_input_r, void* __xlx_apatb_p
     dump(port0, port0.iwriter, tcl.AESL_transaction);
     dump(port1, port1.iwriter, tcl.AESL_transaction);
     dump(port2, port2.iwriter, tcl.AESL_transaction);
+    dump(port3, port3.iwriter, tcl.AESL_transaction);
+    dump(port4, port4.iwriter, tcl.AESL_transaction);
+    dump(port5, port5.iwriter, tcl.AESL_transaction);
+    dump(port6, port6.iwriter, tcl.AESL_transaction);
+    dump(port7, port7.iwriter, tcl.AESL_transaction);
+    dump(port8, port8.iwriter, tcl.AESL_transaction);
+    dump(port9, port9.iwriter, tcl.AESL_transaction);
+    dump(port10, port10.iwriter, tcl.AESL_transaction);
+    dump(port11, port11.iwriter, tcl.AESL_transaction);
+    dump(port12, port12.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
+    port3.doTCL(tcl);
+    port4.doTCL(tcl);
+    port5.doTCL(tcl);
+    port6.doTCL(tcl);
+    port7.doTCL(tcl);
+    port8.doTCL(tcl);
+    port9.doTCL(tcl);
+    port10.doTCL(tcl);
+    port11.doTCL(tcl);
+    port12.doTCL(tcl);
     CodeState = CALL_C_DUT;
-    lenet_predict_hw_stub_wrapper(__xlx_apatb_param_input_r, __xlx_apatb_param_predicted_class);
+    lenet_predict_hw_stub_wrapper(__xlx_apatb_param_input_74, __xlx_apatb_param_predicted_class_74, __xlx_apatb_param_conv1_filters_74, __xlx_apatb_param_conv1_bias_74, __xlx_apatb_param_conv2_filters_74, __xlx_apatb_param_conv2_bias_74, __xlx_apatb_param_fc1_weights_74, __xlx_apatb_param_fc1_bias_74, __xlx_apatb_param_fc2_weights_74, __xlx_apatb_param_fc2_bias_74, __xlx_apatb_param_fc3_weights_74, __xlx_apatb_param_fc3_bias_74);
     CodeState = DUMP_OUTPUTS;
     dump(port1, port1.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;

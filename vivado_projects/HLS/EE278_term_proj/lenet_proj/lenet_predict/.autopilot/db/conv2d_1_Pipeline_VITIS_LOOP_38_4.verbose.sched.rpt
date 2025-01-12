@@ -1,0 +1,823 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv2d_1_Pipeline_VITIS_LOOP_38_4'
+================================================================
+* Date:           Sat Dec  7 11:05:53 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        lenet_proj
+* Solution:       lenet_predict (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvf1517-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      155|      155|  1.550 us|  1.550 us|  155|  155|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_38_4  |      152|      152|        53|         40|          1|     3|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 40, depth = 53
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 57
+* Pipeline : 1
+  Pipeline-0 : II = 40, D = 53, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 55 56 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 2 
+55 --> 57 
+56 --> 57 
+57 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.40>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%sum = alloca i32 1"   --->   Operation 58 'alloca' 'sum' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%fi = alloca i32 1"   --->   Operation 59 'alloca' 'fi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%indvar = alloca i32 1"   --->   Operation 60 'alloca' 'indvar' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_mid216_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %p_mid216"   --->   Operation 61 'read' 'p_mid216_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%filters_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %filters"   --->   Operation 62 'read' 'filters_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%p_cast9_mid2_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %p_cast9_mid2"   --->   Operation 63 'read' 'p_cast9_mid2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln34_1_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %zext_ln34_1"   --->   Operation 64 'read' 'zext_ln34_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%select_ln33_2_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %select_ln33_2"   --->   Operation 65 'read' 'select_ln33_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln34_1_cast = zext i4 %zext_ln34_1_read"   --->   Operation 66 'zext' 'zext_ln34_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_9, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_23, void @empty_25, void @empty_22, i32 16, i32 16, i32 16, i32 16, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.40ns)   --->   "%store_ln0 = store i2 0, i2 %indvar"   --->   Operation 68 'store' 'store_ln0' <Predicate = true> <Delay = 0.40>
+ST_1 : Operation 69 [1/1] (0.40ns)   --->   "%store_ln0 = store i3 0, i3 %fi"   --->   Operation 69 'store' 'store_ln0' <Predicate = true> <Delay = 0.40>
+ST_1 : Operation 70 [1/1] (0.40ns)   --->   "%store_ln0 = store i32 0, i32 %sum"   --->   Operation 70 'store' 'store_ln0' <Predicate = true> <Delay = 0.40>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln0 = br void %VITIS_LOOP_40_5.0.0"   --->   Operation 71 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.73>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%fi_3 = load i3 %fi" [lenet_support.cpp:38]   --->   Operation 72 'load' 'fi_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%indvar_load = load i2 %indvar" [lenet_support.cpp:38]   --->   Operation 73 'load' 'indvar_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 74 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.61ns)   --->   "%icmp_ln38 = icmp_ult  i3 %fi_3, i3 5" [lenet_support.cpp:38]   --->   Operation 75 'icmp' 'icmp_ln38' <Predicate = true> <Delay = 0.61> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 76 [1/1] (0.50ns)   --->   "%add_ln38_1 = add i2 %indvar_load, i2 1" [lenet_support.cpp:38]   --->   Operation 76 'add' 'add_ln38_1' <Predicate = true> <Delay = 0.50> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln38 = br i1 %icmp_ln38, void %VITIS_LOOP_40_5.0.0.for.inc39.0_crit_edge.exitStub, void %VITIS_LOOP_40_5.0.0.split" [lenet_support.cpp:38]   --->   Operation 77 'br' 'br_ln38' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%fi_cast = zext i3 %fi_3" [lenet_support.cpp:38]   --->   Operation 78 'zext' 'fi_cast' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%p_shl4 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %indvar_load, i3 0" [lenet_support.cpp:38]   --->   Operation 79 'bitconcatenate' 'p_shl4' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%p_shl4_cast = zext i5 %p_shl4" [lenet_support.cpp:38]   --->   Operation 80 'zext' 'p_shl4_cast' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%p_shl5 = bitconcatenate i3 @_ssdm_op_BitConcatenate.i3.i2.i1, i2 %indvar_load, i1 0" [lenet_support.cpp:38]   --->   Operation 81 'bitconcatenate' 'p_shl5' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%p_shl5_cast = zext i3 %p_shl5" [lenet_support.cpp:38]   --->   Operation 82 'zext' 'p_shl5_cast' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i9 %p_shl5_cast, i9 %p_cast9_mid2_read" [lenet_support.cpp:38]   --->   Operation 83 'add' 'tmp1' <Predicate = (icmp_ln38)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.45> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 84 [1/1] (0.91ns) (root node of TernaryAdder)   --->   "%empty_63 = add i9 %tmp1, i9 %p_shl4_cast" [lenet_support.cpp:38]   --->   Operation 84 'add' 'empty_63' <Predicate = (icmp_ln38)> <Delay = 0.91> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.45> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i9.i2, i9 %empty_63, i2 0" [lenet_support.cpp:38]   --->   Operation 85 'bitconcatenate' 'tmp_1' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%p_cast30 = zext i11 %tmp_1" [lenet_support.cpp:38]   --->   Operation 86 'zext' 'p_cast30' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (1.12ns)   --->   "%empty_64 = add i64 %p_cast30, i64 %filters_read" [lenet_support.cpp:38]   --->   Operation 87 'add' 'empty_64' <Predicate = (icmp_ln38)> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (0.72ns)   --->   "%empty_65 = add i4 %fi_cast, i4 %select_ln33_2_read" [lenet_support.cpp:38]   --->   Operation 88 'add' 'empty_65' <Predicate = (icmp_ln38)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%p_shl2 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %empty_65, i4 0" [lenet_support.cpp:38]   --->   Operation 89 'bitconcatenate' 'p_shl2' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%p_shl2_cast = zext i8 %p_shl2" [lenet_support.cpp:38]   --->   Operation 90 'zext' 'p_shl2_cast' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%p_shl3 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i4.i1, i4 %empty_65, i1 0" [lenet_support.cpp:38]   --->   Operation 91 'bitconcatenate' 'p_shl3' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%p_shl3_cast = zext i5 %p_shl3" [lenet_support.cpp:38]   --->   Operation 92 'zext' 'p_shl3_cast' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty_66 = sub i9 %p_shl2_cast, i9 %p_shl3_cast" [lenet_support.cpp:38]   --->   Operation 93 'sub' 'empty_66' <Predicate = (icmp_ln38)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.45> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_64, i32 2, i32 63" [lenet_support.cpp:40]   --->   Operation 94 'partselect' 'trunc_ln' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%sext_ln40 = sext i62 %trunc_ln" [lenet_support.cpp:40]   --->   Operation 95 'sext' 'sext_ln40' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i64 %sext_ln40" [lenet_support.cpp:40]   --->   Operation 96 'getelementptr' 'gmem_addr' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.91ns) (root node of TernaryAdder)   --->   "%add_ln41 = add i9 %empty_66, i9 %zext_ln34_1_cast" [lenet_support.cpp:41]   --->   Operation 97 'add' 'add_ln41' <Predicate = (icmp_ln38)> <Delay = 0.91> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.45> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%sext_ln41 = sext i9 %add_ln41" [lenet_support.cpp:41]   --->   Operation 98 'sext' 'sext_ln41' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%input_addr = getelementptr i32 %input_r, i64 0, i64 %sext_ln41" [lenet_support.cpp:41]   --->   Operation 99 'getelementptr' 'input_addr' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 100 [2/2] (1.09ns)   --->   "%input_load = load i11 %input_addr" [lenet_support.cpp:41]   --->   Operation 100 'load' 'input_load' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%or_ln41 = or i9 %add_ln41, i9 1" [lenet_support.cpp:41]   --->   Operation 101 'or' 'or_ln41' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%sext_ln41_1 = sext i9 %or_ln41" [lenet_support.cpp:41]   --->   Operation 102 'sext' 'sext_ln41_1' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%input_addr_1 = getelementptr i32 %input_r, i64 0, i64 %sext_ln41_1" [lenet_support.cpp:41]   --->   Operation 103 'getelementptr' 'input_addr_1' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 104 [2/2] (1.09ns)   --->   "%input_load_1 = load i11 %input_addr_1" [lenet_support.cpp:41]   --->   Operation 104 'load' 'input_load_1' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_2 : Operation 105 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp2 = add i9 %p_shl5_cast, i9 %p_mid216_read" [lenet_support.cpp:38]   --->   Operation 105 'add' 'tmp2' <Predicate = (icmp_ln38)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.45> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 106 [1/1] (0.91ns) (root node of TernaryAdder)   --->   "%empty_68 = add i9 %tmp2, i9 %p_shl4_cast" [lenet_support.cpp:38]   --->   Operation 106 'add' 'empty_68' <Predicate = (icmp_ln38)> <Delay = 0.91> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.45> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_2 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i9.i2, i9 %empty_68, i2 0" [lenet_support.cpp:38]   --->   Operation 107 'bitconcatenate' 'tmp_2' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%p_cast31 = zext i11 %tmp_2" [lenet_support.cpp:38]   --->   Operation 108 'zext' 'p_cast31' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (1.12ns)   --->   "%empty_69 = add i64 %p_cast31, i64 %filters_read" [lenet_support.cpp:38]   --->   Operation 109 'add' 'empty_69' <Predicate = (icmp_ln38)> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%or_ln38 = or i3 %fi_3, i3 1" [lenet_support.cpp:38]   --->   Operation 110 'or' 'or_ln38' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln38 = zext i3 %or_ln38" [lenet_support.cpp:38]   --->   Operation 111 'zext' 'zext_ln38' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 112 [1/1] (0.61ns)   --->   "%icmp_ln38_1 = icmp_ult  i3 %or_ln38, i3 5" [lenet_support.cpp:38]   --->   Operation 112 'icmp' 'icmp_ln38_1' <Predicate = (icmp_ln38)> <Delay = 0.61> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%br_ln38 = br i1 %icmp_ln38_1, void %VITIS_LOOP_40_5.0.0.split.for.inc39.0_crit_edge.exitStub, void %VITIS_LOOP_40_5.0.1" [lenet_support.cpp:38]   --->   Operation 113 'br' 'br_ln38' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_2 : Operation 114 [1/1] (0.72ns)   --->   "%empty = add i4 %zext_ln38, i4 %select_ln33_2_read" [lenet_support.cpp:38]   --->   Operation 114 'add' 'empty' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %empty, i4 0" [lenet_support.cpp:38]   --->   Operation 115 'bitconcatenate' 'p_shl' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%p_shl10_cast = zext i8 %p_shl" [lenet_support.cpp:38]   --->   Operation 116 'zext' 'p_shl10_cast' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%p_shl6 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i4.i1, i4 %empty, i1 0" [lenet_support.cpp:38]   --->   Operation 117 'bitconcatenate' 'p_shl6' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%p_shl11_cast = zext i5 %p_shl6" [lenet_support.cpp:38]   --->   Operation 118 'zext' 'p_shl11_cast' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_2 : Operation 119 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty_61 = sub i9 %p_shl10_cast, i9 %p_shl11_cast" [lenet_support.cpp:38]   --->   Operation 119 'sub' 'empty_61' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.45> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%trunc_ln40_1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_69, i32 2, i32 63" [lenet_support.cpp:40]   --->   Operation 120 'partselect' 'trunc_ln40_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "%sext_ln40_1 = sext i62 %trunc_ln40_1" [lenet_support.cpp:40]   --->   Operation 121 'sext' 'sext_ln40_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%gmem_addr_3 = getelementptr i32 %gmem, i64 %sext_ln40_1" [lenet_support.cpp:40]   --->   Operation 122 'getelementptr' 'gmem_addr_3' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_2 : Operation 123 [1/1] (0.91ns) (root node of TernaryAdder)   --->   "%add_ln41_4 = add i9 %empty_61, i9 %zext_ln34_1_cast" [lenet_support.cpp:41]   --->   Operation 123 'add' 'add_ln41_4' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.91> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.45> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 124 [1/1] (0.61ns)   --->   "%add_ln38 = add i3 %fi_3, i3 2" [lenet_support.cpp:38]   --->   Operation 124 'add' 'add_ln38' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.61> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 125 [1/1] (0.40ns)   --->   "%store_ln38 = store i2 %add_ln38_1, i2 %indvar" [lenet_support.cpp:38]   --->   Operation 125 'store' 'store_ln38' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.40>
+ST_2 : Operation 126 [1/1] (0.40ns)   --->   "%store_ln38 = store i3 %add_ln38, i3 %fi" [lenet_support.cpp:38]   --->   Operation 126 'store' 'store_ln38' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.40>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 127 [8/8] (7.30ns)   --->   "%empty_67 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 5" [lenet_support.cpp:40]   --->   Operation 127 'readreq' 'empty_67' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 128 [1/2] (1.09ns)   --->   "%input_load = load i11 %input_addr" [lenet_support.cpp:41]   --->   Operation 128 'load' 'input_load' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_3 : Operation 129 [1/2] (1.09ns)   --->   "%input_load_1 = load i11 %input_addr_1" [lenet_support.cpp:41]   --->   Operation 129 'load' 'input_load_1' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_3 : Operation 130 [1/1] (0.71ns)   --->   "%add_ln41_1 = add i9 %add_ln41, i9 2" [lenet_support.cpp:41]   --->   Operation 130 'add' 'add_ln41_1' <Predicate = (icmp_ln38)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 131 [1/1] (0.00ns)   --->   "%sext_ln41_2 = sext i9 %add_ln41_1" [lenet_support.cpp:41]   --->   Operation 131 'sext' 'sext_ln41_2' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_3 : Operation 132 [1/1] (0.00ns)   --->   "%input_addr_2 = getelementptr i32 %input_r, i64 0, i64 %sext_ln41_2" [lenet_support.cpp:41]   --->   Operation 132 'getelementptr' 'input_addr_2' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_3 : Operation 133 [2/2] (1.09ns)   --->   "%input_load_2 = load i11 %input_addr_2" [lenet_support.cpp:41]   --->   Operation 133 'load' 'input_load_2' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_3 : Operation 134 [1/1] (0.71ns)   --->   "%add_ln41_2 = add i9 %add_ln41, i9 3" [lenet_support.cpp:41]   --->   Operation 134 'add' 'add_ln41_2' <Predicate = (icmp_ln38)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "%sext_ln41_3 = sext i9 %add_ln41_2" [lenet_support.cpp:41]   --->   Operation 135 'sext' 'sext_ln41_3' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_3 : Operation 136 [1/1] (0.00ns)   --->   "%input_addr_3 = getelementptr i32 %input_r, i64 0, i64 %sext_ln41_3" [lenet_support.cpp:41]   --->   Operation 136 'getelementptr' 'input_addr_3' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_3 : Operation 137 [2/2] (1.09ns)   --->   "%input_load_3 = load i11 %input_addr_3" [lenet_support.cpp:41]   --->   Operation 137 'load' 'input_load_3' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 138 [7/8] (7.30ns)   --->   "%empty_67 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 5" [lenet_support.cpp:40]   --->   Operation 138 'readreq' 'empty_67' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 139 [1/2] (1.09ns)   --->   "%input_load_2 = load i11 %input_addr_2" [lenet_support.cpp:41]   --->   Operation 139 'load' 'input_load_2' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_4 : Operation 140 [1/2] (1.09ns)   --->   "%input_load_3 = load i11 %input_addr_3" [lenet_support.cpp:41]   --->   Operation 140 'load' 'input_load_3' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_4 : Operation 141 [1/1] (0.71ns)   --->   "%add_ln41_3 = add i9 %add_ln41, i9 4" [lenet_support.cpp:41]   --->   Operation 141 'add' 'add_ln41_3' <Predicate = (icmp_ln38)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 142 [1/1] (0.00ns)   --->   "%sext_ln41_4 = sext i9 %add_ln41_3" [lenet_support.cpp:41]   --->   Operation 142 'sext' 'sext_ln41_4' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_4 : Operation 143 [1/1] (0.00ns)   --->   "%input_addr_4 = getelementptr i32 %input_r, i64 0, i64 %sext_ln41_4" [lenet_support.cpp:41]   --->   Operation 143 'getelementptr' 'input_addr_4' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_4 : Operation 144 [2/2] (1.09ns)   --->   "%input_load_4 = load i11 %input_addr_4" [lenet_support.cpp:41]   --->   Operation 144 'load' 'input_load_4' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_4 : Operation 145 [1/1] (0.00ns)   --->   "%sext_ln41_5 = sext i9 %add_ln41_4" [lenet_support.cpp:41]   --->   Operation 145 'sext' 'sext_ln41_5' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_4 : Operation 146 [1/1] (0.00ns)   --->   "%input_addr_5 = getelementptr i32 %input_r, i64 0, i64 %sext_ln41_5" [lenet_support.cpp:41]   --->   Operation 146 'getelementptr' 'input_addr_5' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_4 : Operation 147 [2/2] (1.09ns)   --->   "%input_load_5 = load i11 %input_addr_5" [lenet_support.cpp:41]   --->   Operation 147 'load' 'input_load_5' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 148 [6/8] (7.30ns)   --->   "%empty_67 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 5" [lenet_support.cpp:40]   --->   Operation 148 'readreq' 'empty_67' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 149 [1/2] (1.09ns)   --->   "%input_load_4 = load i11 %input_addr_4" [lenet_support.cpp:41]   --->   Operation 149 'load' 'input_load_4' <Predicate = (icmp_ln38)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_5 : Operation 150 [1/2] (1.09ns)   --->   "%input_load_5 = load i11 %input_addr_5" [lenet_support.cpp:41]   --->   Operation 150 'load' 'input_load_5' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_5 : Operation 151 [1/1] (0.00ns)   --->   "%or_ln41_1 = or i9 %add_ln41_4, i9 1" [lenet_support.cpp:41]   --->   Operation 151 'or' 'or_ln41_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_5 : Operation 152 [1/1] (0.00ns)   --->   "%sext_ln41_6 = sext i9 %or_ln41_1" [lenet_support.cpp:41]   --->   Operation 152 'sext' 'sext_ln41_6' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_5 : Operation 153 [1/1] (0.00ns)   --->   "%input_addr_6 = getelementptr i32 %input_r, i64 0, i64 %sext_ln41_6" [lenet_support.cpp:41]   --->   Operation 153 'getelementptr' 'input_addr_6' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_5 : Operation 154 [2/2] (1.09ns)   --->   "%input_load_6 = load i11 %input_addr_6" [lenet_support.cpp:41]   --->   Operation 154 'load' 'input_load_6' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_5 : Operation 155 [1/1] (0.71ns)   --->   "%add_ln41_5 = add i9 %add_ln41_4, i9 2" [lenet_support.cpp:41]   --->   Operation 155 'add' 'add_ln41_5' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 156 [1/1] (0.00ns)   --->   "%sext_ln41_7 = sext i9 %add_ln41_5" [lenet_support.cpp:41]   --->   Operation 156 'sext' 'sext_ln41_7' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_5 : Operation 157 [1/1] (0.00ns)   --->   "%input_addr_7 = getelementptr i32 %input_r, i64 0, i64 %sext_ln41_7" [lenet_support.cpp:41]   --->   Operation 157 'getelementptr' 'input_addr_7' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_5 : Operation 158 [2/2] (1.09ns)   --->   "%input_load_7 = load i11 %input_addr_7" [lenet_support.cpp:41]   --->   Operation 158 'load' 'input_load_7' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 159 [5/8] (7.30ns)   --->   "%empty_67 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 5" [lenet_support.cpp:40]   --->   Operation 159 'readreq' 'empty_67' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 160 [1/2] (1.09ns)   --->   "%input_load_6 = load i11 %input_addr_6" [lenet_support.cpp:41]   --->   Operation 160 'load' 'input_load_6' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_6 : Operation 161 [1/2] (1.09ns)   --->   "%input_load_7 = load i11 %input_addr_7" [lenet_support.cpp:41]   --->   Operation 161 'load' 'input_load_7' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_6 : Operation 162 [1/1] (0.71ns)   --->   "%add_ln41_6 = add i9 %add_ln41_4, i9 3" [lenet_support.cpp:41]   --->   Operation 162 'add' 'add_ln41_6' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 163 [1/1] (0.00ns)   --->   "%sext_ln41_8 = sext i9 %add_ln41_6" [lenet_support.cpp:41]   --->   Operation 163 'sext' 'sext_ln41_8' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_6 : Operation 164 [1/1] (0.00ns)   --->   "%input_addr_8 = getelementptr i32 %input_r, i64 0, i64 %sext_ln41_8" [lenet_support.cpp:41]   --->   Operation 164 'getelementptr' 'input_addr_8' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_6 : Operation 165 [2/2] (1.09ns)   --->   "%input_load_8 = load i11 %input_addr_8" [lenet_support.cpp:41]   --->   Operation 165 'load' 'input_load_8' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_6 : Operation 166 [1/1] (0.71ns)   --->   "%add_ln41_7 = add i9 %add_ln41_4, i9 4" [lenet_support.cpp:41]   --->   Operation 166 'add' 'add_ln41_7' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 167 [1/1] (0.00ns)   --->   "%sext_ln41_9 = sext i9 %add_ln41_7" [lenet_support.cpp:41]   --->   Operation 167 'sext' 'sext_ln41_9' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_6 : Operation 168 [1/1] (0.00ns)   --->   "%input_addr_9 = getelementptr i32 %input_r, i64 0, i64 %sext_ln41_9" [lenet_support.cpp:41]   --->   Operation 168 'getelementptr' 'input_addr_9' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_6 : Operation 169 [2/2] (1.09ns)   --->   "%input_load_9 = load i11 %input_addr_9" [lenet_support.cpp:41]   --->   Operation 169 'load' 'input_load_9' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 170 [4/8] (7.30ns)   --->   "%empty_67 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 5" [lenet_support.cpp:40]   --->   Operation 170 'readreq' 'empty_67' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 171 [1/2] (1.09ns)   --->   "%input_load_8 = load i11 %input_addr_8" [lenet_support.cpp:41]   --->   Operation 171 'load' 'input_load_8' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+ST_7 : Operation 172 [1/2] (1.09ns)   --->   "%input_load_9 = load i11 %input_addr_9" [lenet_support.cpp:41]   --->   Operation 172 'load' 'input_load_9' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 1.09> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1176> <RAM>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 173 [3/8] (7.30ns)   --->   "%empty_67 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 5" [lenet_support.cpp:40]   --->   Operation 173 'readreq' 'empty_67' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 174 [8/8] (7.30ns)   --->   "%empty_62 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i32 5" [lenet_support.cpp:40]   --->   Operation 174 'readreq' 'empty_62' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 175 [2/8] (7.30ns)   --->   "%empty_67 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 5" [lenet_support.cpp:40]   --->   Operation 175 'readreq' 'empty_67' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 176 [7/8] (7.30ns)   --->   "%empty_62 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i32 5" [lenet_support.cpp:40]   --->   Operation 176 'readreq' 'empty_62' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 7.30>
+ST_10 : Operation 177 [1/8] (7.30ns)   --->   "%empty_67 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 5" [lenet_support.cpp:40]   --->   Operation 177 'readreq' 'empty_67' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 178 [6/8] (7.30ns)   --->   "%empty_62 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i32 5" [lenet_support.cpp:40]   --->   Operation 178 'readreq' 'empty_62' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 7.30>
+ST_11 : Operation 179 [1/1] (7.30ns)   --->   "%gmem_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr" [lenet_support.cpp:42]   --->   Operation 179 'read' 'gmem_addr_read' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_11 : Operation 180 [5/8] (7.30ns)   --->   "%empty_62 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i32 5" [lenet_support.cpp:40]   --->   Operation 180 'readreq' 'empty_62' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 11> <Delay = 7.30>
+ST_12 : Operation 181 [1/1] (0.00ns)   --->   "%bitcast_ln42 = bitcast i32 %gmem_addr_read" [lenet_support.cpp:42]   --->   Operation 181 'bitcast' 'bitcast_ln42' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_12 : [1/1] (0.79ns)   --->   Input mux for Operation 182 '%mul = fmul i32 %input_load, i32 %bitcast_ln42'
+ST_12 : Operation 182 [3/3] (5.29ns)   --->   "%mul = fmul i32 %input_load, i32 %bitcast_ln42" [lenet_support.cpp:41]   --->   Operation 182 'fmul' 'mul' <Predicate = (icmp_ln38)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 183 [1/1] (7.30ns)   --->   "%gmem_addr_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr" [lenet_support.cpp:42]   --->   Operation 183 'read' 'gmem_addr_read_1' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_12 : Operation 184 [4/8] (7.30ns)   --->   "%empty_62 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i32 5" [lenet_support.cpp:40]   --->   Operation 184 'readreq' 'empty_62' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 7.30>
+ST_13 : Operation 185 [2/3] (6.08ns)   --->   "%mul = fmul i32 %input_load, i32 %bitcast_ln42" [lenet_support.cpp:41]   --->   Operation 185 'fmul' 'mul' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 186 [1/1] (0.00ns)   --->   "%bitcast_ln42_1 = bitcast i32 %gmem_addr_read_1" [lenet_support.cpp:42]   --->   Operation 186 'bitcast' 'bitcast_ln42_1' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_13 : [1/1] (0.79ns)   --->   Input mux for Operation 187 '%mul27_s = fmul i32 %input_load_1, i32 %bitcast_ln42_1'
+ST_13 : Operation 187 [3/3] (5.29ns)   --->   "%mul27_s = fmul i32 %input_load_1, i32 %bitcast_ln42_1" [lenet_support.cpp:41]   --->   Operation 187 'fmul' 'mul27_s' <Predicate = (icmp_ln38)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 188 [1/1] (7.30ns)   --->   "%gmem_addr_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr" [lenet_support.cpp:42]   --->   Operation 188 'read' 'gmem_addr_read_2' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_13 : Operation 189 [3/8] (7.30ns)   --->   "%empty_62 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i32 5" [lenet_support.cpp:40]   --->   Operation 189 'readreq' 'empty_62' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 13> <Delay = 7.30>
+ST_14 : Operation 190 [1/3] (6.08ns)   --->   "%mul = fmul i32 %input_load, i32 %bitcast_ln42" [lenet_support.cpp:41]   --->   Operation 190 'fmul' 'mul' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 191 [2/3] (6.08ns)   --->   "%mul27_s = fmul i32 %input_load_1, i32 %bitcast_ln42_1" [lenet_support.cpp:41]   --->   Operation 191 'fmul' 'mul27_s' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 192 [1/1] (0.00ns)   --->   "%bitcast_ln42_2 = bitcast i32 %gmem_addr_read_2" [lenet_support.cpp:42]   --->   Operation 192 'bitcast' 'bitcast_ln42_2' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_14 : [1/1] (0.79ns)   --->   Input mux for Operation 193 '%mul27_2 = fmul i32 %input_load_2, i32 %bitcast_ln42_2'
+ST_14 : Operation 193 [3/3] (5.29ns)   --->   "%mul27_2 = fmul i32 %input_load_2, i32 %bitcast_ln42_2" [lenet_support.cpp:41]   --->   Operation 193 'fmul' 'mul27_2' <Predicate = (icmp_ln38)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 194 [1/1] (7.30ns)   --->   "%gmem_addr_read_3 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr" [lenet_support.cpp:42]   --->   Operation 194 'read' 'gmem_addr_read_3' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_14 : Operation 195 [2/8] (7.30ns)   --->   "%empty_62 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i32 5" [lenet_support.cpp:40]   --->   Operation 195 'readreq' 'empty_62' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 14> <Delay = 7.30>
+ST_15 : Operation 196 [1/1] (0.00ns)   --->   "%sum_load = load i32 %sum" [lenet_support.cpp:41]   --->   Operation 196 'load' 'sum_load' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_15 : [1/1] (0.79ns)   --->   Input mux for Operation 197 '%sum_s = fadd i32 %sum_load, i32 %mul'
+ST_15 : Operation 197 [4/4] (4.91ns)   --->   "%sum_s = fadd i32 %sum_load, i32 %mul" [lenet_support.cpp:41]   --->   Operation 197 'fadd' 'sum_s' <Predicate = (icmp_ln38)> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 198 [1/3] (6.08ns)   --->   "%mul27_s = fmul i32 %input_load_1, i32 %bitcast_ln42_1" [lenet_support.cpp:41]   --->   Operation 198 'fmul' 'mul27_s' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 199 [2/3] (6.08ns)   --->   "%mul27_2 = fmul i32 %input_load_2, i32 %bitcast_ln42_2" [lenet_support.cpp:41]   --->   Operation 199 'fmul' 'mul27_2' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 200 [1/1] (0.00ns)   --->   "%bitcast_ln42_3 = bitcast i32 %gmem_addr_read_3" [lenet_support.cpp:42]   --->   Operation 200 'bitcast' 'bitcast_ln42_3' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_15 : [1/1] (0.79ns)   --->   Input mux for Operation 201 '%mul27_3 = fmul i32 %input_load_3, i32 %bitcast_ln42_3'
+ST_15 : Operation 201 [3/3] (5.29ns)   --->   "%mul27_3 = fmul i32 %input_load_3, i32 %bitcast_ln42_3" [lenet_support.cpp:41]   --->   Operation 201 'fmul' 'mul27_3' <Predicate = (icmp_ln38)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 202 [1/1] (7.30ns)   --->   "%gmem_addr_read_4 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr" [lenet_support.cpp:42]   --->   Operation 202 'read' 'gmem_addr_read_4' <Predicate = (icmp_ln38)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_15 : Operation 203 [1/8] (7.30ns)   --->   "%empty_62 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i32 5" [lenet_support.cpp:40]   --->   Operation 203 'readreq' 'empty_62' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 7.30>
+ST_16 : Operation 204 [3/4] (5.71ns)   --->   "%sum_s = fadd i32 %sum_load, i32 %mul" [lenet_support.cpp:41]   --->   Operation 204 'fadd' 'sum_s' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 205 [1/3] (6.08ns)   --->   "%mul27_2 = fmul i32 %input_load_2, i32 %bitcast_ln42_2" [lenet_support.cpp:41]   --->   Operation 205 'fmul' 'mul27_2' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 206 [2/3] (6.08ns)   --->   "%mul27_3 = fmul i32 %input_load_3, i32 %bitcast_ln42_3" [lenet_support.cpp:41]   --->   Operation 206 'fmul' 'mul27_3' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 207 [1/1] (0.00ns)   --->   "%bitcast_ln42_4 = bitcast i32 %gmem_addr_read_4" [lenet_support.cpp:42]   --->   Operation 207 'bitcast' 'bitcast_ln42_4' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_16 : [1/1] (0.79ns)   --->   Input mux for Operation 208 '%mul27_4 = fmul i32 %input_load_4, i32 %bitcast_ln42_4'
+ST_16 : Operation 208 [3/3] (5.29ns)   --->   "%mul27_4 = fmul i32 %input_load_4, i32 %bitcast_ln42_4" [lenet_support.cpp:41]   --->   Operation 208 'fmul' 'mul27_4' <Predicate = (icmp_ln38)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 209 [1/1] (7.30ns)   --->   "%gmem_addr_3_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_3" [lenet_support.cpp:42]   --->   Operation 209 'read' 'gmem_addr_3_read' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 16> <Delay = 7.30>
+ST_17 : Operation 210 [2/4] (5.71ns)   --->   "%sum_s = fadd i32 %sum_load, i32 %mul" [lenet_support.cpp:41]   --->   Operation 210 'fadd' 'sum_s' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 211 [1/3] (6.08ns)   --->   "%mul27_3 = fmul i32 %input_load_3, i32 %bitcast_ln42_3" [lenet_support.cpp:41]   --->   Operation 211 'fmul' 'mul27_3' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 212 [2/3] (6.08ns)   --->   "%mul27_4 = fmul i32 %input_load_4, i32 %bitcast_ln42_4" [lenet_support.cpp:41]   --->   Operation 212 'fmul' 'mul27_4' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 213 [1/1] (0.00ns)   --->   "%bitcast_ln42_5 = bitcast i32 %gmem_addr_3_read" [lenet_support.cpp:42]   --->   Operation 213 'bitcast' 'bitcast_ln42_5' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_17 : [1/1] (0.79ns)   --->   Input mux for Operation 214 '%mul27_0_1 = fmul i32 %input_load_5, i32 %bitcast_ln42_5'
+ST_17 : Operation 214 [3/3] (5.29ns)   --->   "%mul27_0_1 = fmul i32 %input_load_5, i32 %bitcast_ln42_5" [lenet_support.cpp:41]   --->   Operation 214 'fmul' 'mul27_0_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 215 [1/1] (7.30ns)   --->   "%gmem_addr_3_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_3" [lenet_support.cpp:42]   --->   Operation 215 'read' 'gmem_addr_3_read_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 7.30>
+ST_18 : Operation 216 [1/4] (5.71ns)   --->   "%sum_s = fadd i32 %sum_load, i32 %mul" [lenet_support.cpp:41]   --->   Operation 216 'fadd' 'sum_s' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 217 [1/3] (6.08ns)   --->   "%mul27_4 = fmul i32 %input_load_4, i32 %bitcast_ln42_4" [lenet_support.cpp:41]   --->   Operation 217 'fmul' 'mul27_4' <Predicate = (icmp_ln38)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 218 [2/3] (6.08ns)   --->   "%mul27_0_1 = fmul i32 %input_load_5, i32 %bitcast_ln42_5" [lenet_support.cpp:41]   --->   Operation 218 'fmul' 'mul27_0_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 219 [1/1] (0.00ns)   --->   "%bitcast_ln42_6 = bitcast i32 %gmem_addr_3_read_1" [lenet_support.cpp:42]   --->   Operation 219 'bitcast' 'bitcast_ln42_6' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_18 : [1/1] (0.79ns)   --->   Input mux for Operation 220 '%mul27_0_1_1 = fmul i32 %input_load_6, i32 %bitcast_ln42_6'
+ST_18 : Operation 220 [3/3] (5.29ns)   --->   "%mul27_0_1_1 = fmul i32 %input_load_6, i32 %bitcast_ln42_6" [lenet_support.cpp:41]   --->   Operation 220 'fmul' 'mul27_0_1_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 221 [1/1] (7.30ns)   --->   "%gmem_addr_3_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_3" [lenet_support.cpp:42]   --->   Operation 221 'read' 'gmem_addr_3_read_2' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 18> <Delay = 7.30>
+ST_19 : [1/1] (0.79ns)   --->   Input mux for Operation 222 '%sum_16_1 = fadd i32 %sum_s, i32 %mul27_s'
+ST_19 : Operation 222 [4/4] (4.91ns)   --->   "%sum_16_1 = fadd i32 %sum_s, i32 %mul27_s" [lenet_support.cpp:41]   --->   Operation 222 'fadd' 'sum_16_1' <Predicate = (icmp_ln38)> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 223 [1/3] (6.08ns)   --->   "%mul27_0_1 = fmul i32 %input_load_5, i32 %bitcast_ln42_5" [lenet_support.cpp:41]   --->   Operation 223 'fmul' 'mul27_0_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 224 [2/3] (6.08ns)   --->   "%mul27_0_1_1 = fmul i32 %input_load_6, i32 %bitcast_ln42_6" [lenet_support.cpp:41]   --->   Operation 224 'fmul' 'mul27_0_1_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 225 [1/1] (0.00ns)   --->   "%bitcast_ln42_7 = bitcast i32 %gmem_addr_3_read_2" [lenet_support.cpp:42]   --->   Operation 225 'bitcast' 'bitcast_ln42_7' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_19 : [1/1] (0.79ns)   --->   Input mux for Operation 226 '%mul27_0_1_2 = fmul i32 %input_load_7, i32 %bitcast_ln42_7'
+ST_19 : Operation 226 [3/3] (5.29ns)   --->   "%mul27_0_1_2 = fmul i32 %input_load_7, i32 %bitcast_ln42_7" [lenet_support.cpp:41]   --->   Operation 226 'fmul' 'mul27_0_1_2' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 227 [1/1] (7.30ns)   --->   "%gmem_addr_3_read_3 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_3" [lenet_support.cpp:42]   --->   Operation 227 'read' 'gmem_addr_3_read_3' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 19> <Delay = 7.30>
+ST_20 : Operation 228 [3/4] (5.71ns)   --->   "%sum_16_1 = fadd i32 %sum_s, i32 %mul27_s" [lenet_support.cpp:41]   --->   Operation 228 'fadd' 'sum_16_1' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 229 [1/3] (6.08ns)   --->   "%mul27_0_1_1 = fmul i32 %input_load_6, i32 %bitcast_ln42_6" [lenet_support.cpp:41]   --->   Operation 229 'fmul' 'mul27_0_1_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 230 [2/3] (6.08ns)   --->   "%mul27_0_1_2 = fmul i32 %input_load_7, i32 %bitcast_ln42_7" [lenet_support.cpp:41]   --->   Operation 230 'fmul' 'mul27_0_1_2' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 231 [1/1] (0.00ns)   --->   "%bitcast_ln42_8 = bitcast i32 %gmem_addr_3_read_3" [lenet_support.cpp:42]   --->   Operation 231 'bitcast' 'bitcast_ln42_8' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_20 : [1/1] (0.79ns)   --->   Input mux for Operation 232 '%mul27_0_1_3 = fmul i32 %input_load_8, i32 %bitcast_ln42_8'
+ST_20 : Operation 232 [3/3] (5.29ns)   --->   "%mul27_0_1_3 = fmul i32 %input_load_8, i32 %bitcast_ln42_8" [lenet_support.cpp:41]   --->   Operation 232 'fmul' 'mul27_0_1_3' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 233 [1/1] (7.30ns)   --->   "%gmem_addr_3_read_4 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_3" [lenet_support.cpp:42]   --->   Operation 233 'read' 'gmem_addr_3_read_4' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 20> <Delay = 6.08>
+ST_21 : Operation 234 [2/4] (5.71ns)   --->   "%sum_16_1 = fadd i32 %sum_s, i32 %mul27_s" [lenet_support.cpp:41]   --->   Operation 234 'fadd' 'sum_16_1' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 235 [1/3] (6.08ns)   --->   "%mul27_0_1_2 = fmul i32 %input_load_7, i32 %bitcast_ln42_7" [lenet_support.cpp:41]   --->   Operation 235 'fmul' 'mul27_0_1_2' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 236 [2/3] (6.08ns)   --->   "%mul27_0_1_3 = fmul i32 %input_load_8, i32 %bitcast_ln42_8" [lenet_support.cpp:41]   --->   Operation 236 'fmul' 'mul27_0_1_3' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 237 [1/1] (0.00ns)   --->   "%bitcast_ln42_9 = bitcast i32 %gmem_addr_3_read_4" [lenet_support.cpp:42]   --->   Operation 237 'bitcast' 'bitcast_ln42_9' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 0.00>
+ST_21 : [1/1] (0.79ns)   --->   Input mux for Operation 238 '%mul27_0_1_4 = fmul i32 %input_load_9, i32 %bitcast_ln42_9'
+ST_21 : Operation 238 [3/3] (5.29ns)   --->   "%mul27_0_1_4 = fmul i32 %input_load_9, i32 %bitcast_ln42_9" [lenet_support.cpp:41]   --->   Operation 238 'fmul' 'mul27_0_1_4' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.29> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 6.08>
+ST_22 : Operation 239 [1/4] (5.71ns)   --->   "%sum_16_1 = fadd i32 %sum_s, i32 %mul27_s" [lenet_support.cpp:41]   --->   Operation 239 'fadd' 'sum_16_1' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 240 [1/3] (6.08ns)   --->   "%mul27_0_1_3 = fmul i32 %input_load_8, i32 %bitcast_ln42_8" [lenet_support.cpp:41]   --->   Operation 240 'fmul' 'mul27_0_1_3' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 241 [2/3] (6.08ns)   --->   "%mul27_0_1_4 = fmul i32 %input_load_9, i32 %bitcast_ln42_9" [lenet_support.cpp:41]   --->   Operation 241 'fmul' 'mul27_0_1_4' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.08>
+ST_23 : [1/1] (0.79ns)   --->   Input mux for Operation 242 '%sum_16_2 = fadd i32 %sum_16_1, i32 %mul27_2'
+ST_23 : Operation 242 [4/4] (4.91ns)   --->   "%sum_16_2 = fadd i32 %sum_16_1, i32 %mul27_2" [lenet_support.cpp:41]   --->   Operation 242 'fadd' 'sum_16_2' <Predicate = (icmp_ln38)> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 243 [1/3] (6.08ns)   --->   "%mul27_0_1_4 = fmul i32 %input_load_9, i32 %bitcast_ln42_9" [lenet_support.cpp:41]   --->   Operation 243 'fmul' 'mul27_0_1_4' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 6.08> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 6.08> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 5.71>
+ST_24 : Operation 244 [3/4] (5.71ns)   --->   "%sum_16_2 = fadd i32 %sum_16_1, i32 %mul27_2" [lenet_support.cpp:41]   --->   Operation 244 'fadd' 'sum_16_2' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 5.71>
+ST_25 : Operation 245 [2/4] (5.71ns)   --->   "%sum_16_2 = fadd i32 %sum_16_1, i32 %mul27_2" [lenet_support.cpp:41]   --->   Operation 245 'fadd' 'sum_16_2' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 5.71>
+ST_26 : Operation 246 [1/4] (5.71ns)   --->   "%sum_16_2 = fadd i32 %sum_16_1, i32 %mul27_2" [lenet_support.cpp:41]   --->   Operation 246 'fadd' 'sum_16_2' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 5.71>
+ST_27 : [1/1] (0.79ns)   --->   Input mux for Operation 247 '%sum_16_3 = fadd i32 %sum_16_2, i32 %mul27_3'
+ST_27 : Operation 247 [4/4] (4.91ns)   --->   "%sum_16_3 = fadd i32 %sum_16_2, i32 %mul27_3" [lenet_support.cpp:41]   --->   Operation 247 'fadd' 'sum_16_3' <Predicate = (icmp_ln38)> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 5.71>
+ST_28 : Operation 248 [3/4] (5.71ns)   --->   "%sum_16_3 = fadd i32 %sum_16_2, i32 %mul27_3" [lenet_support.cpp:41]   --->   Operation 248 'fadd' 'sum_16_3' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 5.71>
+ST_29 : Operation 249 [2/4] (5.71ns)   --->   "%sum_16_3 = fadd i32 %sum_16_2, i32 %mul27_3" [lenet_support.cpp:41]   --->   Operation 249 'fadd' 'sum_16_3' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 5.71>
+ST_30 : Operation 250 [1/4] (5.71ns)   --->   "%sum_16_3 = fadd i32 %sum_16_2, i32 %mul27_3" [lenet_support.cpp:41]   --->   Operation 250 'fadd' 'sum_16_3' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 5.71>
+ST_31 : [1/1] (0.79ns)   --->   Input mux for Operation 251 '%sum_16_4 = fadd i32 %sum_16_3, i32 %mul27_4'
+ST_31 : Operation 251 [4/4] (4.91ns)   --->   "%sum_16_4 = fadd i32 %sum_16_3, i32 %mul27_4" [lenet_support.cpp:41]   --->   Operation 251 'fadd' 'sum_16_4' <Predicate = (icmp_ln38)> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 5.71>
+ST_32 : Operation 252 [3/4] (5.71ns)   --->   "%sum_16_4 = fadd i32 %sum_16_3, i32 %mul27_4" [lenet_support.cpp:41]   --->   Operation 252 'fadd' 'sum_16_4' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 5.71>
+ST_33 : Operation 253 [2/4] (5.71ns)   --->   "%sum_16_4 = fadd i32 %sum_16_3, i32 %mul27_4" [lenet_support.cpp:41]   --->   Operation 253 'fadd' 'sum_16_4' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 5.71>
+ST_34 : Operation 254 [1/1] (0.00ns)   --->   "%speclooptripcount_ln36 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3" [lenet_support.cpp:36]   --->   Operation 254 'speclooptripcount' 'speclooptripcount_ln36' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_34 : Operation 255 [1/1] (0.00ns)   --->   "%specloopname_ln38 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [lenet_support.cpp:38]   --->   Operation 255 'specloopname' 'specloopname_ln38' <Predicate = (icmp_ln38)> <Delay = 0.00>
+ST_34 : Operation 256 [1/4] (5.71ns)   --->   "%sum_16_4 = fadd i32 %sum_16_3, i32 %mul27_4" [lenet_support.cpp:41]   --->   Operation 256 'fadd' 'sum_16_4' <Predicate = (icmp_ln38)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 5.71>
+ST_35 : [1/1] (0.79ns)   --->   Input mux for Operation 257 '%sum_1 = fadd i32 %sum_16_4, i32 %mul27_0_1'
+ST_35 : Operation 257 [4/4] (4.91ns)   --->   "%sum_1 = fadd i32 %sum_16_4, i32 %mul27_0_1" [lenet_support.cpp:41]   --->   Operation 257 'fadd' 'sum_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 5.71>
+ST_36 : Operation 258 [3/4] (5.71ns)   --->   "%sum_1 = fadd i32 %sum_16_4, i32 %mul27_0_1" [lenet_support.cpp:41]   --->   Operation 258 'fadd' 'sum_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 5.71>
+ST_37 : Operation 259 [2/4] (5.71ns)   --->   "%sum_1 = fadd i32 %sum_16_4, i32 %mul27_0_1" [lenet_support.cpp:41]   --->   Operation 259 'fadd' 'sum_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 5.71>
+ST_38 : Operation 260 [1/4] (5.71ns)   --->   "%sum_1 = fadd i32 %sum_16_4, i32 %mul27_0_1" [lenet_support.cpp:41]   --->   Operation 260 'fadd' 'sum_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 5.71>
+ST_39 : [1/1] (0.79ns)   --->   Input mux for Operation 261 '%sum_19_1 = fadd i32 %sum_1, i32 %mul27_0_1_1'
+ST_39 : Operation 261 [4/4] (4.91ns)   --->   "%sum_19_1 = fadd i32 %sum_1, i32 %mul27_0_1_1" [lenet_support.cpp:41]   --->   Operation 261 'fadd' 'sum_19_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 5.71>
+ST_40 : Operation 262 [3/4] (5.71ns)   --->   "%sum_19_1 = fadd i32 %sum_1, i32 %mul27_0_1_1" [lenet_support.cpp:41]   --->   Operation 262 'fadd' 'sum_19_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 5.71>
+ST_41 : Operation 263 [2/4] (5.71ns)   --->   "%sum_19_1 = fadd i32 %sum_1, i32 %mul27_0_1_1" [lenet_support.cpp:41]   --->   Operation 263 'fadd' 'sum_19_1' <Predicate = (icmp_ln38 & icmp_ln38_1)> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 5.71>
+ST_42 : Operation 264 [1/4] (5.71ns)   --->   "%sum_19_1 = fadd i32 %sum_1, i32 %mul27_0_1_1" [lenet_support.cpp:41]   --->   Operation 264 'fadd' 'sum_19_1' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 5.71>
+ST_43 : [1/1] (0.79ns)   --->   Input mux for Operation 265 '%sum_19_2 = fadd i32 %sum_19_1, i32 %mul27_0_1_2'
+ST_43 : Operation 265 [4/4] (4.91ns)   --->   "%sum_19_2 = fadd i32 %sum_19_1, i32 %mul27_0_1_2" [lenet_support.cpp:41]   --->   Operation 265 'fadd' 'sum_19_2' <Predicate = true> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 5.71>
+ST_44 : Operation 266 [3/4] (5.71ns)   --->   "%sum_19_2 = fadd i32 %sum_19_1, i32 %mul27_0_1_2" [lenet_support.cpp:41]   --->   Operation 266 'fadd' 'sum_19_2' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 5.71>
+ST_45 : Operation 267 [2/4] (5.71ns)   --->   "%sum_19_2 = fadd i32 %sum_19_1, i32 %mul27_0_1_2" [lenet_support.cpp:41]   --->   Operation 267 'fadd' 'sum_19_2' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 5.71>
+ST_46 : Operation 268 [1/4] (5.71ns)   --->   "%sum_19_2 = fadd i32 %sum_19_1, i32 %mul27_0_1_2" [lenet_support.cpp:41]   --->   Operation 268 'fadd' 'sum_19_2' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 5.71>
+ST_47 : [1/1] (0.79ns)   --->   Input mux for Operation 269 '%sum_19_3 = fadd i32 %sum_19_2, i32 %mul27_0_1_3'
+ST_47 : Operation 269 [4/4] (4.91ns)   --->   "%sum_19_3 = fadd i32 %sum_19_2, i32 %mul27_0_1_3" [lenet_support.cpp:41]   --->   Operation 269 'fadd' 'sum_19_3' <Predicate = true> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 5.71>
+ST_48 : Operation 270 [3/4] (5.71ns)   --->   "%sum_19_3 = fadd i32 %sum_19_2, i32 %mul27_0_1_3" [lenet_support.cpp:41]   --->   Operation 270 'fadd' 'sum_19_3' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 5.71>
+ST_49 : Operation 271 [2/4] (5.71ns)   --->   "%sum_19_3 = fadd i32 %sum_19_2, i32 %mul27_0_1_3" [lenet_support.cpp:41]   --->   Operation 271 'fadd' 'sum_19_3' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 5.71>
+ST_50 : Operation 272 [1/4] (5.71ns)   --->   "%sum_19_3 = fadd i32 %sum_19_2, i32 %mul27_0_1_3" [lenet_support.cpp:41]   --->   Operation 272 'fadd' 'sum_19_3' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 5.71>
+ST_51 : [1/1] (0.79ns)   --->   Input mux for Operation 273 '%sum_19_4 = fadd i32 %sum_19_3, i32 %mul27_0_1_4'
+ST_51 : Operation 273 [4/4] (4.91ns)   --->   "%sum_19_4 = fadd i32 %sum_19_3, i32 %mul27_0_1_4" [lenet_support.cpp:41]   --->   Operation 273 'fadd' 'sum_19_4' <Predicate = true> <Delay = 4.91> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 5.71>
+ST_52 : Operation 274 [3/4] (5.71ns)   --->   "%sum_19_4 = fadd i32 %sum_19_3, i32 %mul27_0_1_4" [lenet_support.cpp:41]   --->   Operation 274 'fadd' 'sum_19_4' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 5.71>
+ST_53 : Operation 275 [2/4] (5.71ns)   --->   "%sum_19_4 = fadd i32 %sum_19_3, i32 %mul27_0_1_4" [lenet_support.cpp:41]   --->   Operation 275 'fadd' 'sum_19_4' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 6.11>
+ST_54 : Operation 276 [1/4] (5.71ns)   --->   "%sum_19_4 = fadd i32 %sum_19_3, i32 %mul27_0_1_4" [lenet_support.cpp:41]   --->   Operation 276 'fadd' 'sum_19_4' <Predicate = true> <Delay = 5.71> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 277 [1/1] (0.40ns)   --->   "%store_ln38 = store i32 %sum_19_4, i32 %sum" [lenet_support.cpp:38]   --->   Operation 277 'store' 'store_ln38' <Predicate = true> <Delay = 0.40>
+ST_54 : Operation 278 [1/1] (0.00ns)   --->   "%br_ln38 = br void %VITIS_LOOP_40_5.0.0" [lenet_support.cpp:38]   --->   Operation 278 'br' 'br_ln38' <Predicate = true> <Delay = 0.00>
+
+State 55 <SV = 34> <Delay = 0.40>
+ST_55 : Operation 279 [1/1] (0.00ns)   --->   "%write_ln41 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %sum_out, i32 %sum_load" [lenet_support.cpp:41]   --->   Operation 279 'write' 'write_ln41' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 280 [1/1] (0.00ns)   --->   "%write_ln41 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %sum_16_4_out, i32 %sum_16_4" [lenet_support.cpp:41]   --->   Operation 280 'write' 'write_ln41' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 281 [1/1] (0.40ns)   --->   "%br_ln0 = br void %UnifiedReturnBlock"   --->   Operation 281 'br' 'br_ln0' <Predicate = true> <Delay = 0.40>
+
+State 56 <SV = 2> <Delay = 0.40>
+ST_56 : Operation 282 [1/1] (0.00ns)   --->   "%sum_load22 = load i32 %sum"   --->   Operation 282 'load' 'sum_load22' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 283 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %sum_out, i32 %sum_load22"   --->   Operation 283 'write' 'write_ln0' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 284 [1/1] (0.40ns)   --->   "%br_ln0 = br void %UnifiedReturnBlock"   --->   Operation 284 'br' 'br_ln0' <Predicate = true> <Delay = 0.40>
+
+State 57 <SV = 35> <Delay = 0.00>
+ST_57 : Operation 285 [1/1] (0.00ns)   --->   "%UnifiedRetVal = phi i1 1, void %VITIS_LOOP_40_5.0.0.for.inc39.0_crit_edge.exitStub, i1 0, void %VITIS_LOOP_40_5.0.0.split.for.inc39.0_crit_edge.exitStub"   --->   Operation 285 'phi' 'UnifiedRetVal' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 286 [1/1] (0.00ns)   --->   "%ret_ln0 = ret i1 %UnifiedRetVal"   --->   Operation 286 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.402ns
+The critical path consists of the following:
+	'alloca' operation ('indvar') [12]  (0.000 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'indvar' [20]  (0.402 ns)
+
+ <State 2>: 2.739ns
+The critical path consists of the following:
+	'load' operation ('fi', lenet_support.cpp:38) on local variable 'fi' [25]  (0.000 ns)
+	'add' operation ('empty_65', lenet_support.cpp:38) [45]  (0.723 ns)
+	'sub' operation ('empty_66', lenet_support.cpp:38) [50]  (0.000 ns)
+	'add' operation ('add_ln41', lenet_support.cpp:41) [55]  (0.917 ns)
+	'getelementptr' operation ('input_addr', lenet_support.cpp:41) [57]  (0.000 ns)
+	'load' operation ('input_load', lenet_support.cpp:41) on array 'input_r' [58]  (1.099 ns)
+
+ <State 3>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_67', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [54]  (7.300 ns)
+
+ <State 4>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_67', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [54]  (7.300 ns)
+
+ <State 5>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_67', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [54]  (7.300 ns)
+
+ <State 6>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_67', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [54]  (7.300 ns)
+
+ <State 7>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_67', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [54]  (7.300 ns)
+
+ <State 8>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_62', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [114]  (7.300 ns)
+
+ <State 9>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_62', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [114]  (7.300 ns)
+
+ <State 10>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_62', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [114]  (7.300 ns)
+
+ <State 11>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_62', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [114]  (7.300 ns)
+
+ <State 12>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_62', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [114]  (7.300 ns)
+
+ <State 13>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_62', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [114]  (7.300 ns)
+
+ <State 14>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_62', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [114]  (7.300 ns)
+
+ <State 15>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_62', lenet_support.cpp:40) on port 'gmem' (lenet_support.cpp:40) [114]  (7.300 ns)
+
+ <State 16>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_3_read', lenet_support.cpp:42) on port 'gmem' (lenet_support.cpp:42) [119]  (7.300 ns)
+
+ <State 17>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_3_read_1', lenet_support.cpp:42) on port 'gmem' (lenet_support.cpp:42) [127]  (7.300 ns)
+
+ <State 18>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_3_read_2', lenet_support.cpp:42) on port 'gmem' (lenet_support.cpp:42) [135]  (7.300 ns)
+
+ <State 19>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_3_read_3', lenet_support.cpp:42) on port 'gmem' (lenet_support.cpp:42) [143]  (7.300 ns)
+
+ <State 20>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_3_read_4', lenet_support.cpp:42) on port 'gmem' (lenet_support.cpp:42) [151]  (7.300 ns)
+
+ <State 21>: 6.087ns
+The critical path consists of the following:
+	'fmul' operation ('mul27_0_1_2', lenet_support.cpp:41) [137]  (6.087 ns)
+
+ <State 22>: 6.087ns
+The critical path consists of the following:
+	'fmul' operation ('mul27_0_1_3', lenet_support.cpp:41) [145]  (6.087 ns)
+
+ <State 23>: 6.087ns
+The critical path consists of the following:
+	'fmul' operation ('mul27_0_1_4', lenet_support.cpp:41) [153]  (6.087 ns)
+
+ <State 24>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_16_2', lenet_support.cpp:41) [78]  (5.714 ns)
+
+ <State 25>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_16_2', lenet_support.cpp:41) [78]  (5.714 ns)
+
+ <State 26>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_16_2', lenet_support.cpp:41) [78]  (5.714 ns)
+
+ <State 27>: 5.714ns
+The critical path consists of the following:
+	multiplexor before operation 'fadd' with delay (0.796 ns)
+'fadd' operation ('sum_16_3', lenet_support.cpp:41) [86]  (4.918 ns)
+
+ <State 28>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_16_3', lenet_support.cpp:41) [86]  (5.714 ns)
+
+ <State 29>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_16_3', lenet_support.cpp:41) [86]  (5.714 ns)
+
+ <State 30>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_16_3', lenet_support.cpp:41) [86]  (5.714 ns)
+
+ <State 31>: 5.714ns
+The critical path consists of the following:
+	multiplexor before operation 'fadd' with delay (0.796 ns)
+'fadd' operation ('sum_16_4', lenet_support.cpp:41) [94]  (4.918 ns)
+
+ <State 32>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_16_4', lenet_support.cpp:41) [94]  (5.714 ns)
+
+ <State 33>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_16_4', lenet_support.cpp:41) [94]  (5.714 ns)
+
+ <State 34>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_16_4', lenet_support.cpp:41) [94]  (5.714 ns)
+
+ <State 35>: 5.714ns
+The critical path consists of the following:
+	multiplexor before operation 'fadd' with delay (0.796 ns)
+'fadd' operation ('sum_1', lenet_support.cpp:41) [122]  (4.918 ns)
+
+ <State 36>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_1', lenet_support.cpp:41) [122]  (5.714 ns)
+
+ <State 37>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_1', lenet_support.cpp:41) [122]  (5.714 ns)
+
+ <State 38>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_1', lenet_support.cpp:41) [122]  (5.714 ns)
+
+ <State 39>: 5.714ns
+The critical path consists of the following:
+	multiplexor before operation 'fadd' with delay (0.796 ns)
+'fadd' operation ('sum_19_1', lenet_support.cpp:41) [130]  (4.918 ns)
+
+ <State 40>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_1', lenet_support.cpp:41) [130]  (5.714 ns)
+
+ <State 41>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_1', lenet_support.cpp:41) [130]  (5.714 ns)
+
+ <State 42>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_1', lenet_support.cpp:41) [130]  (5.714 ns)
+
+ <State 43>: 5.714ns
+The critical path consists of the following:
+	multiplexor before operation 'fadd' with delay (0.796 ns)
+'fadd' operation ('sum_19_2', lenet_support.cpp:41) [138]  (4.918 ns)
+
+ <State 44>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_2', lenet_support.cpp:41) [138]  (5.714 ns)
+
+ <State 45>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_2', lenet_support.cpp:41) [138]  (5.714 ns)
+
+ <State 46>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_2', lenet_support.cpp:41) [138]  (5.714 ns)
+
+ <State 47>: 5.714ns
+The critical path consists of the following:
+	multiplexor before operation 'fadd' with delay (0.796 ns)
+'fadd' operation ('sum_19_3', lenet_support.cpp:41) [146]  (4.918 ns)
+
+ <State 48>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_3', lenet_support.cpp:41) [146]  (5.714 ns)
+
+ <State 49>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_3', lenet_support.cpp:41) [146]  (5.714 ns)
+
+ <State 50>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_3', lenet_support.cpp:41) [146]  (5.714 ns)
+
+ <State 51>: 5.714ns
+The critical path consists of the following:
+	multiplexor before operation 'fadd' with delay (0.796 ns)
+'fadd' operation ('sum_19_4', lenet_support.cpp:41) [154]  (4.918 ns)
+
+ <State 52>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_4', lenet_support.cpp:41) [154]  (5.714 ns)
+
+ <State 53>: 5.714ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_4', lenet_support.cpp:41) [154]  (5.714 ns)
+
+ <State 54>: 6.116ns
+The critical path consists of the following:
+	'fadd' operation ('sum_19_4', lenet_support.cpp:41) [154]  (5.714 ns)
+	'store' operation ('store_ln38', lenet_support.cpp:38) of variable 'sum_19_4', lenet_support.cpp:41 on local variable 'sum' [158]  (0.402 ns)
+
+ <State 55>: 0.402ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('UnifiedRetVal') [169]  (0.402 ns)
+
+ <State 56>: 0.402ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('UnifiedRetVal') [169]  (0.402 ns)
+
+ <State 57>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
